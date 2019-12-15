@@ -77,7 +77,7 @@
   function showDetail(title) {
     console.log("SHOW DETAIL", title);
     const tech = techs.find(tech => tech.title === title);
-    nav.push("nav-detail", { tech });
+    //  nav.push("nav-detail", { tech });
   }
 
   function openMenu() {

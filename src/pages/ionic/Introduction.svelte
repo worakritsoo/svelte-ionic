@@ -15,12 +15,10 @@
 
   const lastSlideShown = () => {
     console.log("lastSlideShown");
-
     setTimeout(() => {
       openMenu();
       setTimeout(() => {
         closeMenu();
-        //        lastSlideShown();
       }, 1000);
     }, 2000);
   };
@@ -55,7 +53,7 @@
 </ion-header>
 
 <ion-content fullscreen padding scroll-y="false">
-  <ion-slides on:ionSlideReachEnd={lastSlideShown}>
+  <ion-slides on:ionSlideReachEnd={lastSlideShown} pager="true">
 
     <ion-slide>
       <img src="./assets/img/slides/slide-1.png" alt="pict" />
