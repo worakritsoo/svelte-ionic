@@ -2,7 +2,27 @@
   import { navigate } from "svelte-routing";
 
   const continueToTab = () => {
-    navigate("/tabs/music");
+    navigate("/tabs/movies");
+  };
+
+  function openMenu() {
+    document.querySelector("ion-menu-controller").open();
+  }
+
+  function closeMenu() {
+    document.querySelector("ion-menu-controller").close();
+  }
+
+  const lastSlideShown = () => {
+    console.log("lastSlideShown");
+
+    setTimeout(() => {
+      openMenu();
+      setTimeout(() => {
+        closeMenu();
+        //        lastSlideShown();
+      }, 1000);
+    }, 2000);
   };
 </script>
 
@@ -35,19 +55,16 @@
 </ion-header>
 
 <ion-content fullscreen padding scroll-y="false">
-  <ion-slides>
+  <ion-slides on:ionSlideReachEnd={lastSlideShown}>
 
     <ion-slide>
       <img src="./assets/img/slides/slide-1.png" alt="pict" />
-      <h2>
-        Welcome to the
-        <b>ICA</b>
-      </h2>
+      <h2>Welcome!</h2>
       <p>
         The
-        <b>ionic conference app</b>
+        <b>Svelte Ionic App</b>
         is a practical preview of the ionic framework in action, and a
-        demonstration of proper code use.
+        demonstration of proper code use (ahum!!) in svelte.
       </p>
     </ion-slide>
 
@@ -62,21 +79,13 @@
     </ion-slide>
 
     <ion-slide>
-      <img src="./assets/img/slides/slide-3.png" alt="pict" />
-      <h2>What is Ionic Pro?</h2>
-      <p>
-        <b>Ionic Pro</b>
-        is a powerful set of services and features built on top of Ionic
-        Framework that brings a totally new level of app development agility to
-        mobile dev teams.
-      </p>
-    </ion-slide>
-
-    <ion-slide>
       <img src="./assets/img/slides/slide-4.png" alt="pict" />
       <h2>Ready to Play?</h2>
+      Check out
+      <ion-icon name="menu" />
+      in left uppper corner to look at UI examples.
       <ion-button fill="clear" on:click={continueToTab}>
-        Continue
+        Continue to tabs
         <ion-icon slot="end" name="arrow-forward" />
       </ion-button>
     </ion-slide>

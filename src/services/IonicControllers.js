@@ -11,10 +11,10 @@ export const registerOnce = (selector, component) => {
     }
 };
 
-const registerDOMOnce=(selector)=> {
+const registerDOMOnce = (selector) => {
     let controller = document.querySelector(selector);
     if (!controller) {
-        controller=document.createElement(selector);
+        controller = document.createElement(selector);
         document.body.appendChild(controller);
     }
     return controller;
@@ -31,13 +31,13 @@ export const IonicShowModal = (selector, component, componentProps) => {
         })
         .then(modal => {
             modal.present();
-            return modal.onWillDismiss() 
+            return modal.onWillDismiss()
         });
 };
 
-export const IonicShowPopover = (event,selector, component, componentProps) => {
+export const IonicShowPopover = (event, selector, component, componentProps) => {
     registerOnce(selector, component);
-    const controller = registerDOMOnce("ion-popover-controller"); 
+    const controller = registerDOMOnce("ion-popover-controller");
     return controller
         .create({
             component: selector,
@@ -45,28 +45,27 @@ export const IonicShowPopover = (event,selector, component, componentProps) => {
         })
         .then(popover => {
             popover.present();
-            return popover.onWillDismiss() 
+            return popover.onWillDismiss()
         });
 };
 
 export const IonicShowLoading = (options) => {
-    const controller = registerDOMOnce("ion-loading-controller"); 
+    const controller = registerDOMOnce("ion-loading-controller");
     return controller
         .create(options)
-        .then(loading =>loading.present());
+        .then(loading => loading.present());
 };
 
 export const IonicShowPicker = (options) => {
-    const controller = registerDOMOnce("ion-picker-controller"); 
+    const controller = registerDOMOnce("ion-picker-controller");
     return controller
         .create(options)
-        .then(picker =>picker.present());
+        .then(picker => picker.present());
 };
 
 export const IonicShowAlert = (options) => {
-    const controller = registerDOMOnce("ion-alert-controller"); 
+    const controller = registerDOMOnce("ion-alert-controller");
     return controller
         .create(options)
-        .then(alert =>alert.present());
+        .then(alert => alert.present());
 };
-
