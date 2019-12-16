@@ -10,10 +10,7 @@
     navigate(url);
   }
 
-  // svelte renders the foreach before the webcomponts are loaded giving a strange sublime message
-  let menuItems = [];
-  setTimeout(() => {
-    menuItems = [
+  const   menuItems = [
       { url: "/tabs/music", label: "Tabs with perks", icon: "home" },
       { url: "/avatars", label: "Avatars", icon: "home" },
       { url: "/buttons", label: "Buttons", icon: "home" },
@@ -46,7 +43,6 @@
       { url: "/toggle", label: "Toggle", icon: "home" },
       { url: "/toolbar", label: "Toolbar", icon: "home" }
     ];
-  }, 1000);
 </script>
 
 <ion-menu {side}>

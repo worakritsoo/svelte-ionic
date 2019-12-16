@@ -1,6 +1,11 @@
 <script>
-  const dualRange = document.querySelector("#dual-range");
-  dualRange.value = { lower: 33, upper: 60 };
+  import { onMount } from "svelte";
+  let dualRange;
+
+  onMount(() => {
+    dualRange.value = { lower: 33, upper: 60 };
+  });
+  //  const dualRange = document.querySelector("#dual-range");
 </script>
 
 <ion-header translucent>
@@ -31,7 +36,7 @@
     </ion-item>
 
     <ion-item>
-      <ion-range id="dual-range" dual-knobs pin color="dark">
+      <ion-range bind:this={dualRange} dual-knobs pin color="dark">
         <ion-icon slot="start" size="small" name="brush" />
         <ion-icon slot="end" name="brush" />
       </ion-range>
