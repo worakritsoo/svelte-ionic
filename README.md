@@ -37,7 +37,7 @@ Splash screen image has a jitter
 
 # Todo's
 A number of todo's:
-- add the popoover and other controller related items
+- ~~add the popoover and other controller related items~~
 - try the css styling as per documentation (theming)
 - look at awesome rollup and add typescript
 - fix rollup copy of files in assets folder
@@ -50,7 +50,7 @@ A number of todo's:
 - better names for controller API?
 - NAV over tab?
 - make it more sveltish (code, store, bindings, animations)
-- publish on firebase hosting
+- ~~publish on firebase hosting~~
 - try some cordova/ionic native
 - singleton classes https://alligator.io/js/js-singletons/
 - place routes in better place (pages folder probably, to avoid repeating /../)
