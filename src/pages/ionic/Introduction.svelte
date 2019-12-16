@@ -61,9 +61,10 @@
       <p>
         The
         <b>Svelte Ionic App</b>
-        is a practical preview of the ionic framework in action, and a
-        demonstration of proper code use (ahum!!) in svelte.
+        is a practical preview of the ionic framework, and a demonstration of
+        proper use (ahum!!) in svelte.
       </p>
+      <br />
     </ion-slide>
 
     <ion-slide>
@@ -72,8 +73,9 @@
       <p>
         <b>Ionic Framework</b>
         is an open source SDK that enables developers to build high quality
-        mobile apps with web technologies like HTML, CSS, and JavaScript.
+        mobile apps with web technologies.
       </p>
+      <br />
     </ion-slide>
 
     <ion-slide>
@@ -81,9 +83,10 @@
       <h2>Ready to Play?</h2>
       Check out
       <ion-icon name="menu" />
-      in left uppper corner to look at UI examples.
+      to look at UI examples.
+      <br />
       <ion-button fill="clear" on:click={continueToTab}>
-        Continue to tabs
+        Continue to tabs demo
         <ion-icon slot="end" name="arrow-forward" />
       </ion-button>
     </ion-slide>

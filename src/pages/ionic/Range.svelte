@@ -1,11 +1,11 @@
 <script>
   import { onMount } from "svelte";
+
   let dualRange;
 
   onMount(() => {
     dualRange.value = { lower: 33, upper: 60 };
   });
-  //  const dualRange = document.querySelector("#dual-range");
 </script>
 
 <ion-header translucent>

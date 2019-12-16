@@ -33,10 +33,17 @@
     */
 </script>
 
+<style>
+  h1,
+  img {
+    text-align: center;
+    margin: 0 auto;
+  }
+</style>
+
 <ion-header translucent>
   <ion-toolbar>
-
-    <ion-title>Ionic Svelte</ion-title>
+    <ion-title>Ionic Svelte - Jagshemash!</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -46,5 +53,7 @@
     src="assets/img/great-success.png"
     alt="Great success"
     in:fly={{ y: 200, duration: 750 }} />
-
+  <br />
+  <br />
+  <h1 in:fly={{ y: 600, duration: 1900 }}>Great success!</h1>
 </ion-content>
