@@ -1,0 +1,23 @@
+[debug] [2019-12-16T07:29:16.016Z] ----------------------------------------------------------------------
+[debug] [2019-12-16T07:29:16.018Z] Command:       C:\Gebruikers\Developer\node\node.exe C:\Gebruikers\Developer\node\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-12-16T07:29:16.018Z] CLI Version:   7.10.0
+[debug] [2019-12-16T07:29:16.018Z] Platform:      win32
+[debug] [2019-12-16T07:29:16.018Z] Node Version:  v12.13.0
+[debug] [2019-12-16T07:29:16.020Z] Time:          Mon Dec 16 2019 08:29:16 GMT+0100 (Central European Standard Time)
+[debug] [2019-12-16T07:29:16.020Z] ----------------------------------------------------------------------
+[debug] [2019-12-16T07:29:16.020Z] 
+[debug] [2019-12-16T07:29:16.027Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-16T07:29:16.027Z] > authorizing via signed-in user
+[debug] [2019-12-16T07:29:16.028Z] [iam] checking project ionicsvelte for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-12-16T07:29:16.029Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ionicsvelte:testIamPermissions  
+
+[debug] [2019-12-16T07:29:16.791Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-16T07:29:16.795Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ionicsvelte  
+ 
+[debug] [2019-12-16T07:29:17.076Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'ionicsvelte'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-12-16T07:29:17.088Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/ionicsvelte/versions  
+

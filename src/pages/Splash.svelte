@@ -15,6 +15,7 @@
   //    console.log("POS", position);
   //  });
 
+  /*
   Plugins.Share.share({
     title: "See cool stuff",
     text: "Really awesome thing you need to see right meow",
@@ -27,6 +28,8 @@
     .catch(error => {
       console.log("SHARE ERROR", error);
     });
+
+    */
 </script>
 
 <ion-header translucent>
