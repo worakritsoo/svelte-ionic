@@ -110,6 +110,7 @@
       </Route>
     {/each}
 
+    <!-- need to be placed in a svelte tab component to simplify code -->
     <Route path="/tabs">
       <IonTab tabs={myTabs} />
     </Route>

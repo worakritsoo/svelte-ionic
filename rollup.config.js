@@ -19,7 +19,8 @@ export default {
 	plugins: [
 		copy({
 			targets: [{ src: 'src/assets/*', dest: 'public/assets' }],
-			verbose: true
+			verbose: true,
+			copyOnce: true
 		}),
 		svelte({
 			// enable run-time checks when not in production
