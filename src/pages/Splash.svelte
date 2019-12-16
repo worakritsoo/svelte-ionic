@@ -9,7 +9,8 @@
     navigate("/intro");
   }, 3500);
 
-  console.log("STORA", localforage);
+  console.log("STORAGE", localforage);
+  console.log("CAPACITOR PLUGINS", Plugins);
 
   //  Plugins.Geolocation.getCurrentPosition().then(position => {
   //    console.log("POS", position);
