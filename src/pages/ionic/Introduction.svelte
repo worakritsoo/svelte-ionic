@@ -5,16 +5,18 @@
     navigate("/tabs/movies");
   };
 
+  // todo: more sveltish
   function openMenu() {
     document.querySelector("ion-menu-controller").open();
   }
 
+  // todo: more sveltish
   function closeMenu() {
     document.querySelector("ion-menu-controller").close();
   }
 
-  const lastSlideShown = () => {
-    console.log("lastSlideShown");
+  const flipMenuOnOff = () => {
+    console.log("flipMenuOnOff");
     setTimeout(() => {
       openMenu();
       setTimeout(() => {
@@ -53,7 +55,7 @@
 </ion-header>
 
 <ion-content fullscreen padding scroll-y="false">
-  <ion-slides on:ionSlideReachEnd={lastSlideShown} pager="true">
+  <ion-slides on:ionSlideReachEnd={flipMenuOnOff} pager="true">
 
     <ion-slide>
       <img src="./assets/img/slides/slide-1.png" alt="pict" />
@@ -65,6 +67,7 @@
         proper use (ahum!!) in svelte.
       </p>
       <br />
+      <br />
     </ion-slide>
 
     <ion-slide>
@@ -75,6 +78,7 @@
         is an open source SDK that enables developers to build high quality
         mobile apps with web technologies.
       </p>
+      <br />
       <br />
     </ion-slide>
 

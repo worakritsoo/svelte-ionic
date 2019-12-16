@@ -7,7 +7,7 @@
 
   setTimeout(() => {
     navigate("/intro");
-  }, 3500);
+  }, 4000);
 
   console.log("STORAGE", localforage);
   console.log("CAPACITOR PLUGINS", Plugins);
@@ -43,7 +43,7 @@
 
 <ion-header translucent>
   <ion-toolbar>
-    <ion-title>Ionic Svelte - Jagshemash!</ion-title>
+    <ion-title>Jagshemash!</ion-title>
   </ion-toolbar>
 </ion-header>
 

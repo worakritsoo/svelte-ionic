@@ -19,17 +19,16 @@
   let list;
   let refresher;
 
-  onMount(() => {
-    refresher = document.getElementById("refresher");
+  const refreshAction = () => {
+    console.log("Refresh action");
+    setTimeout(() => {
+      prependMessages(5, true);
+      refresher.complete();
+    }, 2000);
+  };
 
-    refresher.addEventListener("ionRefresh", () => {
-      console.log("Refresh action");
-      setTimeout(() => {
-        prependMessages(5, true);
-        refresher.complete();
-      }, 2000);
-    });
-    list = document.getElementById("items");
+  onMount(() => {
+    //  refresher.addEventListener("ionRefresh", () => {});
     appendMessages(5);
   });
 
@@ -102,9 +101,12 @@
 </ion-header>
 
 <ion-content>
-  <ion-refresher slot="fixed" id="refresher">
+  <ion-refresher
+    slot="fixed"
+    bind:this={refresher}
+    on:ionRefresh={refreshAction}>
     <ion-refresher-content />
   </ion-refresher>
 
-  <ion-list id="items" />
+  <ion-list bind:this={list} />
 </ion-content>

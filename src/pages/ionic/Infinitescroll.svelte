@@ -7,10 +7,6 @@
   let infiniteScroll;
 
   onMount(() => {
-    list = document.getElementById("list");
-    infiniteScroll = document.getElementById("infinite-scroll");
-    console.log("list", list, infiniteScroll);
-
     appendItems(10);
   });
 
@@ -66,12 +62,12 @@
 </ion-header>
 
 <ion-content fullscreen>
-  <ion-list id="list" />
+  <ion-list bind:this={list} />
 
   <ion-infinite-scroll
     on:ionInfinite={infiniteAction}
     threshold="100px"
-    id="infinite-scroll">
+    bind:this={infiniteScroll}>
     <ion-infinite-scroll-content
       loading-spinner="bubbles"
       loading-text="Loading more data..." />

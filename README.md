@@ -1,5 +1,5 @@
 # Ionic Svelte UI demo
-Try out to get svelte-routing integrated with ionic tabs in svelte.
+Project to integrate Ionic UI goodies with svelte.
 
 To run this, you need to run `npm run dev`. Routing (deeplinking) through the SPA will be served through localhost:8080 (not :5000)
 
