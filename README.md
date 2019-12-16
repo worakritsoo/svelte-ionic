@@ -24,7 +24,9 @@ The ionic api docs state you can predefine as property to ion-tab-bar, but this 
 
 Update 13/12/2019: workaround: add ion-router (with no routes! as we don't want hash routes) to IonTab so at least the default tab is not shown as per ion-tabs.tsx (see https://github.com/ionic-team/ionic/issues/20060). No ugly UI, but bit hacky code to find when `present` is present. And we get ionic errors in console because of router issue.
 
-So besides workaround, I need a bit of help on svelte onMount wrt webcomponents.
+~~So besides workaround, I need a bit of help on svelte onMount wrt webcomponents.~~
+
+Update 2019/12/16 - it seems svelte is too fast for the ionic code to be loaded - probably because it is in the App.svelte HEAD. Moving CDN reference to template.html. Maintaining the hacky code in IonTab.svelte for the time being.
 
 ## IonMenu gives warning
 Need to use other api
@@ -54,3 +56,4 @@ A number of todo's:
 - try some cordova/ionic native
 - singleton classes https://alligator.io/js/js-singletons/
 - place routes in better place (pages folder probably, to avoid repeating /../)
+- consider Contexts for exposing controllers?
