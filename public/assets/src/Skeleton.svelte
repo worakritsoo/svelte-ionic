@@ -1,12 +1,10 @@
 <script>
   let skeletonEl;
   let dataEl;
+
   const toggleSkeleton = () => {
-    //   const skeletonEl = document.getElementById("skeleton"),
     const skeletonStyle = window.getComputedStyle(skeletonEl);
     const skeletonDisplay = skeletonStyle.getPropertyValue("display");
-
-    // const dataEl = document.getElementById("data");
     const dataStyle = window.getComputedStyle(dataEl);
     const dataDisplay = dataStyle.getPropertyValue("display");
 

@@ -1,11 +1,9 @@
 <script>
-  function toggleReorder() {
-    const reorderGroup = document.getElementById("reorder");
+  let reorderGroup;
+
+  const toggleReorder = () => {
     reorderGroup.disabled = !reorderGroup.disabled;
-    reorderGroup.addEventListener("ionItemReorder", ({ detail }) => {
-      detail.complete(true);
-    });
-  }
+  };
 </script>
 
 <ion-header translucent>
@@ -23,7 +21,11 @@
 <ion-content fullscreen>
   <ion-list>
     <ion-list-header>Reorder Icon</ion-list-header>
-    <ion-reorder-group id="reorder">
+    <ion-reorder-group
+      {reorderGroup}
+      on:ionItemReorder={({ detail }) => {
+        detail.complete(true);
+      }}>
       <ion-item>
         <ion-label>Item 1</ion-label>
         <ion-reorder slot="end" />
