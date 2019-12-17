@@ -1,16 +1,18 @@
 <script>
-  function toggleSkeleton() {
-    const skeletonEl = document.getElementById("skeleton"),
-      skeletonStyle = window.getComputedStyle(skeletonEl),
-      skeletonDisplay = skeletonStyle.getPropertyValue("display");
-    const dataEl = document.getElementById("data"),
-      dataStyle = window.getComputedStyle(dataEl),
-      dataDisplay = dataStyle.getPropertyValue("display");
-    document.getElementById("skeleton").style.display =
-      skeletonDisplay === "none" ? "block" : "none";
-    document.getElementById("data").style.display =
-      dataDisplay === "none" ? "block" : "none";
-  }
+  let skeletonEl;
+  let dataEl;
+  const toggleSkeleton = () => {
+    //   const skeletonEl = document.getElementById("skeleton"),
+    const skeletonStyle = window.getComputedStyle(skeletonEl);
+    const skeletonDisplay = skeletonStyle.getPropertyValue("display");
+
+    // const dataEl = document.getElementById("data");
+    const dataStyle = window.getComputedStyle(dataEl);
+    const dataDisplay = dataStyle.getPropertyValue("display");
+
+    skeletonEl.style.display = skeletonDisplay === "none" ? "block" : "none";
+    dataDisplay.style.display = dataDisplay === "none" ? "block" : "none";
+  };
 </script>
 
 <style>
@@ -35,7 +37,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list id="data">
+  <ion-list {dataEl}>
     <ion-list-header>Albums</ion-list-header>
     <ion-item>
       <ion-thumbnail slot="start">
@@ -119,7 +121,7 @@
     </ion-item>
 
   </ion-list>
-  <ion-list id="skeleton">
+  <ion-list {skeletonEl}>
     <ion-list-header>
       <ion-skeleton-text animated style="width: 80px" />
     </ion-list-header>
