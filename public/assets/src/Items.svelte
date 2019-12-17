@@ -1,3 +1,9 @@
+<style>
+  ion-item {
+    --background: grey;
+  }
+</style>
+
 <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="start">

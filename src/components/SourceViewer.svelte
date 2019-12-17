@@ -6,6 +6,8 @@
   const { Clipboard } = Plugins;
   const { componentProps } = document.querySelector("ion-modal");
 
+  let anchor;
+
   // probably can be done in easier way, but I am lazy
   let name = "/";
   if (componentProps.name) {
@@ -22,6 +24,16 @@
   const closeOverlay = () => {
     const modal = document.querySelector("ion-modal");
     modal.dismiss({});
+  };
+
+  const goAPIdocs = () => {
+    let apiName = name.toLowerCase();
+    if (apiName.charAt(apiName.length - 1) == "s") {
+      apiName = apiName.slice(0, -1);
+    }
+    console.log("APINAME", apiName);
+    anchor.href = "https://ionicframework.com/docs/api/" + apiName;
+    anchor.click();
   };
 
   let sourceCode = "";
@@ -59,6 +71,10 @@
 <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="end">
+      <ion-button on:click={goAPIdocs}>
+        <ion-icon name="share-alt" />
+      </ion-button>
+
       {#if sourceCode.length > 0}
         <ion-button on:click={copySource}>
           <ion-icon name="copy" />
@@ -75,3 +91,4 @@
 <ion-content>
   <pre contenteditable="true">{sourceCode}</pre>
 </ion-content>
+<a target="_blank" bind:this={anchor} href="/" />
