@@ -19,7 +19,8 @@ All features (vision/realised)
 - Run as SPA (100% done) - Router via "svelte-routing" repo
 - Service Worker setup via workbox (100%) 
 - PWA compliance via Ligthouse score (70%))
-- Stores/RXJS (0%)
+- Stores (0%)
+- RXJS (25%)
 - Localstorage via localforage (50%)
 - Firebase SDK (0%)
 - Capacitor for mobile native support (100%)
@@ -68,3 +69,4 @@ A number of todo's:
 - consider Contexts for exposing controllers?
 - ~~split pane~~
 - SSR
+- to docs link https://ionicframework.com/docs/api/input

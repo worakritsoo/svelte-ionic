@@ -1,6 +1,7 @@
 <script>
   import Extra from "./Extra.svelte";
   import {
+    IonicShowActionSheet,
     IonicShowAlert,
     IonicShowPicker,
     IonicShowLoading,
@@ -27,7 +28,7 @@
     }).then(data => console.log(data));
   };
 
-  const showAlert = () => {
+  const showInputAlert = () => {
     IonicShowAlert({
       header: "Prompt!",
       inputs: [
@@ -134,6 +135,114 @@
       ]
     });
   };
+
+  const showSimpleAlert = () => {
+    IonicShowAlert({
+      header: "Prompt!",
+      subHeader: "Subtitle",
+      message: "This is an alert message.",
+      buttons: ["OK"]
+    });
+  };
+
+  const showRadioAlert = () => {
+    IonicShowAlert({
+      header: "Radio",
+      subHeader: "Subtitle",
+      message: "This is an alert message.",
+      inputs: [
+        {
+          type: "radio",
+          label: "Radio 1",
+          value: "value1",
+          checked: true
+        },
+        {
+          type: "radio",
+          label: "Radio 2",
+          value: "value2"
+        },
+        {
+          type: "radio",
+          label: "Radio 3",
+          value: "value3"
+        },
+        {
+          type: "radio",
+          label: "Radio 4",
+          value: "value4"
+        },
+        {
+          type: "radio",
+          label: "Radio 5",
+          value: "value5"
+        },
+        {
+          type: "radio",
+          label:
+            "Radio 6 Radio 6 Radio 6 Radio 6 Radio 6 Radio 6 Radio 6 Radio 6 Radio 6 Radio 6 ",
+          value: "value6"
+        }
+      ],
+
+      buttons: [
+        {
+          text: "Cancel",
+          role: "cancel",
+          cssClass: "secondary",
+          handler: () => {
+            console.log("Confirm Cancel");
+          }
+        },
+        {
+          text: "Ok",
+          handler: () => {
+            console.log("Confirm Ok");
+          }
+        }
+      ]
+    });
+  };
+
+  const showActionSheet = () => {
+    IonicShowActionSheet({
+      header: "Albums",
+      buttons: [
+        {
+          text: "Delete",
+          role: "destructive",
+          handler: () => {
+            console.log("Delete clicked");
+          }
+        },
+        {
+          text: "Share",
+          handler: () => {
+            console.log("Share clicked");
+          }
+        },
+        {
+          text: "Play",
+          handler: () => {
+            console.log("Play clicked");
+          }
+        },
+        {
+          text: "Favorite",
+          handler: () => {
+            console.log("Favorite clicked");
+          }
+        },
+        {
+          text: "Cancel",
+          role: "cancel",
+          handler: () => {
+            console.log("Cancel clicked");
+          }
+        }
+      ]
+    });
+  };
 </script>
 
 <ion-header translucent>
@@ -146,8 +255,19 @@
 </ion-header>
 
 <ion-content fullscreen class="ion-padding">
+  <ion-button expand="block" on:click={showActionSheet}>
+    Action Sheet
+  </ion-button>
+  <ion-button expand="block" on:click={showSimpleAlert}>
+    Show Simple Alert
+  </ion-button>
+  <ion-button expand="block" on:click={showRadioAlert}>
+    Show Radio Alert
+  </ion-button>
 
-  <ion-button expand="block" on:click={showAlert}>Show Alert</ion-button>
+  <ion-button expand="block" on:click={showInputAlert}>
+    Show Input Alert
+  </ion-button>
   <ion-button expand="block" on:click={showModal}>Show Modal</ion-button>
   <ion-button expand="block" on:click={showPopover}>Show Popover</ion-button>
   <ion-button expand="block" on:click={showLoading}>Show Loading</ion-button>

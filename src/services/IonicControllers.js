@@ -71,3 +71,4 @@ export const IonicShowLoading = DefaultIonicController("ion-loading-controller")
 export const IonicShowPicker = DefaultIonicController("ion-picker-controller");
 export const IonicShowAlert = DefaultIonicController("ion-alert-controller");
 export const IonicShowToast = DefaultIonicController("ion-toast-controller");
+export const IonicShowActionSheet = DefaultIonicController("ion-action-sheet-controller");

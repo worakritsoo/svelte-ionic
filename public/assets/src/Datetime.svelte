@@ -1,3 +1,9 @@
+<script>
+  const changeValue = event => {
+    console.log("Change of value", event.detail);
+  };
+</script>
+
 <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -18,18 +24,25 @@
     <ion-item-divider />
     <ion-item>
       <ion-label>Start Date</ion-label>
-      <ion-datetime value="1990-02-19" placeholder="Select Date" />
+      <ion-datetime
+        on:ionChange={changeValue}
+        value="1990-02-19"
+        placeholder="Select Date" />
     </ion-item>
     <ion-item>
       <ion-label>Start Time</ion-label>
       <ion-datetime
+        on:ionChange={changeValue}
         display-format="h:mm A"
         picker-format="h:mm A"
         value="1990-02-19T07:43Z" />
     </ion-item>
     <ion-item>
       <ion-label>Ends</ion-label>
-      <ion-datetime value="1990-02-20" placeholder="Select Date" />
+      <ion-datetime
+        on:ionChange={changeValue}
+        value="1990-02-20"
+        placeholder="Select Date" />
     </ion-item>
     <ion-item>
       <ion-label>Repeat</ion-label>

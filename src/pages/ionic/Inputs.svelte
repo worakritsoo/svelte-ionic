@@ -21,6 +21,10 @@
   function handleLastNameValue(event) {
     lastName = event.target.value;
   }
+
+  const changeValue = event => {
+    console.log("Change of value", event.detail);
+  };
 </script>
 
 <ion-header translucent>
@@ -40,7 +44,11 @@
           First Name
           <ion-text color="danger">*</ion-text>
         </ion-label>
-        <ion-input required type="text" oninput="handleFirstNameValue(event)" />
+        <ion-input
+          on:ionChange={changeValue}
+          required
+          type="text"
+          oninput="handleFirstNameValue(event)" />
       </ion-item>
 
       <ion-item>
@@ -48,7 +56,11 @@
           Last Name
           <ion-text color="danger">*</ion-text>
         </ion-label>
-        <ion-input required type="text" oninput="handleLastNameValue(event)" />
+        <ion-input
+          on:ionChange={changeValue}
+          required
+          type="text"
+          oninput="handleLastNameValue(event)" />
       </ion-item>
 
       <ion-item>
