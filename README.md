@@ -8,17 +8,17 @@ Also published as web app: https://ionicsvelte.firebaseapp.com
 Features (vision/realised) 
 - All Ionic Framework UI components (80% done)
 - Run as SPA (100% done)
-- Service Worker setup via workbox (0%) 
+- Service Worker setup via workbox (100%) 
 - PWA compliance via Ligthouse score (70%))
 - Stores/RXJS (0%)
 - Localstorage via localforage (50%)
 - Firebase SDK (0%)
-- Capacitor for mobile native support (25%)
+- Capacitor for mobile native support (100%)
 
 # Known issues
 
 ## IonTab present not ready onMount
-Issue is in IonTab.svelte. The onMount triggers too earlier for the controller to be able to expose the `present` method for programmatically setting the tab selected by default.
+~~Issue is in IonTab.svelte. The onMount triggers too earlier for the controller to be able to expose the `present` method for programmatically setting the tab selected by default.~~
 
 The ionic api docs state you can predefine as property to ion-tab-bar, but this does not seem to work.
 
@@ -42,14 +42,14 @@ A number of todo's:
 - ~~add the popoover and other controller related items~~
 - try the css styling as per documentation (theming)
 - look at awesome rollup and add typescript
-- fix rollup copy of files in assets folder
-- do some binding on inputs and other interactive elements
+- ~~fix rollup copy of files in assets folder~~
+- ~~do some binding on inputs and other interactive elements~~
 - ionicons for menu - colors and other names
 - ionicons part has some unknown icons, make larger
-- virtual scroll??
-- ion-img?
-- make it a PWA
-- better names for controller API?
+- ~~virtual scroll??~~
+- ~~ion-img? (will work, but not tried)~~
+- ~~make it a PWA~~
+- ~~better names for controller API?~~
 - NAV over tab?
 - make it more sveltish (code, store, bindings, animations)
 - ~~publish on firebase hosting~~
