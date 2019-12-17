@@ -5,6 +5,8 @@ To run this, you need to run `npm run dev`. Routing (deeplinking) through the SP
 
 Also published as web app: https://ionicsvelte.firebaseapp.com
 
+NEW FEATURE: click to view source! For all components (except tab) you can click the lower right source button to view the source and copy/paste in your app. If you use fullscreen view, the menu will be a sidepanel instead of a hamburger!
+
 Features (vision/realised) 
 - All Ionic Framework UI components (99% done)
 - Run as SPA (100% done) - Router via "svelte-routing" repo
