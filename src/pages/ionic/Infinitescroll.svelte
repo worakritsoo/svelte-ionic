@@ -26,6 +26,8 @@
   function appendItems(number) {
     console.log("length is", length);
     const originalLength = length;
+
+    // todo: replace with array and binding in each
     for (var i = 0; i < number; i++) {
       const el = document.createElement("ion-item");
       el.innerHTML = `
@@ -72,4 +74,5 @@
       loading-spinner="bubbles"
       loading-text="Loading more data..." />
   </ion-infinite-scroll>
+
 </ion-content>

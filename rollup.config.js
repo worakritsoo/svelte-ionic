@@ -4,7 +4,8 @@ import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import dev from 'rollup-plugin-dev';
-import copy from 'rollup-plugin-copy'
+import copy from 'rollup-plugin-copy';
+import del from 'rollup-plugin-delete';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -17,6 +18,7 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
+
 		copy({
 			targets: [{ src: 'src/assets/*', dest: 'public/assets' }],
 			verbose: true,
@@ -45,6 +47,12 @@ export default {
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated
 
+		// no service worken in dev
+		!production && del({ targets: 'public/sw.js' }),
+		!production && copy({
+			targets: [{ src: 'src/sw.js', dest: 'public/' }],
+			verbose: true
+		}),
 
 		!production && serve2(),
 

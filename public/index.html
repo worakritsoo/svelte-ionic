@@ -32,6 +32,16 @@
 	<link rel="manifest" href="/manifest.json" />
 	<meta name="theme-color" content="#1976d2" />
 
+	<script>
+		// Check that service workers are supported
+		if ('serviceWorker' in navigator) {
+			// Use the window load event to keep the page load performant
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('/sw.js');
+			});
+		}
+	</script>
+
 	<script defer src='/build/bundle.js'></script>
 </head>
 

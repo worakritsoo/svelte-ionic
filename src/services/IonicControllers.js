@@ -1,6 +1,5 @@
 import { register } from "svelte-custom-elements";
 
-
 //
 // Private functions
 //

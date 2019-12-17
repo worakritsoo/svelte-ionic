@@ -2,7 +2,7 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c",
+    "build": "workbox injectManifest src/sw-config.js && rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public"
   },
@@ -10,6 +10,7 @@
     "rollup": "^1.12.0",
     "rollup-plugin-commonjs": "^10.0.0",
     "rollup-plugin-copy": "^3.1.0",
+    "rollup-plugin-delete": "^1.1.0",
     "rollup-plugin-dev": "^1.1.1",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
