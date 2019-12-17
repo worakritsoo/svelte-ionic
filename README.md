@@ -42,7 +42,7 @@ Need to use other api
 There is much going on in the IonNav
 
 ## Fly in has a jitter
-Splash screen image has a jitter
+~~Splash screen image has a jitter~~
 
 # Todo's
 A number of todo's:
