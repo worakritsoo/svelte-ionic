@@ -1,1 +1,1 @@
-console.log('No Service worker');
+// empty service worker - for development mode

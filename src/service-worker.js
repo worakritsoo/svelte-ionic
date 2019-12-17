@@ -6,11 +6,24 @@ if (workbox) {
     console.log(`Boo! Workbox didn't load 😬`);
 }
 
-
-
 var today = new Date();
 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-console.log('Time ', time)
+console.log('Time ', time);
+
+workbox.setConfig({ debug: true });
+
+workbox.core.skipWaiting();
+workbox.core.clientsClaim();
+
+// todo: cache ionic cdn assets
+
+workbox.routing.registerRoute(
+    new RegExp('https://cdn.jsdelivr.net/npm/@ionic'),
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: 'ionic-cdn',
+    })
+);
+
 
 workbox.routing.registerRoute(
     // Cache CSS files.
