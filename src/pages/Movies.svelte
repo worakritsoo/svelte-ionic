@@ -16,7 +16,7 @@
       firstName: "Douglas",
       lastName: "Adams",
       middleInitial: "N"
-    }).then(data => console.log(data));
+    }).then(console.log);
   };
 
   const showPopover = event => {
@@ -24,7 +24,7 @@
       firstName: "Douglas",
       lastName: "Adams",
       middleInitial: "N"
-    }).then(data => console.log(data));
+    }).then(console.log);
   };
 
   const showInputAlert = () => {

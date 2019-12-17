@@ -11,7 +11,7 @@
   }
 
   const menuItems = [
-    { url: "/tabs/music", label: "Tabs with perks", icon: "home" },
+    { url: "/tabs/movies", label: "Tabs with perks", icon: "home" },
     { url: "/avatars", label: "Avatars", icon: "home" },
     { url: "/buttons", label: "Buttons", icon: "home" },
     { url: "/cards", label: "Cards", icon: "home" },

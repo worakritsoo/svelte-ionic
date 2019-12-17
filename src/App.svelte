@@ -10,7 +10,8 @@
 
   // Check that service workers are supported
   if ("serviceWorker" in navigator) {
-    const wb = new Workbox("sw.js");
+    /*
+  const wb = new Workbox("sw.js");
 
     wb.addEventListener("installed", event => {
       if (event.isUpdate) {
@@ -21,7 +22,7 @@
     });
 
     wb.register();
-
+*/
     // Use the window load event to keep the page load performant
     //	window.addEventListener('load', () => {
     //		navigator.serviceWorker.register('/sw.js');
@@ -29,8 +30,6 @@
   }
 
   const viewSource = () => {
-    console.log("asdsa", window.location.pathname);
-    console.log("asdasds2");
     IonicShowModal("source-viewer", SourceViewer, {
       name: window.location.pathname
     }).then(data => console.log(data));
