@@ -1,29 +1,40 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
+// for testing purposes
 if (workbox) {
     console.log(`Yay! Workbox is loaded 🎉`);
 } else {
     console.log(`Boo! Workbox didn't load 😬`);
 }
 
+// for testing purposes
 var today = new Date();
 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 console.log('Time ', time);
 
+// remove line if you want to have default behaviour (no debugging in prod)
 workbox.setConfig({ debug: true });
 
+
+// https://medium.com/@webmaxru/workbox-4-implementing-refresh-to-update-version-flow-using-the-workbox-window-module-41284967e79c
 workbox.core.skipWaiting();
 workbox.core.clientsClaim();
 
-// todo: cache ionic cdn assets
+// remove if not needed
+workbox.googleAnalytics.initialize();
 
+
+//
+// Caching strategies and routes
+// https://developers.google.com/web/tools/workbox/modules/workbox-strategies
+// https://developers.google.com/web/tools/workbox/guides/route-requests 
+//
 workbox.routing.registerRoute(
     new RegExp('https://cdn.jsdelivr.net/npm/@ionic'),
     new workbox.strategies.StaleWhileRevalidate({
         cacheName: 'ionic-cdn',
     })
 );
-
 
 workbox.routing.registerRoute(
     // Cache CSS files.
@@ -53,4 +64,6 @@ workbox.routing.registerRoute(
     })
 );
 
+// Use precache CLI to update sw-config.js 
+// https://developers.google.com/web/tools/workbox/guides/precache-files/cli
 workbox.precaching.precacheAndRoute([]);
