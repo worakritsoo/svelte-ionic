@@ -91,4 +91,6 @@
 <ion-content>
   <pre contenteditable="true">{sourceCode}</pre>
 </ion-content>
-<a target="_blank" bind:this={anchor} href="/" />
+<a target="_blank" bind:this={anchor} href="/">
+  <div />
+</a>

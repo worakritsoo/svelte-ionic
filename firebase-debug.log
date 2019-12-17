@@ -1,0 +1,60 @@
+[debug] [2019-12-17T21:25:26.055Z] ----------------------------------------------------------------------
+[debug] [2019-12-17T21:25:26.057Z] Command:       C:\Gebruikers\Developer\node\node.exe C:\Gebruikers\Developer\node\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-12-17T21:25:26.058Z] CLI Version:   7.10.0
+[debug] [2019-12-17T21:25:26.058Z] Platform:      win32
+[debug] [2019-12-17T21:25:26.058Z] Node Version:  v12.13.0
+[debug] [2019-12-17T21:25:26.059Z] Time:          Tue Dec 17 2019 22:25:26 GMT+0100 (Central European Standard Time)
+[debug] [2019-12-17T21:25:26.060Z] ----------------------------------------------------------------------
+[debug] [2019-12-17T21:25:26.060Z] 
+[debug] [2019-12-17T21:25:26.126Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-17T21:25:26.127Z] > authorizing via signed-in user
+[debug] [2019-12-17T21:25:26.128Z] [iam] checking project ionicsvelte for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-12-17T21:25:26.131Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ionicsvelte:testIamPermissions  
+
+[debug] [2019-12-17T21:25:27.693Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-17T21:25:27.701Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ionicsvelte  
+ 
+[debug] [2019-12-17T21:25:29.416Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'ionicsvelte'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-12-17T21:25:29.444Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/ionicsvelte/versions  
+
+[debug] [2019-12-17T21:25:32.218Z] <<< HTTP RESPONSE 200
+[info] i  hosting[ionicsvelte]: beginning deploy...
+[info] i  hosting[ionicsvelte]: found 70 files in public
+[debug] [2019-12-17T21:25:32.463Z] [hosting] hash cache [cHVibGlj] stored for 70 files
+[debug] [2019-12-17T21:25:32.464Z] [hosting][hash queue][FINAL]
+[debug] [2019-12-17T21:25:32.464Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/ionicsvelte/versions/ee1bf57a33d410ef:populateFiles  
+ <request body omitted>
+[debug] [2019-12-17T21:25:36.332Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-17T21:25:36.339Z] [hosting][populate queue][FINAL]
+[debug] [2019-12-17T21:25:36.339Z] [hosting] uploads queued: 4
+[debug] [2019-12-17T21:25:42.456Z] [hosting][upload queue][FINAL]
+[info] +  hosting[ionicsvelte]: file upload complete
+[debug] [2019-12-17T21:25:42.459Z] [hosting] deploy completed after 10233ms
+[debug] [2019-12-17T21:25:42.461Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "ionicsvelte"
+    },
+    "site": "ionicsvelte",
+    "version": "sites/ionicsvelte/versions/ee1bf57a33d410ef"
+  }
+]
+[info] i  hosting[ionicsvelte]: finalizing version...
+[debug] [2019-12-17T21:25:42.463Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/ionicsvelte/versions/ee1bf57a33d410ef?updateMask=status  
+
