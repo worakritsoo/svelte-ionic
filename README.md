@@ -1,16 +1,17 @@
 # Ionic Svelte UI demo
-Project to integrate Ionic UI goodies with svelte.
+Project to integrate Ionic UI goodies with svelte - with source code viewer
 
 To run this, you need to run `npm run dev`. Routing (deeplinking) through the SPA will be served through localhost:8080 (not :5000)
 
 Also published as web app: https://ionicsvelte.firebaseapp.com
 
 NEW FEATURE: click to view source! For all components (except tab) you can click the lower right source button to view the source and copy/paste in your app. If you use fullscreen view, the menu will be a sidepanel instead of a hamburger!
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Viewing the overview](https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen1.PNG)
 
+And the source view with copy feature and you can select text with the mouse:
+![Selecting source](https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen2.PNG)
 
-
-Features (vision/realised) 
+All features (vision/realised) 
 - All Ionic Framework UI components (99% done)
 - Run as SPA (100% done) - Router via "svelte-routing" repo
 - Service Worker setup via workbox (100%) 
