@@ -1,11 +1,4 @@
 <script>
-  import { LOCATION } from "svelte-routing";
-  const location = getContext(LOCATION);
-
-  location.subscribe(value => {
-    console.log("value2", value);
-  });
-
   let characters = {};
 
   const checkBoxChange = event => {

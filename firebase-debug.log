@@ -1,0 +1,13 @@
+[debug] [2019-12-17T19:43:48.034Z] ----------------------------------------------------------------------
+[debug] [2019-12-17T19:43:48.039Z] Command:       C:\Gebruikers\Developer\node\node.exe C:\Gebruikers\Developer\node\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-12-17T19:43:48.039Z] CLI Version:   7.10.0
+[debug] [2019-12-17T19:43:48.040Z] Platform:      win32
+[debug] [2019-12-17T19:43:48.040Z] Node Version:  v12.13.0
+[debug] [2019-12-17T19:43:48.042Z] Time:          Tue Dec 17 2019 20:43:48 GMT+0100 (Central European Standard Time)
+[debug] [2019-12-17T19:43:48.043Z] ----------------------------------------------------------------------
+[debug] [2019-12-17T19:43:48.043Z] 
+[debug] [2019-12-17T19:43:48.110Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-17T19:43:48.111Z] > authorizing via signed-in user
+[debug] [2019-12-17T19:43:48.111Z] [iam] checking project ionicsvelte for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-12-17T19:43:48.115Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ionicsvelte:testIamPermissions  
+

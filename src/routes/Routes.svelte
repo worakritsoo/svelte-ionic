@@ -86,8 +86,8 @@
   ];
 
   const myTabs = [
-    { label: "Text", icon: "musical-note", tab: "music", component: Music },
     { label: "Magic", icon: "videocam", tab: "movies", component: Movies },
+    { label: "Text", icon: "musical-note", tab: "music", component: Music },
     {
       label: "Nothing",
       icon: "logo-game-controller-b",

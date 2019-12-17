@@ -1,5 +1,6 @@
 <script>
-  import Extra from "./Extra.svelte";
+  import ModalExtra from "./ionic/ModalExtra.svelte";
+  import PopoverExtra from "./ionic/PopoverExtra.svelte";
   import {
     IonicShowActionSheet,
     IonicShowAlert,
@@ -11,20 +12,18 @@
   } from "./../services/IonicControllers";
 
   const showModal = () => {
-    IonicShowModal("modal-extra", Extra, {
+    IonicShowModal("modal-extra", ModalExtra, {
       firstName: "Douglas",
       lastName: "Adams",
-      middleInitial: "N",
-      type: "popover"
+      middleInitial: "N"
     }).then(data => console.log(data));
   };
 
   const showPopover = event => {
-    IonicShowPopover(event, "modal-extra", Extra, {
+    IonicShowPopover(event, "popover-extra", PopoverExtra, {
       firstName: "Douglas",
       lastName: "Adams",
-      middleInitial: "N",
-      type: "popover"
+      middleInitial: "N"
     }).then(data => console.log(data));
   };
 
@@ -331,5 +330,4 @@
   <ion-button expand="block" on:click={showLoading}>Show Loading</ion-button>
   <ion-button expand="block" on:click={showPicker}>Show Picker</ion-button>
   <ion-button expand="block" on:click={showToast}>Show Toast</ion-button>
-
 </ion-content>

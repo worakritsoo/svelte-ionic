@@ -59,11 +59,12 @@ export const IonicShowPopover = (event, selector, component, componentProps) => 
     return controller
         .create({
             component: selector,
+            event,
             componentProps
         })
         .then(popover => {
             popover.present();
-            return popover.onWillDismiss()
+            return popover.onWillDismiss();
         });
 };
 

@@ -1,9 +1,5 @@
 <script>
   let overlayElement = document.querySelector("ion-modal");
-  if (!overlayElement) {
-    overlayElement = document.querySelector("ion-popover");
-  }
-
   console.log(overlayElement.componentProps);
 
   const closeOverlay = () => {
