@@ -5,7 +5,7 @@ import { register } from "svelte-custom-elements";
 //
 
 // see if webcomponent is already created
-const isRegistered = function (name) {
+const isRegistered = function(name) {
     return document.createElement(name).constructor !== HTMLElement;
 };
 
@@ -32,7 +32,10 @@ const DefaultIonicController = (selector) => {
         const controller = registerDOMOnce(selector);
         return controller
             .create(options)
-            .then(ionicitem => ionicitem.present());
+            .then(ionicitem => {
+                ionicitem.present()
+                return ionicitem; // a promise that needs resolution to access dimiss etc.
+            });
     }
 }
 

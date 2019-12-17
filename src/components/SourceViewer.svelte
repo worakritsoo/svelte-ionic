@@ -1,7 +1,10 @@
 <script>
   import { Plugins } from "@capacitor/core";
   import { fromFetch } from "rxjs/fetch";
-  import { IonicShowToast } from "../services/IonicControllers";
+  import {
+    IonicShowToast,
+    IonicShowLoading
+  } from "../services/IonicControllers";
 
   const { Clipboard } = Plugins;
   const { componentProps } = document.querySelector("ion-modal");
@@ -36,7 +39,6 @@
     anchor.click();
   };
 
-  let sourceCode = "";
   const data$ = fromFetch("assets/src/" + name + ".svelte").subscribe(
     response => {
       response.text().then(txt => {

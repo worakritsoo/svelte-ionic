@@ -89,9 +89,15 @@
   };
 
   const showLoading = () => {
-    IonicShowLoading({
-      message: "Please wait...",
+    const s = IonicShowLoading({
+      message: "Please wait......",
       duration: 3000
+    });
+
+    s.then(x => {
+      x.dismiss();
+
+      console.log("x", x);
     });
   };
 
