@@ -8,7 +8,7 @@ Also published as web app: https://ionicsvelte.firebaseapp.com
 NEW FEATURE: click to view source! For all components (except tab) you can click the lower right source button to view the source and copy/paste in your app. If you use fullscreen view, the menu will be a sidepanel instead of a hamburger!
 ![Viewing the overview](https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen1.PNG | width=100)
 
-<img src="./https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen1.PNG" width="100" height="100">
+<img src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen1.PNG" width="100" height="100">
 
 And the source view with copy feature and you can select text with the mouse:
 ![Selecting source](https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen2.PNG | width=100)
