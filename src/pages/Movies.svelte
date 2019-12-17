@@ -184,7 +184,6 @@
           value: "value6"
         }
       ],
-
       buttons: [
         {
           text: "Cancel",
@@ -196,8 +195,65 @@
         },
         {
           text: "Ok",
+          handler: data => {
+            console.log("Confirm Ok", data);
+          }
+        }
+      ]
+    });
+  };
+
+  const showCheckboxAlert = () => {
+    IonicShowAlert({
+      header: "Radio",
+      subHeader: "Subtitle",
+      message: "This is an alert message.",
+      inputs: [
+        {
+          type: "checkbox",
+          label: "Checkbox 1",
+          value: "value1",
+          checked: true
+        },
+        {
+          type: "checkbox",
+          label: "Checkbox 2",
+          value: "value2"
+        },
+        {
+          type: "checkbox",
+          label: "Checkbox 3",
+          value: "value3"
+        },
+        {
+          type: "checkbox",
+          label: "Checkbox 4",
+          value: "value4"
+        },
+        {
+          type: "checkbox",
+          label: "Checkbox 5",
+          value: "value5"
+        },
+        {
+          type: "checkbox",
+          label: "Checkbox 6",
+          value: "value6"
+        }
+      ],
+      buttons: [
+        {
+          text: "Cancel",
+          role: "cancel",
+          cssClass: "secondary",
           handler: () => {
-            console.log("Confirm Ok");
+            console.log("Confirm Cancel");
+          }
+        },
+        {
+          text: "Ok",
+          handler: data => {
+            console.log("Confirm Ok", data);
           }
         }
       ]
@@ -264,7 +320,9 @@
   <ion-button expand="block" on:click={showRadioAlert}>
     Show Radio Alert
   </ion-button>
-
+  <ion-button expand="block" on:click={showCheckboxAlert}>
+    Show Checkbox Alert
+  </ion-button>
   <ion-button expand="block" on:click={showInputAlert}>
     Show Input Alert
   </ion-button>
