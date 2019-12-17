@@ -5,13 +5,12 @@ To run this, you need to run `npm run dev`. Routing (deeplinking) through the SP
 
 Also published as web app: https://ionicsvelte.firebaseapp.com
 
-NEW FEATURE: click to view source! For all components (except tab) you can click the lower right source button to view the source and copy/paste in your app. If you use fullscreen view, the menu will be a sidepanel instead of a hamburger!
-![Viewing the overview](https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen1.PNG | width=100)
+**NEW FEATURE: click to view source! For all components (except tab) you can click the lower right source button to view the source and copy/paste in your app. If you use fullscreen view, the menu will be a sidepanel instead of a hamburger!**
 
-<img src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen1.PNG" width="75%" >
+<img alt="Screen1.PNG" src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen1.PNG" width="75%" >
 
 And the source view with copy feature and you can select text with the mouse:
-![Selecting source](https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen2.PNG | width=100)
+<img alt="Screen2.PNG" src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen2.PNG" width="75%" >
 
 All features (vision/realised) 
 - All Ionic Framework UI components (99% done)
