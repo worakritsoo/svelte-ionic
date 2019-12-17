@@ -5,7 +5,11 @@
   import { Plugins } from "@capacitor/core";
   import localforage from "localforage";
 
+  const splitpane = document.querySelector("ion-split-pane");
+  splitpane.disabled = true;
+
   setTimeout(() => {
+    splitpane.disabled = false;
     navigate("/slides");
   }, 4000);
 
