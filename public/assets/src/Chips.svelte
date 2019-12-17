@@ -3,10 +3,6 @@
     margin-left: 16px;
     margin-top: 0;
   }
-
-  ion-chip {
-    --border-radius: 100px;
-  }
 </style>
 
 <ion-header translucent>

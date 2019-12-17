@@ -1,6 +1,6 @@
 <style>
-  ion-item {
-    --background: grey;
+  .blue-item {
+    --background: blue;
   }
 </style>
 
@@ -16,7 +16,7 @@
 <ion-content fullscreen class="ion-padding">
   <ion-list>
     <ion-list-header>Items with Labels</ion-list-header>
-    <ion-item>
+    <ion-item class="grey-item">
       <ion-label>Label</ion-label>
     </ion-item>
 
@@ -91,7 +91,7 @@
     <ion-list-header>Sliding Item</ion-list-header>
 
     <ion-item-sliding>
-      <ion-item>
+      <ion-item class="blue-item">
         <ion-label>New Message</ion-label>
       </ion-item>
 
