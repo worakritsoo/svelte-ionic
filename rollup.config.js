@@ -20,6 +20,12 @@ export default {
 	plugins: [
 
 		copy({
+			targets: [{ src: 'src/pages/ionic/*', dest: 'public/assets/src' }],
+			verbose: true,
+			copyOnce: true
+		}),
+
+		copy({
 			targets: [{ src: 'src/assets/*', dest: 'public/assets' }],
 			verbose: true,
 			copyOnce: true

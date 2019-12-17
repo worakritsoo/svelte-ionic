@@ -9,7 +9,6 @@
   import Splash from "./../pages/Splash.svelte";
 
   import Home from "./../pages/Home.svelte";
-  // import DefaultTab from "./../pages/DefaultTab.svelte";
 
   import Music from "./../pages/Music.svelte";
   import Movies from "./../pages/Movies.svelte";
@@ -26,14 +25,13 @@
   import Icons from "./../pages/ionic/Icons.svelte";
   import Infinitescroll from "./../pages/ionic/Infinitescroll.svelte";
   import Inputs from "./../pages/ionic/Inputs.svelte";
-  import Introduction from "./../pages/ionic/Introduction.svelte";
   import Items from "./../pages/ionic/Items.svelte";
   import Lists from "./../pages/ionic/Lists.svelte";
   import Nav from "./../pages/ionic/Nav.svelte";
   import NavHome from "./../pages/ionic/NavHome.svelte";
 
   import Notes from "./../pages/ionic/Notes.svelte";
-  import ProgressBar from "./../pages/ionic/ProgressBar.svelte";
+  import Progressbar from "./../pages/ionic/Progressbar.svelte";
   import Radios from "./../pages/ionic/Radios.svelte";
   import Range from "./../pages/ionic/Range.svelte";
   import Refresher from "./../pages/ionic/Refresher.svelte";
@@ -42,6 +40,7 @@
   import Segment from "./../pages/ionic/Segment.svelte";
   import Select from "./../pages/ionic/Select.svelte";
   import Skeleton from "./../pages/ionic/Skeleton.svelte";
+  import Slides from "./../pages/ionic/Slides.svelte";
   import Spinner from "./../pages/ionic/Spinner.svelte";
   import Text from "./../pages/ionic/Text.svelte";
   import Thumbnails from "./../pages/ionic/Thumbnails.svelte";
@@ -50,8 +49,7 @@
 
   const routes = [
     { path: "/", component: Splash },
-    { path: "/intro", component: Introduction },
-    //  { path: "/tabalt", component: DefaultTab },
+    { path: "/slides", component: Slides },
     { path: "/avatars", component: Avatars },
     { path: "/buttons", component: Buttons },
     { path: "/cards", component: Cards },
@@ -63,12 +61,11 @@
     { path: "/icons", component: Icons },
     { path: "/infinitescroll", component: Infinitescroll },
     { path: "/inputs", component: Inputs },
-    { path: "/introduction", component: Introduction },
-    { path: "/slides", component: Introduction },
+    { path: "/slides", component: Slides },
     { path: "/items", component: Items },
     { path: "/lists", component: Lists },
     { path: "/notes", component: Notes },
-    { path: "/progressbar", component: ProgressBar },
+    { path: "/progressbar", component: Progressbar },
     { path: "/radios", component: Radios },
     { path: "/range", component: Range },
     { path: "/refresher", component: Refresher },

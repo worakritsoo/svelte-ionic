@@ -6,7 +6,7 @@
   import localforage from "localforage";
 
   setTimeout(() => {
-    navigate("/intro");
+    navigate("/slides");
   }, 4000);
 
   console.log("STORAGE", localforage);

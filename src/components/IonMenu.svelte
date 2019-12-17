@@ -67,4 +67,5 @@
     </ion-content>
   {/if}
 </ion-menu>
+
 <ion-menu-controller bind:this={menucontroller} />

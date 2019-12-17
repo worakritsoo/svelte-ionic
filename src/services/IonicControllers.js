@@ -70,3 +70,4 @@ export const IonicShowPopover = (event, selector, component, componentProps) => 
 export const IonicShowLoading = DefaultIonicController("ion-loading-controller");
 export const IonicShowPicker = DefaultIonicController("ion-picker-controller");
 export const IonicShowAlert = DefaultIonicController("ion-alert-controller");
+export const IonicShowToast = DefaultIonicController("ion-toast-controller");

@@ -5,6 +5,9 @@
 
   import { Workbox } from "workbox-window";
 
+  import SourceViewer from "./components/SourceViewer.svelte";
+  import { IonicShowModal } from "./services/IonicControllers";
+
   // Check that service workers are supported
   if ("serviceWorker" in navigator) {
     const wb = new Workbox("sw.js");
@@ -24,15 +27,28 @@
     //		navigator.serviceWorker.register('/sw.js');
     //	});
   }
+
+  const viewSource = () => {
+    console.log("asdsa", window.location.pathname);
+    console.log("asdasds2");
+    IonicShowModal("source-viewer", SourceViewer, {
+      name: window.location.pathname
+    }).then(data => console.log(data));
+  };
 </script>
 
 <svelte:head>
   <title>Ionic Svelte UI demo</title>
-
 </svelte:head>
 
 <ion-app>
-  <IonMenu />
-  <Routes />
-
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="dark" on:click={viewSource}>
+      <ion-icon name="code-working" />
+    </ion-fab-button>
+  </ion-fab>
+  <ion-split-pane>
+    <IonMenu />
+    <Routes main />
+  </ion-split-pane>
 </ion-app>

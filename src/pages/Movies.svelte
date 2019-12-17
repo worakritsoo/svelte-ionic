@@ -5,7 +5,8 @@
     IonicShowPicker,
     IonicShowLoading,
     IonicShowModal,
-    IonicShowPopover
+    IonicShowPopover,
+    IonicShowToast
   } from "./../services/IonicControllers";
 
   const showModal = () => {
@@ -94,6 +95,15 @@
     });
   };
 
+  const showToast = () => {
+    IonicShowToast({
+      color: "dark",
+      duration: 2000,
+      message: "Paired successfully",
+      showCloseButton: true
+    });
+  };
+
   const showPicker = () => {
     const pickerOptions = [
       {
@@ -142,5 +152,6 @@
   <ion-button expand="block" on:click={showPopover}>Show Popover</ion-button>
   <ion-button expand="block" on:click={showLoading}>Show Loading</ion-button>
   <ion-button expand="block" on:click={showPicker}>Show Picker</ion-button>
+  <ion-button expand="block" on:click={showToast}>Show Toast</ion-button>
 
 </ion-content>

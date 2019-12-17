@@ -6,8 +6,8 @@ To run this, you need to run `npm run dev`. Routing (deeplinking) through the SP
 Also published as web app: https://ionicsvelte.firebaseapp.com
 
 Features (vision/realised) 
-- All Ionic Framework UI components (80% done)
-- Run as SPA (100% done)
+- All Ionic Framework UI components (99% done)
+- Run as SPA (100% done) - Router via "svelte-routing" repo
 - Service Worker setup via workbox (100%) 
 - PWA compliance via Ligthouse score (70%))
 - Stores/RXJS (0%)
@@ -57,3 +57,5 @@ A number of todo's:
 - singleton classes https://alligator.io/js/js-singletons/
 - place routes in better place (pages folder probably, to avoid repeating /../)
 - consider Contexts for exposing controllers?
+- ~~split pane~~
+- SSR
