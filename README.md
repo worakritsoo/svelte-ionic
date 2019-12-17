@@ -19,13 +19,14 @@ And the source view with copy feature and you can select text with the mouse:
 All features (vision/realised) 
 - All Ionic Framework UI components (99% done)
 - Run as SPA (100% done) - Router via "svelte-routing" repo
-- Service Worker setup via workbox (100%) 
-- PWA compliance via Ligthouse score (70%))
+- Service Worker setup via workbox (50%) 
+- PWA compliance via Ligthouse score (40%))
 - Stores (0%)
 - RXJS (25%)
 - Localstorage via localforage (50%)
 - Firebase SDK (0%)
 - Capacitor for mobile native support (100%)
+- Ionic Theming in local styles and global CSS (100%)
 
 # Known issues
 
@@ -44,7 +45,7 @@ Update 2019/12/16 - it seems svelte is too fast for the ionic code to be loaded 
 Need to use other api
 
 ## IonNav no navigation and ion-back-button does not show
-There is much going on in the IonNav
+There is much going wrong in the IonNav
 
 ## Fly in has a jitter
 ~~Splash screen image has a jitter~~
@@ -52,8 +53,8 @@ There is much going on in the IonNav
 # Todo's
 A number of todo's:
 - ~~add the popoover and other controller related items~~
-- try the css styling as per documentation (theming)
-- look at awesome rollup and add typescript
+- ~~try the css styling as per documentation (theming)~~
+- ~~look at awesome rollup and add typescript -~~ not mature enough!!
 - ~~fix rollup copy of files in assets folder~~
 - ~~do some binding on inputs and other interactive elements~~
 - ionicons for menu - colors and other names
@@ -71,4 +72,4 @@ A number of todo's:
 - consider Contexts for exposing controllers?
 - ~~split pane~~
 - SSR
-- to docs link https://ionicframework.com/docs/api/input
+- ~~to docs link https://ionicframework.com/docs/api/input~~
