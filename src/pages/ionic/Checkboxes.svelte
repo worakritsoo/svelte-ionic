@@ -4,7 +4,7 @@
   const checkBoxChange = event => {
     if (event.detail.value) {
       characters[event.detail.value] = event.detail.checked;
-      console.log("CHARACTERS", characters);
+      console.log(JSON.stringify(characters, null, 2));
     }
   };
 </script>
