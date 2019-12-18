@@ -15,7 +15,7 @@
       console.log("Loading data...");
       await wait(500);
       infiniteScroll.complete();
-      appendItems(15);
+      appendItems(175);
       console.log("Done");
     } else {
       console.log("No More Data");
@@ -59,7 +59,7 @@
     IonicShowToast({
       color: "dark",
       duration: 3000,
-      message: `<ion-icon name="${icon}"></ion-icon> - ${icon} - copied`,
+      message: `<ion-icon style="font-size:350%" name="${icon}"></ion-icon> - ${icon} - copied`,
       showCloseButton: true
     });
   };

@@ -1,6 +1,8 @@
 <script>
   import { navigate } from "svelte-routing";
+  import { fromFetch } from "rxjs/fetch";
 
+  let anchor;
   export let side = "start";
 
   let menucontroller;
@@ -10,8 +12,31 @@
     navigate(url);
   }
 
-  const menuItems = [
-    { url: "/tabs/movies", label: "Tabs with perks", icon: "home" },
+  const goToGitHub = () => {
+    console.log("SDASDS");
+    anchor.click();
+  };
+
+  const getRandomColor = () => {
+    const items = [
+      "secondary",
+      "primary",
+      "danger",
+      "warning",
+      "dark",
+      "medium",
+      "success",
+      "tertiary"
+    ];
+    return items[Math.floor(Math.random() * items.length)];
+  };
+
+  let menuItems = [
+    {
+      url: "/tabs/movies",
+      label: "Tabs with perks (modal/alert/etc)",
+      icon: "home"
+    },
     { url: "/avatars", label: "Avatars", icon: "home" },
     { url: "/buttons", label: "Buttons", icon: "home" },
     { url: "/cards", label: "Cards", icon: "home" },
@@ -43,6 +68,23 @@
     { url: "/toggle", label: "Toggle", icon: "home" },
     { url: "/toolbar", label: "Toolbar", icon: "home" }
   ];
+
+  // randomize the icons for the menu
+  let icons;
+  fromFetch("/assets/json/ionicons.json").subscribe(
+    response => {
+      response.json().then(json => {
+        icons = json.icons;
+        menuItems.map(menuItem => {
+          menuItem.icon = icons[Math.floor(Math.random() * icons.length)];
+        });
+        menuItems = [...menuItems];
+      });
+    },
+    error => {
+      console.error("Error HTTP", error);
+    }
+  );
 </script>
 
 <ion-menu {side}>
@@ -54,16 +96,30 @@
     </ion-header>
     <ion-content>
       <ion-list>
-        {#each menuItems as menuItem}
+        {#each menuItems as menuItem, i}
           <ion-item
             on:click={() => {
               closeAndNavigate(menuItem.url);
             }}>
-            <ion-icon name={menuItem.icon} slot="start" />
+            <ion-icon
+              name={menuItem.icon}
+              slot="start"
+              color={getRandomColor()} />
             <ion-label>{menuItem.label}</ion-label>
           </ion-item>
         {/each}
+        <ion-item />
+        <ion-item on:click={goToGitHub}>
+          <ion-icon name="logo-github" slot="start" />
+          <ion-label>Go to GitHub for this app</ion-label>
+        </ion-item>
       </ion-list>
+      <a
+        target="_blank"
+        bind:this={anchor}
+        href="https://github.com/Tommertom/svelte-ionic-app">
+        <div />
+      </a>
     </ion-content>
   {/if}
 </ion-menu>
