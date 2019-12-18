@@ -1,6 +1,7 @@
 <script>
   import { navigate } from "svelte-routing";
-  import { fly } from "svelte/transition";
+  import { scale } from "svelte/transition";
+  import { elasticInOut } from "svelte/easing";
 
   import { Plugins } from "@capacitor/core";
   import localforage from "localforage";
@@ -38,26 +39,29 @@
 </script>
 
 <style>
-  h1,
   img {
-    text-align: center;
-    margin: 0 auto;
+    width: 30%;
   }
 </style>
 
 <ion-header translucent>
   <ion-toolbar>
-    <ion-title>Ionic Svelte UI</ion-title>
+    <ion-title>Ionic Svelte UI App</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <br />
-  <img
-    src="assets/img/great-success.png"
-    alt="Great success"
-    in:fly={{ y: 200, duration: 750 }} />
-  <br />
-  <br />
-  <h1 in:fly={{ y: 600, duration: 1900 }}>Great success!</h1>
+
+  <div class="ion-text-center">
+    <img
+      src="assets/img/great-success.png"
+      alt="Great success"
+      in:scale={{ duration: 1900, easing: elasticInOut }} />
+
+    <div in:scale={{ delay: 400, duration: 1900, easing: elasticInOut }}>
+      Great success!
+    </div>
+  </div>
+
 </ion-content>
