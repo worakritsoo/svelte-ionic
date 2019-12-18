@@ -26,7 +26,7 @@
   import Items from "./../pages/ionic/Items.svelte";
   import Lists from "./../pages/ionic/Lists.svelte";
   import Nav from "./../pages/ionic/Nav.svelte";
-  import NavHome from "./../pages/ionic/NavHome.svelte";
+  import Navhome from "./../pages/ionic/NavHome.svelte";
 
   import Notes from "./../pages/ionic/Notes.svelte";
   import Progressbar from "./../pages/ionic/Progressbar.svelte";
@@ -78,7 +78,7 @@
     { path: "/toggle", component: Toggle },
     { path: "/toolbar", component: Toolbar },
 
-    { path: "/nav", component: NavHome }
+    { path: "/nav", component: Navhome }
   ];
 
   const myTabs = [

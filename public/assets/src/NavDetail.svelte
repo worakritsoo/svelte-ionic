@@ -1,4 +1,6 @@
 <script>
+  import IonBackButton from "../../components/IonBackButton.svelte";
+
   const nav = document.querySelector("ion-nav");
   const tech = document.querySelector("nav-detail").tech;
 
@@ -10,10 +12,7 @@
 <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button />
-    </ion-buttons>
-    <ion-buttons>
-      <ion-back-button text="Back" icon="close" />
+      <IonBackButton />
     </ion-buttons>
     <ion-title>{tech.title}</ion-title>
   </ion-toolbar>

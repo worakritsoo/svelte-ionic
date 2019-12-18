@@ -30,25 +30,17 @@ All features (vision/realised)
 
 # Known issues
 
-## IonTab present not ready onMount
-~~Issue is in IonTab.svelte. The onMount triggers too earlier for the controller to be able to expose the `present` method for programmatically setting the tab selected by default.~~
-
-The ionic api docs state you can predefine as property to ion-tab-bar, but this does not seem to work.
-
-Update 13/12/2019: workaround: add ion-router (with no routes! as we don't want hash routes) to IonTab so at least the default tab is not shown as per ion-tabs.tsx (see https://github.com/ionic-team/ionic/issues/20060). No ugly UI, but bit hacky code to find when `present` is present. And we get ionic errors in console because of router issue.
-
-~~So besides workaround, I need a bit of help on svelte onMount wrt webcomponents.~~
-
-Update 2019/12/16 - it seems svelte is too fast for the ionic code to be loaded - probably because it is in the App.svelte HEAD. Moving CDN reference to template.html. Maintaining the hacky code in IonTab.svelte for the time being.
+## Ion Tabs
+May need to refactor the IonTab.svelte
 
 ## IonMenu gives warning
 Need to use other api
 
-## IonNav no navigation and ion-back-button does not show
-There is much going wrong in the IonNav
+## ion-back-button does not show
+Ion Back Button does not appear in the app. Neither in a REPL. Made a custom version.
 
-## Fly in has a jitter
-~~Splash screen image has a jitter~~
+## Nav needs customElement
+Not necessarily an issue, but still a bit undesireable to make a custom element to be using a IonNav (as in `<ion-nav root="my-element">`)
 
 # Todo's
 A number of todo's:

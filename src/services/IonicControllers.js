@@ -3,17 +3,9 @@ import { register } from "svelte-custom-elements";
 //
 // Private functions 
 //
-
 // see if webcomponent is already created
 const isRegistered = function(name) {
     return document.createElement(name).constructor !== HTMLElement;
-};
-
-// register webcomponent if not yet done
-const registerWebComponentOnce = (selector, component) => {
-    if (!isRegistered(selector)) {
-        register(selector, component, []);
-    }
 };
 
 // add DOM element if it not exists and return to caller
@@ -39,9 +31,21 @@ const DefaultIonicController = (selector) => {
     }
 }
 
+
 //
 // API methods
 //
+// register webcomponent if not yet done
+export const registerWebComponentOnce = (selector, component) => {
+    if (!isRegistered(selector)) {
+        register(selector, component, []);
+    }
+};
+
+export const getIonicNav = () => {
+    return document.querySelector("ion-nav");
+}
+
 export const IonicShowModal = (selector, component, componentProps) => {
     const controller = registerDOMOnce("ion-modal-controller");
     registerWebComponentOnce(selector, component);
@@ -71,8 +75,7 @@ export const IonicShowPopover = (event, selector, component, componentProps) => 
         });
 };
 
-export const IonicShowLoading =
-    DefaultIonicController("ion-loading-controller");
+export const IonicShowLoading = DefaultIonicController("ion-loading-controller");
 export const IonicShowPicker = DefaultIonicController("ion-picker-controller");
 export const IonicShowAlert = DefaultIonicController("ion-alert-controller");
 export const IonicShowToast = DefaultIonicController("ion-toast-controller");
