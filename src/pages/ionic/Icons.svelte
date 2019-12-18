@@ -63,6 +63,20 @@
       showCloseButton: true
     });
   };
+
+  const getRandomColor = () => {
+    const items = [
+      "secondary",
+      "primary",
+      "danger",
+      "warning",
+      "dark",
+      "medium",
+      "success",
+      "tertiary"
+    ];
+    return items[Math.floor(Math.random() * items.length)];
+  };
 </script>
 
 <style>
@@ -89,7 +103,7 @@
           on:click={() => {
             iconClicked(icon);
           }}>
-          <ion-icon name={icon} />
+          <ion-icon name={icon} color={getRandomColor()} />
         </ion-col>
       {/each}
     </ion-row>
