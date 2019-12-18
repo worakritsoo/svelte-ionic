@@ -168,6 +168,10 @@ workbox.precaching.precacheAndRoute([
     "revision": "9bc5d7587877590f2074280ae1d833ee"
   },
   {
+    "url": "assets/img/slides/svelte.png",
+    "revision": "ffb99304c099d2e41d5a3635fcc9c288"
+  },
+  {
     "url": "assets/json/api-mappings.json",
     "revision": "e79aea50ab54240e3fdf70f8c77983e4"
   },
@@ -177,11 +181,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "build/bundle.css",
-    "revision": "4713de0cd9ed0a1bc0d995ff2cfa4c4c"
+    "revision": "81545ecfbacee4775ff7da3ba72aafbb"
   },
   {
     "url": "build/bundle.js",
-    "revision": "59f4baaf9c7f47af075524068a29f93e"
+    "revision": "a6206a55255809d98df72878a9488882"
   },
   {
     "url": "favicon.png",
