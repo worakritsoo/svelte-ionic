@@ -1,7 +1,7 @@
 <script>
   const nav = document.querySelector("ion-nav");
 
-  //  export let color;
+  export let color;
   //  export let defaultHref;
   export let disabled = false;
   export let icon;
@@ -18,6 +18,10 @@
     text = "Back";
   }
 
+  if (!color) {
+    color = "primary";
+  }
+
   const popWindow = () => {
     if (!disabled) {
       nav.pop();
@@ -26,5 +30,5 @@
 </script>
 
 <ion-button on:click={popWindow}>
-  <ion-icon name={icon} />
+  <ion-icon name={icon} {color} />
 </ion-button>

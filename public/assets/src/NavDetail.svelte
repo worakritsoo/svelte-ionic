@@ -23,11 +23,4 @@
     style="color: {tech.color}"
     size="large" />
   <p>{tech.description}</p>
-
-  <ion-button
-    on:click={() => {
-      popWindow();
-    }}>
-    Go back
-  </ion-button>
 </ion-content>
