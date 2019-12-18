@@ -168,16 +168,20 @@ workbox.precaching.precacheAndRoute([
     "revision": "9bc5d7587877590f2074280ae1d833ee"
   },
   {
+    "url": "assets/json/api-mappings.json",
+    "revision": "e79aea50ab54240e3fdf70f8c77983e4"
+  },
+  {
     "url": "assets/src/users.js",
     "revision": "6e82510cd7dff2a926d21c2e18091b87"
   },
   {
     "url": "build/bundle.css",
-    "revision": "352f18af02bb670356868a44b4536b89"
+    "revision": "4713de0cd9ed0a1bc0d995ff2cfa4c4c"
   },
   {
     "url": "build/bundle.js",
-    "revision": "f33cdcc57299a3165652c463bf2b32ac"
+    "revision": "59f4baaf9c7f47af075524068a29f93e"
   },
   {
     "url": "favicon.png",

@@ -94,8 +94,9 @@
       duration: 3000
     });
 
+    // todo: fix controller
     s.then(x => {
-      x.dismiss();
+      //   x.dismiss();
 
       console.log("x", x);
     });

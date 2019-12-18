@@ -10,6 +10,7 @@
   const { componentProps } = document.querySelector("ion-modal");
 
   let anchor;
+  let apiURL = "";
 
   // probably can be done in easier way, but I am lazy
   let name = "/";
@@ -17,12 +18,14 @@
     name = componentProps.name;
   }
 
-  // remove trailing /
+  // generate the name to source file
   name = name.substr(1);
   name = name.charAt(0).toUpperCase() + name.slice(1);
   if (name.length == 0) {
     name = "Splash";
   }
+  name = name.replace("Tabs/", "");
+  console.log("Name", name);
 
   const closeOverlay = () => {
     const modal = document.querySelector("ion-modal");
@@ -30,23 +33,47 @@
   };
 
   const goAPIdocs = () => {
+    // try to generate the url to the api docs
     let apiName = name.toLowerCase();
     if (apiName.charAt(apiName.length - 1) == "s") {
       apiName = apiName.slice(0, -1);
     }
-    console.log("APINAME", apiName);
-    anchor.href = "https://ionicframework.com/docs/api/" + apiName;
-    anchor.click();
+    console.log("Raw APINAME", apiName);
+
+    // do a mapping for some exceptions
+    apiName = apiName.replace("/", "");
+    fromFetch("/assets/json/api-mappings.json").subscribe(
+      response => {
+        response.json().then(json => {
+          let url = "https://ionicframework.com/docs/api/";
+          if (json[apiName]) {
+            url += json[apiName];
+            if (json[apiName].toLowerCase().substring(0, 4) == "http") {
+              url = json[apiName];
+            }
+          } else {
+            url += apiName;
+          }
+          anchor.href = url;
+          anchor.click();
+        });
+      },
+      error => {
+        console.error("Error HTTP", error);
+      }
+    );
   };
 
   let sourceCode = "Loading....";
-  const data$ = fromFetch("assets/src/" + name + ".svelte").subscribe(
-    response => {
-      response.text().then(txt => {
+  fromFetch("assets/src/" + name + ".svelte").subscribe(response => {
+    response.text().then(txt => {
+      if (txt.search("<!DOCTYPE html>") > -1) {
+        sourceCode = `No svelte file found for ${name}. Please check github repo.`;
+      } else {
         sourceCode = txt;
-      });
-    }
-  );
+      }
+    });
+  });
 
   const copySource = () => {
     Clipboard.write({
@@ -87,7 +114,7 @@
         <ion-icon name="close" />
       </ion-button>
     </ion-buttons>
-    <ion-title>Source code for {name}</ion-title>
+    <ion-title>Source</ion-title>
   </ion-toolbar>
 </ion-header>
 

@@ -52,7 +52,8 @@
 
 <ion-content>
   <br />
-
+  <br />
+  <br />
   <div class="ion-text-center">
     <img
       src="assets/img/great-success.png"
