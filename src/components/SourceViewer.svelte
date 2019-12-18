@@ -39,6 +39,7 @@
     anchor.click();
   };
 
+  let sourceCode = "Loading....";
   const data$ = fromFetch("assets/src/" + name + ".svelte").subscribe(
     response => {
       response.text().then(txt => {
