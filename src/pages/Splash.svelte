@@ -47,7 +47,7 @@
 
 <ion-header translucent>
   <ion-toolbar>
-    <ion-title>Jagshemash!</ion-title>
+    <ion-title>Ionic Svelte UI</ion-title>
   </ion-toolbar>
 </ion-header>
 
