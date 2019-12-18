@@ -36,7 +36,7 @@
     { url: "/segment", label: "Segment", icon: "home" },
     { url: "/select", label: "Select", icon: "home" },
     { url: "/skeleton", label: "Skeleton", icon: "home" },
-    { url: "/introduction", label: "Slides", icon: "home" },
+    { url: "/slides", label: "Slides", icon: "home" },
     { url: "/spinner", label: "Spinner", icon: "home" },
     { url: "/text", label: "Text", icon: "home" },
     { url: "/thumbnails", label: "Thumbnails", icon: "home" },
