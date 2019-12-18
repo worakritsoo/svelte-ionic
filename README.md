@@ -73,3 +73,4 @@ A number of todo's:
 - ~~split pane~~
 - SSR
 - ~~to docs link https://ionicframework.com/docs/api/input~~
+- https://css-tricks.com/what-i-like-about-writing-styles-with-svelte/

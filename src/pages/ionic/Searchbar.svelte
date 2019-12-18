@@ -1,10 +1,11 @@
 <script>
   import { onMount } from "svelte";
 
+  let listElement;
   let items;
 
   onMount(() => {
-    items = Array.from(document.getElementById("cities").children);
+    items = Array.from(listElement.children);
   });
 
   function handleInput(event) {
@@ -31,7 +32,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content fullscreen>
-  <ion-list id="cities">
+  <ion-list bind:this={listElement}>
     <ion-item>Amsterdam</ion-item>
     <ion-item>Bogota</ion-item>
     <ion-item>Buenos Aires</ion-item>
