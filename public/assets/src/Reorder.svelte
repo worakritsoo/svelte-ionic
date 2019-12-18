@@ -1,8 +1,19 @@
 <script>
+  // code taken from https://petercoding.com/ionic/2019/05/06/implementing-reorder-in-ionic4/
   let reorderGroup;
+  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   const toggleReorder = () => {
     reorderGroup.disabled = !reorderGroup.disabled;
+  };
+
+  const reorderEvent = ({ detail }) => {
+    console.log("Reorder detail", detail);
+    console.log(`Moving item from ${detail.from} to ${detail.to}`);
+    const itemMove = items.splice(detail.from, 1)[0];
+    items.splice(detail.to, 0, itemMove);
+    console.log("New list of items ", items);
+    detail.complete();
   };
 </script>
 
@@ -22,10 +33,8 @@
   <ion-list>
     <ion-list-header>Reorder Icon</ion-list-header>
     <ion-reorder-group
-      {reorderGroup}
-      on:ionItemReorder={({ detail }) => {
-        detail.complete(true);
-      }}>
+      bind:this={reorderGroup}
+      on:ionItemReorder={reorderEvent}>
       <ion-item>
         <ion-label>Item 1</ion-label>
         <ion-reorder slot="end" />
