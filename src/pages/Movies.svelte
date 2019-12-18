@@ -80,8 +80,8 @@
         },
         {
           text: "Ok",
-          handler: () => {
-            console.log("Confirm Ok");
+          handler: data => {
+            console.log("Confirm Ok", data);
           }
         }
       ]
@@ -89,16 +89,16 @@
   };
 
   const showLoading = () => {
-    const s = IonicShowLoading({
+    const loading1 = IonicShowLoading({
       message: "Please wait......",
-      duration: 3000
+      duration: 30000
     });
 
-    // todo: fix controller
-    s.then(x => {
-      //   x.dismiss();
-
-      console.log("x", x);
+    // to demonstrate early dismissal of loading controller
+    loading1.then(loading2 => {
+      setTimeout(() => {
+        loading2.dismiss();
+      }, 2000);
     });
   };
 

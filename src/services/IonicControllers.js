@@ -1,7 +1,7 @@
 import { register } from "svelte-custom-elements";
 
 //
-// Private functions
+// Private functions 
 //
 
 // see if webcomponent is already created
@@ -35,7 +35,7 @@ const DefaultIonicController = (selector) => {
             .then(ionicitem => {
                 ionicitem.present()
                 return ionicitem; // a promise that needs resolution to access dimiss etc.
-            });
+            })
     }
 }
 
@@ -71,7 +71,8 @@ export const IonicShowPopover = (event, selector, component, componentProps) => 
         });
 };
 
-export const IonicShowLoading = DefaultIonicController("ion-loading-controller");
+export const IonicShowLoading =
+    DefaultIonicController("ion-loading-controller");
 export const IonicShowPicker = DefaultIonicController("ion-picker-controller");
 export const IonicShowAlert = DefaultIonicController("ion-alert-controller");
 export const IonicShowToast = DefaultIonicController("ion-toast-controller");

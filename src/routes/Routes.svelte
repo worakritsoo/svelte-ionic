@@ -8,8 +8,6 @@
   // import * as sss from "./Music.svelte";  https://github.com/sveltejs/sapper/issues/288 TODO
   import Splash from "./../pages/Splash.svelte";
 
-  import Home from "./../pages/Home.svelte";
-
   import Music from "./../pages/Music.svelte";
   import Movies from "./../pages/Movies.svelte";
   import Games from "./../pages/Games.svelte";
@@ -80,9 +78,7 @@
     { path: "/toggle", component: Toggle },
     { path: "/toolbar", component: Toolbar },
 
-    { path: "/nav", component: NavHome },
-
-    { path: "/home", component: Home }
+    { path: "/nav", component: NavHome }
   ];
 
   const myTabs = [

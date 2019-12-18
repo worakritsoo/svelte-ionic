@@ -9,5 +9,5 @@
 
 <ion-content fullscreen class="ion-padding">
   <h1>Games</h1>
-  Games stuff
+  Games stuff. To implement: nav
 </ion-content>
