@@ -1,3 +1,76 @@
+<script>
+  import { fromFetch } from "rxjs/fetch";
+  import { Plugins } from "@capacitor/core";
+  import { IonicShowToast } from "../../services/IonicControllers";
+
+  let length = 0;
+  let icons = [];
+  let list = [];
+  let infiniteScroll;
+  const { Clipboard } = Plugins;
+
+  const infiniteAction = async () => {
+    console.log("L", length, icons.length);
+    if (length < icons.length) {
+      console.log("Loading data...");
+      await wait(500);
+      infiniteScroll.complete();
+      appendItems(15);
+      console.log("Done");
+    } else {
+      console.log("No More Data");
+      infiniteScroll.disabled = true;
+    }
+  };
+
+  function appendItems(number) {
+    list = [];
+    list = icons.slice(0, number + length);
+    length += number;
+  }
+
+  function wait(time) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve();
+      }, time);
+    });
+  }
+
+  fromFetch("/assets/json/ionicons.json").subscribe(
+    response => {
+      response.json().then(json => {
+        icons = json.icons;
+        console.log("List of icons", icons);
+        appendItems(120);
+      });
+    },
+    error => {
+      console.error("Error HTTP", error);
+    }
+  );
+
+  const iconClicked = icon => {
+    console.log("Icon clicked", icon);
+
+    Clipboard.write({
+      string: `<ion-icon name="${icon}"></ion-icon>`
+    });
+    IonicShowToast({
+      color: "dark",
+      duration: 3000,
+      message: `<ion-icon name="${icon}"></ion-icon> - ${icon} - copied`,
+      showCloseButton: true
+    });
+  };
+</script>
+
+<style>
+  ion-icon {
+    font-size: 500%;
+  }
+</style>
+
 <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -11,122 +84,24 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col>
-        <ion-icon name="ionic" color="primary" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="logo-angular" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="heart" color="danger" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="ionitron" color="primary" />
-      </ion-col>
-
-      <ion-col>
-        <ion-icon name="happy" color="vibrant" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="people" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="person" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="contact" />
-      </ion-col>
-
-      <ion-col>
-        <ion-icon name="apps" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="lock" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="key" color="bright" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="unlock" />
-      </ion-col>
-
-      <ion-col>
-        <ion-icon name="map" color="secondary" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="navigate" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="pin" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="locate" />
-      </ion-col>
-
-      <ion-col>
-        <ion-icon name="mic" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="musical-notes" color="vibrant" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="volume-up" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="microphone" />
-      </ion-col>
-
-      <ion-col>
-        <ion-icon name="cafe" color="bright" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="calculator" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="bus" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="wine" color="danger" />
-      </ion-col>
-
-      <ion-col>
-        <ion-icon name="camera" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="image" color="secondary" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="star" color="bright" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="pin" />
-      </ion-col>
-
-      <ion-col>
-        <ion-icon name="arrow-dropup-circle" color="vibrant" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="arrow-back" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="arrow-dropdown" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="arrow-forward" />
-      </ion-col>
-
-      <ion-col>
-        <ion-icon name="cloud" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="sunny" color="bright" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="umbrella" />
-      </ion-col>
-      <ion-col>
-        <ion-icon name="rainy" color="primary" />
-      </ion-col>
+      {#each list as icon}
+        <ion-col
+          on:click={() => {
+            iconClicked(icon);
+          }}>
+          <ion-icon name={icon} />
+        </ion-col>
+      {/each}
     </ion-row>
   </ion-grid>
+
+  <ion-infinite-scroll
+    on:ionInfinite={infiniteAction}
+    threshold="100px"
+    bind:this={infiniteScroll}>
+    <ion-infinite-scroll-content
+      loading-spinner="bubbles"
+      loading-text="Loading more data..." />
+  </ion-infinite-scroll>
+
 </ion-content>
