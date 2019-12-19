@@ -5,10 +5,12 @@ Published as web app: https://ionicsvelte.firebaseapp.com
 
 Or if you want to run it locally:
 
-`git clone https://github.com/Tommertom/svelte-ionic-app.git
+```
+git clone https://github.com/Tommertom/svelte-ionic-app.git
 cd svelte-ionic-app
 npm i
-npm run dev`
+npm run dev
+```
 
 The app will be served on `localhost:8080`.
 
