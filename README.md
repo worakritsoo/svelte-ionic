@@ -5,7 +5,7 @@ Published as web app: https://ionicsvelte.firebaseapp.com
 
 Or if you want to run it locally:
 
-```
+```bash
 git clone https://github.com/Tommertom/svelte-ionic-app.git
 cd svelte-ionic-app
 npm i
