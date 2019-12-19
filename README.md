@@ -1,9 +1,16 @@
 # Ionic Svelte UI demo
-Project to integrate Ionic UI goodies with svelte - with source code viewer
+A showcase app for all Ionic UI elements. Use this app to try-out the elements you like for your app, and then navigate directly to the API docs or the source code (now: only svelte).
 
-To run this, you need to run `npm run dev`. Routing (deeplinking) through the SPA will be served through localhost:8080 (not :5000)
+Published as web app: https://ionicsvelte.firebaseapp.com
 
-Also published as web app: https://ionicsvelte.firebaseapp.com
+Or if you want to run it locally:
+
+`git clone https://github.com/Tommertom/svelte-ionic-app.git`
+`cd svelte-ionic-app`
+`npm i`
+`npm run dev`
+
+The app will be served on `localhost:8080`.
 
 **NEW FEATURE: click to view source! For all components (except tab) you can click the lower right source button to view the source and copy/paste in your app. If you use fullscreen view, the menu will be a sidepanel instead of a hamburger!**
 
@@ -40,7 +47,7 @@ Need to use other api
 Ion Back Button does not appear in the app. Neither in a REPL. Made a custom version.
 
 ## Nav needs customElement
-Not necessarily an issue, but still a bit undesireable to make a custom element to be using a IonNav (as in `<ion-nav root="my-element">`)
+Not necessarily an issue, but still a bit undesireable to make a custom element to be using a IonNav (as in `<ion-nav root="my-element">`). Therefore made IonNav.svelte to handle this and developers can include svelte components.
 
 # Todo's
 A number of todo's:
@@ -49,11 +56,11 @@ A number of todo's:
 - ~~look at awesome rollup and add typescript -~~ not mature enough!!
 - ~~fix rollup copy of files in assets folder~~
 - ~~do some binding on inputs and other interactive elements~~
-- ionicons for menu - colors and other names
-- ionicons part has some unknown icons, make larger
+- ~~ionicons for menu - colors and other names~~
+- ~~ionicons part has some unknown icons, make larger~~
 - ~~virtual scroll??~~
-- ~~ion-img? (will work, but not tried)~~
-- ~~make it a PWA~~
+- ~~ion-img~~
+- make it a PWA - need to work on the service worker
 - ~~better names for controller API?~~
 - NAV over tab?
 - make it more sveltish (code, store, bindings, animations)
@@ -61,7 +68,7 @@ A number of todo's:
 - try some cordova/ionic native
 - singleton classes https://alligator.io/js/js-singletons/
 - place routes in better place (pages folder probably, to avoid repeating /../)
-- consider Contexts for exposing controllers?
+- ~~consider Contexts for exposing controllers - nope as you need nesting for this, which I don't like ~~
 - ~~split pane~~
 - SSR
 - ~~to docs link https://ionicframework.com/docs/api/input~~
