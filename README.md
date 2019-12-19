@@ -53,6 +53,7 @@ Not necessarily an issue, but still a bit undesireable to make a custom element 
 
 # Todo's
 A number of todo's:
+- UI elements missing: VirtualScroll (low prio)
 - ~~add the popoover and other controller related items~~
 - ~~try the css styling as per documentation (theming)~~
 - ~~look at awesome rollup and add typescript -~~ not mature enough!!
@@ -60,8 +61,6 @@ A number of todo's:
 - ~~do some binding on inputs and other interactive elements~~
 - ~~ionicons for menu - colors and other names~~
 - ~~ionicons part has some unknown icons, make larger~~
-- ~~virtual scroll??~~
-- ~~ion-img~~
 - make it a PWA - need to work on the service worker
 - ~~better names for controller API?~~
 - NAV over tab?

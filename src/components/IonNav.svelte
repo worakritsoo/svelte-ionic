@@ -1,4 +1,6 @@
 <script>
+  import { register } from "svelte-custom-elements";
+
   const isRegistered = function(name) {
     return document.createElement(name).constructor !== HTMLElement;
   };
