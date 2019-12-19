@@ -5,10 +5,10 @@ Published as web app: https://ionicsvelte.firebaseapp.com
 
 Or if you want to run it locally:
 
-`git clone https://github.com/Tommertom/svelte-ionic-app.git`
-`cd svelte-ionic-app`
-`npm i`
-`npm run dev`
+`git clone https://github.com/Tommertom/svelte-ionic-app.git
+cd svelte-ionic-app
+npm i
+npm run dev`
 
 The app will be served on `localhost:8080`.
 
@@ -70,6 +70,8 @@ A number of todo's:
 - place routes in better place (pages folder probably, to avoid repeating /../)
 - ~~consider Contexts for exposing controllers - nope as you need nesting for this, which I don't like ~~
 - ~~split pane~~
+- searchbox in ionicons
+- add non Ionic elements to complete UI: https://www.w3schools.com/howto/default.asp
 - SSR
 - ~~to docs link https://ionicframework.com/docs/api/input~~
 - https://css-tricks.com/what-i-like-about-writing-styles-with-svelte/
