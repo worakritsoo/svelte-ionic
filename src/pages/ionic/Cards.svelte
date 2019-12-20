@@ -6,7 +6,7 @@
     <ion-title>Card</ion-title>
   </ion-toolbar>
 </ion-header>
-,
+
 <ion-content fullscreen>
 
   <ion-card>
@@ -67,4 +67,5 @@
       Madison was named the capital of the Wisconsin Territory in 1836.
     </ion-card-content>
   </ion-card>
+
 </ion-content>

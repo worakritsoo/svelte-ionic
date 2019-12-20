@@ -76,3 +76,8 @@ A number of todo's:
 - SSR
 - ~~to docs link https://ionicframework.com/docs/api/input~~
 - https://css-tricks.com/what-i-like-about-writing-styles-with-svelte/
+- https://github.com/pngwn/prism-svelte or something else that works
+- REPLs
+- other languages code?
+- change router? https://github.com/qutran/swheel, https://github.com/jorgegorka/svelte-router/blob/master/README.md
+- https://github.com/ryanatkn/awesome-svelte-resources

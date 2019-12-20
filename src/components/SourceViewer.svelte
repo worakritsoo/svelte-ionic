@@ -32,6 +32,26 @@
     modal.dismiss({});
   };
 
+  const goREPL = () => {
+    fromFetch("/assets/json/repls.json").subscribe(response => {
+      response.json().then(json => {
+        const url = json[name.toLocaleLowerCase()];
+        if (url) {
+          console.log("REPL", json, url);
+          anchor.href = url;
+          anchor.click();
+        } else {
+          IonicShowToast({
+            color: "dark",
+            duration: 2000,
+            message: "No REPL link configured (up to Chips there are)",
+            showCloseButton: true
+          });
+        }
+      });
+    });
+  };
+
   const goAPIdocs = () => {
     // try to generate the url to the api docs
     let apiName = name.toLowerCase();
@@ -85,7 +105,8 @@
       message: "Copied source of " + name,
       showCloseButton: true
     });
-    closeOverlay();
+
+    setTimeout(closeOverlay, 1000);
   };
 </script>
 
@@ -101,14 +122,14 @@
 <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="end">
-      <ion-button on:click={goAPIdocs}>
-        <ion-icon name="share-alt" />
+      <ion-button on:click={goREPL} title="Hello This Will Have Some Value">
+        REPL
       </ion-button>
 
+      <ion-button on:click={goAPIdocs}>API</ion-button>
+
       {#if sourceCode.length > 0}
-        <ion-button on:click={copySource}>
-          <ion-icon name="copy" />
-        </ion-button>
+        <ion-button on:click={copySource}>COPY</ion-button>
       {/if}
       <ion-button on:click={closeOverlay}>
         <ion-icon name="close" />
@@ -119,7 +140,7 @@
 </ion-header>
 
 <ion-content>
-  <pre contenteditable="true">{sourceCode}</pre>
+  <pre>{sourceCode}</pre>
 </ion-content>
 <a target="_blank" bind:this={anchor} href="/">
   <div />

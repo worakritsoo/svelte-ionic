@@ -59,7 +59,7 @@
     IonicShowToast({
       color: "dark",
       duration: 3000,
-      message: `<ion-icon style="font-size:350%" name="${icon}"></ion-icon> - ${icon} - copied`,
+      message: `<ion-icon style="font-size:350%" name="${icon}"></ion-icon> - ${icon}`,
       showCloseButton: true
     });
   };

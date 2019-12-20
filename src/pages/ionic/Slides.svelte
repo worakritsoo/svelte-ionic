@@ -61,9 +61,9 @@
       <img src="./assets/img/slides/slide-1.png" alt="pict" />
       <h2>Welcome!</h2>
       The
-      <b>Svelte Ionic App</b>
+      <b>Ionic UI App</b>
       is a practical preview of the ionic framework, and a demonstration of
-      proper use (ahum!!) in svelte.
+      proper use (ahum!!) in svelte or even other languages.
       <br />
     </ion-slide>
 
