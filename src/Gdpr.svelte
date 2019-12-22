@@ -15,7 +15,6 @@
     if (!value) {
       showGDPR = true;
     }
-    showGDPR = true;
   });
 
   const userAgrees = () => {
