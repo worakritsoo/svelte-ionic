@@ -18,6 +18,8 @@ The app will be served on `localhost:8080`.
 
 **NEW FEATURE2: click on share button in source view to link directly to the Ionic API docs**
 
+**NEW FEATURE3: almost all UI elements have a separate REPL (coding playground) - only TAB is missing**
+
 Do you like this work? Please star this project! 
 
 <img alt="Screen1.PNG" src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen1.PNG" width="75%" >

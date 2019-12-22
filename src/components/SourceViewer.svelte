@@ -44,7 +44,7 @@
           IonicShowToast({
             color: "dark",
             duration: 2000,
-            message: "No REPL link configured (up to Chips there are)",
+            message: "No REPL link configured",
             showCloseButton: true
           });
         }
