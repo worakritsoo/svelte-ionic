@@ -52,7 +52,7 @@
           button to continue and agree.
           <br />
           <ion-button on:click={userAgrees} expand="full" color="primary" on>
-            Agree to usages of cookies
+            Agree to usage of cookies
           </ion-button>
         </ion-card-content>
       </ion-card>
