@@ -28,7 +28,6 @@
   };
 
   onMount(() => {
-    //  refresher.addEventListener("ionRefresh", () => {});
     appendMessages(5);
   });
 
