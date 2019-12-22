@@ -4,7 +4,6 @@
   import { elasticInOut } from "svelte/easing";
 
   import { Plugins } from "@capacitor/core";
-  import localforage from "localforage";
 
   const splitpane = document.querySelector("ion-split-pane");
   splitpane.disabled = true;
@@ -14,7 +13,6 @@
     navigate("/slides");
   }, 4000);
 
-  console.log("STORAGE", localforage);
   console.log("CAPACITOR PLUGINS", Plugins);
 
   //  Plugins.Geolocation.getCurrentPosition().then(position => {

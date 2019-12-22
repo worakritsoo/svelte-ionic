@@ -6,6 +6,8 @@
   import { Workbox } from "workbox-window";
 
   import SourceViewer from "./components/SourceViewer.svelte";
+  import Gdpr from "./Gdpr.svelte";
+
   import { IonicShowModal } from "./services/IonicControllers";
 
   // Check that service workers are supported
@@ -75,3 +77,4 @@
     </ion-split-pane>
   </ion-app>
 </FirebaseApp>
+<Gdpr />
