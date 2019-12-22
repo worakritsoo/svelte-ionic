@@ -28,12 +28,12 @@ And the source view with copy feature and you can select text with the mouse:
 <img alt="Screen2.PNG" src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen2.PNG" width="75%" >
 
 All features (vision/realised) 
-- All Ionic Framework UI components (100% done)
+- All Ionic Framework UI components showcased (100% done)
 - Run as SPA (100% done) - Router via "svelte-routing" repo
 - Service Worker setup via workbox (50%) 
-- PWA compliance via Ligthouse score (40%))
+- PWA compliance via Ligthouse score (40% - missing the service worker mostly)
 - Stores (0%)
-- RXJS (25%)
+- RXJS usage (100%)
 - Localstorage via localforage (50%)
 - Firebase SDK (0%)
 - Capacitor for mobile native support (100%)
@@ -53,7 +53,7 @@ Need to use other api
 Ion Back Button does not appear in the app. Neither in a REPL. Made a custom version.
 
 ## Nav needs customElement
-Not necessarily an issue, but still a bit undesireable to make a custom element to be using a IonNav (as in `<ion-nav root="my-element">`). Therefore made IonNav.svelte to handle this and developers can include svelte components.
+Not necessarily an issue, but still a bit undesireable to make a custom element to be using a IonNav (as in `<ion-nav root="my-element">`). Therefore made IonNav.svelte to handle this and developers can include svelte component instead of manually registering a customElement.
 
 # Todo's
 A number of todo's:
