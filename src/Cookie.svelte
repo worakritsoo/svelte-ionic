@@ -10,16 +10,16 @@
 
   let showGDPR = false;
 
-  localforage.getItem("gdpr-agree").then(value => {
-    console.log("GDPR value", value);
+  localforage.getItem("cookie-agree").then(value => {
+    console.log("Cookie value", value);
     if (!value) {
       showGDPR = true;
     }
   });
 
   const userAgrees = () => {
-    console.log("User agreed to GDPR");
-    localforage.setItem("gdpr-agree", true);
+    console.log("User agreed to Cookie");
+    localforage.setItem("cookie-agree", true);
     showGDPR = false;
   };
 </script>
@@ -46,13 +46,13 @@
 
     <div class="card-inset">
       <ion-card>
-        <ion-card-header>GDPR</ion-card-header>
+        <ion-card-header>Cookie monster alert!</ion-card-header>
         <ion-card-content>
           This app/website is using cookies to track usage. Please click the
           button to continue and agree.
           <br />
           <ion-button on:click={userAgrees} expand="full" color="primary" on>
-            Agree to GDPR
+            Agree to usages of cookies
           </ion-button>
         </ion-card-content>
       </ion-card>

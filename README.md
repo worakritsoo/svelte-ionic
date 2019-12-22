@@ -40,7 +40,7 @@ All features (vision/realised)
 - Ionic Theming in local styles and global CSS (100%)
 - REPLs for each element (100%)
 - Source code previewer (100%)
-- GDPR Popup (100%)
+- Cookie Popup (100%)
 
 # Known issues
 
