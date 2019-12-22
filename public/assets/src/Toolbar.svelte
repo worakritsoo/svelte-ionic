@@ -1,10 +1,16 @@
+<script>
+  const clickAction = event => {
+    console.log("You clicked me!!", event);
+  };
+</script>
+
 <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button />
     </ion-buttons>
     <ion-buttons slot="secondary">
-      <ion-button>
+      <ion-button on:click={clickAction}>
         <ion-icon slot="icon-only" name="logo-ionic" />
       </ion-button>
     </ion-buttons>
@@ -12,7 +18,7 @@
     <ion-title>Header</ion-title>
 
     <ion-buttons slot="primary">
-      <ion-button>
+      <ion-button on:click={clickAction}>
         <ion-icon slot="icon-only" name="star" />
       </ion-button>
     </ion-buttons>
@@ -50,13 +56,13 @@
 
   <ion-toolbar>
     <ion-buttons slot="secondary">
-      <ion-button>Messages (1)</ion-button>
+      <ion-button on:click={clickAction}>Messages (1)</ion-button>
     </ion-buttons>
 
     <ion-title>Buttons</ion-title>
 
     <ion-buttons slot="primary">
-      <ion-button>Log Out</ion-button>
+      <ion-button on:click={clickAction}>Log Out</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-content>
@@ -64,7 +70,7 @@
 <ion-footer>
   <ion-toolbar>
     <ion-buttons slot="secondary">
-      <ion-button>
+      <ion-button on:click={clickAction}>
         <ion-icon slot="icon-only" name="finger-print" />
       </ion-button>
     </ion-buttons>
@@ -72,7 +78,7 @@
     <ion-title>Footer</ion-title>
 
     <ion-buttons slot="primary">
-      <ion-button>
+      <ion-button on:click={clickAction}>
         <ion-icon slot="icon-only" name="more" />
       </ion-button>
     </ion-buttons>
