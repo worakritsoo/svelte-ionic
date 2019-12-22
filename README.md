@@ -18,7 +18,7 @@ The app will be served on `localhost:8080`.
 
 **NEW FEATURE2: click on share button in source view to link directly to the Ionic API docs**
 
-**NEW FEATURE3: almost all UI elements have a separate REPL (coding playground) - only TAB is missing**
+**NEW FEATURE3: almost all UI elements have a separate REPL (coding playground)**
 
 Do you like this work? Please star this project! 
 
@@ -28,7 +28,7 @@ And the source view with copy feature and you can select text with the mouse:
 <img alt="Screen2.PNG" src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen2.PNG" width="75%" >
 
 All features (vision/realised) 
-- All Ionic Framework UI components (99% done)
+- All Ionic Framework UI components (100% done)
 - Run as SPA (100% done) - Router via "svelte-routing" repo
 - Service Worker setup via workbox (50%) 
 - PWA compliance via Ligthouse score (40%))
@@ -38,6 +38,8 @@ All features (vision/realised)
 - Firebase SDK (0%)
 - Capacitor for mobile native support (100%)
 - Ionic Theming in local styles and global CSS (100%)
+- REPLs for each element (100%)
+- Source code previewer (100%)
 
 # Known issues
 
@@ -55,7 +57,7 @@ Not necessarily an issue, but still a bit undesireable to make a custom element 
 
 # Todo's
 A number of todo's:
-- UI elements missing: VirtualScroll (low prio)
+- ~~UI elements missing: VirtualScroll skipped ~~
 - ~~add the popoover and other controller related items~~
 - ~~try the css styling as per documentation (theming)~~
 - ~~look at awesome rollup and add typescript -~~ not mature enough!!
@@ -66,9 +68,9 @@ A number of todo's:
 - make it a PWA - need to work on the service worker
 - ~~better names for controller API?~~
 - NAV over tab?
-- make it more sveltish (code, store, bindings, animations)
+- ~~make it more sveltish (code, store, bindings, animations)~~
 - ~~publish on firebase hosting~~
-- try some cordova/ionic native
+- ~~try some cordova/ionic native - no web features I need ~~
 - singleton classes https://alligator.io/js/js-singletons/
 - place routes in better place (pages folder probably, to avoid repeating /../)
 - ~~consider Contexts for exposing controllers - nope as you need nesting for this, which I don't like ~~
@@ -79,7 +81,7 @@ A number of todo's:
 - ~~to docs link https://ionicframework.com/docs/api/input~~
 - https://css-tricks.com/what-i-like-about-writing-styles-with-svelte/
 - https://github.com/pngwn/prism-svelte or something else that works
-- REPLs
+- ~~REPLs~~
 - other languages code?
 - change router? https://github.com/qutran/swheel, https://github.com/jorgegorka/svelte-router/blob/master/README.md
 - https://github.com/ryanatkn/awesome-svelte-resources

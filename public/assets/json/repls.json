@@ -28,5 +28,8 @@
     "text": "https://svelte.dev/repl/c1dc6a91601d427995d68cc25a782e2f?version=3.16.5",
     "thumbnails": "https://svelte.dev/repl/0576a69392f948eabcb29f2cf8f244eb?version=3.16.5",
     "toggle": "https://svelte.dev/repl/48af603d6363480f901e214a7532fa25?version=3.16.5",
-    "toolbar": "https://svelte.dev/repl/84d8a747b1b84b28bc74259a110ac9c4?version=3.16.5"
+    "toolbar": "https://svelte.dev/repl/84d8a747b1b84b28bc74259a110ac9c4?version=3.16.5",
+    "movies": "https://svelte.dev/repl/8a03c4f333154aa089a32e16f6747a14?version=3.16.5",
+    "music": "https://svelte.dev/repl/8a03c4f333154aa089a32e16f6747a14?version=3.16.5",
+    "games": "https://svelte.dev/repl/8a03c4f333154aa089a32e16f6747a14?version=3.16.5"
 }
