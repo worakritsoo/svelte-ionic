@@ -1,3 +1,9 @@
+<script>
+  const radioChange = event => {
+    console.log("Radio change", event.detail);
+  };
+</script>
+
 <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -9,7 +15,7 @@
 
 <ion-content fullscreen>
   <ion-list>
-    <ion-radio-group>
+    <ion-radio-group on:ionChange={radioChange}>
       <ion-list-header>
         <ion-label>Fruit</ion-label>
       </ion-list-header>
@@ -29,7 +35,7 @@
       </ion-item>
     </ion-radio-group>
 
-    <ion-radio-group allow-empty-selection>
+    <ion-radio-group allow-empty-selection on:ionChange={radioChange}>
       <ion-list-header>
         <ion-label>Pizza Topping</ion-label>
       </ion-list-header>

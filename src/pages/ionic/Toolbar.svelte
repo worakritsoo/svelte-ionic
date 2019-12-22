@@ -1,3 +1,9 @@
+<script>
+  const clickAction = event => {
+    console.log("You clicked me!!", event);
+  };
+</script>
+
 <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="start">
