@@ -173,7 +173,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "assets/json/api-mappings.json",
-    "revision": "e79aea50ab54240e3fdf70f8c77983e4"
+    "revision": "84455e15b5e3e846b34eec1d66df3a16"
   },
   {
     "url": "assets/json/ionicons.json",
@@ -181,7 +181,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "assets/json/repls.json",
-    "revision": "40a097dbb3d4dc3f513c91c557cb9f49"
+    "revision": "905d582d971f31b14f6391e0348511b5"
   },
   {
     "url": "assets/src/techs.js",
@@ -193,7 +193,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "build/bundle.css",
-    "revision": "e5eab4d8e06fb23fbfb4ed9f3683719f"
+    "revision": "99d2497ccf9a76e8e220dd2723206f11"
+  },
+  {
+    "url": "build/bundle.js",
+    "revision": "08158ff44c688f59cc213055c60baa3a"
   },
   {
     "url": "favicon.png",
