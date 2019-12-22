@@ -135,7 +135,7 @@
         <ion-icon name="close" />
       </ion-button>
     </ion-buttons>
-    <ion-title>Source</ion-title>
+
   </ion-toolbar>
 </ion-header>
 

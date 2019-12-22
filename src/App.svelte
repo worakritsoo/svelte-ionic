@@ -40,7 +40,7 @@
   import firebase from "firebase/app";
   import "firebase/firestore";
   import "firebase/auth";
-  import "firebase/performance";
+  // import "firebase/performance";
   import "firebase/analytics";
 
   let firebaseConfig = {
@@ -55,6 +55,7 @@
   };
 
   firebase.initializeApp(firebaseConfig);
+  firebase.analytics().logEvent("APP LAUNCH");
 </script>
 
 <svelte:head>
