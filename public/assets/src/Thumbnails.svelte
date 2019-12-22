@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button />
     </ion-buttons>
-    <ion-title>Avatar</ion-title>
+    <ion-title>Thumbails</ion-title>
   </ion-toolbar>
 </ion-header>
 
