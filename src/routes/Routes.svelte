@@ -8,10 +8,6 @@
   // import * as sss from "./Music.svelte";  https://github.com/sveltejs/sapper/issues/288 TODO
   import Splash from "./../pages/Splash.svelte";
 
-  import Music from "./../pages/Music.svelte";
-  import Movies from "./../pages/Movies.svelte";
-  import Games from "./../pages/Games.svelte";
-
   import Avatars from "./../pages/ionic/Avatars.svelte";
   import Badges from "./../pages/ionic/Badges.svelte";
   import Buttons from "./../pages/ionic/Buttons.svelte";
@@ -28,7 +24,6 @@
   import Lists from "./../pages/ionic/Lists.svelte";
   import Nav from "./../pages/ionic/Nav.svelte";
   import Navhome from "./../pages/ionic/NavHome.svelte";
-
   import Notes from "./../pages/ionic/Notes.svelte";
   import Progressbar from "./../pages/ionic/Progressbar.svelte";
   import Radios from "./../pages/ionic/Radios.svelte";
@@ -41,12 +36,15 @@
   import Skeleton from "./../pages/ionic/Skeleton.svelte";
   import Slides from "./../pages/ionic/Slides.svelte";
   import Spinner from "./../pages/ionic/Spinner.svelte";
+  import Tabs from "./../pages/ionic/Tabs.svelte";
   import Text from "./../pages/ionic/Text.svelte";
   import Thumbnails from "./../pages/ionic/Thumbnails.svelte";
   import Toggle from "./../pages/ionic/Toggle.svelte";
   import Toolbar from "./../pages/ionic/Toolbar.svelte";
 
   const routes = [
+    { path: "/tabs/:id", component: Tabs },
+    { path: "/tabs", component: Tabs },
     { path: "/", component: Splash },
     { path: "/slides", component: Slides },
     { path: "/avatars", component: Avatars },
@@ -82,17 +80,6 @@
 
     { path: "/nav", component: Navhome }
   ];
-
-  const myTabs = [
-    { label: "Magic", icon: "videocam", tab: "movies", component: Movies },
-    { label: "Text", icon: "musical-note", tab: "music", component: Music },
-    {
-      label: "Nothing",
-      icon: "logo-game-controller-b",
-      tab: "games",
-      component: Games
-    }
-  ];
 </script>
 
 <!-- this div with main is needed for menu-controller -->
@@ -105,12 +92,5 @@
       </Route>
     {/each}
 
-    <!-- need to be placed in a svelte tab component to simplify code -->
-    <Route path="/tabs">
-      <IonTab tabs={myTabs} />
-    </Route>
-    <Route path="/tabs/:id" let:params>
-      <IonTab tabs={myTabs} selected={params.id} />
-    </Route>
   </Router>
 </div>

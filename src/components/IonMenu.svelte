@@ -13,7 +13,6 @@
   }
 
   const goToGitHub = () => {
-    console.log("SDASDS");
     anchor.click();
   };
 
