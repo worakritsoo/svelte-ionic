@@ -14,6 +14,8 @@ npm run dev
 
 The app will be served on `localhost:8080`.
 
+All items also available as individual REPLs: https://github.com/Tommertom/svelte-ionic-app/blob/master/REPLS.md
+
 **NEW FEATURE: click to view source! For all components (except tab) you can click the lower right source button to view the source and copy/paste in your app. If you use fullscreen view, the menu will be a sidepanel instead of a hamburger!**
 
 **NEW FEATURE2: click on share button in source view to link directly to the Ionic API docs**
