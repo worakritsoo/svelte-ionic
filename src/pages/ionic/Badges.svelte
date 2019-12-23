@@ -1,6 +1,9 @@
 <ion-header translucent>
   <ion-toolbar>
-    <ion-title>Badge</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button />
+    </ion-buttons>
+    <ion-title>Badges</ion-title>
   </ion-toolbar>
 </ion-header>
 

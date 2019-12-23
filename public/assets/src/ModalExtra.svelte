@@ -19,7 +19,7 @@
   <ion-list>
     <ion-item>
       <ion-avatar slot="start">
-        <ion-img src="https://i.pravatar.cc/300?img=3" />
+        <ion-img src="https://www.gravatar.com/avatar/1?d=monsterid&f=y" />
       </ion-avatar>
       <ion-label>
         <h2>Gollum</h2>
@@ -28,7 +28,7 @@
     </ion-item>
     <ion-item>
       <ion-avatar slot="start">
-        <ion-img src="https://i.pravatar.cc/300?img=1" />
+        <ion-img src="https://www.gravatar.com/avatar/2?d=monsterid&f=y" />
       </ion-avatar>
       <ion-label>
         <h2>Frodo</h2>
@@ -37,7 +37,7 @@
     </ion-item>
     <ion-item>
       <ion-avatar slot="start">
-        <ion-img src="https://i.pravatar.cc/300?img=2" />
+        <ion-img src="https://www.gravatar.com/avatar/3?d=monsterid&f=y" />
       </ion-avatar>
       <ion-label>
         <h2>Samwise</h2>

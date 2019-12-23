@@ -1,6 +1,6 @@
 <script>
-  import ModalExtra from "./ionic/ModalExtra.svelte";
-  import PopoverExtra from "./ionic/PopoverExtra.svelte";
+  import ModalExtra from "./ModalExtra.svelte";
+  import PopoverExtra from "./PopoverExtra.svelte";
   import {
     IonicShowActionSheet,
     IonicShowAlert,
@@ -9,7 +9,7 @@
     IonicShowModal,
     IonicShowPopover,
     IonicShowToast
-  } from "./../services/IonicControllers";
+  } from "./../../services/IonicControllers";
 
   const showModal = () => {
     IonicShowModal("modal-extra", ModalExtra, {
