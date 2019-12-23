@@ -44,7 +44,7 @@
 
 <ion-header translucent>
   <ion-toolbar>
-    <ion-title>Ionic Svelte UI App</ion-title>
+    <ion-title>Ionic UI Companion</ion-title>
   </ion-toolbar>
 </ion-header>
 
