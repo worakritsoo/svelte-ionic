@@ -37,7 +37,8 @@
 
 {#if showCookieJar}
   <div
-    transition:fly={{ y: 200, delay: 10000, duration: 1500, easing: elasticInOut }}
+    in:fly={{ y: 200, delay: 10000, duration: 1500, easing: elasticInOut }}
+    out:fly={{ y: 200, delay: 10, duration: 1000, easing: elasticInOut }}
     class="card">
 
     <div class="card-inset">
