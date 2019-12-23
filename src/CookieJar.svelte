@@ -5,18 +5,18 @@
   import localforage from "localforage";
 
   // we don't want to show, unless we need to
-  let showGDPR = false;
+  let showCookieJar = false;
   localforage.getItem("cookie-agree").then(value => {
     console.log("Cookie value", value);
     if (!value) {
-      showGDPR = true;
+      showCookieJar = true;
     }
   });
 
   const userAgrees = () => {
     console.log("User agreed to Cookie!");
     localforage.setItem("cookie-agree", true);
-    showGDPR = false;
+    showCookieJar = false;
   };
 </script>
 
@@ -35,14 +35,16 @@
   }
 </style>
 
-{#if showGDPR}
+{#if showCookieJar}
   <div
-    transition:fly={{ y: 200, delay: 3100, duration: 1500, easing: elasticInOut }}
+    transition:fly={{ y: 200, delay: 10000, duration: 1500, easing: elasticInOut }}
     class="card">
 
     <div class="card-inset">
       <ion-card>
-        <ion-card-header>Cookie monster alert!</ion-card-header>
+        <ion-card-header>
+          <ion-card-header>Cookie monster alert!</ion-card-header>
+        </ion-card-header>
         <ion-card-content>
           This app/website is using cookies to track usage. Please click the
           button to continue and agree.
