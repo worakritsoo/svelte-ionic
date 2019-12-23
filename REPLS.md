@@ -4,8 +4,8 @@ The full app: https://ionicsvelte.firebaseapp.com/
 
 [avatars](https://svelte.dev/repl/1a5f5b06b1944e42ade1edd10f63e3e8?version=3.16.5)
 [badges](https://svelte.dev/repl/9c456fbab918432098d5638a9486d27a?version=3.16.5)
-[cards](https://svelte.dev/repl/1b39390270f84855bc1bdfa386452979?version=3.16.5)
 [buttons](https://svelte.dev/repl/719f9984592e4ceaacf0a2f7f0356d6a?version=3.16.5)
+[cards](https://svelte.dev/repl/1b39390270f84855bc1bdfa386452979?version=3.16.5)
 [checkboxes](https://svelte.dev/repl/b9f74f5ff760476696b3c813bbb53f10?version=3.16.5)
 [chips](https://svelte.dev/repl/7d55304ef485403f963603e1469633d4?version=3.16.5)
 [datetime](https://svelte.dev/repl/0af650335e2e4081977bd3b531c793ec?version=3.16.5)
