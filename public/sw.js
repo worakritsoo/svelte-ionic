@@ -193,7 +193,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "build/bundle.css",
-    "revision": "478740adbfd8155eb3013c628912a831"
+    "revision": "7b0c1ec74e38829459221ccd46a83a08"
   },
   {
     "url": "favicon.png",
@@ -205,7 +205,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "eaed6cbb4e233ae60aa5f82b7c7bf5e6"
+    "revision": "378718bcc3d1982feba20d229541c9d1"
   },
   {
     "url": "manifest.json",

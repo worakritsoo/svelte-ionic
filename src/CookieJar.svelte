@@ -14,9 +14,9 @@
   });
 
   const userAgrees = () => {
+    showCookieJar = false;
     console.log("User agreed to Cookie!");
     localforage.setItem("cookie-agree", true);
-    showCookieJar = false;
   };
 </script>
 

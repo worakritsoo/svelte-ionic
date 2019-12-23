@@ -61,7 +61,7 @@
 </script>
 
 <svelte:head>
-  <title>Ionic Svelte UI demo</title>
+  <title>Ionic UI Companion App - svelte power!</title>
 </svelte:head>
 
 <FirebaseApp {firebase}>
