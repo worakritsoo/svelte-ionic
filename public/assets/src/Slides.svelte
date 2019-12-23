@@ -65,6 +65,8 @@
       is a practical preview of the ionic framework, and a demonstration of
       proper use (ahum!!) in svelte or even other languages.
       <br />
+      <br />
+      <br />
     </ion-slide>
 
     <ion-slide>
@@ -72,6 +74,7 @@
       <h2>Handy tool!</h2>
       By clicking the button bottom right you can instantly view the source code
       of the element you are viewing, to copy/paste and direct link to API docs.
+      <br />
       <br />
       <br />
     </ion-slide>
@@ -83,6 +86,7 @@
       <b>Ionic Framework</b>
       is an open source SDK that enables developers to build high quality mobile
       apps with web technologies.
+      <br />
       <br />
       <br />
     </ion-slide>
@@ -98,6 +102,9 @@
         Continue to tabs demo
         <ion-icon slot="end" name="arrow-forward" />
       </ion-button>
+      <br />
+      <br />
+      <br />
     </ion-slide>
 
   </ion-slides>

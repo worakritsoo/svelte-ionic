@@ -3,7 +3,7 @@
     <ion-title>Badge</ion-title>
   </ion-toolbar>
 </ion-header>
-,
+
 <ion-content fullscreen>
   <ion-list>
     <ion-list-header>Badges</ion-list-header>
