@@ -2,14 +2,10 @@
   import { fly } from "svelte/transition";
   import { elasticInOut } from "svelte/easing";
 
-  import { onMount } from "svelte";
-
   import localforage from "localforage";
 
-  console.log("STORAGE", localforage);
-
+  // we don't want to show, unless we need to
   let showGDPR = false;
-
   localforage.getItem("cookie-agree").then(value => {
     console.log("Cookie value", value);
     if (!value) {
@@ -18,7 +14,7 @@
   });
 
   const userAgrees = () => {
-    console.log("User agreed to Cookie");
+    console.log("User agreed to Cookie!");
     localforage.setItem("cookie-agree", true);
     showGDPR = false;
   };
