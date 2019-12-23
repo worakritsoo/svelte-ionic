@@ -1,4 +1,4 @@
-# All REPLs containing the individual elements of IONIC
+# REPLs containing the individual elements of IONIC
 
 The full app: https://ionicsvelte.firebaseapp.com/
 
