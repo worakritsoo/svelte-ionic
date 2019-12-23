@@ -41,7 +41,7 @@
 
 {#if showGDPR}
   <div
-    transition:fly={{ y: 200, delay: 100, duration: 1500, easing: elasticInOut }}
+    transition:fly={{ y: 200, delay: 3100, duration: 1500, easing: elasticInOut }}
     class="card">
 
     <div class="card-inset">

@@ -6,7 +6,7 @@
   import { Workbox } from "workbox-window";
 
   import SourceViewer from "./components/SourceViewer.svelte";
-  import Cookie from "./Cookie.svelte";
+  import CookieJar from "./CookieJar.svelte";
 
   import { IonicShowModal } from "./services/IonicControllers";
 
@@ -77,4 +77,4 @@
     </ion-split-pane>
   </ion-app>
 </FirebaseApp>
-<Cookie />
+<CookieJar />

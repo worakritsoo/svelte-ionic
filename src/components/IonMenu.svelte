@@ -38,6 +38,7 @@
       icon: "home"
     },
     { url: "/avatars", label: "Avatars", icon: "home" },
+    { url: "/badges", label: "Badges", icon: "home" },
     { url: "/buttons", label: "Buttons", icon: "home" },
     { url: "/cards", label: "Cards", icon: "home" },
     { url: "/checkboxes", label: "Checkboxes", icon: "home" },

@@ -13,6 +13,7 @@
   import Games from "./../pages/Games.svelte";
 
   import Avatars from "./../pages/ionic/Avatars.svelte";
+  import Badges from "./../pages/ionic/Badges.svelte";
   import Buttons from "./../pages/ionic/Buttons.svelte";
   import Cards from "./../pages/ionic/Cards.svelte";
   import Checkboxes from "./../pages/ionic/Checkboxes.svelte";
@@ -49,6 +50,7 @@
     { path: "/", component: Splash },
     { path: "/slides", component: Slides },
     { path: "/avatars", component: Avatars },
+    { path: "/badges", component: Badges },
     { path: "/buttons", component: Buttons },
     { path: "/cards", component: Cards },
     { path: "/checkboxes", component: Checkboxes },
