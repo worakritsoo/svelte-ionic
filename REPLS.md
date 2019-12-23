@@ -29,11 +29,9 @@ The full app: https://ionicsvelte.firebaseapp.com/
 * [skeleton](https://svelte.dev/repl/2680695b315f43749909ff79ca5da90d?version=3.16.5)
 * [slides](https://svelte.dev/repl/82c2033f5fb343c5b299cb99ab32e8ab?version=3.16.5)
 * [spinner](https://svelte.dev/repl/89715e8ba65d47edbde224e33598f1d3?version=3.16.5)
+* [tabs](https://svelte.dev/repl/8a03c4f333154aa089a32e16f6747a14?version=3.16.5)
 * [text](https://svelte.dev/repl/c1dc6a91601d427995d68cc25a782e2f?version=3.16.5)
 * [thumbnails](https://svelte.dev/repl/0576a69392f948eabcb29f2cf8f244eb?version=3.16.5)
 * [toggle](https://svelte.dev/repl/48af603d6363480f901e214a7532fa25?version=3.16.5)
 * [toolbar](https://svelte.dev/repl/84d8a747b1b84b28bc74259a110ac9c4?version=3.16.5)
-* [movies](https://svelte.dev/repl/8a03c4f333154aa089a32e16f6747a14?version=3.16.5)
-* [music](https://svelte.dev/repl/8a03c4f333154aa089a32e16f6747a14?version=3.16.5)
-* [games](https://svelte.dev/repl/8a03c4f333154aa089a32e16f6747a14?version=3.16.5)
 
