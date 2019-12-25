@@ -41,6 +41,7 @@
   import Thumbnails from "./../pages/ionic/Thumbnails.svelte";
   import Toggle from "./../pages/ionic/Toggle.svelte";
   import Toolbar from "./../pages/ionic/Toolbar.svelte";
+  import Supertab from "./../pages/ionic/Supertab.svelte";
 
   const routes = [
     { path: "/tabs/:id", component: Tabs },
@@ -78,7 +79,8 @@
     { path: "/toggle", component: Toggle },
     { path: "/toolbar", component: Toolbar },
     { path: "/navhome", component: Navhome },
-    { path: "/nav", component: Navhome }
+    { path: "/nav", component: Navhome },
+    { path: "/supertab", component: Supertab }
   ];
 </script>
 
