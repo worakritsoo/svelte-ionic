@@ -77,6 +77,7 @@
     { path: "/thumbnails", component: Thumbnails },
     { path: "/toggle", component: Toggle },
     { path: "/toolbar", component: Toolbar },
+    { path: "/navhome", component: Navhome },
     { path: "/nav", component: Navhome }
   ];
 </script>
