@@ -119,6 +119,9 @@
   }
 </style>
 
+<svelte:head>
+  <title>Sourceviewer {name}</title>
+</svelte:head>
 <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="end">

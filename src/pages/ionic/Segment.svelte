@@ -4,6 +4,9 @@
   }
 </style>
 
+<svelte:head>
+  <title>Ionic UI Companion App - Segment</title>
+</svelte:head>
 <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="start">

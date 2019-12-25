@@ -5,6 +5,9 @@
   };
 </script>
 
+<svelte:head>
+  <title>Ionic UI Companion App - Popover extra</title>
+</svelte:head>
 <ion-list>
   <ion-list-header>Ionic</ion-list-header>
   <ion-item

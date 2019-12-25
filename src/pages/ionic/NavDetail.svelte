@@ -9,6 +9,9 @@
   };
 </script>
 
+<svelte:head>
+  <title>Ionic UI Companion App - NavDetail</title>
+</svelte:head>
 <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="start">
