@@ -1,13 +1,6 @@
-<ion-header translucent>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button />
-    </ion-buttons>
-    <ion-title>Games</ion-title>
-  </ion-toolbar>
-</ion-header>
+<script>
+  import NavList from "./NavList.svelte";
+  import IonNav from "../../components/IonNav.svelte";
+</script>
 
-<ion-content fullscreen class="ion-padding">
-  <h1>Games</h1>
-  Games stuff. To implement: nav
-</ion-content>
+<IonNav component={NavList} root="nav-list" />

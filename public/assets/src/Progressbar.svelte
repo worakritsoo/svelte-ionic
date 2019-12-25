@@ -6,7 +6,7 @@
     <ion-title>Progress Bar</ion-title>
   </ion-toolbar>
 </ion-header>
-
+ 
 <ion-content class="outer-content">
   <!-- Default Progressbar -->
   <ion-list>

@@ -52,7 +52,7 @@
     { url: "/lists", label: "Lists", icon: "home" },
     { url: "/nav", label: "Nav", icon: "home" },
     { url: "/notes", label: "Notes", icon: "home" },
-    { url: "/progressbar", label: "ProgressBar", icon: "home" },
+    { url: "/progressbar", label: "Progressbar", icon: "home" },
     { url: "/radios", label: "Radios", icon: "home" },
     { url: "/range", label: "Range", icon: "home" },
     { url: "/refresher", label: "Refresher", icon: "home" },

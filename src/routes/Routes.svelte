@@ -22,7 +22,7 @@
   import Inputs from "./../pages/ionic/Inputs.svelte";
   import Items from "./../pages/ionic/Items.svelte";
   import Lists from "./../pages/ionic/Lists.svelte";
-  import Nav from "./../pages/ionic/Nav.svelte";
+  // import Nav from "./../pages/ionic/Nav.svelte";
   import Navhome from "./../pages/ionic/NavHome.svelte";
   import Notes from "./../pages/ionic/Notes.svelte";
   import Progressbar from "./../pages/ionic/Progressbar.svelte";
@@ -77,7 +77,6 @@
     { path: "/thumbnails", component: Thumbnails },
     { path: "/toggle", component: Toggle },
     { path: "/toolbar", component: Toolbar },
-
     { path: "/nav", component: Navhome }
   ];
 </script>
