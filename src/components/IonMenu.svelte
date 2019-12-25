@@ -1,4 +1,7 @@
 <script>
+  import firebase from "firebase/app";
+  import "firebase/analytics";
+
   import { navigate } from "svelte-routing";
   import { fromFetch } from "rxjs/fetch";
 
@@ -13,6 +16,7 @@
   }
 
   const goToGitHub = () => {
+    firebase.analytics().logEvent("Go to GitHUB");
     anchor.click();
   };
 
