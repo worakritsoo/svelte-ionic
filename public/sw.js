@@ -192,10 +192,6 @@ workbox.precaching.precacheAndRoute([
     "revision": "6e82510cd7dff2a926d21c2e18091b87"
   },
   {
-    "url": "build/bundle.css",
-    "revision": "4473c2133a4ab7cbbcb7b6f98caeab74"
-  },
-  {
     "url": "favicon.png",
     "revision": "c64beab291de80970aa4887a5a1c9135"
   },
