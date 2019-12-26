@@ -173,7 +173,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "assets/json/api-mappings.json",
-    "revision": "84455e15b5e3e846b34eec1d66df3a16"
+    "revision": "5c46ac97d5e2e47bf85f5d3207859233"
   },
   {
     "url": "assets/json/ionicons.json",
@@ -193,7 +193,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "build/bundle.css",
-    "revision": "4473c2133a4ab7cbbcb7b6f98caeab74"
+    "revision": "51945b5d8aa1932d29ebb3eff58f853b"
+  },
+  {
+    "url": "build/bundle.js",
+    "revision": "9ff84d742a04335e23dba0152b9bc42e"
   },
   {
     "url": "favicon.png",

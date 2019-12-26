@@ -68,7 +68,7 @@
     { url: "/skeleton", label: "Skeleton", icon: "home" },
     { url: "/slides", label: "Slides", icon: "home" },
     { url: "/spinner", label: "Spinner", icon: "home" },
-    //  { url: "/timeline", label: "Timeline (non ionic)", icon: "home" },
+    { url: "/timeline", label: "Timeline (non ionic)", icon: "home" },
     { url: "/text", label: "Text", icon: "home" },
     { url: "/thumbnails", label: "Thumbnails", icon: "home" },
     { url: "/toggle", label: "Toggle", icon: "home" },
