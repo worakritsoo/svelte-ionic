@@ -36,7 +36,6 @@
   }
   function appendMessages(numMessages = 1, unread) {
     for (let i = 0; i < numMessages; i++) {
-      console.log("stuff added", createMessage(unread));
       list.appendChild(createMessage(unread, i));
     }
   }

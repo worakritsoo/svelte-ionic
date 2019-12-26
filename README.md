@@ -64,7 +64,7 @@ See issue https://github.com/roman-rr/cupertino-pane/issues/3 raised.
 After completion of `npm i` you need to manually change line 185 in `cupertino-pane.esm.bundle.js` in the node_modules directory - unfortunately.
 ```  // Content
 185: this.contentEl = this.el.childNodes[2];
-```      
+```          
 
 # Todo's
 A number of todo's:
