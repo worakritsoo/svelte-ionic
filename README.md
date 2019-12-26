@@ -71,21 +71,25 @@ A number of todo's:
 - ~~ionicons part has some unknown icons, make larger~~
 - make it a PWA - need to work on the service worker
 - ~~better names for controller API?~~
-- NAV over tab?
+- ~~NAV over tab~~
 - ~~make it more sveltish (code, store, bindings, animations)~~
 - ~~publish on firebase hosting~~
 - ~~try some cordova/ionic native - no web features I need ~~
 - singleton classes https://alligator.io/js/js-singletons/
 - place routes in better place (pages folder probably, to avoid repeating /../)
-- ~~consider Contexts for exposing controllers - nope as you need nesting for this, which I don't like ~~
+- ~~consider Contexts for exposing controllers ~~
 - ~~split pane~~
 - searchbox in ionicons
-- add non Ionic elements to complete UI: https://www.w3schools.com/howto/default.asp
+- add non Ionic elements to complete UI: 
+    - lower card
+    - chat ui
+    - timeline
+    - accordeon
+    - 
 - SSR
 - ~~to docs link https://ionicframework.com/docs/api/input~~
 - https://css-tricks.com/what-i-like-about-writing-styles-with-svelte/
 - https://github.com/pngwn/prism-svelte or something else that works
 - ~~REPLs~~
-- other languages code?
 - change router? https://github.com/qutran/swheel, https://github.com/jorgegorka/svelte-router/blob/master/README.md
 - https://github.com/ryanatkn/awesome-svelte-resources

@@ -41,7 +41,10 @@
   import Thumbnails from "./../pages/ionic/Thumbnails.svelte";
   import Toggle from "./../pages/ionic/Toggle.svelte";
   import Toolbar from "./../pages/ionic/Toolbar.svelte";
-  import Supertab from "./../pages/ionic/Supertab.svelte";
+
+  import AltDetails from "./../pages/ionic/AltDetails.svelte";
+  import Timeline from "./../pages/ionic/Timeline.svelte";
+  import Pane from "./../pages/ionic/Pane.svelte";
 
   const routes = [
     { path: "/tabs/:id", component: Tabs },
@@ -80,7 +83,10 @@
     { path: "/toolbar", component: Toolbar },
     { path: "/navhome", component: Navhome },
     { path: "/nav", component: Navhome },
-    { path: "/supertab", component: Supertab }
+
+    { path: "/pane", component: Pane },
+    { path: "/timeline", component: Timeline },
+    { path: "/navdetails/:techName", component: AltDetails }
   ];
 </script>
 

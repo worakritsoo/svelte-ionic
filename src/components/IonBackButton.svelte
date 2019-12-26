@@ -24,7 +24,11 @@
 
   const popWindow = () => {
     if (!disabled) {
-      nav.pop();
+      if (nav) {
+        nav.pop();
+      } else {
+        window.history.back();
+      }
     }
   };
 </script>

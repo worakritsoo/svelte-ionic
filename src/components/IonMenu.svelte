@@ -56,6 +56,8 @@
     { url: "/lists", label: "Lists", icon: "home" },
     { url: "/navhome", label: "Nav", icon: "home" },
     { url: "/notes", label: "Notes", icon: "home" },
+    { url: "/pane", label: "Pane (non-ionic)", icon: "home" },
+
     { url: "/progressbar", label: "Progressbar", icon: "home" },
     { url: "/radios", label: "Radios", icon: "home" },
     { url: "/range", label: "Range", icon: "home" },
