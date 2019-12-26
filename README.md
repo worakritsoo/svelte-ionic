@@ -59,6 +59,13 @@ Ion Back Button does not appear in the app. Neither in a REPL. Made a custom ver
 ## Nav needs customElement
 Not necessarily an issue, but still a bit undesireable to make a custom element to be using a IonNav (as in `<ion-nav root="my-element">`). Therefore made IonNav.svelte to handle this and developers can include svelte component instead of manually registering a customElement.
 
+## Pane has error
+See issue https://github.com/roman-rr/cupertino-pane/issues/3 raised.
+After completion of `npm i` you need to manually change line 185 in `cupertino-pane.esm.bundle.js` in the node_modules directory - unfortunately.
+```  // Content
+185: this.contentEl = this.el.childNodes[2];
+```      
+
 # Todo's
 A number of todo's:
 - ~~UI elements missing: VirtualScroll skipped ~~
@@ -85,7 +92,7 @@ A number of todo's:
     - chat ui
     - timeline
     - accordeon
-    - 
+    - pane 
 - SSR
 - ~~to docs link https://ionicframework.com/docs/api/input~~
 - https://css-tricks.com/what-i-like-about-writing-styles-with-svelte/
