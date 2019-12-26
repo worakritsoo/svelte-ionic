@@ -6,5 +6,6 @@
     "infinitescroll": "infinite-scroll",
     "slide": "slides",
     "icon": "https://ionicons.com/",
-    "skeleton": "skeleton-text"
+    "skeleton": "skeleton-text",
+    "pane": "https://github.com/roman-rr/cupertino-pane"
 }

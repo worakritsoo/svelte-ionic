@@ -41,8 +41,8 @@
   import Thumbnails from "./../pages/ionic/Thumbnails.svelte";
   import Toggle from "./../pages/ionic/Toggle.svelte";
   import Toolbar from "./../pages/ionic/Toolbar.svelte";
-
   import AltDetails from "./../pages/ionic/AltDetails.svelte";
+
   import Timeline from "./../pages/ionic/Timeline.svelte";
   import Pane from "./../pages/ionic/Pane.svelte";
 

@@ -57,7 +57,6 @@
     { url: "/navhome", label: "Nav", icon: "home" },
     { url: "/notes", label: "Notes", icon: "home" },
     { url: "/pane", label: "Pane (non-ionic)", icon: "home" },
-
     { url: "/progressbar", label: "Progressbar", icon: "home" },
     { url: "/radios", label: "Radios", icon: "home" },
     { url: "/range", label: "Range", icon: "home" },
@@ -69,6 +68,7 @@
     { url: "/skeleton", label: "Skeleton", icon: "home" },
     { url: "/slides", label: "Slides", icon: "home" },
     { url: "/spinner", label: "Spinner", icon: "home" },
+    //  { url: "/timeline", label: "Timeline (non ionic)", icon: "home" },
     { url: "/text", label: "Text", icon: "home" },
     { url: "/thumbnails", label: "Thumbnails", icon: "home" },
     { url: "/toggle", label: "Toggle", icon: "home" },
