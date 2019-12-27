@@ -41,7 +41,7 @@
       // let's not trigger the user immmediately
       setTimeout(() => {
         pulseSourceViewer = true;
-      }, 10000);
+      }, 20000);
     }
   });
 

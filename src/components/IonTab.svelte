@@ -4,7 +4,7 @@
   export let tabs;
   export let selected;
 
-  // ugly implmentation
+  // ugly implmentation - to avoid present method not present
   let tries = 0;
   const selectTab = () => {
     const controller = document.querySelector("ion-tabs");
@@ -23,10 +23,21 @@
       selectTab();
     }
   });
+
+  const tabsChange = event => {
+    // console.log("Tabs change", event.detail.tab);
+    history.pushState(
+      event.detail,
+      event.detail.tab,
+      "/tabs/" + event.detail.tab
+    );
+
+    // console.log("adas", window.history);
+  };
 </script>
 
 <ion-router />
-<ion-tabs>
+<ion-tabs on:ionTabsDidChange={tabsChange}>
   {#each tabs as tab}
     <ion-tab tab={tab.tab}>
       <svelte:component this={tab.component} />
