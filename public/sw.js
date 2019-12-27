@@ -181,7 +181,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "assets/json/repls.json",
-    "revision": "5cfcd9d804fb43c25131ff59f9d27b3e"
+    "revision": "a64ce36baf1ccc8477cf4f8b40ba86b2"
   },
   {
     "url": "assets/src/techs.js",
@@ -193,11 +193,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "build/bundle.css",
-    "revision": "ac619a58ed4d93ac47de39beb5cb0544"
-  },
-  {
-    "url": "build/bundle.js",
-    "revision": "5cd386ebec874cc03ed174b9eb912b92"
+    "revision": "6e6fc265cc984267f621fbd426ad6a52"
   },
   {
     "url": "favicon.png",

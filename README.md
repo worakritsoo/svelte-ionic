@@ -62,8 +62,8 @@ Not necessarily an issue, but still a bit undesireable to make a custom element 
 ## Altdetails is not taking the route argument
 Needing some debugging
 
-## Tabs need to pushState to history
-In order to make back button work, tabs needs to add to the navigation history
+## Cupertino pane has issue after closing of button
+The demo does not have this issue as I removed the `_this.parentEl.appendChild(_this.contentEl);` in/around line 428 (`this.paneEl.addEventListener('transitionend', function (t) {` in `closePane` ) of file `node_modules/cupertino-pane/dist/cupertino-pane.esm.bundle.js`. 
 
 # Todo's
 A number of todo's:

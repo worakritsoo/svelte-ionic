@@ -41,10 +41,15 @@
       // let's not trigger the user immmediately
       setTimeout(() => {
         pulseSourceViewer = true;
+        // and stop the pulse after 1 minute
+        setTimeout(() => {
+          pulseSourceViewer = false;
+        }, 60000);
       }, 20000);
     }
   });
 
+  // handler for the sourceviewer
   const viewSource = () => {
     localforage.setItem("has-seen-source", true);
     pulseSourceViewer = false;
