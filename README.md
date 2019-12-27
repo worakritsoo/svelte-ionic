@@ -62,13 +62,8 @@ Not necessarily an issue, but still a bit undesireable to make a custom element 
 ## Altdetails is not taking the route argument
 Needing some debugging
 
-## Pane has error - u need to manually update node_module
-See issue https://github.com/roman-rr/cupertino-pane/issues/3 raised.
-After completion of `npm i` you need to manually change line 185 in `cupertino-pane.esm.bundle.js` in the node_modules directory - unfortunately.
-```  // Content
-185: this.contentEl = this.el.childNodes[2];
-```          
-And therefore also no REPL available. Also, the pane stays open if you switch menu item (because it is placed outside `ion-content`. This was done because of the padding in `ion-content`)
+## Tabs need to pushState to history
+In order to make back button work, tabs needs to add to the navigation history
 
 # Todo's
 A number of todo's:

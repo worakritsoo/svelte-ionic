@@ -10,6 +10,8 @@
 
   import { IonicShowModal } from "./services/IonicControllers";
 
+  import localforage from "localforage";
+
   // Check that service workers are supported
   if ("serviceWorker" in navigator) {
     /*
@@ -31,7 +33,22 @@
     //	});
   }
 
+  // source viewer and pulsating class for the FAB
+  let pulseSourceViewer = false;
+  localforage.getItem("has-seen-source").then(value => {
+    console.log("has-seen-source", value);
+    if (!value) {
+      // let's not trigger the user immmediately
+      setTimeout(() => {
+        pulseSourceViewer = true;
+      }, 10000);
+    }
+  });
+
   const viewSource = () => {
+    localforage.setItem("has-seen-source", true);
+    pulseSourceViewer = false;
+
     IonicShowModal("source-viewer", SourceViewer, {
       name: window.location.pathname
     }).then(data => console.log(data));
@@ -60,6 +77,22 @@
   firebase.analytics().logEvent("APP LAUNCH");
 </script>
 
+<style>
+  @keyframes shadow-pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 135px rgba(0, 0, 0, 0);
+    }
+  }
+
+  .pulseSourceViewer {
+    border-radius: 50%;
+    animation: shadow-pulse 1s infinite;
+  }
+</style>
+
 <svelte:head>
   <title>Ionic UI Companion App - svelte power!</title>
 </svelte:head>
@@ -67,7 +100,7 @@
 <FirebaseApp {firebase}>
   <ion-app>
     <ion-fab horizontal="end" vertical="bottom" slot="fixed">
-      <ion-fab-button color="dark" on:click={viewSource}>
+      <ion-fab-button class:pulseSourceViewer on:click={viewSource}>
         <ion-icon name="code-working" />
       </ion-fab-button>
     </ion-fab>
