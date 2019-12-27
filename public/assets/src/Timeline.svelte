@@ -2736,6 +2736,7 @@
 </style>
 
 <svelte:head>
+  <title>Ionic UI Companion App - Timeline </title>
 
   <link
     href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -2748,6 +2749,17 @@
     crossorigin="anonymous" />
 
 </svelte:head>
+
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button />
+    </ion-buttons>
+    <ion-title>Timeline - experimental</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
 <ion-content>
 
   <div class="container">
