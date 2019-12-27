@@ -1,3 +1,22 @@
+<script>
+  let itemSlidingStart;
+  let itemSlidingEnd;
+
+  const animateSliding = () => {
+    setTimeout(() => {
+      itemSlidingStart.open("start");
+      itemSlidingEnd.open("end");
+      setTimeout(() => {
+        itemSlidingStart.close();
+        itemSlidingEnd.close();
+        animateSliding();
+      }, 2000);
+    }, 2000);
+  };
+
+  animateSliding();
+</script>
+
 <style>
   .blue-item {
     --background: blue;
@@ -93,7 +112,7 @@
   <ion-list>
     <ion-list-header>Sliding Item</ion-list-header>
 
-    <ion-item-sliding>
+    <ion-item-sliding bind:this={itemSlidingStart}>
       <ion-item class="blue-item">
         <ion-label>New Message</ion-label>
       </ion-item>
@@ -107,7 +126,7 @@
       </ion-item-options>
     </ion-item-sliding>
 
-    <ion-item-sliding>
+    <ion-item-sliding bind:this={itemSlidingEnd}>
       <ion-item>
         <ion-label>New Message</ion-label>
       </ion-item>
