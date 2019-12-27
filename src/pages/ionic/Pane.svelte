@@ -35,13 +35,6 @@
 </ion-header>
 <ion-content padding>
 
-  <div class="wrapper">
-    <div class="example-1">Example 1</div>
-    <div class="example-2">Example 2</div>
-    <div class="example-3">Example 3</div>
-  </div>
-  <div style="clear: both;" />
-
   <h1>Cupertino Pane</h1>
   <ion-text>
     <p>
