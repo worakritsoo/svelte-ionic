@@ -11,6 +11,8 @@
 
   let anchor;
   let apiURL = "";
+  let REPLlink;
+  let APIlink;
 
   // probably can be done in easier way, but I am lazy
   let name = "/";
@@ -32,59 +34,66 @@
     modal.dismiss({});
   };
 
-  const goREPL = () => {
-    fromFetch("/assets/json/repls.json").subscribe(response => {
-      response.json().then(json => {
-        const url = json[name.toLocaleLowerCase()];
-        if (url) {
-          console.log("REPL", json, url);
-          anchor.href = url;
-          anchor.click();
-        } else {
-          IonicShowToast({
-            color: "dark",
-            duration: 2000,
-            message: "No REPL link configured",
-            showCloseButton: true
-          });
-        }
-      });
-    });
-  };
-
-  const goAPIdocs = () => {
-    // try to generate the url to the api docs
-    let apiName = name.toLowerCase();
-    if (apiName.charAt(apiName.length - 1) == "s") {
-      apiName = apiName.slice(0, -1);
-    }
-    console.log("Raw APINAME", apiName);
-
-    // do a mapping for some exceptions
-    apiName = apiName.replace("/", "");
-    fromFetch("/assets/json/api-mappings.json").subscribe(
-      response => {
-        response.json().then(json => {
-          let url = "https://ionicframework.com/docs/api/";
-          if (json[apiName]) {
-            url += json[apiName];
-            if (json[apiName].toLowerCase().substring(0, 4) == "http") {
-              url = json[apiName];
-            }
-          } else {
-            url += apiName;
-          }
-          anchor.href = url;
-          anchor.click();
-        });
-      },
-      error => {
-        console.error("Error HTTP", error);
+  // const goREPL = () => {
+  fromFetch("/assets/json/repls.json").subscribe(response => {
+    response.json().then(json => {
+      const url = json[name.toLocaleLowerCase()];
+      if (url) {
+        console.log("REPL", json, url);
+        REPLlink = url;
+        //  anchor.href = url;
+        //  anchor.click();
       }
-    );
-  };
+      /*
+      else {
+        IonicShowToast({
+          color: "dark",
+          duration: 2000,
+          message: "No REPL link configured",
+          showCloseButton: true
+        });
+      }
+      */
+    });
+  });
+  // };
+
+  // const goAPIdocs = () => {
+  // try to generate the url to the api docs
+  let apiName = name.toLowerCase();
+  if (apiName.charAt(apiName.length - 1) == "s") {
+    apiName = apiName.slice(0, -1);
+  }
+  console.log("Raw APINAME", apiName);
+
+  // do a mapping for some exceptions
+  // using RXJS just for fun
+  apiName = apiName.replace("/", "");
+  fromFetch("/assets/json/api-mappings.json").subscribe(
+    response => {
+      response.json().then(json => {
+        let url = "https://ionicframework.com/docs/api/";
+        if (json[apiName]) {
+          url += json[apiName];
+          if (json[apiName].toLowerCase().substring(0, 4) == "http") {
+            url = json[apiName];
+          }
+        } else {
+          url += apiName;
+        }
+        //anchor.href = url;
+        APIlink = url;
+        //      anchor.click();
+      });
+    },
+    error => {
+      console.error("Error HTTP", error);
+    }
+  );
+  // };
 
   let sourceCode = "Loading....";
+  // using RXJS just for fun
   fromFetch("assets/src/" + name + ".svelte").subscribe(response => {
     response.text().then(txt => {
       if (txt.search("<!DOCTYPE html>") > -1) {
@@ -125,13 +134,21 @@
 <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="end">
-      <ion-button on:click={goREPL} title="Hello This Will Have Some Value">
+      <ion-button
+        on:click={() => {
+          window.open(REPLlink, '_blank');
+        }}>
         REPL
       </ion-button>
 
-      <ion-button on:click={goAPIdocs}>API</ion-button>
+      <ion-button
+        on:click={() => {
+          window.open(APIlink, '_blank');
+        }}>
+        API
+      </ion-button>
 
-      {#if sourceCode.length > 0}
+      {#if sourceCode.length > 11}
         <ion-button on:click={copySource}>COPY</ion-button>
       {/if}
       <ion-button on:click={closeOverlay}>
