@@ -57,9 +57,6 @@ Need to use other api
 ## ion-back-button does not show
 Ion Back Button does not appear in the app. Neither in a REPL. Made a custom version.
 
-## Nav needs customElement
-Not necessarily an issue, but still a bit undesireable to make a custom element to be using a IonNav (as in `<ion-nav root="my-element">`). Therefore made IonNav.svelte to handle this and developers can include svelte component instead of manually registering a customElement.
-
 ## Altdetails is not taking the route argument
 Needing some debugging
 
@@ -68,6 +65,15 @@ Safari browser requires windows.open to be called in on:bind. Not fully implemen
 
 ## Capacitor Clipboard on iOS does not copy
 Copy of sourcecode on iOS does not seem to work.
+
+## Source viewer ScrollX    
+Source viewer does not support horizontal scrolling.
+
+# Remarks
+
+## Nav needs customElement
+Not necessarily an issue, but still a bit undesireable to make a custom element to be using a IonNav (as in `<ion-nav root="my-element">`). Therefore made IonNav.svelte to handle this and developers can include svelte component instead of manually registering a customElement.
+
 
 # Todo's
 A number of todo's:
