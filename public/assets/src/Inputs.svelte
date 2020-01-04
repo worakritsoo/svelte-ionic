@@ -1,8 +1,10 @@
 <script>
-  const controller = document.querySelector("ion-alert-controller");
+  let controller;
   let firstName, lastName;
+
   function processForm(event) {
-    event.preventDefault();
+    console.log("Processing form", event);
+    // event.preventDefault();
     controller
       .create({
         header: "Account Created",
@@ -41,18 +43,14 @@
 </ion-header>
 
 <ion-content fullscreen>
-  <form onsubmit="processForm(event)">
+  <form>
     <ion-list lines="full" class="ion-no-margin ion-no-padding">
       <ion-item>
         <ion-label position="stacked">
           First Name
           <ion-text color="danger">*</ion-text>
         </ion-label>
-        <ion-input
-          on:ionChange={changeValue}
-          required
-          type="text"
-          oninput="handleFirstNameValue(event)" />
+        <ion-input on:ionChange={handleFirstNameValue} required type="text" />
       </ion-item>
 
       <ion-item>
@@ -60,38 +58,34 @@
           Last Name
           <ion-text color="danger">*</ion-text>
         </ion-label>
-        <ion-input
-          on:ionChange={changeValue}
-          required
-          type="text"
-          oninput="handleLastNameValue(event)" />
+        <ion-input on:ionChange={handleLastNameValue} required type="text" />
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Title</ion-label>
-        <ion-input />
+        <ion-input on:ionChange={changeValue} />
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Address</ion-label>
-        <ion-input placeholder="Address Line 1" />
-        <ion-input placeholder="Address Line 2" />
-        <ion-input placeholder="City" />
-        <ion-input placeholder="State" />
-        <ion-input placeholder="Zip Code" />
+        <ion-input placeholder="Address Line 1" on:ionChange={changeValue} />
+        <ion-input placeholder="Address Line 2" on:ionChange={changeValue} />
+        <ion-input placeholder="City" on:ionChange={changeValue} />
+        <ion-input placeholder="State" on:ionChange={changeValue} />
+        <ion-input placeholder="Zip Code" on:ionChange={changeValue} />
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Notes</ion-label>
-        <ion-textarea />
+        <ion-textarea on:ionChange={changeValue} />
       </ion-item>
     </ion-list>
 
     <div class="ion-padding">
-      <ion-button expand="block" type="submit" class="ion-no-margin">
+      <ion-button expand="block" on:click={processForm} class="ion-no-margin">
         Create account
       </ion-button>
     </div>
   </form>
 </ion-content>
-<ion-alert-controller />
+<ion-alert-controller bind:this={controller} />
