@@ -109,19 +109,19 @@
     Clipboard.write({
       string: sourceCode
     })
-      .catch(error => {
+      .then(() => {
         IonicShowToast({
           color: "dark",
           duration: 2000,
-          message: "STUFF " + JSON.stringify(error),
+          message: "Copied...",
           showCloseButton: true
         });
       })
-      .then(sss => {
+      .catch(message => {
         IonicShowToast({
-          color: "dark",
+          color: "danger",
           duration: 2000,
-          message: "zsfdsf" + JSON.stringify(sss),
+          message,
           showCloseButton: true
         });
       });
