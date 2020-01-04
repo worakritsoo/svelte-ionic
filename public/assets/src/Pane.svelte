@@ -1,8 +1,10 @@
 <script>
+  //
   // https://github.com/roman-rr/cupertino-pane
-  import { onMount } from "svelte";
-
+  //
   import { CupertinoPane } from "cupertino-pane";
+
+  import { onMount } from "svelte";
 
   onMount(() => {
     var myPane = new CupertinoPane(

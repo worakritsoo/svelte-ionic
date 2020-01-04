@@ -71,7 +71,7 @@ Copy of sourcecode on iOS does not seem to work.
 
 # Todo's
 A number of todo's:
-- ~~UI elements missing: VirtualScroll skipped ~~
+- ~~UI elements missing: VirtualScroll skipped~~
 - ~~add the popoover and other controller related items~~
 - ~~try the css styling as per documentation (theming)~~
 - ~~look at awesome rollup and add typescript -~~ not mature enough!!
@@ -87,7 +87,7 @@ A number of todo's:
 - ~~try some cordova/ionic native - no web features I need ~~
 - singleton classes https://alligator.io/js/js-singletons/
 - place routes in better place (pages folder probably, to avoid repeating /../)
-- ~~consider Contexts for exposing controllers ~~
+- ~~consider Contexts for exposing controllers~~
 - ~~split pane~~
 - searchbox in ionicons
 - add non Ionic elements to complete UI: 
@@ -102,3 +102,4 @@ A number of todo's:
 - ~~REPLs~~
 - change router? https://github.com/qutran/swheel, https://github.com/jorgegorka/svelte-router/blob/master/README.md
 - https://github.com/ryanatkn/awesome-svelte-resources
+- source code formatter in HTML

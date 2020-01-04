@@ -9,7 +9,6 @@
   const { Clipboard } = Plugins;
   const { componentProps } = document.querySelector("ion-modal");
 
-  let anchor;
   let apiURL = "";
   let REPLlink;
   let APIlink;
@@ -35,38 +34,29 @@
   };
 
   // cannot use function as Safari request window.open to be called in on:click
-  // const goREPL = () => {
   fromFetch("/assets/json/repls.json").subscribe(response => {
     response.json().then(json => {
       const url = json[name.toLocaleLowerCase()];
       if (url) {
-        console.log("REPL", json, url);
         REPLlink = url;
-        //  anchor.href = url;
-        //  anchor.click();
       }
-      /*
-      else {
-        IonicShowToast({
-          color: "dark",
-          duration: 2000,
-          message: "No REPL link configured",
-          showCloseButton: true
-        });
-      }
-      */
     });
   });
-  // };
+  const showNoREPLToast = () => {
+    IonicShowToast({
+      color: "danger",
+      duration: 2000,
+      message: "No REPL link configured",
+      showCloseButton: true
+    });
+  };
 
-  // const goAPIdocs = () => {
   // try to generate the url to the api docs
   let apiName = name.toLowerCase();
   if (apiName.charAt(apiName.length - 1) == "s") {
     apiName = apiName.slice(0, -1);
   }
   console.log("Raw APINAME", apiName);
-
   // do a mapping for some exceptions
   // using RXJS just for fun
   apiName = apiName.replace("/", "");
@@ -82,19 +72,16 @@
         } else {
           url += apiName;
         }
-        //anchor.href = url;
         APIlink = url;
-        //      anchor.click();
       });
     },
     error => {
       console.error("Error HTTP", error);
     }
   );
-  // };
 
-  let sourceCode = "Loading....";
   // using RXJS just for fun
+  let sourceCode = "Loading....";
   fromFetch("assets/src/" + name + ".svelte").subscribe(response => {
     response.text().then(txt => {
       if (txt.search("<!DOCTYPE html>") > -1) {
@@ -105,6 +92,7 @@
     });
   });
 
+  // somehow does not fly on iOS?
   const copySource = () => {
     Clipboard.write({
       string: sourceCode
@@ -147,7 +135,11 @@
     <ion-buttons slot="end">
       <ion-button
         on:click={() => {
-          window.open(REPLlink, '_blank');
+          if (REPLlink.length > 1) {
+            window.open(REPLlink, '_blank');
+          } else {
+            showNoREPLToast();
+          }
         }}>
         REPL
       </ion-button>
@@ -173,6 +165,3 @@
 <ion-content padding scrollX="true">
   <pre>{sourceCode}</pre>
 </ion-content>
-<a target="_blank" bind:this={anchor} href="/">
-  <div />
-</a>
