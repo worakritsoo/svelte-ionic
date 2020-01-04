@@ -3,7 +3,9 @@ A showcase app for all Ionic UI elements. Use this app to try-out the elements y
 
 Published as web app: https://ionicsvelte.firebaseapp.com
 
-Or if you want to run it locally:
+Hint: try reactivity of the app by using various devices or the Chrome developer view: iOS, MD and fullscreen desktop responsiveness guaranteed!
+
+If you want to run it locally:
 
 ```bash
 npm install -g degit
@@ -48,8 +50,6 @@ All features (vision/realised)
 
 # Known issues
 
-## Ion Tabs
-May need to refactor the IonTab.svelte
 
 ## IonMenu gives warning
 Need to use other api
@@ -75,6 +75,9 @@ If you want to set properties for Ionic elements, you need to use the `attribute
 
 ## Nav needs customElement
 Not necessarily an issue, but still a bit undesireable to make a custom element to be using a IonNav (as in `<ion-nav root="my-element">`). Therefore made IonNav.svelte to handle this and developers can include svelte component instead of manually registering a customElement.
+
+## IonTabs selected Tab 
+I raised an issue @ Ionic for selected-tab not selecting te default tab as per Ionic's documentation. https://github.com/ionic-team/ionic/issues/20060
 
 
 # Todo's
