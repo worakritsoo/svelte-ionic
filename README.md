@@ -66,9 +66,12 @@ Safari browser requires windows.open to be called in on:bind. Not fully implemen
 ## Capacitor Clipboard on iOS does not copy
 Copy of sourcecode on iOS does not seem to work.
 
-# Remarks
+# Remarks while working on Ionic - Svelte integration
 
-## Setting properties
+## Setting properties for Ionic Elements
+If you want to set properties for Ionic elements, you need to use the `attribute` as defined in the docs. Example:
+- not ok: `<ion-content scrollX="true">...</ion-content>`
+- ok: `<ion-content scroll-x="true>...</ion-content>`
 
 ## Nav needs customElement
 Not necessarily an issue, but still a bit undesireable to make a custom element to be using a IonNav (as in `<ion-nav root="my-element">`). Therefore made IonNav.svelte to handle this and developers can include svelte component instead of manually registering a customElement.

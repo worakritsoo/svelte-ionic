@@ -1,7 +1,4 @@
 <script>
-  import firebase from "firebase/app";
-  import "firebase/analytics";
-
   import { navigate } from "svelte-routing";
   import { fromFetch } from "rxjs/fetch";
 
@@ -70,6 +67,7 @@
   ];
 
   // randomize the icons for the menu
+  // using RXJS for fun
   let icons;
   fromFetch("/assets/json/ionicons.json").subscribe(
     response => {
