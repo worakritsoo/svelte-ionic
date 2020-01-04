@@ -14,10 +14,6 @@
     navigate(url);
   }
 
-  const goToGitHub = () => {
-    firebase.analytics().logEvent("Go to GitHUB");
-  };
-
   const getRandomColor = () => {
     const items = [
       "secondary",
@@ -116,7 +112,6 @@
         <ion-item
           on:click={() => {
             window.open('https://github.com/Tommertom/svelte-ionic-app', '_blank');
-            goToGitHub();
           }}>
           <ion-icon name="logo-github" slot="start" />
           <ion-label>Go to GitHub for this app</ion-label>
