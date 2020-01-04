@@ -56,11 +56,10 @@
 
     IonicShowModal("source-viewer", SourceViewer, {
       name: window.location.pathname
-    }).then(data => console.log(data));
+    });
   };
 
   import { FirebaseApp } from "sveltefire";
-
   import firebase from "firebase/app";
   import "firebase/firestore";
   import "firebase/auth";
@@ -79,7 +78,6 @@
   };
 
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics().logEvent("APP LAUNCH");
 </script>
 
 <style>
@@ -114,5 +112,5 @@
       <Routes main />
     </ion-split-pane>
   </ion-app>
+  <CookieJar />
 </FirebaseApp>
-<CookieJar />

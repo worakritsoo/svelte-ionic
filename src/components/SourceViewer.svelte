@@ -170,7 +170,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding scrollX="true">
   <pre>{sourceCode}</pre>
 </ion-content>
 <a target="_blank" bind:this={anchor} href="/">
