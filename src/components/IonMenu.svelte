@@ -5,7 +5,6 @@
   import { navigate } from "svelte-routing";
   import { fromFetch } from "rxjs/fetch";
 
-  let anchor;
   export let side = "start";
 
   let menucontroller;
@@ -17,7 +16,6 @@
 
   const goToGitHub = () => {
     firebase.analytics().logEvent("Go to GitHUB");
-    anchor.click();
   };
 
   const getRandomColor = () => {
@@ -115,17 +113,22 @@
           </ion-item>
         {/each}
         <ion-item />
-        <ion-item on:click={goToGitHub}>
+        <ion-item
+          on:click={() => {
+            window.open('https://github.com/Tommertom/svelte-ionic-app', '_blank');
+            goToGitHub();
+          }}>
           <ion-icon name="logo-github" slot="start" />
           <ion-label>Go to GitHub for this app</ion-label>
         </ion-item>
+        <ion-item
+          on:click={() => {
+            window.open('https://forum.ionicframework.com/t/ionicsvelte-all-of-ionics-ui-in-one-svelte-app', '_blank');
+          }}>
+          <ion-icon name="logo-ionic" slot="start" />
+          <ion-label>Go to Ionic Forum to discuss this app</ion-label>
+        </ion-item>
       </ion-list>
-      <a
-        target="_blank"
-        bind:this={anchor}
-        href="https://github.com/Tommertom/svelte-ionic-app">
-        <div />
-      </a>
     </ion-content>
   {/if}
 </ion-menu>
