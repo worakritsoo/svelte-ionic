@@ -126,7 +126,7 @@
             window.open('https://forum.ionicframework.com/t/ionicsvelte-all-of-ionics-ui-in-one-svelte-app', '_blank');
           }}>
           <ion-icon name="logo-ionic" slot="start" />
-          <ion-label>Go to Ionic Forum to discuss this app</ion-label>
+          <ion-label>Go to Ionic Forum</ion-label>
         </ion-item>
       </ion-list>
     </ion-content>
