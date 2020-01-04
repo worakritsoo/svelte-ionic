@@ -162,6 +162,6 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding scrollX="true" forceOverscroll="true">
+<ion-content padding scroll-x="true">
   <pre>{sourceCode}</pre>
 </ion-content>
