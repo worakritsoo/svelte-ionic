@@ -108,13 +108,23 @@
   const copySource = () => {
     Clipboard.write({
       string: sourceCode
-    });
-    IonicShowToast({
-      color: "dark",
-      duration: 1000,
-      message: "Copied source of " + name,
-      showCloseButton: true
-    });
+    })
+      .catch(error => {
+        IonicShowToast({
+          color: "dark",
+          duration: 2000,
+          message: "STUFF " + JSON.stringify(error),
+          showCloseButton: true
+        });
+      })
+      .then(sss => {
+        IonicShowToast({
+          color: "dark",
+          duration: 2000,
+          message: "zsfdsf" + JSON.stringify(sss),
+          showCloseButton: true
+        });
+      });
 
     setTimeout(closeOverlay, 1000);
   };
