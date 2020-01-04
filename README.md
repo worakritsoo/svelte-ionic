@@ -1,9 +1,9 @@
 # Ionic Svelte UI demo
-A showcase app for all Ionic UI elements. Use this app to try-out the elements you like for your app, and then navigate directly to the API docs or the source code (now: only svelte).
+A showcase app for all Ionic UI elements. Use this app to try-out the elements you like for your app, and then navigate directly to the API docs or the source code.
 
 Published as web app: https://ionicsvelte.firebaseapp.com
 
-Hint: try reactivity of the app by using various devices or the Chrome developer view: iOS, MD and fullscreen desktop responsiveness guaranteed!
+Hint: try reactivity of the app by using various devices or the Chrome developer view: iOS, Android's material design and fullscreen desktop responsiveness guaranteed!
 
 If you want to run it locally:
 
