@@ -181,7 +181,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "assets/json/repls.json",
-    "revision": "a64ce36baf1ccc8477cf4f8b40ba86b2"
+    "revision": "35914f89e1780f0bbf50d19ef6808377"
   },
   {
     "url": "assets/src/techs.js",

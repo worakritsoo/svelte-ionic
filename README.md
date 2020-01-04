@@ -37,13 +37,14 @@ All features (vision/realised)
 - PWA compliance via Ligthouse score (40% - missing the service worker mostly)
 - Stores (0%)
 - RXJS usage (100%)
-- Localstorage via localforage (50%)
+- Localstorage via localforage (100%)
 - Firebase SDK - analytics/firestore (75%)
 - Capacitor for mobile native support (100%)
 - Ionic Theming in local styles and global CSS (100%)
 - REPLs for each element (100%)
 - Source code previewer (100%)
 - Cookie Popup (100%)
+- Multi language support
 
 # Known issues
 

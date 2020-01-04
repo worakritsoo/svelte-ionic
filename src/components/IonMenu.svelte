@@ -35,7 +35,7 @@
   let menuItems = [
     {
       url: "/tabs/movies",
-      label: "Tabs with perks (modal/alert/etc)",
+      label: "Tabs & modal/alert/etc",
       icon: "home"
     },
     { url: "/avatars", label: "Avatars", icon: "home" },
