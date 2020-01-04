@@ -65,6 +65,9 @@ Needing some debugging
 ## Safari users not fully supported
 Safari browser requires windows.open to be called in on:bind. Not fully implemented yet.
 
+## Capacitor Clipboard on iOS does not copy
+Copy of sourcecode on iOS does not seem to work.
+
 # Todo's
 A number of todo's:
 - ~~UI elements missing: VirtualScroll skipped ~~
