@@ -5,6 +5,7 @@
   export let selected;
 
   // ugly implmentation - to avoid present method not present
+  // selected-tab does not seem to work
   let tries = 0;
   const selectTab = () => {
     const controller = document.querySelector("ion-tabs");
@@ -44,7 +45,7 @@
     </ion-tab>
   {/each}
 
-  <ion-tab-bar slot="bottom" selectedTab={selected}>
+  <ion-tab-bar slot="bottom" selected-tab={selected}>
     {#each tabs as tab}
       <ion-tab-button tab={tab.tab}>
         <ion-label>{tab.label}</ion-label>
