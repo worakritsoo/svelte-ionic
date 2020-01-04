@@ -62,8 +62,8 @@ Not necessarily an issue, but still a bit undesireable to make a custom element 
 ## Altdetails is not taking the route argument
 Needing some debugging
 
-## Cupertino pane has issue after closing of button
-The demo does not have this issue as I removed the `_this.parentEl.appendChild(_this.contentEl);` in/around line 428 (`this.paneEl.addEventListener('transitionend', function (t) {` in `closePane` ) of file `node_modules/cupertino-pane/dist/cupertino-pane.esm.bundle.js`. 
+## Safari users not fully supported
+Safari browser requires windows.open to be called in on:bind. Not fully implemented yet.
 
 # Todo's
 A number of todo's:

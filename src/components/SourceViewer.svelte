@@ -34,6 +34,7 @@
     modal.dismiss({});
   };
 
+  // cannot use function as Safari request window.open to be called in on:click
   // const goREPL = () => {
   fromFetch("/assets/json/repls.json").subscribe(response => {
     response.json().then(json => {
