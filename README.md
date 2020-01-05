@@ -60,11 +60,11 @@ Ion Back Button does not appear in the app. Neither in a REPL. Made a custom ver
 ## Altdetails is not taking the route argument
 Needing some debugging
 
-## Safari users not fully supported
-Safari browser requires windows.open to be called in on:bind. Not fully implemented yet.
-
 ## Capacitor Clipboard on iOS does not copy
 Copy of sourcecode on iOS does not seem to work.
+
+## Pane a bit buggy 
+Pane seems to work initially, but then crashes.
 
 # Remarks while working on Ionic - Svelte integration
 

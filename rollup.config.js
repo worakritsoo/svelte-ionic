@@ -57,7 +57,7 @@ export default {
         // In dev mode, call `npm run start` once
         // the bundle has been generated
 
-        // no service worken in dev
+        // no service worker in dev
         !production && del({ targets: 'public/sw.js' }), !production && copy({
             targets: [{ src: 'src/sw.js', dest: 'public/' }],
             verbose: true

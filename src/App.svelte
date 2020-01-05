@@ -109,7 +109,7 @@
     </ion-fab>
     <ion-split-pane>
       <IonMenu />
-      <Routes main />
+      <Routes />
     </ion-split-pane>
   </ion-app>
   <CookieJar />

@@ -3,15 +3,17 @@
   let itemSlidingEnd;
 
   const animateSliding = () => {
-    setTimeout(() => {
-      itemSlidingStart.open("start");
-      itemSlidingEnd.open("end");
+    if (itemSlidingEnd && itemSlidingStart) {
       setTimeout(() => {
-        itemSlidingStart.close();
-        itemSlidingEnd.close();
-        animateSliding();
+        itemSlidingStart.open("start");
+        itemSlidingEnd.open("end");
+        setTimeout(() => {
+          itemSlidingStart.close();
+          itemSlidingEnd.close();
+          animateSliding();
+        }, 2000);
       }, 2000);
-    }, 2000);
+    }
   };
 
   animateSliding();
