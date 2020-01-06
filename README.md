@@ -64,7 +64,7 @@ Needing some debugging
 Copy of sourcecode on iOS does not seem to work.
 
 ## Pane a bit buggy 
-Pane seems to work initially, but then crashes and shows lots of weird UI.
+Pane seems to work initially, but then crashes and shows lots of weird UI. https://github.com/roman-rr/cupertino-pane/issues/6
 
 # Remarks while working on Ionic - Svelte integration
 
