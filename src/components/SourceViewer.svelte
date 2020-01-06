@@ -104,6 +104,8 @@
           message: "Copied...",
           showCloseButton: true
         });
+
+        setTimeout(closeOverlay, 1000);
       })
       .catch(message => {
         IonicShowToast({
@@ -157,8 +159,6 @@
 
         copyToClipboard(sourceCode);
       });
-
-    setTimeout(closeOverlay, 1000);
   };
 </script>
 
