@@ -45,7 +45,7 @@
   const showNoREPLToast = () => {
     IonicShowToast({
       color: "danger",
-      duration: 2000,
+      duration: 4000,
       message: "No REPL link configured",
       showCloseButton: true
     });
@@ -108,10 +108,54 @@
       .catch(message => {
         IonicShowToast({
           color: "danger",
-          duration: 2000,
+          duration: 4000,
           message,
           showCloseButton: true
         });
+
+        // trying hack for iOS: https://josephkhan.me/javascript-copy-clipboard-safari/
+        function copyToClipboard(textToCopy) {
+          var textArea;
+
+          function isOS() {
+            //can use a better detection logic here
+            return navigator.userAgent.match(/ipad|iphone/i);
+          }
+
+          function createTextArea(text) {
+            textArea = document.createElement("textArea");
+            textArea.readOnly = true;
+            textArea.contentEditable = true;
+            textArea.value = text;
+            document.body.appendChild(textArea);
+          }
+
+          function selectText() {
+            var range, selection;
+
+            if (isOS()) {
+              range = document.createRange();
+              range.selectNodeContents(textArea);
+              selection = window.getSelection();
+              selection.removeAllRanges();
+              selection.addRange(range);
+              textArea.setSelectionRange(0, 999999);
+            } else {
+              textArea.select();
+            }
+          }
+
+          function copyTo() {
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+          }
+
+          createTextArea(textToCopy);
+          selectText();
+          copyTo();
+        }
+
+        copyToClipboard(sourceCode);
       });
 
     setTimeout(closeOverlay, 1000);
