@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import { IonicShowToast } from "./../../services/IonicControllers";
 
   // https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
   const aliceTiming = {
@@ -14,7 +15,16 @@
 
   let avatar;
   const startAnimation = () => {
-    avatar.animate(aliceTumbling, aliceTiming);
+    if (!avatar.animate) {
+      IonicShowToast({
+        color: "danger",
+        duration: 4000,
+        message: "Web Animations API not available",
+        showCloseButton: true
+      });
+    } else {
+      avatar.animate(aliceTumbling, aliceTiming);
+    }
   };
 </script>
 
