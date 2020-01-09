@@ -15,13 +15,6 @@
 
   let avatar;
   const startAnimation = () => {
-    IonicShowToast({
-      //    color: "danger",
-      duration: 4000,
-      message: "Web " + typeof avatar.animate,
-      showCloseButton: true
-    });
-
     if (!avatar.animate) {
       IonicShowToast({
         color: "danger",
@@ -71,6 +64,15 @@
       </ion-avatar>
       <ion-label>Lorem ipsum</ion-label>
     </ion-item>
+    <ion-item on:click={startAnimation} bind:this={avatar}>
+      <ion-avatar slot="end">
+        <img alt="avatar" src="../assets/img/ionic/avatar.svg" />
+      </ion-avatar>
+      <ion-label>
+        <h3>Click me!</h3>
+        <p>Click this item to launch the WEB Animation API</p>
+      </ion-label>
+    </ion-item>
     <ion-item>
       <ion-avatar slot="start">
         <img alt="avatar" src="../assets/img/ionic/avatar.svg" />
@@ -103,15 +105,6 @@
       <ion-label>
         <h3>Lorem ipsum</h3>
         <p>dolor sit amet</p>
-      </ion-label>
-    </ion-item>
-    <ion-item on:click={startAnimation} bind:this={avatar}>
-      <ion-avatar slot="end">
-        <img alt="avatar" src="../assets/img/ionic/avatar.svg" />
-      </ion-avatar>
-      <ion-label>
-        <h3>Click me!</h3>
-        <p>Click this item to launch the WEB Animation API</p>
       </ion-label>
     </ion-item>
   </ion-list>
