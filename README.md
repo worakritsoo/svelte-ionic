@@ -36,7 +36,7 @@ And the source view with copy feature and you can select text with the mouse:
 
 All features (vision/realised) 
 - All Ionic Framework UI components showcased (100% done)
-- Run as SPA (100% done) - Router via "svelte-routing" repo
+- Run as SPA  - Filesystem router via Routify (100% done)
 - Service Worker setup via workbox (50%) 
 - PWA compliance via Ligthouse score (40% - missing the service worker mostly)
 - Stores (0%)
@@ -49,7 +49,6 @@ All features (vision/realised)
 - Source code previewer (100%)
 - Cookie Popup (100%)
 - Multi language support (0%)
-- Svelte File Router - Routify (100%)
 
 # Known issues
 
@@ -117,3 +116,4 @@ A number of todo's:
 - ~~change router? https://github.com/qutran/swheel, https://github.com/jorgegorka/svelte-router/blob/master/README.md~~
 - https://github.com/ryanatkn/awesome-svelte-resources
 - source code formatter in HTML
+- Font Awesome icons
