@@ -15,6 +15,13 @@
 
   let avatar;
   const startAnimation = () => {
+    IonicShowToast({
+      //    color: "danger",
+      duration: 4000,
+      message: "Web " + typeof avatar.animate,
+      showCloseButton: true
+    });
+
     if (!avatar.animate) {
       IonicShowToast({
         color: "danger",
