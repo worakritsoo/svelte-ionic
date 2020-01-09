@@ -97,7 +97,7 @@ A number of todo's:
 - ~~NAV over tab~~
 - ~~make it more sveltish (code, store, bindings, animations)~~
 - ~~publish on firebase hosting~~
-- ~~try some cordova/ionic native - no web features I need ~~
+- ~~try some cordova/ionic native - no web features I need~~
 - singleton classes https://alligator.io/js/js-singletons/
 - place routes in better place (pages folder probably, to avoid repeating /../)
 - ~~consider Contexts for exposing controllers~~
