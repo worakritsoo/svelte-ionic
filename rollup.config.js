@@ -7,7 +7,6 @@ import { terser } from 'rollup-plugin-terser';
 import copy from 'rollup-plugin-copy';
 import del from 'rollup-plugin-delete';
 
-
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
