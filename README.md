@@ -27,6 +27,8 @@ All items also available as individual REPLs: https://github.com/Tommertom/svelt
 
 **NEW FEATURE3: almost all UI elements have a separate REPL (coding playground)**
 
+**NEW FEATURE4: Web Animations API included (see Avatars)**
+
 Do you like this work? Please star this project! 
 
 <img alt="Screen1.PNG" src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen1.PNG" width="75%" >
@@ -117,3 +119,4 @@ A number of todo's:
 - https://github.com/ryanatkn/awesome-svelte-resources
 - source code formatter in HTML
 - Font Awesome icons
+- ~~Web Animations API trial - see Avatars~~

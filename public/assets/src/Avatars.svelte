@@ -1,3 +1,23 @@
+<script>
+  import { onMount } from "svelte";
+
+  // https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
+  const aliceTiming = {
+    duration: 7000
+  };
+
+  const aliceTumbling = [
+    { transform: "rotate(0) scale(1)", color: "#000" },
+    { transform: "rotate(360deg) scale(0.1)", color: "#000" },
+    { transform: "rotate(0) scale(1)", color: "#000" }
+  ];
+
+  let avatar;
+  const startAnimation = () => {
+    avatar.animate(aliceTumbling, aliceTiming);
+  };
+</script>
+
 <svelte:head>
   <title>Ionic UI Companion App - Avatars</title>
 </svelte:head>
@@ -68,14 +88,13 @@
         <p>dolor sit amet</p>
       </ion-label>
     </ion-item>
-    <ion-item>
+    <ion-item on:click={startAnimation} bind:this={avatar}>
       <ion-avatar slot="end">
         <img alt="avatar" src="../assets/img/ionic/avatar.svg" />
       </ion-avatar>
       <ion-label>
-        <h3>Lorem ipsum</h3>
-        <p>dolor sit amet</p>
-        <p>consectetur adipiscing elit. Duis ut urna neque.</p>
+        <h3>Click me!</h3>
+        <p>Click this item to launch the WEB Animation API</p>
       </ion-label>
     </ion-item>
   </ion-list>
