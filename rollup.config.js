@@ -3,7 +3,6 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
-// import { routify } from '@sveltech/routify'
 
 import copy from 'rollup-plugin-copy';
 import del from 'rollup-plugin-delete';
@@ -15,12 +14,16 @@ export default {
     input: 'src/main.js',
     output: {
         sourcemap: true,
-        format: 'iife',
+        format: 'esm',
         name: 'app',
-        file: 'public/build/bundle.js'
+        dir: 'public/bundle'
+            // file: 'public/build/bundle.js'
     },
     plugins: [
 
+        del({
+            targets: ['public/bundle', 'build/build']
+        }),
 
         copy({
             targets: [{ src: 'src/pages/ionic/*', dest: 'public/assets/src' }],

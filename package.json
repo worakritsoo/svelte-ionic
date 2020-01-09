@@ -6,7 +6,7 @@
         "buildnow": "npm run build && cd public && now --prod",
         "dev": "run-p watch:routify watch:rollup",
         "watch:rollup": "rollup -c -w",
-        "watch:routify": "routify",
+        "watch:routify": "routify -D",
         "start": "sirv public --single"
     },
     "devDependencies": {

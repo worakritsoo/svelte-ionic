@@ -38,7 +38,8 @@ And the source view with copy feature and you can select text with the mouse:
 
 All features (vision/realised) 
 - All Ionic Framework UI components showcased (100% done)
-- Run as SPA  - Filesystem router via Routify (100% done)
+- Run as SPA - Filesystem router via Routify (100% done)
+- Code splitting - lazy loading of routes (100%)
 - Service Worker setup via workbox (50%) 
 - PWA compliance via Ligthouse score (40% - missing the service worker mostly)
 - Stores (0%)
