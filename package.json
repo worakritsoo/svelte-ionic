@@ -23,7 +23,7 @@
     },
     "dependencies": {
         "@capacitor/core": "^1.4.0",
-        "cupertino-pane": "^1.0.7",
+        "cupertino-pane": "^1.0.71",
         "localforage": "^1.7.3",
         "rxjs": "^6.5.3",
         "svelte-custom-elements": "^1.0.2",

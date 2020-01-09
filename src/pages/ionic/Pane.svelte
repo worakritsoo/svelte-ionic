@@ -10,7 +10,12 @@
     var myPane = new CupertinoPane(
       ".cupertino-pane", // Pane container selector
       {
-        onDrag: () => console.log("Drag event")
+        onDrag: () => console.log("Drag event"),
+        breaks: {
+          top: { enabled: true, offset: -10 },
+          middle: { enabled: true, offset: 180 },
+          bottom: { enabled: true, offset: 140 }
+        }
       }
     );
     myPane.present();
@@ -99,5 +104,4 @@
       </p>
     </div>
   </div>
-
 </ion-content>
