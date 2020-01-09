@@ -1,1 +1,0 @@
-{"version":3,"file":"_layout-6a5a5fa5.js","sources":["../../src/pages/ionic/_layout.svelte"],"sourcesContent":["<script>\r\n  console.log(\"Ionic layout\");\r\n</script>\r\n\r\n<slot />\r\n"],"names":["console","log"],"mappings":"6UACEA,QAAQC,IAAI"}

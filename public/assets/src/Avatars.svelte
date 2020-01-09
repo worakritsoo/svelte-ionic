@@ -43,6 +43,7 @@
 
 <ion-content fullscreen>
 
+  <i class="fas fa-user" />
   <ion-list-header>Default</ion-list-header>
   <ion-avatar class="ion-margin-start">
     <img alt="avatar" src="../assets/img/ionic/avatar.svg" />
