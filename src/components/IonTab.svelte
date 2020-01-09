@@ -4,6 +4,8 @@
   export let tabs;
   export let selected;
 
+  console.log("Init IonTabs", tabs, selected);
+
   // ugly implmentation - to avoid present method not present
   // selected-tab does not seem to work
   let tries = 0;
@@ -26,12 +28,12 @@
   });
 
   const tabsChange = event => {
-    // console.log("Tabs change", event.detail.tab);
-    history.pushState(
-      event.detail,
-      event.detail.tab,
-      "/tabs/" + event.detail.tab
-    );
+    console.log("Tabs change", event.detail.tab);
+    //  history.pushState(
+    //    event.detail,
+    //    event.detail.tab,
+    //    "tabs/" + event.detail.tab
+    //  );
 
     // console.log("adas", window.history);
   };

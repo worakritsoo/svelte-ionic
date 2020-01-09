@@ -1,5 +1,7 @@
 <script>
-  import { navigate } from "svelte-routing";
+  function navigate(s) {
+    console.log("NOT WORKING", s);
+  }
 
   const continueToTab = () => {
     navigate("/tabs/movies");
@@ -61,7 +63,7 @@
   <ion-slides on:ionSlideReachEnd={flipMenuOnOff} pager="true">
 
     <ion-slide>
-      <img src="./assets/img/slides/slide-1.png" alt="pict" />
+      <img src="../assets/img/slides/slide-1.png" alt="pict" />
       <h2>Welcome!</h2>
       The
       <b>Ionic UI App</b>
@@ -73,7 +75,7 @@
     </ion-slide>
 
     <ion-slide>
-      <img src="./assets/img/slides/svelte.png" alt="pict" />
+      <img src="../assets/img/slides/svelte.png" alt="pict" />
       <h2>Handy tool!</h2>
       By clicking the button bottom right you can instantly view the source code
       of the element you are viewing, to copy/paste and direct link to API docs.
@@ -83,7 +85,7 @@
     </ion-slide>
 
     <ion-slide>
-      <img src="./assets/img/slides/slide-2.png" alt="pict" />
+      <img src="../assets/img/slides/slide-2.png" alt="pict" />
       <h2>What is Ionic?</h2>
 
       <b>Ionic Framework</b>
@@ -95,7 +97,7 @@
     </ion-slide>
 
     <ion-slide>
-      <img src="./assets/img/slides/slide-4.png" alt="pict" />
+      <img src="../assets/img/slides/slide-4.png" alt="pict" />
       <h2>Ready to Play?</h2>
       Check out
       <ion-icon name="menu" />

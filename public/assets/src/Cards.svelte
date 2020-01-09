@@ -61,7 +61,7 @@
   </ion-card>
 
   <ion-card>
-    <img src="./assets/img/madison.jpg" alt="madison" />
+    <img src="../assets/img/madison.jpg" alt="madison" />
     <ion-card-header>
       <ion-card-subtitle>Destination</ion-card-subtitle>
       <ion-card-title>Madison, WI</ion-card-title>

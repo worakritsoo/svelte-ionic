@@ -7,7 +7,7 @@
     getIonicNav
   } from "../../services/IonicControllers";
 
-  import { navigate } from "svelte-routing";
+  //  import { navigate } from "svelte-routing";
 
   // registerWebComponentOnce("nav-detail", NavDetail);
 
@@ -22,7 +22,7 @@
     const tech = techs.find(tech => tech.title === title);
     //  nav.push("nav-detail", { tech });
 
-    navigate("/navdetails/" + title);
+    // navigate("/navdetails/" + title);
   }
 </script>
 

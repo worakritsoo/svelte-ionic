@@ -17,7 +17,7 @@
 
     <ion-item>
       <ion-avatar slot="start">
-        <img alt="avatar" src="./assets/img/ionic/avatar-finn.png" />
+        <img alt="avatar" src="../assets/img/ionic/avatar-finn.png" />
       </ion-avatar>
       <ion-label>
         <h2>Finn</h2>
@@ -28,7 +28,7 @@
 
     <ion-item>
       <ion-avatar slot="start">
-        <img alt="avatar" src="./assets/img/ionic/avatar-han.png" />
+        <img alt="avatar" src="../assets/img/ionic/avatar-han.png" />
       </ion-avatar>
       <ion-label>
         <h2>Han</h2>
@@ -39,7 +39,7 @@
 
     <ion-item>
       <ion-avatar slot="start">
-        <img alt="avatar" src="./assets/img/ionic/avatar-rey.png" />
+        <img alt="avatar" src="../assets/img/ionic/avatar-rey.png" />
       </ion-avatar>
       <ion-label>
         <h2>Rey</h2>
@@ -50,7 +50,7 @@
 
     <ion-item>
       <ion-avatar slot="start">
-        <img alt="avatar" src="./assets/img/ionic/avatar-luke.png" />
+        <img alt="avatar" src="../assets/img/ionic/avatar-luke.png" />
       </ion-avatar>
       <ion-label>
         <h2>Luke</h2>
@@ -65,7 +65,7 @@
 
     <ion-item>
       <ion-avatar slot="start">
-        <img alt="avatar" src="./assets/img/ionic/avatar-poe.png" />
+        <img alt="avatar" src="../assets/img/ionic/avatar-poe.png" />
       </ion-avatar>
       <ion-label>
         <h2>Poe</h2>
@@ -76,7 +76,7 @@
 
     <ion-item>
       <ion-avatar slot="start">
-        <img alt="avatar" src="./assets/img/ionic/avatar-ben.png" />
+        <img alt="avatar" src="../assets/img/ionic/avatar-ben.png" />
       </ion-avatar>
       <ion-label>
         <h2>Ben</h2>
@@ -87,7 +87,7 @@
 
     <ion-item>
       <ion-avatar slot="start">
-        <img alt="avatar" src="./assets/img/ionic/avatar-leia.png" />
+        <img alt="avatar" src="../assets/img/ionic/avatar-leia.png" />
       </ion-avatar>
       <ion-label>
         <h2>Leia</h2>
@@ -98,7 +98,7 @@
 
     <ion-item>
       <ion-avatar slot="start">
-        <img alt="avatar" src="./assets/img/ionic/avatar-yoda.png" />
+        <img alt="avatar" src="../assets/img/ionic/avatar-yoda.png" />
       </ion-avatar>
       <ion-label>
         <h2>Yoda</h2>

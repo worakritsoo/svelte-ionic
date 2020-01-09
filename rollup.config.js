@@ -1,11 +1,13 @@
 import svelte from 'rollup-plugin-svelte';
-import resolve from 'rollup-plugin-node-resolve';
+import resolve from '@rollup/plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
-import dev from 'rollup-plugin-dev';
+// import { routify } from '@sveltech/routify'
+
 import copy from 'rollup-plugin-copy';
 import del from 'rollup-plugin-delete';
+
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -19,6 +21,7 @@ export default {
     },
     plugins: [
 
+
         copy({
             targets: [{ src: 'src/pages/ionic/*', dest: 'public/assets/src' }],
             verbose: true,
@@ -30,6 +33,9 @@ export default {
             verbose: true,
             copyOnce: true
         }),
+
+
+        //  routify({ dynamicImports: true }),
         svelte({
             // enable run-time checks when not in production
             dev: !production,
@@ -41,7 +47,7 @@ export default {
         }),
 
         // If you have external dependencies installed from
-        // npm, you'll most likely need these plugins. In 
+        // npm, you'll most likely need these plugins. In
         // some cases you'll need additional configuration —
         // consult the documentation for details:
         // https://github.com/rollup/rollup-plugin-commonjs
@@ -54,8 +60,6 @@ export default {
                 'node_modules/idb/build/idb.js': ['openDb']
             }
         }),
-        // In dev mode, call `npm run start` once
-        // the bundle has been generated
 
         // no service worker in dev
         !production && del({ targets: 'public/sw.js' }), !production && copy({
@@ -63,9 +67,9 @@ export default {
             verbose: true
         }),
 
-        !production && serve2(),
-
-        dev({ dirs: ['public'], spa: 'public/index.html' }),
+        // In dev mode, call `npm run start` once
+        // the bundle has been generated
+        !production && serve(),
 
         // Watch the `public` directory and refresh the
         // browser on changes when not in production
@@ -80,7 +84,7 @@ export default {
     }
 };
 
-function serve2() {
+function serve() {
     let started = false;
 
     return {

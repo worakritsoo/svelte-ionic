@@ -10,13 +10,13 @@
 <ion-content fullscreen>
   <ion-list-header>Default</ion-list-header>
   <ion-thumbnail class="ion-margin-start">
-    <img alt="avatar" src="./assets/img/ionic/avatar.svg" />
+    <img alt="avatar" src="../assets/img/ionic/avatar.svg" />
   </ion-thumbnail>
 
   <ion-list-header>Chip Avatar</ion-list-header>
   <ion-chip class="ion-margin-start">
     <ion-thumbnail>
-      <img alt="avatar" src="./assets/img/ionic/avatar.svg" />
+      <img alt="avatar" src="../assets/img/ionic/avatar.svg" />
     </ion-thumbnail>
     <ion-label>Kit Bishop</ion-label>
   </ion-chip>
@@ -25,13 +25,13 @@
     <ion-list-header>Item Avatars</ion-list-header>
     <ion-item>
       <ion-thumbnail slot="start">
-        <img alt="avatar" src="./assets/img/ionic/avatar.svg" />
+        <img alt="avatar" src="../assets/img/ionic/avatar.svg" />
       </ion-thumbnail>
       <ion-label>Lorem ipsum</ion-label>
     </ion-item>
     <ion-item>
       <ion-thumbnail slot="start">
-        <img alt="avatar" src="./assets/img/ionic/avatar.svg" />
+        <img alt="avatar" src="../assets/img/ionic/avatar.svg" />
       </ion-thumbnail>
       <ion-label>
         <h3>Lorem ipsum</h3>
@@ -40,7 +40,7 @@
     </ion-item>
     <ion-item>
       <ion-thumbnail slot="start">
-        <img alt="avatar" src="./assets/img/ionic/avatar.svg" />
+        <img alt="avatar" src="../assets/img/ionic/avatar.svg" />
       </ion-thumbnail>
       <ion-label>
         <h3>Lorem ipsum</h3>
@@ -50,13 +50,13 @@
     </ion-item>
     <ion-item>
       <ion-thumbnail slot="end">
-        <img alt="avatar" src="./assets/img/ionic/avatar.svg" />
+        <img alt="avatar" src="../assets/img/ionic/avatar.svg" />
       </ion-thumbnail>
       <ion-label>Lorem ipsum</ion-label>
     </ion-item>
     <ion-item>
       <ion-thumbnail slot="end">
-        <img alt="avatar" src="./assets/img/ionic/avatar.svg" />
+        <img alt="avatar" src="../assets/img/ionic/avatar.svg" />
       </ion-thumbnail>
       <ion-label>
         <h3>Lorem ipsum</h3>
@@ -65,7 +65,7 @@
     </ion-item>
     <ion-item>
       <ion-thumbnail slot="end">
-        <img alt="avatar" src="./assets/img/ionic/avatar.svg" />
+        <img alt="avatar" src="../assets/img/ionic/avatar.svg" />
       </ion-thumbnail>
       <ion-label>
         <h3>Lorem ipsum</h3>

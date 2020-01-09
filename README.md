@@ -48,7 +48,8 @@ All features (vision/realised)
 - REPLs for each element (100%)
 - Source code previewer (100%)
 - Cookie Popup (100%)
-- Multi language support
+- Multi language support (0%)
+- Svelte File Router - Routify (100%)
 
 # Known issues
 
@@ -113,6 +114,6 @@ A number of todo's:
 - https://css-tricks.com/what-i-like-about-writing-styles-with-svelte/
 - https://github.com/pngwn/prism-svelte or something else that works
 - ~~REPLs~~
-- change router? https://github.com/qutran/swheel, https://github.com/jorgegorka/svelte-router/blob/master/README.md
+- ~~change router? https://github.com/qutran/swheel, https://github.com/jorgegorka/svelte-router/blob/master/README.md~~
 - https://github.com/ryanatkn/awesome-svelte-resources
 - source code formatter in HTML

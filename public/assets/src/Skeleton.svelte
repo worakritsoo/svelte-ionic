@@ -35,7 +35,7 @@
     <ion-list-header>Albums</ion-list-header>
     <ion-item>
       <ion-thumbnail slot="start">
-        <img alt="img" src="./assets/img/ionic/thebeatles.jpeg" />
+        <img alt="img" src="../assets/img/ionic/thebeatles.jpeg" />
       </ion-thumbnail>
       <ion-label>
         <h3>Abbey Road</h3>
@@ -45,7 +45,7 @@
     </ion-item>
     <ion-item>
       <ion-thumbnail slot="start">
-        <img alt="img" src="./assets/img/ionic/pinkfloyd.jpeg" />
+        <img alt="img" src="../assets/img/ionic/pinkfloyd.jpeg" />
       </ion-thumbnail>
       <ion-label>
         <h3>The Dark Side of the Moon</h3>
@@ -55,7 +55,7 @@
     </ion-item>
     <ion-item>
       <ion-thumbnail slot="start">
-        <img alt="img" src="./assets/img/ionic/boniver.jpeg" />
+        <img alt="img" src="../assets/img/ionic/boniver.jpeg" />
       </ion-thumbnail>
       <ion-label>
         <h3>For Emma, Forever Ago</h3>
@@ -65,7 +65,7 @@
     </ion-item>
     <ion-item>
       <ion-thumbnail slot="start">
-        <img alt="img" src="./assets/img/ionic/ironwine.jpeg" />
+        <img alt="img" src="../assets/img/ionic/ironwine.jpeg" />
       </ion-thumbnail>
       <ion-label>
         <h3>Beast Epic</h3>
@@ -75,7 +75,7 @@
     </ion-item>
     <ion-item>
       <ion-thumbnail slot="start">
-        <img alt="img" src="./assets/img/ionic/porterrobinson.jpeg" />
+        <img alt="img" src="../assets/img/ionic/porterrobinson.jpeg" />
       </ion-thumbnail>
       <ion-label>
         <h3>Worlds</h3>
@@ -85,7 +85,7 @@
     </ion-item>
     <ion-item>
       <ion-thumbnail slot="start">
-        <img alt="img" src="./assets/img/ionic/childishgambino.jpeg" />
+        <img alt="img" src="../assets/img/ionic/childishgambino.jpeg" />
       </ion-thumbnail>
       <ion-label>
         <h3>Worlds</h3>
@@ -95,7 +95,7 @@
     </ion-item>
     <ion-item>
       <ion-thumbnail slot="start">
-        <img alt="img" src="./assets/img/ionic/chancetherapper.jpeg" />
+        <img alt="img" src="../assets/img/ionic/chancetherapper.jpeg" />
       </ion-thumbnail>
       <ion-label>
         <h3>Coloring Book</h3>
@@ -105,7 +105,7 @@
     </ion-item>
     <ion-item>
       <ion-thumbnail slot="start">
-        <img alt="img" src="./assets/img/ionic/kimbra.jpeg" />
+        <img alt="img" src="../assets/img/ionic/kimbra.jpeg" />
       </ion-thumbnail>
       <ion-label>
         <h3>Primal Heart</h3>

@@ -20,12 +20,16 @@
   }
 
   // generate the name to source file
+  name = name.replace("ionic/", "");
   name = name.substr(1);
   name = name.charAt(0).toUpperCase() + name.slice(1);
   if (name.length == 0) {
     name = "Splash";
   }
-  name = name.replace("Tabs/", "");
+  if (name.toLowerCase().includes("tabs")) {
+    name = "tabs";
+  }
+
   console.log("Name", name);
 
   const closeOverlay = () => {
@@ -34,18 +38,22 @@
   };
 
   // cannot use function as Safari request window.open to be called in on:click
+  // therefor, preload the links
   fromFetch("/assets/json/repls.json").subscribe(response => {
     response.json().then(json => {
-      const url = json[name.toLocaleLowerCase()];
+      const url = json[name.toLowerCase()];
       if (url) {
         REPLlink = url;
+      } else {
+        REPLlink = "";
       }
     });
   });
+
   const showNoREPLToast = () => {
     IonicShowToast({
       color: "danger",
-      duration: 4000,
+      duration: 2000,
       message: "No REPL link configured",
       showCloseButton: true
     });
@@ -57,6 +65,7 @@
     apiName = apiName.slice(0, -1);
   }
   console.log("Raw APINAME", apiName);
+
   // do a mapping for some exceptions
   // using RXJS just for fun
   apiName = apiName.replace("/", "");
@@ -81,8 +90,12 @@
   );
 
   // using RXJS just for fun
+  console.log("Path to source ", "/assets/src/" + name + ".svelte");
   let sourceCode = "Loading....";
-  fromFetch("assets/src/" + name + ".svelte").subscribe(response => {
+  if (name == "tabs") {
+    name = "tabs/[tab]";
+  }
+  fromFetch("/assets/src/" + name + ".svelte").subscribe(response => {
     response.text().then(txt => {
       if (txt.search("<!DOCTYPE html>") > -1) {
         sourceCode = `No svelte file found for ${name}. Please check github repo.`;
@@ -104,61 +117,17 @@
           message: "Copied...",
           showCloseButton: true
         });
-
-        setTimeout(closeOverlay, 1000);
       })
       .catch(message => {
         IonicShowToast({
           color: "danger",
-          duration: 4000,
+          duration: 2000,
           message,
           showCloseButton: true
         });
-
-        // trying hack for iOS: https://josephkhan.me/javascript-copy-clipboard-safari/
-        function copyToClipboard(textToCopy) {
-          var textArea;
-
-          function isOS() {
-            //can use a better detection logic here
-            return navigator.userAgent.match(/ipad|iphone/i);
-          }
-
-          function createTextArea(text) {
-            textArea = document.createElement("textArea");
-            textArea.readOnly = true;
-            textArea.contentEditable = true;
-            textArea.value = text;
-            document.body.appendChild(textArea);
-          }
-
-          function selectText() {
-            var range, selection;
-
-            if (isOS()) {
-              range = document.createRange();
-              range.selectNodeContents(textArea);
-              selection = window.getSelection();
-              selection.removeAllRanges();
-              selection.addRange(range);
-              textArea.setSelectionRange(0, 999999);
-            } else {
-              textArea.select();
-            }
-          }
-
-          function copyTo() {
-            document.execCommand("copy");
-            document.body.removeChild(textArea);
-          }
-
-          createTextArea(textToCopy);
-          selectText();
-          copyTo();
-        }
-
-        copyToClipboard(sourceCode);
       });
+
+    setTimeout(closeOverlay, 1000);
   };
 </script>
 
