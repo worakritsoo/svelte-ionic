@@ -29,13 +29,6 @@ All items also available as individual REPLs: https://github.com/Tommertom/svelt
 
 **NEW FEATURE4: Web Animations API included (see Avatars)**
 
-Do you like this work? Please star this project! 
-
-<img alt="Screen1.PNG" src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen1.PNG" width="75%" >
-
-And the source view with copy feature and you can select text with the mouse:
-<img alt="Screen2.PNG" src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen2.PNG" width="75%" >
-
 All features (vision/realised) 
 - All Ionic Framework UI components showcased (100% done)
 - Run as SPA - Filesystem router via Routify (100% done)
@@ -53,8 +46,14 @@ All features (vision/realised)
 - Cookie Popup (100%)
 - Multi language support (0%)
 
-# Known issues
+<img alt="Screen1.PNG" src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen1.PNG" width="75%" >
 
+And the source view with copy feature and you can select text with the mouse:
+<img alt="Screen2.PNG" src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen2.PNG" width="75%" >
+
+Do you like this work? Please star this project! 
+
+# Known issues
 
 ## IonMenu gives warning
 Need to use other api
