@@ -11,7 +11,6 @@
   onMount(() => {
     splitpane = document.querySelector("ion-split-pane");
     splitpane.disabled = true;
-    console.log("Splash pane", splitpane);
   });
 
   function navigate(url) {
@@ -20,7 +19,6 @@
   }
 
   setTimeout(() => {
-    console.log("Splash splitpane", splitpane);
     splitpane.disabled = false;
     navigate("/ionic/Slides");
   }, 4000);
