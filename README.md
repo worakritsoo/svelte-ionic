@@ -68,7 +68,7 @@ Needing some debugging
 Copy of sourcecode on iOS does not seem to work.
 
 ## Pane integration is WIP
-Pane needs ion-content needs to be set to scroll-y:false.
+Pane needs ion-content  to be set to `scroll-y:false` to avoid strange UI on some devices.
 
 # Remarks while working on Ionic - Svelte integration
 
