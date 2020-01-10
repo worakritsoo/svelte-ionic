@@ -41,7 +41,7 @@
     <ion-title>Pane</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content padding>
+<ion-content padding scroll-y="false">
 
   <h1>Cupertino Pane</h1>
   <ion-text>
