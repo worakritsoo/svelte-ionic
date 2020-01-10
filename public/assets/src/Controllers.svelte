@@ -315,7 +315,7 @@
     <ion-buttons slot="start">
       <ion-menu-button />
     </ion-buttons>
-    <ion-title>Movies</ion-title>
+    <ion-title>Controllers</ion-title>
   </ion-toolbar>
 </ion-header>
 

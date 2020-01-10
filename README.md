@@ -68,7 +68,7 @@ Needing some debugging
 Copy of sourcecode on iOS does not seem to work.
 
 ## Pane integration is WIP
-Pane seems to work initially, but needs further work on getting really smooth integration. https://github.com/roman-rr/cupertino-pane/issues/6
+Pane needs ion-content needs to be set to scroll-y:false.
 
 # Remarks while working on Ionic - Svelte integration
 
@@ -120,3 +120,4 @@ A number of todo's:
 - source code formatter in HTML
 - Font Awesome icons
 - ~~Web Animations API trial - see Avatars~~
+- replace manual route filter with ignore option
