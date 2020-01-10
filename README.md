@@ -17,7 +17,7 @@ npm i
 npm run dev
 ```
 
-The app will be served on `localhost:8080`.
+The app will be served on `localhost:5000`.
 
 All items also available as individual REPLs: https://github.com/Tommertom/svelte-ionic-app/blob/master/REPLS.md
 
