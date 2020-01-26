@@ -45,7 +45,7 @@ All features (vision/realised)
 - Source code previewer (100%)
 - Cookie Popup (100%)
 - Multi language support (0%)
-- Ionic included as asset (100%)
+- Ionic included as asset, not CDN (100%)
 
 <img alt="Screen1.PNG" src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen1.PNG" width="75%" >
 
