@@ -1,3 +1,15 @@
+/*
+
+This file is hacky....
+
+Routify has a nice ignore option that should be used instead, to 
+create a more performant way to exclude anything you don't want 
+generated into the routing
+
+(work in progress)
+
+*/
+
 import { routes } from "@sveltech/routify/tmp/routes";
 
 

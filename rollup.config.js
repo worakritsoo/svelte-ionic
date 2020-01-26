@@ -16,7 +16,6 @@ export default {
         format: 'esm',
         name: 'app',
         dir: 'public/bundle'
-            // file: 'public/build/bundle.js'
     },
     plugins: [
 
@@ -24,6 +23,8 @@ export default {
             targets: ['public/bundle', 'build/build']
         }),
 
+
+        // remove if you use the code to make something else
         copy({
             targets: [{ src: 'src/pages/ionic/*', dest: 'public/assets/src' }],
             verbose: true,
@@ -37,7 +38,6 @@ export default {
         }),
 
 
-        //  routify({ dynamicImports: true }),
         svelte({
             // enable run-time checks when not in production
             dev: !production,

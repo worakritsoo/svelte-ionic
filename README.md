@@ -38,13 +38,14 @@ All features (vision/realised)
 - Stores (0%)
 - RXJS usage (100%)
 - Localstorage via localforage (100%)
-- Firebase SDK - analytics/firestore (75%)
+- Firebase SDK - analytics/firestore (100%)
 - Capacitor for mobile native support (100%)
 - Ionic Theming in local styles and global CSS (100%)
 - REPLs for each element (100%)
 - Source code previewer (100%)
 - Cookie Popup (100%)
 - Multi language support (0%)
+- Ionic included as asset (100%)
 
 <img alt="Screen1.PNG" src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen1.PNG" width="75%" >
 
@@ -100,8 +101,8 @@ A number of todo's:
 - ~~make it more sveltish (code, store, bindings, animations)~~
 - ~~publish on firebase hosting~~
 - ~~try some cordova/ionic native - no web features I need~~
-- singleton classes https://alligator.io/js/js-singletons/
-- place routes in better place (pages folder probably, to avoid repeating /../)
+- ~~singleton classes https://alligator.io/js/js-singletons/~~
+- ~~place routes in better place (pages folder probably, to avoid repeating /../)~~
 - ~~consider Contexts for exposing controllers~~
 - ~~split pane~~
 - searchbox in ionicons
@@ -110,14 +111,15 @@ A number of todo's:
     - timeline
     - accordeon
     - ~~pane~~ 
-- SSR
+- ~~SSR~~
 - ~~to docs link https://ionicframework.com/docs/api/input~~
 - https://css-tricks.com/what-i-like-about-writing-styles-with-svelte/
 - https://github.com/pngwn/prism-svelte or something else that works
 - ~~REPLs~~
 - ~~change router? https://github.com/qutran/swheel, https://github.com/jorgegorka/svelte-router/blob/master/README.md~~
-- https://github.com/ryanatkn/awesome-svelte-resources
 - source code formatter in HTML
 - Font Awesome icons
 - ~~Web Animations API trial - see Avatars~~
 - replace manual route filter with ignore option
+- seek ways to include in rollup bundler instead of script include
+- Ionic 5 migration - once it is fully released
