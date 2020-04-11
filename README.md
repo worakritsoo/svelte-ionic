@@ -122,4 +122,17 @@ A number of todo's:
 - ~~Web Animations API trial - see Avatars~~
 - replace manual route filter with ignore option
 - seek ways to include in rollup bundler instead of script include
-- Ionic 5 migration - once it is fully released
+- Ionic 5 migration - once it is fully released - already some breaking changes
+
+
+
+Local install:
+    <script type="module" src='/assets/libs/@ionic/core/dist/ionic/ionic.js'></script>
+    <link rel="stylesheet" href="/assets/libs/@ionic/core/css/ionic.bundle.css" />
+
+CDN Ionic 5:
+https://cdn.jsdelivr.net/npm/@ionic/core@5.0.0-rc.1/dist/ionic/ionic.esm.js
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@5.0.0-rc.1/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@5.0.0-rc.1/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@5.0.0-rc.1/css/ionic.bundle.css"/>
