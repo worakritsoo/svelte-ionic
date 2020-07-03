@@ -20,8 +20,8 @@
   <ion-list-header>Default</ion-list-header>
 
   <!-- Label only -->
-  <ion-segment>
-    <ion-segment-button checked>
+  <ion-segment value="call">
+    <ion-segment-button value="call">
       <ion-label>Call</ion-label>
     </ion-segment-button>
     <ion-segment-button>
@@ -33,11 +33,11 @@
   </ion-segment>
 
   <!-- Icon only -->
-  <ion-segment color="secondary">
+  <ion-segment color="secondary" value="heart">
     <ion-segment-button>
       <ion-icon name="call" />
     </ion-segment-button>
-    <ion-segment-button checked>
+    <ion-segment-button value="heart">
       <ion-icon name="heart" />
     </ion-segment-button>
     <ion-segment-button>
@@ -46,12 +46,12 @@
   </ion-segment>
 
   <!-- Icon top -->
-  <ion-segment color="tertiary">
+  <ion-segment color="tertiary" value="favorite">
     <ion-segment-button>
       <ion-label>Call</ion-label>
       <ion-icon name="call" />
     </ion-segment-button>
-    <ion-segment-button checked>
+    <ion-segment-button value="favorite">
       <ion-label>Favorite</ion-label>
       <ion-icon name="heart" />
     </ion-segment-button>
@@ -62,8 +62,8 @@
   </ion-segment>
 
   <!-- Icon bottom -->
-  <ion-segment color="success">
-    <ion-segment-button checked layout="icon-bottom">
+  <ion-segment color="success" value="call">
+    <ion-segment-button value="call" layout="icon-bottom">
       <ion-icon name="call" />
       <ion-label>Call</ion-label>
     </ion-segment-button>
@@ -80,8 +80,8 @@
   <ion-list-header>Scrollable</ion-list-header>
 
   <!-- Icon start -->
-  <ion-segment color="warning" scrollable>
-    <ion-segment-button checked layout="icon-start">
+  <ion-segment color="warning" value="call" scrollable>
+    <ion-segment-button value="call" layout="icon-start">
       <ion-label>Call</ion-label>
       <ion-icon name="call" />
     </ion-segment-button>
@@ -96,8 +96,8 @@
   </ion-segment>
 
   <!-- Icon end -->
-  <ion-segment color="danger" scrollable>
-    <ion-segment-button checked layout="icon-end">
+  <ion-segment color="danger" value="call" scrollable>
+    <ion-segment-button value="call" layout="icon-end">
       <ion-icon name="call" />
       <ion-label>Call</ion-label>
     </ion-segment-button>

@@ -37,7 +37,7 @@
 
   <ion-fab horizontal="end" vertical="bottom" slot="fixed">
     <ion-fab-button color="light">
-      <ion-icon name="arrow-dropleft" />
+      <ion-icon name="caret-back" />
     </ion-fab-button>
     <ion-fab-list side="start">
       <ion-fab-button color="light">
@@ -54,7 +54,7 @@
 
   <ion-fab horizontal="start" vertical="bottom" slot="fixed">
     <ion-fab-button color="dark">
-      <ion-icon name="arrow-dropup" />
+      <ion-icon name="caret-up" />
     </ion-fab-button>
     <ion-fab-list side="top">
       <ion-fab-button color="light">
@@ -74,7 +74,7 @@
 
   <ion-fab horizontal="start" vertical="top" slot="fixed">
     <ion-fab-button color="secondary">
-      <ion-icon name="arrow-dropright" />
+      <ion-icon name="caret-forward" />
     </ion-fab-button>
     <ion-fab-list side="end">
       <ion-fab-button color="light">

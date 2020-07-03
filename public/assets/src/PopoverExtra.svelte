@@ -1,5 +1,5 @@
 <script>
-  let overlayElement = document.querySelector("ion-popover-controller");
+  let overlayElement = document.querySelector("ion-popover");
   const closeOverlay = data => {
     overlayElement.dismiss(data);
   };

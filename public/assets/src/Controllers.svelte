@@ -11,17 +11,6 @@
     IonicShowToast
   } from "./../../services/IonicControllers";
 
-  import { loadingController } from "@ionic/core";
-  window.loadingController = loadingController;
-
-  async function presentLoading() {
-    const loading = await loadingController.create({
-      message: "Hello",
-      duration: 2000
-    });
-    await loading.present();
-  }
-
   const showModal = () => {
     IonicShowModal("modal-extra", ModalExtra, {
       firstName: "Douglas",
@@ -114,20 +103,11 @@
   };
 
   const showToast = () => {
-    console.log("kut");
-    const toast = document.createElement("ion-toast");
-    toast.message = "Your settings have been saved.";
-    toast.duration = 2000;
-
-    document.body.appendChild(toast);
-    return toast.present();
-    /*
     IonicShowToast({
       color: "dark",
       duration: 2000,
       message: "Paired successfully"
     });
-    */
   };
 
   const showPicker = () => {
@@ -339,7 +319,6 @@
 </ion-header>
 
 <ion-content fullscreen class="ion-padding">
-  <ion-button expand="block" on:click={presentLoading}>Show Loading</ion-button>
 
   <ion-button expand="block" on:click={showActionSheet}>
     Action Sheet
