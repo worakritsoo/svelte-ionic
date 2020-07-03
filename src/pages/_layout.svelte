@@ -7,6 +7,8 @@
   import Menu from "../components/Menu.svelte";
   import CookieJar from "../components/CookieJar.svelte";
 
+  import { menuController } from "@ionic/core";
+
   // source viewer and pulsating class for the FAB
   let pulseSourceViewer = false;
   localforage.getItem("has-seen-source").then(value => {

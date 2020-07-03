@@ -6,11 +6,11 @@
   export let side = "start";
 
   import { menuController } from "@ionic/core";
-  window.menuController = menuController;
 
   setTimeout(() => {
-    menuController.enable(true, "first");
-    menuController.open("first");
+    // menuController.enable(true, "first");
+    console.log("OPEN");
+    menuController.open();
   }, 5000);
 
   function navigate(url) {
@@ -21,12 +21,8 @@
   function closeAndNavigate(url) {
     // console.log("Menucontroller", menuController);
 
-    menuController.getMenus().then(list => {
-      console.log("List of menus", list);
-    });
-
-    menuController.close(true).then(ss => {
-      console.log("Menucontroller close", ss);
+    menuController.close().then(res => {
+      console.log("Close result", res);
       navigate(url);
     });
   }
@@ -89,7 +85,7 @@
   );
 </script>
 
-<ion-menu {side} menu-id="first" content-id="main">
+<ion-menu {side} content-id="main">
   {#if menuItems.length > 0}
     <ion-header>
       <ion-toolbar translucent>

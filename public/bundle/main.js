@@ -2,7 +2,7 @@
 (function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.head.appendChild(r) })(window.document);
 import { S as SvelteComponentDev, a as init, d as dispatch_dev, s as safe_not_equal, e as create_component, m as mount_component, q as transition_in, t as transition_out, o as destroy_component } from './index-1e5d4352.js';
 import { R as Router } from './index-f8989f95.js';
-import { c as createCommonjsModule, u as unwrapExports, a as commonjsGlobal$1, m as myRoutes } from './myRoutes-a765123c.js';
+import { c as createCommonjsModule, u as unwrapExports, a as commonjsGlobal$1, m as myRoutes } from './myRoutes-5c2fb1b3.js';
 import { t as tslib_es6, _ as __awaiter, a as __generator, b as __values, c as __assign, d as __spread } from './tslib.es6-6edcd844.js';
 
 var index_cjs = createCommonjsModule(function (module, exports) {

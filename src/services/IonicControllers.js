@@ -9,43 +9,6 @@ const isRegistered = function(name) {
     return document.createElement(name).constructor !== HTMLElement;
 };
 
-// add DOM element if it not exists and return to caller
-const registerDOMOnce = (selector) => {
-    let controller = document.querySelector(selector);
-    if (!controller) {
-        controller = document.createElement(selector);
-        document.body.appendChild(controller);
-    }
-    return controller;
-}
-
-
-/*
-// add DOM element if it not exists and return to caller
-const registerDOMOnce = (selector) => {
-    let controller = document.querySelector(selector);
-    if (!controller) {
-        controller = document.createElement(selector);
-        document.body.appendChild(controller);
-    }
-    return controller;
-}
-
-// default pattern for many ionic UI controllers
-const DefaultIonicController = (selector) => {
-    return (options) => {
-        const controller = registerDOMOnce(selector);
-        return controller
-            .create(options)
-            .then(ionicitem => {
-                ionicitem.present()
-                return ionicitem; // a promise that needs resolution to access dimiss etc.
-            })
-    }
-}
-
-*/
-
 //
 // API methods
 //
@@ -103,7 +66,6 @@ export const IonicShowToast = (options) => {
         return toast;
     })
 }
-
 
 export const IonicShowAlert = (options) => {
     return alertController.create(options).then(alert => {

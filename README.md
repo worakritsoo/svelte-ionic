@@ -87,7 +87,9 @@ I raised an issue @ Ionic for selected-tab not selecting te default tab as per I
 
 # Todo's
 A number of todo's:
-- fix Ionic Menu close
+- fix Ionic Menu close, go through all components and fix some messages
+- research some of the warnings after Ionic 5 migration
+- Ionic 5 add-ons not present in Ionic 4 (to figure out which ones)
 - ~~UI elements missing: VirtualScroll skipped~~
 - ~~add the popoover and other controller related items~~
 - ~~try the css styling as per documentation (theming)~~
