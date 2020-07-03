@@ -85,6 +85,13 @@ Not necessarily an issue, but still a bit undesireable to make a custom element 
 I raised an issue @ Ionic for selected-tab not selecting te default tab as per Ionic's documentation. https://github.com/ionic-team/ionic/issues/20060
 
 
+## Want local install of Ionic lib?
+
+Local install:
+    <script type="module" src='/assets/libs/@ionic/core/dist/ionic/ionic.js'></script>
+    <link rel="stylesheet" href="/assets/libs/@ionic/core/css/ionic.bundle.css" />
+
+
 # Todo's
 A number of todo's:
 - fix Ionic Menu close, go through all components and fix some messages
@@ -126,25 +133,4 @@ A number of todo's:
 - replace manual route filter with ignore option
 - seek ways to include in rollup bundler instead of script include
 - Ionic 5 migration - once it is fully released - already some breaking changes
-
-
-
-Local install:
-    <script type="module" src='/assets/libs/@ionic/core/dist/ionic/ionic.js'></script>
-    <link rel="stylesheet" href="/assets/libs/@ionic/core/css/ionic.bundle.css" />
-
-CDN Ionic 5:
-
-<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
-
-CDN Ionic 4:
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.11.10/dist/ionic/ionic.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.11.10/dist/ionic/ionic.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@4.11.10/css/ionic.bundle.css" />
-
-
-https://github.com/ionic-team/ionic/blob/master/BREAKING.md
-todo
 
