@@ -61,9 +61,9 @@
       <ion-icon name="code-working" />
     </ion-fab-button>
   </ion-fab>
-  <ion-split-pane>
+  <ion-split-pane content-id="main">
     <Menu />
-    <div class="ion-page" main>
+    <div class="ion-page" id="main">
       <slot />
     </div>
   </ion-split-pane>

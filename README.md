@@ -131,8 +131,17 @@ Local install:
     <link rel="stylesheet" href="/assets/libs/@ionic/core/css/ionic.bundle.css" />
 
 CDN Ionic 5:
-https://cdn.jsdelivr.net/npm/@ionic/core@5.0.0-rc.1/dist/ionic/ionic.esm.js
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@5.0.0-rc.1/dist/ionic/ionic.esm.js"></script>
-<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@5.0.0-rc.1/dist/ionic/ionic.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@5.0.0-rc.1/css/ionic.bundle.css"/>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+
+CDN Ionic 4:
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.11.10/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.11.10/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@4.11.10/css/ionic.bundle.css" />
+
+
+https://github.com/ionic-team/ionic/blob/master/BREAKING.md
+todo
+

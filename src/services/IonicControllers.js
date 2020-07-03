@@ -1,4 +1,5 @@
 import { register } from "svelte-custom-elements";
+import { loadingController, toastController, alertController, pickerController, actionSheetController, modalController, popoverController } from "@ionic/core";
 
 //
 // Private functions 
@@ -8,6 +9,18 @@ const isRegistered = function(name) {
     return document.createElement(name).constructor !== HTMLElement;
 };
 
+// add DOM element if it not exists and return to caller
+const registerDOMOnce = (selector) => {
+    let controller = document.querySelector(selector);
+    if (!controller) {
+        controller = document.createElement(selector);
+        document.body.appendChild(controller);
+    }
+    return controller;
+}
+
+
+/*
 // add DOM element if it not exists and return to caller
 const registerDOMOnce = (selector) => {
     let controller = document.querySelector(selector);
@@ -31,6 +44,7 @@ const DefaultIonicController = (selector) => {
     }
 }
 
+*/
 
 //
 // API methods
@@ -47,9 +61,8 @@ export const getIonicNav = () => {
 }
 
 export const IonicShowModal = (selector, component, componentProps) => {
-    const controller = registerDOMOnce("ion-modal-controller");
     registerWebComponentOnce(selector, component);
-    return controller
+    return modalController
         .create({
             component: selector,
             componentProps
@@ -58,12 +71,12 @@ export const IonicShowModal = (selector, component, componentProps) => {
             modal.present();
             return modal.onWillDismiss()
         });
-};
+}
+
 
 export const IonicShowPopover = (event, selector, component, componentProps) => {
     registerWebComponentOnce(selector, component);
-    const controller = registerDOMOnce("ion-popover-controller");
-    return controller
+    return popoverController
         .create({
             component: selector,
             event,
@@ -75,8 +88,40 @@ export const IonicShowPopover = (event, selector, component, componentProps) => 
         });
 };
 
-export const IonicShowLoading = DefaultIonicController("ion-loading-controller");
-export const IonicShowPicker = DefaultIonicController("ion-picker-controller");
-export const IonicShowAlert = DefaultIonicController("ion-alert-controller");
-export const IonicShowToast = DefaultIonicController("ion-toast-controller");
-export const IonicShowActionSheet = DefaultIonicController("ion-action-sheet-controller");
+export const IonicShowLoading = (options) => {
+    return loadingController
+        .create(options)
+        .then(ionicitem => {
+            ionicitem.present()
+            return ionicitem;
+        })
+}
+
+export const IonicShowToast = (options) => {
+    return toastController.create(options).then(toast => {
+        toast.present();
+        return toast;
+    })
+}
+
+
+export const IonicShowAlert = (options) => {
+    return alertController.create(options).then(alert => {
+        alert.present();
+        return alert;
+    })
+}
+
+export const IonicShowPicker = (options) => {
+    return pickerController.create(options).then(picker => {
+        picker.present();
+        return picker;
+    })
+}
+
+export const IonicShowActionSheet = (options) => {
+    return actionSheetController.create(options).then(actionSheet => {
+        actionSheet.present();
+        return actionSheet;
+    })
+}

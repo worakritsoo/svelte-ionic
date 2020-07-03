@@ -106,8 +106,7 @@
     IonicShowToast({
       color: "dark",
       duration: 2000,
-      message: "Paired successfully",
-      showCloseButton: true
+      message: "Paired successfully"
     });
   };
 
@@ -320,6 +319,7 @@
 </ion-header>
 
 <ion-content fullscreen class="ion-padding">
+
   <ion-button expand="block" on:click={showActionSheet}>
     Action Sheet
   </ion-button>

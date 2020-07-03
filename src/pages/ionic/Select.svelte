@@ -66,10 +66,10 @@
 
     <ion-item>
       <ion-label>Music</ion-label>
-      <ion-select on:ionChange={selectChange}>
+      <ion-select value="nirvana" on:ionChange={selectChange}>
         <ion-select-option>Alice in Chains</ion-select-option>
         <ion-select-option>Green Day</ion-select-option>
-        <ion-select-option selected>Nirvana</ion-select-option>
+        <ion-select-option value="nirvana">Nirvana</ion-select-option>
         <ion-select-option>Pearl Jam</ion-select-option>
         <ion-select-option>Smashing Pumpkins</ion-select-option>
         <ion-select-option>Soundgarden</ion-select-option>
@@ -79,7 +79,7 @@
 
     <ion-item>
       <ion-label>Month</ion-label>
-      <ion-select on:ionChange={selectChange}>
+      <ion-select value="12" on:ionChange={selectChange}>
         <ion-select-option value="01">January</ion-select-option>
         <ion-select-option value="02">February</ion-select-option>
         <ion-select-option value="03">March</ion-select-option>
@@ -91,19 +91,19 @@
         <ion-select-option value="09">September</ion-select-option>
         <ion-select-option value="10">October</ion-select-option>
         <ion-select-option value="11">November</ion-select-option>
-        <ion-select-option value="12" selected>December</ion-select-option>
+        <ion-select-option value="12">December</ion-select-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label>Year</ion-label>
-      <ion-select on:ionChange={selectChange}>
+      <ion-select value="1994" on:ionChange={selectChange}>
         <ion-select-option>1989</ion-select-option>
         <ion-select-option>1990</ion-select-option>
         <ion-select-option>1991</ion-select-option>
         <ion-select-option>1992</ion-select-option>
         <ion-select-option>1993</ion-select-option>
-        <ion-select-option selected>1994</ion-select-option>
+        <ion-select-option value="1994">1994</ion-select-option>
         <ion-select-option>1995</ion-select-option>
         <ion-select-option>1996</ion-select-option>
         <ion-select-option>1997</ion-select-option>

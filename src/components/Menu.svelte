@@ -5,7 +5,13 @@
 
   export let side = "start";
 
-  let menucontroller;
+  import { menuController } from "@ionic/core";
+  window.menuController = menuController;
+
+  setTimeout(() => {
+    menuController.enable(true, "first");
+    menuController.open("first");
+  }, 5000);
 
   function navigate(url) {
     console.log("Navigate url", url);
@@ -13,8 +19,16 @@
   }
 
   function closeAndNavigate(url) {
-    menucontroller.close();
-    navigate(url);
+    // console.log("Menucontroller", menuController);
+
+    menuController.getMenus().then(list => {
+      console.log("List of menus", list);
+    });
+
+    menuController.close(true).then(ss => {
+      console.log("Menucontroller close", ss);
+      navigate(url);
+    });
   }
 
   const getRandomColor = () => {
@@ -63,6 +77,7 @@
       response.json().then(json => {
         icons = json.icons;
         menuItems.map(menuItem => {
+          //   menuItem.icon = "at";
           menuItem.icon = icons[Math.floor(Math.random() * icons.length)];
         });
         menuItems = [...menuItems];
@@ -74,7 +89,7 @@
   );
 </script>
 
-<ion-menu {side}>
+<ion-menu {side} menu-id="first" content-id="main">
   {#if menuItems.length > 0}
     <ion-header>
       <ion-toolbar translucent>
@@ -114,5 +129,3 @@
     </ion-content>
   {/if}
 </ion-menu>
-
-<ion-menu-controller bind:this={menucontroller} />
