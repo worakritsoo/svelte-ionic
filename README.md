@@ -1,5 +1,5 @@
 # Ionic Svelte UI demo
-A showcase app for all Ionic UI elements. Use this app to try-out the elements you like for your app, and then navigate directly to the API docs or the source code.
+A showcase app for all Ionic UI elements - up to Ionic 5!!! Use this app to try-out the elements you like for your app, and then navigate directly to the API docs or the source code.
 
 Secondly, it is a boilerplate to start developing an Ionic/Svelte/PWA supercharged app (WIP) 
 
@@ -87,6 +87,7 @@ I raised an issue @ Ionic for selected-tab not selecting te default tab as per I
 
 # Todo's
 A number of todo's:
+- fix Ionic Menu close
 - ~~UI elements missing: VirtualScroll skipped~~
 - ~~add the popoover and other controller related items~~
 - ~~try the css styling as per documentation (theming)~~
