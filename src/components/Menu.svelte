@@ -12,8 +12,11 @@
   }
 
   function closeAndNavigate(url) {
-    getIonicMenu("mainmenu").close(true);
-    navigate(url);
+    getIonicMenu("mainmenu")
+      .close(true)
+      .then(() => {
+        navigate(url);
+      });
   }
 
   const getRandomColor = () => {

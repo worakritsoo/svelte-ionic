@@ -30,6 +30,7 @@ All items also available as individual REPLs: https://github.com/Tommertom/svelt
 **NEW FEATURE4: Web Animations API included (see Avatars)**
 
 All features (vision/realised) 
+- Web Animations API (see Avatars - 100% done)
 - All Ionic Framework UI components showcased (100% done)
 - Run as SPA - Filesystem router via Routify (100% done)
 - Code splitting - lazy loading of routes (100%)
