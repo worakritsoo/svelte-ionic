@@ -10,7 +10,7 @@
 <svelte:head>
   <title>Ionic UI Companion App - Modal Extra</title>
 </svelte:head>
-<ion-header translucent>
+<ion-header translucent="true">
   <ion-toolbar>
     <ion-title>Modal Content</ion-title>
     <ion-buttons slot="end">

@@ -1,5 +1,13 @@
 import { register } from "svelte-custom-elements";
-import { loadingController, toastController, alertController, pickerController, actionSheetController, modalController, popoverController } from "@ionic/core";
+import {
+    loadingController,
+    toastController,
+    alertController,
+    pickerController,
+    actionSheetController,
+    modalController,
+    popoverController
+} from "@ionic/core";
 
 //
 // Private functions 

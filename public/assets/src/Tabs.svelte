@@ -1,7 +1,7 @@
 <ion-tabs>
 
   <ion-tab tab="music">
-    <ion-header translucent>
+    <ion-header translucent="true">
       <ion-toolbar>
         <ion-title>Music</ion-title>
       </ion-toolbar>
@@ -13,7 +13,7 @@
   </ion-tab>
 
   <ion-tab tab="movies">
-    <ion-header translucent>
+    <ion-header translucent="true">
       <ion-toolbar>
         <ion-title>Movies</ion-title>
       </ion-toolbar>
@@ -25,7 +25,7 @@
   </ion-tab>
 
   <ion-tab tab="games">
-    <ion-header translucent>
+    <ion-header translucent="true">
       <ion-toolbar>
         <ion-title>Games</ion-title>
       </ion-toolbar>

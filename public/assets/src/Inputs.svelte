@@ -33,7 +33,7 @@
   <title>Ionic UI Companion App - Inputs</title>
 </svelte:head>
 
-<ion-header translucent>
+<ion-header translucent="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button />

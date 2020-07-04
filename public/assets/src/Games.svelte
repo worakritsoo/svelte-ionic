@@ -7,9 +7,8 @@
     getIonicNav
   } from "../../services/IonicControllers";
 
-  //  import { navigate } from "svelte-routing";
-
-  // registerWebComponentOnce("nav-detail", NavDetail);
+  // not the proper one - as a nav in a tab is a difficult thing
+  registerWebComponentOnce("nav-detail", AltDetails);
 
   let nav;
   onMount(() => {
@@ -20,7 +19,8 @@
   function showDetail() {
     const title = "Tux";
     const tech = techs.find(tech => tech.title === title);
-    //  nav.push("nav-detail", { tech });
+    console.log("navpush", tech);
+    nav.push("nav-detail", { tech });
 
     // navigate("/navdetails/" + title);
   }
@@ -29,7 +29,7 @@
 <svelte:head>
   <title>Ionic UI Companion App - Tabs-Games</title>
 </svelte:head>
-<ion-header translucent>
+<ion-header translucent="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button />
@@ -42,4 +42,6 @@
   <ion-button expand="full" color="secondary" on:click={showDetail}>
     Open a detail nav with back button.
   </ion-button>
+  This is not working. Issue is that the Nav and the Tabs are not working nicely
+  together. We need an ion-nav element to do the push. So not resolved yet....
 </ion-content>

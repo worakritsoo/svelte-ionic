@@ -3,7 +3,8 @@
   import { techs } from "./techs.js";
   import {
     registerWebComponentOnce,
-    getIonicNav
+    getIonicNav,
+    getIonicMenu
   } from "../../services/IonicControllers";
 
   registerWebComponentOnce("nav-detail", NavDetail);
@@ -16,15 +17,14 @@
   }
 
   function openMenu() {
-    console.log("asdadasd", document.querySelector("ion-menu-controller"));
-    document.querySelector("ion-menu-controller").open();
+    getIonicMenu("mainmenu").open();
   }
 </script>
 
 <svelte:head>
   <title>Ionic UI Companion App - NavList</title>
 </svelte:head>
-<ion-header translucent>
+<ion-header translucent="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button />

@@ -56,14 +56,11 @@ Do you like this work? Please star this project!
 
 # Known issues
 
-## IonMenu gives warning
-Need to use other api
-
 ## ion-back-button does not show
 Ion Back Button does not appear in the app. Neither in a REPL. Made a custom version.
 
 ## Altdetails is not taking the route argument
-Needing some debugging
+Needing some debugging - A NAV in the TAB is not working properly
 
 ## Capacitor Clipboard on iOS does not copy
 Copy of sourcecode on iOS does not seem to work.
@@ -94,7 +91,7 @@ Local install:
 
 # Todo's
 A number of todo's:
-- detail nav not working in tab
+- REPLS are not aligned to Ionic 5 
 - ~~fix Ionic Menu close, go through all components and fix some messages~~
 - ~~research some of the warnings after Ionic 5 migration~~
 - ~~Ionic 5 add-ons not present in Ionic 4 (to figure out which ones)~~

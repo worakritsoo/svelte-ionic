@@ -52,7 +52,7 @@
   }
 </style>
 
-<ion-header translucent>
+<ion-header translucent="true">
   <ion-toolbar>
     <ion-title>Ionic UI Companion</ion-title>
   </ion-toolbar>

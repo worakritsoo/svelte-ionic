@@ -19,7 +19,7 @@
 </svelte:head>
 
 <IonPage>
-  <ion-header translucent>
+  <ion-header translucent="true">
     <ion-toolbar>
       <ion-buttons slot="start">
         <IonBackButton />

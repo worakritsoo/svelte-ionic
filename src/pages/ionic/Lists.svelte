@@ -2,7 +2,7 @@
   <title>Ionic UI Companion App - Lists</title>
 </svelte:head>
 
-<ion-header translucent>
+<ion-header translucent="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button />
