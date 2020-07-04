@@ -23,6 +23,11 @@ export const getIonicNav = () => {
     return document.querySelector("ion-nav");
 }
 
+export const getIonicMenu = (menuId) => {
+    const query = "ion-menu[menu-id='" + menuId + "']";
+    return document.querySelector(query);
+}
+
 export const IonicShowModal = (selector, component, componentProps) => {
     registerWebComponentOnce(selector, component);
     return modalController

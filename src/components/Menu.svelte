@@ -2,16 +2,9 @@
   import { fromFetch } from "rxjs/fetch";
   import { goto } from "@sveltech/routify";
   import { myRoutes as routes } from "../myRoutes.js";
+  import { getIonicMenu } from "./../services/IonicControllers";
 
   export let side = "start";
-
-  import { menuController } from "@ionic/core";
-
-  setTimeout(() => {
-    // menuController.enable(true, "first");
-    console.log("OPEN");
-    menuController.open();
-  }, 5000);
 
   function navigate(url) {
     console.log("Navigate url", url);
@@ -19,12 +12,8 @@
   }
 
   function closeAndNavigate(url) {
-    // console.log("Menucontroller", menuController);
-
-    menuController.close().then(res => {
-      console.log("Close result", res);
-      navigate(url);
-    });
+    getIonicMenu("mainmenu").close(true);
+    navigate(url);
   }
 
   const getRandomColor = () => {
@@ -85,7 +74,7 @@
   );
 </script>
 
-<ion-menu {side} content-id="main">
+<ion-menu {side} content-id="main" menu-id="mainmenu">
   {#if menuItems.length > 0}
     <ion-header>
       <ion-toolbar translucent>

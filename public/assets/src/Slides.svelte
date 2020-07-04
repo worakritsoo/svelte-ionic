@@ -1,29 +1,22 @@
 <script>
-  function navigate(s) {
-    console.log("NOT WORKING", s);
+  import { getIonicMenu } from "./../../services/IonicControllers";
+  import { goto } from "@sveltech/routify";
+
+  function navigate(url) {
+    $goto(url);
   }
 
   const continueToTab = () => {
-    navigate("/tabs/movies");
+    navigate("/ionic/tabs/movies");
   };
-
-  // todo: more sveltish
-  function openMenu() {
-    document.querySelector("ion-menu-controller").open();
-  }
-
-  // todo: more sveltish
-  function closeMenu() {
-    document.querySelector("ion-menu-controller").close();
-  }
 
   const flipMenuOnOff = () => {
     console.log("flipMenuOnOff");
     setTimeout(() => {
-      openMenu();
+      getIonicMenu("mainmenu").open(true);
       setTimeout(() => {
-        closeMenu();
-      }, 1000);
+        getIonicMenu("mainmenu").close(true);
+      }, 2000);
     }, 2000);
   };
 </script>

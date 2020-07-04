@@ -1,8 +1,3 @@
-<script>
-  export let params;
-  console.log("para", params);
-</script>
-
 <style>
   :root {
     --ion-safe-area-top: 20px;
