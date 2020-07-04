@@ -57,6 +57,10 @@ Do you like this work? Please star this project!
 
 # Known issues
 
+
+## REPLs are Ionic 4
+The REPLs are Ionic 4. I think they still sufficiently serve purpose to play around with the UI, so for now I won't bother too much updating them.
+
 ## ion-back-button does not show
 Ion Back Button does not appear in the app. Neither in a REPL. Made a custom version.
 
@@ -92,7 +96,6 @@ Local install:
 
 # Todo's
 A number of todo's:
-- REPLS are not aligned to Ionic 5 
 - ~~fix Ionic Menu close, go through all components and fix some messages~~
 - ~~research some of the warnings after Ionic 5 migration~~
 - ~~Ionic 5 add-ons not present in Ionic 4 (to figure out which ones)~~
