@@ -7,6 +7,7 @@
 
   export let tab = "movies";
 
+  // too much?
   if (tab == ":tab") {
     tab = "movies";
   }

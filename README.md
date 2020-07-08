@@ -57,9 +57,6 @@ Do you like this work? Please star this project!
 
 # Known issues
 
-## Livereload seems to need ctrl-F5
-After code changes, I need to hit ctrl-f5 to reload, as Chrome gives an error (GET http://localhost:5000/bundle/main.js net::ERR_ABORTED 404 (Not Found)) on automatic live-reload
-
 ## REPLs are Ionic 4
 The REPLs are Ionic 4. I think they still sufficiently serve purpose to play around with the UI, so for now I won't bother too much updating them.
 
@@ -88,9 +85,10 @@ Not necessarily an issue, but still a bit undesireable to make a custom element 
 ## IonTabs selected Tab 
 I raised an issue @ Ionic for selected-tab not selecting te default tab as per Ionic's documentation. https://github.com/ionic-team/ionic/issues/20060
 
+## IonNav does not work in tabs
+This seems to be related to the ionic router that is not working for me.  IonPage.svelte could be a replacement for a flyin type of animation.
 
 ## Want local install of Ionic lib?
-
 Local install:
     <script type="module" src='/assets/libs/@ionic/core/dist/ionic/ionic.js'></script>
     <link rel="stylesheet" href="/assets/libs/@ionic/core/css/ionic.bundle.css" />
@@ -98,6 +96,7 @@ Local install:
 
 # Todo's
 A number of todo's:
+- fix IonTab
 - ~~fix Ionic Menu close, go through all components and fix some messages~~
 - ~~research some of the warnings after Ionic 5 migration~~
 - ~~Ionic 5 add-ons not present in Ionic 4 (to figure out which ones)~~

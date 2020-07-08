@@ -29,13 +29,14 @@
 
   const tabsChange = event => {
     console.log("Tabs change", event.detail.tab);
+
+    // to support back button - some tries
     //  history.pushState(
     //    event.detail,
     //    event.detail.tab,
     //    "tabs/" + event.detail.tab
     //  );
-
-    // console.log("adas", window.history);
+    // console.log("History", window.history);
   };
 </script>
 
