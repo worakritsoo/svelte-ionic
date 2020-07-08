@@ -108,7 +108,7 @@ A number of todo's:
 - ~~do some binding on inputs and other interactive elements~~
 - ~~ionicons for menu - colors and other names~~
 - ~~ionicons part has some unknown icons, make larger~~
-- make it a PWA - need to work on the service worker
+- make it a PWA - need to work on the service worker - https://developers.google.com/web/tools/workbox/guides/get-started
 - ~~better names for controller API?~~
 - ~~NAV over tab~~
 - ~~make it more sveltish (code, store, bindings, animations)~~

@@ -34,6 +34,7 @@
         "@ionic/core": "5.2.3",
         "cupertino-pane": "1.1.652",
         "sirv-cli": "1.0.3",
-        "svelte-custom-elements": "1.0.2"
+        "svelte-custom-elements": "1.0.2",
+        "workbox-precaching": "^5.1.3"
     }
 }

@@ -19,16 +19,6 @@ export default {
     },
     plugins: [
 
-        /*
-      
-            Not sure why this originally was included, but it gives livereload issues
-            
-           del({
-               targets: ['public/bundle', 'build/build']
-           }),
-         
-           */
-
         // remove if you use the code to make something else
         copy({
             targets: [{ src: 'src/pages/ionic/*', dest: 'public/assets/src' }],
@@ -41,6 +31,7 @@ export default {
             verbose: true,
             copyOnce: true
         }),
+
         svelte({
             // enable run-time checks when not in production
             dev: !production,
@@ -83,6 +74,7 @@ export default {
         // If we're building for production (npm run build
         // instead of npm run dev), minify
         production && terser()
+
     ],
     watch: {
         clearScreen: false
