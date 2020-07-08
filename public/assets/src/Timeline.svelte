@@ -2766,7 +2766,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="main-timeline">
-          <a href="javascript:void(0)" class="timeline">
+          <a href="/ionic/Timeline" class="timeline">
             <div class="timeline-icon">
               <i class="fa fa-globe" />
             </div>
@@ -2779,7 +2779,7 @@
               </p>
             </div>
           </a>
-          <a href="javascript:void(0)" class="timeline">
+          <a href="/ionic/Timeline" class="timeline">
             <div class="timeline-icon">
               <i class="fa fa-rocket" />
             </div>
@@ -2792,7 +2792,7 @@
               </p>
             </div>
           </a>
-          <a href="javascript:void(0)" class="timeline">
+          <a href="/ionic/Timeline" class="timeline">
             <div class="timeline-icon">
               <i class="fa fa-briefcase" />
             </div>
@@ -2805,7 +2805,7 @@
               </p>
             </div>
           </a>
-          <a href="javascript:void(0)" class="timeline">
+          <a href="/ionic/Timeline" class="timeline">
             <div class="timeline-icon">
               <i class="fa fa-mobile" />
             </div>
@@ -2831,7 +2831,7 @@
         <div class="main-timeline2">
           <div class="timeline">
             <span class="icon fa fa-globe" />
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <h3 class="title">Web Designer</h3>
               <p class="description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
@@ -2841,7 +2841,7 @@
           </div>
           <div class="timeline">
             <span class="icon fa fa-rocket" />
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <h3 class="title">Web Developer</h3>
               <p class="description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
@@ -2851,7 +2851,7 @@
           </div>
           <div class="timeline">
             <span class="icon fa fa-briefcase" />
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <h3 class="title">Web Designer</h3>
               <p class="description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
@@ -2861,7 +2861,7 @@
           </div>
           <div class="timeline">
             <span class="icon fa fa-mobile" />
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <h3 class="title">Web Developer</h3>
               <p class="description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
@@ -2881,7 +2881,7 @@
       <div class="col-md-12">
         <div class="main-timeline3">
           <div class="timeline">
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <span class="year">2018</span>
               <h3 class="title">Web Designer</h3>
               <p class="description">
@@ -2891,7 +2891,7 @@
             </a>
           </div>
           <div class="timeline">
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <span class="year">2017</span>
               <h3 class="title">Web Developer</h3>
               <p class="description">
@@ -2901,7 +2901,7 @@
             </a>
           </div>
           <div class="timeline">
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <span class="year">2016</span>
               <h3 class="title">Web Designer</h3>
               <p class="description">
@@ -2911,7 +2911,7 @@
             </a>
           </div>
           <div class="timeline">
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <span class="year">2015</span>
               <h3 class="title">Web Developer</h3>
               <p class="description">
@@ -2932,7 +2932,7 @@
       <div class="col-md-12">
         <div class="main-timeline4">
           <div class="timeline">
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <span class="year">2018</span>
               <div class="inner-content">
                 <h3 class="title">Web Designer</h3>
@@ -2945,7 +2945,7 @@
             </a>
           </div>
           <div class="timeline">
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <span class="year">2017</span>
               <div class="inner-content">
                 <h3 class="title">Web Developer</h3>
@@ -2958,7 +2958,7 @@
             </a>
           </div>
           <div class="timeline">
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <span class="year">2016</span>
               <div class="inner-content">
                 <h3 class="title">Web Designer</h3>
@@ -2971,7 +2971,7 @@
             </a>
           </div>
           <div class="timeline">
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <span class="year">2015</span>
               <div class="inner-content">
                 <h3 class="title">Web Developer</h3>
@@ -3448,7 +3448,7 @@
       <div class="col-md-12">
         <div class="main-timeline11">
           <div class="timeline">
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <span class="year">2018</span>
               <div class="inner-content">
                 <h3 class="title">Web Designer</h3>
@@ -3462,7 +3462,7 @@
             </a>
           </div>
           <div class="timeline">
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <span class="year">2017</span>
               <div class="inner-content">
                 <h3 class="title">Web Developer</h3>
@@ -3476,7 +3476,7 @@
             </a>
           </div>
           <div class="timeline">
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <span class="year">2016</span>
               <div class="inner-content">
                 <h3 class="title">Web Designer</h3>
@@ -3490,7 +3490,7 @@
             </a>
           </div>
           <div class="timeline">
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <span class="year">2015</span>
               <div class="inner-content">
                 <h3 class="title">Web Developer</h3>
@@ -3504,7 +3504,7 @@
             </a>
           </div>
           <div class="timeline">
-            <a href="javascript:void(0)" class="timeline-content">
+            <a href="/ionic/Timeline" class="timeline-content">
               <span class="year">2014</span>
               <div class="inner-content">
                 <h3 class="title">Web Designer</h3>
