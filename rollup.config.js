@@ -23,7 +23,6 @@ export default {
             targets: ['public/bundle', 'build/build']
         }),
 
-
         // remove if you use the code to make something else
         copy({
             targets: [{ src: 'src/pages/ionic/*', dest: 'public/assets/src' }],
@@ -36,7 +35,6 @@ export default {
             verbose: true,
             copyOnce: true
         }),
-
 
         svelte({
             // enable run-time checks when not in production
