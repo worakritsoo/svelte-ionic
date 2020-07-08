@@ -12,11 +12,10 @@
   }
 
   function closeAndNavigate(url) {
+    navigate(url);
     getIonicMenu("mainmenu")
       .close(true)
-      .then(() => {
-        navigate(url);
-      });
+      .then(() => {});
   }
 
   const getRandomColor = () => {

@@ -19,9 +19,15 @@ export default {
     },
     plugins: [
 
-        del({
-            targets: ['public/bundle', 'build/build']
-        }),
+        /*
+      
+            Not sure why this originally was included, but it gives livereload issues
+            
+           del({
+               targets: ['public/bundle', 'build/build']
+           }),
+         
+           */
 
         // remove if you use the code to make something else
         copy({
@@ -35,7 +41,6 @@ export default {
             verbose: true,
             copyOnce: true
         }),
-
         svelte({
             // enable run-time checks when not in production
             dev: !production,
@@ -71,7 +76,7 @@ export default {
         // the bundle has been generated
         !production && serve(),
 
-        // Watch the `public` directory and refresh the
+        // Watch the `public/bundle` directory and refresh the
         // browser on changes when not in production
         !production && livereload('public'),
 

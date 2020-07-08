@@ -13,7 +13,7 @@
   tech = techs.find(tech => tech.title === "Tux");
   console.log("techs", techs, tech, techName);
 </script>
-
+ 
 <svelte:head>
   <title>Ionic UI Companion App - AltDetail</title>
 </svelte:head>
