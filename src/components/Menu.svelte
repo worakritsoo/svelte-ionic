@@ -32,10 +32,29 @@
     return items[Math.floor(Math.random() * items.length)];
   };
 
+  const excludedPaths = [
+    "AltDetails",
+    "ModalExtra",
+    "NavDetail",
+    "NavList",
+    "PopoverExtra"
+  ];
+
   // let's use the generated routes for making the menu items
   let menuItems = routes
     .filter(route => route.path.includes("ionic"))
+    .filter(route => {
+      let found = false;
+      excludedPaths.forEach(exclude => {
+        found = found || route.path.includes(exclude);
+      });
+      return !found;
+    })
     .map(route => {
+      if (route.name.includes("[tab]")) {
+        route.name = "Tab";
+      }
+
       return {
         url: route.path,
         label: route.name.replace("ionic/", ""),
