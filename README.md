@@ -34,9 +34,8 @@ All features (vision/realised)
 - All Ionic Framework UI components showcased (100% done)
 - Run as SPA - Filesystem router via Routify (100% done)
 - Code splitting - lazy loading of routes (100%)
-- Service Worker setup via workbox (50%) 
-- PWA compliance via Ligthouse score (40% - missing the service worker mostly)
-- Stores (0%)
+- Service Worker setup via workbox (75% - not really doing much this way) 
+- PWA compliance via Ligthouse score (80% - biggest issue: no 200 when offline)
 - RXJS usage (100%)
 - Localstorage via localforage (100%)
 - Firebase SDK - analytics/firestore (100%)
@@ -45,7 +44,6 @@ All features (vision/realised)
 - REPLs for each element (100%)
 - Source code previewer (100%)
 - Cookie Popup (100%)
-- Multi language support (0%)
 - Ionic included as asset, not CDN (100%)
 
 <img alt="Screen1.PNG" src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen1.PNG" width="75%" >
@@ -71,6 +69,9 @@ Copy of sourcecode on iOS does not seem to work.
 
 ## Pane integration is WIP
 Pane needs ion-content  to be set to `scroll-y:false` to avoid strange UI on some devices.
+
+## PWA no 200 when offline
+This is something that requires a bit more work on my end - finding the right toolbox to do 200 when offline and at the same time a developer friendly implementation for changes. Probably it exists already, but just need to research a bit more.
 
 # Remarks while working on Ionic - Svelte integration
 
@@ -108,7 +109,7 @@ A number of todo's:
 - ~~do some binding on inputs and other interactive elements~~
 - ~~ionicons for menu - colors and other names~~
 - ~~ionicons part has some unknown icons, make larger~~
-- make it a PWA - need to work on the service worker - https://developers.google.com/web/tools/workbox/guides/get-started
+- make it a better PWA - need to work on the service worker - https://developers.google.com/web/tools/workbox/guides/get-started
 - ~~better names for controller API?~~
 - ~~NAV over tab~~
 - ~~make it more sveltish (code, store, bindings, animations)~~
@@ -121,7 +122,7 @@ A number of todo's:
 - searchbox in ionicons
 - add non Ionic elements to complete UI: 
     - chat ui
-    - timeline
+    - ~~Stimeline~~S
     - accordeon
     - ~~pane~~ 
 - ~~SSR~~
@@ -134,6 +135,6 @@ A number of todo's:
 - Font Awesome icons
 - ~~Web Animations API trial - see Avatars~~
 - replace manual route filter with ignore option
-- seek ways to include in rollup bundler instead of script include
-- Ionic 5 migration - once it is fully released - already some breaking changes
+- ~~Sseek ways to include in rollup bundler instead of script include~~S
+- ~~SIonic 5 migration - once it is fully released - already some breaking changes~~S
 
