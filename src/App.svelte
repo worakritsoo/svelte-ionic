@@ -24,9 +24,9 @@
 </script>
 
 <style>
-  :global(body) {
-    /* this will apply to <body> */
-    --ion-font-family: "Roboto", "Helvetica Neue", sans-serif;
+  :global(html) {
+    /* this will apply to <html doc> */
+    --ion-font-family: "Helvetica Neue", "Roboto", sans-serif;
   }
 </style>
 
