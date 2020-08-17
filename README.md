@@ -101,7 +101,7 @@ Local install:
 
 # Todo's
 A number of todo's:
-- fix IonTab
+- ~~fix IonTab~~
 - ~~fix Ionic Menu close, go through all components and fix some messages~~
 - ~~research some of the warnings after Ionic 5 migration~~
 - ~~Ionic 5 add-ons not present in Ionic 4 (to figure out which ones)~~
