@@ -37,6 +37,8 @@
     "ModalExtra",
     "NavDetail",
     "NavList",
+    "Games",
+    "Music",
     "PopoverExtra"
   ];
 
