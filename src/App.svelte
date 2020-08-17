@@ -23,4 +23,11 @@
   firebase.initializeApp(firebaseConfig);
 </script>
 
+<style>
+  :global(body) {
+    /* this will apply to <body> */
+    --ion-font-family: "Roboto", "Helvetica Neue", sans-serif;
+  }
+</style>
+
 <Router {routes} />

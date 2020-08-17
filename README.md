@@ -45,6 +45,7 @@ All features (vision/realised)
 - Source code previewer (100%)
 - Cookie Popup (100%)
 - Ionic included as asset, not CDN (100%)
+- Setting global CSS variables - (https://ionicframework.com/docs/theming/css-variables (100%) - see App.svelte)
 
 <img alt="Screen1.PNG" src="https://raw.githubusercontent.com/Tommertom/svelte-ionic-app/master/doc/Screen1.PNG" width="75%" >
 
@@ -72,6 +73,9 @@ Pane needs ion-content  to be set to `scroll-y:false` to avoid strange UI on som
 
 ## PWA no 200 when offline
 This is something that requires a bit more work on my end - finding the right toolbox to do 200 when offline and at the same time a developer friendly implementation for changes. Probably it exists already, but just need to research a bit more.
+
+## Navigation through href isn't as pretty 
+In Cards there is a link that navigates away from the current page. It does not nicely replace the page, as it fully reloads. That is not very nice if you ask me, so you have to use a `navigate` method instead of href. That is a bit unfortunate if you ask me (from SEO perspective - correct?)
 
 # Remarks while working on Ionic - Svelte integration
 
