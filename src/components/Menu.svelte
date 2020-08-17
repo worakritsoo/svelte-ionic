@@ -97,6 +97,12 @@
   );
 </script>
 
+<style>
+  ion-item {
+    cursor: pointer;
+  }
+</style>
+
 <ion-menu {side} content-id="main" menu-id="mainmenu">
   {#if menuItems.length > 0}
     <ion-header>

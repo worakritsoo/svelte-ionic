@@ -39,12 +39,12 @@
   </ion-card>
 
   <ion-card>
-    <ion-item href="/tabs/music" class="activated">
+    <ion-item href="/ionic/tabs/:tab" class="activated">
       <ion-icon name="wifi" slot="start" />
       <ion-label>Card Link Item 1 .activated</ion-label>
     </ion-item>
 
-    <ion-item href="/buttons">
+    <ion-item href="/ionic/Buttons">
       <ion-icon name="wine" slot="start" />
       <ion-label>Card Link Item 2</ion-label>
     </ion-item>

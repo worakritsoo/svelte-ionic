@@ -30,7 +30,7 @@
 </style>
 
 <svelte:head>
-  <title>Ionic UI Companion App - Pane</title>
+  <title>Ionic UI Companion App - Pane - experimental</title>
 </svelte:head>
 
 <ion-header translucent="true">
