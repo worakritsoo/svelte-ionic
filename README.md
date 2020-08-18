@@ -98,7 +98,6 @@ Local install:
     <script type="module" src='/assets/libs/@ionic/core/dist/ionic/ionic.js'></script>
     <link rel="stylesheet" href="/assets/libs/@ionic/core/css/ionic.bundle.css" />
 
-
 # Todo's
 A number of todo's:
 - ~~fix IonTab~~
@@ -123,7 +122,7 @@ A number of todo's:
 - ~~place routes in better place (pages folder probably, to avoid repeating /../)~~
 - ~~consider Contexts for exposing controllers~~
 - ~~split pane~~
-- searchbox in ionicons
+- ~~searchbox in ionicons~~
 - add non Ionic elements to complete UI: 
     - chat ui
     - ~~Stimeline~~S

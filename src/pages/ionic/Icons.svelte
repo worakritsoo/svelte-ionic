@@ -3,12 +3,23 @@
   import { Plugins } from "@capacitor/core";
   import { IonicShowToast } from "../../services/IonicControllers";
 
+  import { fromEvent } from "rxjs";
+  import { onMount } from "svelte";
+  import {
+    map,
+    filter,
+    debounceTime,
+    distinctUntilChanged
+  } from "rxjs/operators";
+
+  let searchBar;
   let length = 0;
   let icons = [];
   let list = [];
   let infiniteScroll;
   const { Clipboard } = Plugins;
 
+  /*
   const infiniteAction = async () => {
     console.log("L", length, icons.length);
     if (length < icons.length) {
@@ -36,13 +47,19 @@
       }, time);
     });
   }
+*/
 
   fromFetch("/assets/json/ionicons.json").subscribe(
     response => {
       response.json().then(json => {
         icons = json.icons;
         console.log("List of icons", icons);
-        appendItems(120);
+
+        list = icons.slice(0, 300);
+        // we delay the full display to smoothen the rendering
+        setTimeout(() => {
+          list = [].concat(icons);
+        }, 3000);
       });
     },
     error => {
@@ -77,6 +94,35 @@
     ];
     return items[Math.floor(Math.random() * items.length)];
   };
+
+  onMount(() => {
+    fromEvent(searchBar, "keyup")
+      .pipe(
+        // get value
+        map(event => {
+          return event.target.value;
+        }),
+        // if character length greater then 2
+        filter(res => res.length > 2),
+
+        // Time in milliseconds between key events
+        debounceTime(1000),
+
+        // If previous query is diffent from current
+        distinctUntilChanged()
+
+        // subscription for response
+      )
+      .subscribe(text => {
+        const query = text.toLowerCase();
+        if (query != "") {
+          list = [];
+          list = icons.filter(icon => icon.toLowerCase().indexOf(query) > -1);
+        } else {
+          list = [].concat(icons);
+        }
+      });
+  });
 </script>
 
 <style>
@@ -88,12 +134,16 @@
 <svelte:head>
   <title>Ionic UI Companion App - Icons</title>
 </svelte:head>
+
 <ion-header translucent="true">
   <ion-toolbar>
+    <ion-title>Icons</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button />
     </ion-buttons>
-    <ion-title>Icons</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar debounce="5000" bind:this={searchBar} />
   </ion-toolbar>
 </ion-header>
 
@@ -111,14 +161,5 @@
       {/each}
     </ion-row>
   </ion-grid>
-
-  <ion-infinite-scroll
-    on:ionInfinite={infiniteAction}
-    threshold="100px"
-    bind:this={infiniteScroll}>
-    <ion-infinite-scroll-content
-      loading-spinner="bubbles"
-      loading-text="Loading more data..." />
-  </ion-infinite-scroll>
 
 </ion-content>
