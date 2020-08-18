@@ -56,6 +56,9 @@ Do you like this work? Please star this project!
 
 # Known issues
 
+## Searchbar cancel ionCancel does not fire
+I think I need to debug a bit more, because ionInput does fire..... And the show-cancel-button "never" also does not work.
+
 ## REPLs are Ionic 4
 The REPLs are Ionic 4. I think they still sufficiently serve purpose to play around with the UI, so for now I won't bother too much updating them.
 

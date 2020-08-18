@@ -19,42 +19,14 @@
   let infiniteScroll;
   const { Clipboard } = Plugins;
 
-  /*
-  const infiniteAction = async () => {
-    console.log("L", length, icons.length);
-    if (length < icons.length) {
-      console.log("Loading data...");
-      await wait(500);
-      infiniteScroll.complete();
-      appendItems(175);
-      console.log("Done");
-    } else {
-      console.log("No More Data");
-      infiniteScroll.disabled = true;
-    }
-  };
-
-  function appendItems(number) {
-    list = [];
-    list = icons.slice(0, number + length);
-    length += number;
-  }
-
-  function wait(time) {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve();
-      }, time);
-    });
-  }
-*/
-
+  // let's get the icons
   fromFetch("/assets/json/ionicons.json").subscribe(
     response => {
       response.json().then(json => {
         icons = json.icons;
         console.log("List of icons", icons);
 
+        // icons = icons.slice(0, 100); // for debugging
         list = icons.slice(0, 300);
         // we delay the full display to smoothen the rendering
         setTimeout(() => {
@@ -96,14 +68,16 @@
   };
 
   onMount(() => {
-    fromEvent(searchBar, "keyup")
+    // not firing when the cancel button is clicked - unsure why the cancel button is shown at all!
+    fromEvent(searchBar, "input")
       .pipe(
         // get value
         map(event => {
+          console.log("INPUT", event);
           return event.target.value;
         }),
-        // if character length greater then 2
-        filter(res => res.length > 2),
+        // if character length greater then 2 - removed
+        //  filter(res => res.length > 2),
 
         // Time in milliseconds between key events
         debounceTime(1000),
@@ -121,6 +95,8 @@
         } else {
           list = [].concat(icons);
         }
+
+        console.log("Changing the list ", text, list);
       });
   });
 </script>
@@ -143,7 +119,7 @@
     </ion-buttons>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-searchbar debounce="5000" bind:this={searchBar} />
+    <ion-searchbar show-cancel-button="'never'" bind:this={searchBar} />
   </ion-toolbar>
 </ion-header>
 
