@@ -24,8 +24,8 @@ export default {
         svelte({
             preprocess: autoPreprocess()
         }),
-        typescript({ sourceMap: !production }),
 
+        typescript({ sourceMap: !production }),
         /*
         // remove if you use the code to make something else
         production && copy({
