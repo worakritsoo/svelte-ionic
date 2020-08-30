@@ -127,7 +127,7 @@ A number of todo's:
 - ~~split pane~~
 - ~~searchbox in ionicons~~
 - add non Ionic elements to complete UI: 
-    - chat ui
+    - chat ui and other social elements (https://github.com/thenaim/ionic-tk-social-network)
     - ~~Stimeline~~S
     - accordeon
     - ~~pane~~ 

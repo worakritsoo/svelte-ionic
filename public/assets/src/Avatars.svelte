@@ -28,6 +28,22 @@
   };
 </script>
 
+<style>
+  .story-avatar {
+    background: blue;
+    height: 64px;
+    width: 64px;
+    padding: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .story-img {
+    border: 2px solid red;
+    border-radius: 50%;
+  }
+</style>
+
 <svelte:head>
   <title>Ionic UI Companion App - Avatars</title>
 </svelte:head>
@@ -43,6 +59,14 @@
 
 <ion-content fullscreen>
 
+  <ion-avatar class="story-avatar">
+    <img
+      alt="avatar-social"
+      style=" border: 2px solid red; border-radius: 50%; "
+      src="https://s3.amazonaws.com/uifaces/faces/twitter/nemanjaivanovic/128.jpg" />
+  </ion-avatar>
+  Courtesy : https://github.com/thenaim/ionic-tk-social-network
+  <br />
   <ion-list-header>Default</ion-list-header>
   <ion-avatar class="ion-margin-start">
     <img alt="avatar" src="../assets/img/ionic/avatar.svg" />
@@ -108,4 +132,5 @@
       </ion-label>
     </ion-item>
   </ion-list>
+
 </ion-content>

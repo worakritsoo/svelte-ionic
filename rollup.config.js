@@ -19,19 +19,20 @@ export default {
     },
     plugins: [
 
+        /*
         // remove if you use the code to make something else
-        copy({
+        production && copy({
             targets: [{ src: 'src/pages/ionic/*', dest: 'public/assets/src' }],
             verbose: true,
             copyOnce: true
         }),
 
-        copy({
+        production && copy({
             targets: [{ src: 'src/assets/*', dest: 'public/assets' }],
             verbose: true,
             copyOnce: true
         }),
-
+*/
         svelte({
             // enable run-time checks when not in production
             dev: !production,
