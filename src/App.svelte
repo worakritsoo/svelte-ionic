@@ -17,7 +17,7 @@
     storageBucket: "ionicsvelte.appspot.com",
     messagingSenderId: "512207280782",
     appId: "1:512207280782:web:aa2cc110c3ac12e5ef07df",
-    measurementId: "G-NNGFLY1HYH"
+    measurementId: "G-NNGFLY1HYH",
   };
 
   firebase.initializeApp(firebaseConfig);

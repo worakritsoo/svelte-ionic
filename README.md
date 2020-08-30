@@ -23,13 +23,16 @@ All items also available as individual REPLs: https://github.com/Tommertom/svelt
 
 **NEW FEATURE: click to view source! For all components (except tab) you can click the lower right source button to view the source and copy/paste in your app. If you use fullscreen view, the menu will be a sidepanel instead of a hamburger!**
 
-**NEW FEATURE2: click on share button in source view to link directly to the Ionic API docs**
+**NEW FEATURE: click on share button in source view to link directly to the Ionic API docs**
 
-**NEW FEATURE3: almost all UI elements have a separate REPL (coding playground)**
+**NEW FEATURE: almost all UI elements have a separate REPL (coding playground)**
 
-**NEW FEATURE4: Web Animations API included (see Avatars)**
+**NEW FEATURE: Web Animations API included (see Avatars)**
+
+**NEW FEATURE: TYPESCRIPT ARRIVED!!!!! Configuration done and usable via `<script lang="ts">`
 
 All features (vision/realised) 
+- Configured for Typescript usage (100%)
 - Web Animations API (see Avatars - 100% done)
 - All Ionic Framework UI components showcased (100% done)
 - Run as SPA - Filesystem router via Routify (100% done)
@@ -55,6 +58,9 @@ And the source view with copy feature and you can select text with the mouse:
 Do you like this work? Please star this project! 
 
 # Known issues
+
+## Not an issue but good to note: Typescript full usage may require typings for some packages
+These are not always available for all packages used in this project, and hence not applied.
 
 ## Searchbar cancel ionCancel does not fire
 I think I need to debug a bit more, because ionInput does fire..... And the show-cancel-button "never" also does not work.

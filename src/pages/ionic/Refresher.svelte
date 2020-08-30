@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
   const names = [
     "Burt Bear",
@@ -13,7 +13,7 @@
     "Molly Mouse",
     "Paul Puppy",
     "Rachel Rabbit",
-    "Ted Turtle"
+    "Ted Turtle",
   ];
 
   let list;
@@ -28,7 +28,7 @@
   };
 
   onMount(() => {
-    appendMessages(5);
+    appendMessages(5, false);
   });
 
   function chooseRandomName() {
@@ -102,10 +102,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-refresher
-    slot="fixed"
-    bind:this={refresher}
-    on:ionRefresh={refreshAction}>
+  <ion-refresher slot="fixed" bind:this={refresher} on:ionRefresh={refreshAction}>
     <ion-refresher-content />
   </ion-refresher>
 

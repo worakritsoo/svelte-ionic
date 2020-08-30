@@ -4,6 +4,9 @@ import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 
+import autoPreprocess from 'svelte-preprocess';
+import typescript from '@rollup/plugin-typescript';
+
 import copy from 'rollup-plugin-copy';
 import del from 'rollup-plugin-delete';
 
@@ -18,6 +21,10 @@ export default {
         dir: 'public/bundle'
     },
     plugins: [
+        svelte({
+            preprocess: autoPreprocess()
+        }),
+        typescript({ sourceMap: !production }),
 
         /*
         // remove if you use the code to make something else

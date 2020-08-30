@@ -1,16 +1,16 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
   import { IonicShowToast } from "./../../services/IonicControllers";
 
   // https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
   const aliceTiming = {
-    duration: 7000
+    duration: 7000,
   };
 
   const aliceTumbling = [
     { transform: "rotate(0) scale(1)", color: "#000" },
     { transform: "rotate(360deg) scale(0.1)", color: "#000" },
-    { transform: "rotate(0) scale(1)", color: "#000" }
+    { transform: "rotate(0) scale(1)", color: "#000" },
   ];
 
   let avatar;
@@ -20,7 +20,7 @@
         color: "danger",
         duration: 4000,
         message: "Web Animations API not available",
-        showCloseButton: true
+        showCloseButton: true,
       });
     } else {
       avatar.animate(aliceTumbling, aliceTiming);
@@ -35,7 +35,7 @@
     { name: "Yoda", src: "../assets/img/ionic/avatar-yoda.png" },
     { name: "Poe", src: "../assets/img/ionic/avatar-poe.png" },
     { name: "Han", src: "../assets/img/ionic/avatar-han.png" },
-    { name: "Luke", src: "../assets/img/ionic/avatar-luke.png" }
+    { name: "Luke", src: "../assets/img/ionic/avatar-luke.png" },
   ];
 </script>
 
