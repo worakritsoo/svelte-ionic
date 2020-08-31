@@ -21,11 +21,11 @@ export default {
         dir: 'public/bundle'
     },
     plugins: [
-        svelte({
-            preprocess: autoPreprocess()
-        }),
+        // svelte({
+        //    preprocess: autoPreprocess()
+        // }),
 
-        typescript({ sourceMap: !production }),
+        // typescript({ sourceMap: !production }),
         /*
         // remove if you use the code to make something else
         production && copy({
