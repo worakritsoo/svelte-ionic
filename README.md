@@ -29,7 +29,7 @@ All items also available as individual REPLs: https://github.com/Tommertom/svelt
 
 **NEW FEATURE: Web Animations API included (see Avatars)**
 
-**NEW FEATURE: TYPESCRIPT ARRIVED!!!!! Configuration done but not yet usable via `<script lang="ts">`**
+**NEW FEATURE: TYPESCRIPT ARRIVED!!!!! Configuration done and usable via `<script lang="ts">`**
 
 All features (vision/realised) 
 - Configured for Typescript usage (100%)
