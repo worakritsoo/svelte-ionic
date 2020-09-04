@@ -59,6 +59,9 @@ Do you like this work? Please star this project!
 
 # Known issues
 
+## Need to work on slides
+Something wrong with slides...
+
 ## Not an issue but good to note: Typescript full usage may require typings for some packages
 These are not always available for all packages used in this project, and hence not applied.
 
