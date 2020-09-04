@@ -5,6 +5,7 @@
         "build": "rollup -c",
         "dev": "run-p watch:routify watch:rollup",
         "watch:rollup": "rollup -c -w",
+        "rollup": "rollup -cw",
         "watch:routify": "routify -D",
         "start": "sirv public --single",
         "validate": "svelte-check"
