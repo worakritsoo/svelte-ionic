@@ -1,10 +1,9 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
+import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
-
-import autoPreprocess from 'svelte-preprocess';
+import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 
 import copy from 'rollup-plugin-copy';
@@ -12,8 +11,29 @@ import del from 'rollup-plugin-delete';
 
 const production = !process.env.ROLLUP_WATCH;
 
+function serve() {
+    let server;
+
+    function toExit() {
+        if (server) server.kill(0);
+    }
+
+    return {
+        writeBundle() {
+            if (server) return;
+            server = require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
+                stdio: ['ignore', 'inherit', 'inherit'],
+                shell: true
+            });
+
+            process.on('SIGTERM', toExit);
+            process.on('exit', toExit);
+        }
+    };
+}
+
 export default {
-    input: 'src/main.js',
+    input: 'src/main.ts',
     output: {
         sourcemap: true,
         format: 'esm',
@@ -21,87 +41,55 @@ export default {
         dir: 'public/bundle'
     },
     plugins: [
-        // svelte({
-        //    preprocess: autoPreprocess()
-        // }),
-
-        // typescript({ sourceMap: !production }),
-        /*
-        // remove if you use the code to make something else
-        production && copy({
-            targets: [{ src: 'src/pages/ionic/*', dest: 'public/assets/src' }],
-            verbose: true,
-            copyOnce: true
-        }),
-
-        production && copy({
-            targets: [{ src: 'src/assets/*', dest: 'public/assets' }],
-            verbose: true,
-            copyOnce: true
-        }),
-*/
         svelte({
             // enable run-time checks when not in production
             dev: !production,
             // we'll extract any component CSS out into
-            // a separate file — better for performance
+            // a separate file - better for performance
             css: css => {
-                css.write('public/build/bundle.css');
-            }
+                css.write('bundle.css');
+            },
+            preprocess: sveltePreprocess(),
         }),
 
         // If you have external dependencies installed from
         // npm, you'll most likely need these plugins. In
-        // some cases you'll need additional configuration —
+        // some cases you'll need additional configuration -
         // consult the documentation for details:
-        // https://github.com/rollup/rollup-plugin-commonjs
+        // https://github.com/rollup/plugins/tree/master/packages/commonjs
         resolve({
             browser: true,
-            dedupe: importee => importee === 'svelte' || importee.startsWith('svelte/')
+            dedupe: ['svelte']
         }),
-        commonjs({
-            namedExports: {
-                'node_modules/idb/build/idb.js': ['openDb']
-            }
-        }),
-
+        commonjs(
+            //			{
+            //          namedExports: {
+            //            'node_modules/idb/build/idb.js': ['openDb']
+            //        }
+            //		}
+        ),
         // no service worker in dev
-        !production && del({ targets: 'public/sw.js' }), !production && copy({
-            targets: [{ src: 'src/sw.js', dest: 'public/' }],
+        !production && del({ targets: 'public/service-worker.js' }),
+
+        production && copy({
+            targets: [{ src: 'src/service-worker.js', dest: 'public/' }],
             verbose: true
         }),
+        typescript({ sourceMap: !production }),
 
         // In dev mode, call `npm run start` once
         // the bundle has been generated
         !production && serve(),
 
-        // Watch the `public/bundle` directory and refresh the
+        // Watch the `public` directory and refresh the
         // browser on changes when not in production
         !production && livereload('public'),
 
         // If we're building for production (npm run build
         // instead of npm run dev), minify
         production && terser()
-
     ],
     watch: {
         clearScreen: false
     }
 };
-
-function serve() {
-    let started = false;
-
-    return {
-        writeBundle() {
-            if (!started) {
-                started = true;
-
-                require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
-                    stdio: ['ignore', 'inherit', 'inherit'],
-                    shell: true
-                });
-            }
-        }
-    };
-}

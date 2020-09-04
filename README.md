@@ -29,7 +29,7 @@ All items also available as individual REPLs: https://github.com/Tommertom/svelt
 
 **NEW FEATURE: Web Animations API included (see Avatars)**
 
-**NEW FEATURE: TYPESCRIPT ARRIVED!!!!! Configuration done but not yet usable via `<script lang="ts">`
+**NEW FEATURE: TYPESCRIPT ARRIVED!!!!! Configuration done but not yet usable via `<script lang="ts">`**
 
 All features (vision/realised) 
 - Configured for Typescript usage (100%)
@@ -109,6 +109,7 @@ Local install:
 
 # Todo's
 A number of todo's:
+- Implement workbox and spassr as shown in the startertemplate of routify (or at least check)
 - ~~fix IonTab~~
 - ~~fix Ionic Menu close, go through all components and fix some messages~~
 - ~~research some of the warnings after Ionic 5 migration~~
