@@ -8,8 +8,7 @@ import { routes } from "@sveltech/routify/tmp/routes";
 const app = new App({
 	target: document.body,
 	props: {
-		routes,
-		name: 'world'
+		routes
 	}
 });
 
