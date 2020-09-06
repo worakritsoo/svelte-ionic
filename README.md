@@ -106,7 +106,7 @@ I raised an issue @ Ionic for selected-tab not selecting te default tab as per I
 This seems to be related to the ionic router that is not working for me.  IonPage.svelte could be a replacement for a flyin type of animation.
 
 ## Want local install of Ionic lib?
-Local install:
+Local install (in index.html):
 ```
     <script type="module" src='/assets/libs/@ionic/core/dist/ionic/ionic.js'></script>
     <link rel="stylesheet" href="/assets/libs/@ionic/core/css/ionic.bundle.css" />
@@ -153,7 +153,7 @@ A number of todo's:
 - source code formatter in HTML
 - Font Awesome icons
 - ~~Web Animations API trial - see Avatars~~
-- replace manual route filter with ignore option
+- ~~replace manual route filter with ignore option~~
 - ~~Sseek ways to include in rollup bundler instead of script include~~S
 - ~~SIonic 5 migration - once it is fully released - already some breaking changes~~S
 
