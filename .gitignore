@@ -1,6 +1,0 @@
-/node_modules/
-/public/bundle/
-.DS_Store
-gitpush.bat
-.gitignore
-.firebase
