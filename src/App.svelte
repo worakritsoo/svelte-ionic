@@ -5,7 +5,7 @@
 }
 </style>
 
-<script lang="ts">
+<script>
 import { Router } from "@sveltech/routify";
 export let routes;
 

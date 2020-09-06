@@ -3,3 +3,4 @@
 .DS_Store
 gitpush.bat
 .gitignore
+.firebase
