@@ -107,8 +107,11 @@ This seems to be related to the ionic router that is not working for me.  IonPag
 
 ## Want local install of Ionic lib?
 Local install:
+```
     <script type="module" src='/assets/libs/@ionic/core/dist/ionic/ionic.js'></script>
     <link rel="stylesheet" href="/assets/libs/@ionic/core/css/ionic.bundle.css" />
+```
+Obviously you need to put the NPM lib of @ionic in the assets folder.
 
 # Todo's
 A number of todo's:
