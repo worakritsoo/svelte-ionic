@@ -6,7 +6,7 @@
 </style>
 
 <script>
-import { Router } from "@sveltech/routify";
+import { Router } from "@roxi/routify";
 export let routes;
 
 // import { FirebaseApp } f rom "sveltefire";
@@ -29,19 +29,7 @@ let firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-// once routify is better documented, figure out a better way
-const myRoutes = routes.filter((route) => {
-  return (
-    route.name != "ionic/Games" &&
-    route.name != "ionic/Music" &&
-    route.name != "ionic/ModalExtra" &&
-    route.name != "ionic/Navhome" &&
-    route.name != "ionic/NavDetail" &&
-    route.name != "ionic/PopoverExtra" &&
-    route.name != "ionic/NavList" &&
-    route.name != "ionic/AltDetails"
-  );
-});
+console.log("ROUTES", routes);
 </script>
 
-<Router routes="{myRoutes}" />
+<Router routes="{routes}" />

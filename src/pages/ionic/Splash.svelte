@@ -1,35 +1,41 @@
+<style>
+img {
+  width: 60%;
+}
+</style>
+
 <script>
-  import { scale } from "svelte/transition";
-  import { elasticInOut } from "svelte/easing";
-  import { goto } from "@sveltech/routify";
+import { scale } from "svelte/transition";
+import { elasticInOut } from "svelte/easing";
+import { goto } from "@roxi/routify";
 
-  import { Plugins } from "@capacitor/core";
+import { Plugins } from "@capacitor/core";
 
-  import { onMount } from "svelte";
+import { onMount } from "svelte";
 
-  let splitpane;
-  onMount(() => {
-    splitpane = document.querySelector("ion-split-pane");
-    splitpane.disabled = true;
-  });
+let splitpane;
+onMount(() => {
+  splitpane = document.querySelector("ion-split-pane");
+  splitpane.disabled = true;
+});
 
-  function navigate(url) {
-    console.log("Navigate url", url);
-    $goto(url);
-  }
+function navigate(url) {
+  console.log("Navigate url", url);
+  $goto(url);
+}
 
-  setTimeout(() => {
-    splitpane.disabled = false;
-    navigate("/ionic/Slides");
-  }, 4000);
+setTimeout(() => {
+  splitpane.disabled = false;
+  navigate("/ionic/Slides");
+}, 4000);
 
-  console.log("CAPACITOR PLUGINS", Plugins);
+console.log("CAPACITOR PLUGINS", Plugins);
 
-  //  Plugins.Geolocation.getCurrentPosition().then(position => {
-  //    console.log("POS", position);
-  //  });
+//  Plugins.Geolocation.getCurrentPosition().then(position => {
+//    console.log("POS", position);
+//  });
 
-  /*
+/*
   Plugins.Share.share({
     title: "See cool stuff",
     text: "Really awesome thing you need to see right meow",
@@ -46,12 +52,6 @@
     */
 </script>
 
-<style>
-  img {
-    width: 60%;
-  }
-</style>
-
 <ion-header translucent="true">
   <ion-toolbar>
     <ion-title>Ionic UI Companion</ion-title>
@@ -66,11 +66,11 @@
     <img
       src="/assets/img/great-success.png"
       alt="Great success"
-      in:scale={{ duration: 1900, easing: elasticInOut }} />
+      in:scale="{{ duration: 1900, easing: elasticInOut }}"
+    />
 
-    <div in:scale={{ delay: 400, duration: 1900, easing: elasticInOut }}>
+    <div in:scale="{{ delay: 400, duration: 1900, easing: elasticInOut }}">
       Great success!
     </div>
   </div>
-
 </ion-content>

@@ -1,5 +1,5 @@
 {
-    "name": "svelte-app",
+    "name": "svelte-ionic-demo-app",
     "version": "1.0.0",
     "scripts": {
         "build": "rollup -c",
@@ -8,7 +8,8 @@
         "rollup": "rollup -cw",
         "watch:routify": "routify -D",
         "start": "sirv public --single",
-        "validate": "svelte-check"
+        "validate": "svelte-check",
+        "deploy": "rollup -c && firebase deploy"
     },
     "devDependencies": {
         "@capacitor/core": "^2.4.0",
@@ -16,7 +17,6 @@
         "@rollup/plugin-commonjs": "^14.0.0",
         "@rollup/plugin-node-resolve": "^8.0.0",
         "@rollup/plugin-typescript": "^4.0.0",
-        "@sveltech/routify": "^1.9.9",
         "@tsconfig/svelte": "^1.0.0",
         "cupertino-pane": "^1.1.81",
         "firebase": "^7.19.1",
@@ -39,6 +39,10 @@
         "typescript": "^3.9.3"
     },
     "dependencies": {
+        "@roxi/routify": "^2.0.0",
         "sirv-cli": "^1.0.0"
+    },
+    "routify": {
+        "routifyDir": "src/services"
     }
 }
