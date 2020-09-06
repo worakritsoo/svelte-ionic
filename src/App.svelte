@@ -29,7 +29,7 @@ let firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-console.log("ROUTES", routes);
+// console.log("ROUTES", routes);
 </script>
 
 <Router routes="{routes}" />
