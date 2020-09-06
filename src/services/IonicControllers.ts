@@ -33,7 +33,7 @@ export const getIonicNav = () => {
 
 export const getIonicMenu = (menuId) => {
     const query = "ion-menu[menu-id='" + menuId + "']";
-    return document.querySelector(query);
+    return document.querySelector(query) 
 }
 
 export const IonicShowModal = (selector, component, componentProps) => {

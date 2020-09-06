@@ -5,12 +5,10 @@ ion-item {
 </style>
 
 <script>
-//  "routifyDir": "node_modules/@roxi/routify/tmp"
-//  "routifyDir": "src/services"
 import { fromFetch } from "rxjs/fetch";
 import { goto } from "@roxi/routify";
 import { getIonicMenu } from "./../services/IonicControllers";
-// import { routes } from "@roxi/routify/tmp";
+
 import { routes } from "./../services/routes";
 
 export let side = "start";
