@@ -4,7 +4,7 @@ import App from './App.svelte';
 
 // import { routes } from "@sveltech/routify/tmp/routes";
 // import { routes } from "@roxi/routify";
-import { routes } from "./services/routes";
+import { routes } from "./routes/routes";
 
 const app = new App({
 	target: document.body,

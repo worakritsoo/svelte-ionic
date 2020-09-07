@@ -1,7 +1,7 @@
 module.exports = {
   "pages": "src/pages",
   "sourceDir": "public",
-  "routifyDir": "src/services",
+  "routifyDir": "src/routes",
   "ignore": "",
   "dynamicImports": true,
   "singleBuild": false,
@@ -14,5 +14,5 @@ module.exports = {
   ],
   "distDir": "dist",
   "hashScroll": true,
-  "started": "2020-09-06T15:24:15.524Z"
+  "started": "2020-09-07T07:13:47.952Z"
 }

@@ -1,5 +1,6 @@
 import { register } from "svelte-custom-elements";
 import {
+    MenuI,
     loadingController,
     toastController,
     alertController,
@@ -31,12 +32,12 @@ export const getIonicNav = () => {
     return document.querySelector("ion-nav");
 }
 
-export const getIonicMenu = (menuId) => {
+export const getIonicMenu = (menuId):MenuI => {
     const query = "ion-menu[menu-id='" + menuId + "']";
-    return document.querySelector(query) 
+    return document.querySelector(query) as unknown as MenuI;
 }
 
-export const IonicShowModal = (selector, component, componentProps) => {
+export const IonicShowModal = (selector, component, componentProps):any => {
     registerWebComponentOnce(selector, component);
     return modalController
         .create({
@@ -50,7 +51,7 @@ export const IonicShowModal = (selector, component, componentProps) => {
 }
 
 
-export const IonicShowPopover = (event, selector, component, componentProps) => {
+export const IonicShowPopover = (event, selector, component, componentProps):any => {
     registerWebComponentOnce(selector, component);
     return popoverController
         .create({

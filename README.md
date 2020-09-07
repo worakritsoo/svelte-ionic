@@ -30,6 +30,7 @@ All items also available as individual REPLs: https://github.com/Tommertom/svelt
 **NEW FEATURE: Web Animations API included (see Avatars)**
 
 **NEW FEATURE: TYPESCRIPT ARRIVED!!!!! Configuration done and usable via `<script lang="ts">`**
+(I just need to add some types to the IonicController.ts so you don't get red curls)
 
 All features (vision/realised) 
 - Configured for Typescript usage (100%)

@@ -4,12 +4,12 @@ ion-item {
 }
 </style>
 
-<script>
+<script lang="ts">
 import { fromFetch } from "rxjs/fetch";
 import { goto } from "@roxi/routify";
 import { getIonicMenu } from "./../services/IonicControllers";
 
-import { routes } from "./../services/routes";
+import { routes } from "./../routes/routes";
 
 export let side = "start";
 
@@ -51,19 +51,7 @@ const excludedPaths = [
 
 // let's use the generated routes for making the menu items
 // and skip a few ones for the menu
-let menuItems = routes
-  .filter((route) => {
-    return (
-      route.name != "ionic/Games" &&
-      route.name != "ionic/Music" &&
-      route.name != "ionic/ModalExtra" &&
-      route.name != "ionic/Navhome" &&
-      route.name != "ionic/NavDetail" &&
-      route.name != "ionic/PopoverExtra" &&
-      route.name != "ionic/NavList" &&
-      route.name != "ionic/AltDetails"
-    );
-  })
+let menuItems: Array<{ url: string; label: string; icon: string }> = routes
   .filter((route) => route.path.includes("ionic"))
   .filter((route) => {
     let found = false;
@@ -76,7 +64,6 @@ let menuItems = routes
     if (route.name.includes("[tab]")) {
       route.name = "Tab";
     }
-
     return {
       url: route.path,
       label: route.name.replace("ionic/", ""),

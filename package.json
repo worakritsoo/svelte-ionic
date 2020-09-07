@@ -43,6 +43,6 @@
         "sirv-cli": "^1.0.0"
     },
     "routify": {
-        "routifyDir": "src/services"
+        "routifyDir": "src/routes"
     }
 }
