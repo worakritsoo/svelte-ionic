@@ -7,6 +7,7 @@
 
 <script>
 import { Router } from "@roxi/routify";
+
 export let routes;
 
 // import { FirebaseApp } f rom "sveltefire";
