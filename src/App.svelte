@@ -14,8 +14,8 @@ export let routes;
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
-// import "firebase/performance"; // gives error
-// import "firebase/analytics"; // gives error
+// import "firebase/performance"; // gives runtime error
+// import "firebase/analytics"; // gives runtime error
 
 let firebaseConfig = {
   apiKey: "AIzaSyAOul3jp5hfGOfRWwqxjrvU4i965DE11Qk",
