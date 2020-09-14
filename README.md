@@ -60,9 +60,6 @@ Do you like this work? Please star this project!
 
 # Known issues
 
-## Need to work on slides
-Something wrong with slides...
-
 ## Not an issue but good to note: Typescript full usage may require typings for some packages
 These are not always available for all packages used in this project, and hence not applied.
 
@@ -116,6 +113,7 @@ Obviously you need to put the NPM lib of @ionic in the assets folder.
 
 # Todo's
 A number of todo's:
+- Copy snippets of source code
 - Implement workbox and spassr as shown in the startertemplate of routify (or at least check)
 - ~~fix IonTab~~
 - ~~fix Ionic Menu close, go through all components and fix some messages~~
