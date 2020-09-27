@@ -1,3 +1,57 @@
+<svelte:head>
+  <title>Sourceviewer {name}</title>
+</svelte:head>
+<ion-header translucent="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button
+        on:click="{() => {
+          if (REPLlink.length > 1) {
+            window.open(REPLlink, '_blank');
+          } else {
+            showNoREPLToast();
+          }
+        }}"
+      >
+        REPL
+      </ion-button>
+
+      <ion-button
+        on:click="{() => {
+          window.open(APIlink, '_blank');
+        }}"
+      >
+        API
+      </ion-button>
+
+      {#if sourceCode.length > 11}
+        <ion-button on:click="{copySource}">COPY</ion-button>
+      {/if}
+      <ion-button on:click="{closeOverlay}">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-segment value="{codeLanguage}" on:ionChange="{segmentChange}">
+    <ion-segment-button value="svelte">
+      <ion-label>Svelte</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="js">
+      <ion-label>Javascript</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content padding scroll-x="true">
+  <pre
+    style="-webkit-user-select: text; /* Chrome 49+ */
+  -moz-user-select: text; /* Firefox 43+ */
+  -ms-user-select: text; /* No support yet */
+  user-select: text; /* Likely future */"
+  >{sourceCode}</pre>
+</ion-content>
+
 <style>
 pre {
   -webkit-user-select: all; /* Chrome 49+ */
@@ -7,10 +61,10 @@ pre {
 }
 </style>
 
-<script>
+<script lang="ts">
 import { Plugins } from "@capacitor/core";
 import { fromFetch } from "rxjs/fetch";
-import { IonicShowToast, IonicShowLoading } from "../services/IonicControllers";
+import { IonicShowToast } from "../services/IonicControllers";
 
 import localforage from "localforage";
 
@@ -29,7 +83,7 @@ languages.forEach((lang) => {
   sources[lang] = "Loading " + lang + "....";
 });
 
-localforage.getItem("source-language").then((value) => {
+localforage.getItem("source-language").then((value: string) => {
   if (value) {
     codeLanguage = value;
     sourceCode = sources[codeLanguage];
@@ -69,11 +123,11 @@ fromFetch("/assets/json/repls.json").subscribe((response) => {
 });
 
 // try to generate the url to the api docs
-// let apiName = name.toLowerCase();
 // if (apiName.charAt(apiName.length - 1) == "s") {
 //  apiName = apiName.slice(0, -1);
 // }
 
+let apiName = name.toLowerCase();
 console.log("Raw APINAME", apiName);
 
 // do a mapping for some exceptions
@@ -102,23 +156,25 @@ fromFetch("/assets/json/api-mappings.json").subscribe(
 // and more automated ways to load the other languages
 languages.forEach((lang) => {
   if (lang !== "svelte") {
-    // we hace the name because the name mismatch
-    // let componentHack = name;
-    // if (componentHack.slice(-1) === "s") {
-    //   componentHack = componentHack.slice(0, -1);
-    //  }
-
-    console.log("Loading code ", lang, componentHack, name, name.slice(0, -1));
-
+    console.log("Loading code ", lang);
+    sources[lang] = "No code available";
     fromFetch(
-      "/assets/src/" + lang + "/" + componentHack.toLowerCase() + "/index.html"
-    ).subscribe((response) => {
-      response.text().then((txt) => {
-        sources[lang] = txt;
-        console.log("Loaded code", sources);
+      "/assets/src/" + lang + "/" + name.toLowerCase() + "/index.html"
+    ).subscribe(
+      (response) => {
+        response.text().then((txt) => {
+          sources[lang] = txt;
+        });
+      },
+      (err) => {
+        sources[lang] = "No code available";
+        console.log("Loaded code error", err);
+      },
+      () => {
         sourceCode = sources[codeLanguage];
-      });
-    });
+        console.log("Loaded code", sources);
+      }
+    );
   }
 });
 
@@ -185,57 +241,3 @@ const copySource = () => {
   setTimeout(closeOverlay, 1000);
 };
 </script>
-
-<svelte:head>
-  <title>Sourceviewer {name}</title>
-</svelte:head>
-<ion-header translucent="true">
-  <ion-toolbar>
-    <ion-buttons slot="end">
-      <ion-button
-        on:click="{() => {
-          if (REPLlink.length > 1) {
-            window.open(REPLlink, '_blank');
-          } else {
-            showNoREPLToast();
-          }
-        }}"
-      >
-        REPL
-      </ion-button>
-
-      <ion-button
-        on:click="{() => {
-          window.open(APIlink, '_blank');
-        }}"
-      >
-        API
-      </ion-button>
-
-      {#if sourceCode.length > 11}
-        <ion-button on:click="{copySource}">COPY</ion-button>
-      {/if}
-      <ion-button on:click="{closeOverlay}">
-        <ion-icon name="close"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-
-  <ion-segment value="{codeLanguage}" on:ionChange="{segmentChange}">
-    <ion-segment-button value="svelte">
-      <ion-label>Svelte</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="js">
-      <ion-label>Javascript</ion-label>
-    </ion-segment-button>
-  </ion-segment>
-</ion-header>
-
-<ion-content padding scroll-x="true">
-  <pre
-    style="-webkit-user-select: text; /* Chrome 49+ */
-  -moz-user-select: text; /* Firefox 43+ */
-  -ms-user-select: text; /* No support yet */
-  user-select: text; /* Likely future */"
-  >{sourceCode}</pre>
-</ion-content>
