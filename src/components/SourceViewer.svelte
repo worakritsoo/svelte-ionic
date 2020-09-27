@@ -33,7 +33,7 @@
     </ion-buttons>
   </ion-toolbar>
 
-  <ion-segment value="{codeLanguage}" on:ionChange="{segmentChange}">
+  <ion-segment value="{codeLanguage}" on:ionChange="{segmentChange}" scrollable>
     <ion-segment-button value="svelte">
       <ion-label>Svelte</ion-label>
     </ion-segment-button>

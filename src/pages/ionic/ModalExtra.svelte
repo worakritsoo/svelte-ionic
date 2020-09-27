@@ -1,12 +1,3 @@
-<script>
-  let overlayElement = document.querySelector("ion-modal");
-  console.log(overlayElement.componentProps);
-
-  const closeOverlay = () => {
-    overlayElement.dismiss({ data: Date.now() });
-  };
-</script>
-
 <svelte:head>
   <title>Ionic UI Companion App - Modal Extra</title>
 </svelte:head>
@@ -14,7 +5,7 @@
   <ion-toolbar>
     <ion-title>Modal Content</ion-title>
     <ion-buttons slot="end">
-      <ion-button on:click={closeOverlay}>Close</ion-button>
+      <ion-button on:click="{closeOverlay}">Close</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -22,7 +13,9 @@
   <ion-list>
     <ion-item>
       <ion-avatar slot="start">
-        <ion-img src="https://www.gravatar.com/avatar/1?d=monsterid&f=y" />
+        <ion-img
+          src="https://www.gravatar.com/avatar/1?d=monsterid&f=y"
+        ></ion-img>
       </ion-avatar>
       <ion-label>
         <h2>Gollum</h2>
@@ -31,7 +24,9 @@
     </ion-item>
     <ion-item>
       <ion-avatar slot="start">
-        <ion-img src="https://www.gravatar.com/avatar/2?d=monsterid&f=y" />
+        <ion-img
+          src="https://www.gravatar.com/avatar/2?d=monsterid&f=y"
+        ></ion-img>
       </ion-avatar>
       <ion-label>
         <h2>Frodo</h2>
@@ -40,7 +35,9 @@
     </ion-item>
     <ion-item>
       <ion-avatar slot="start">
-        <ion-img src="https://www.gravatar.com/avatar/3?d=monsterid&f=y" />
+        <ion-img
+          src="https://www.gravatar.com/avatar/3?d=monsterid&f=y"
+        ></ion-img>
       </ion-avatar>
       <ion-label>
         <h2>Samwise</h2>
@@ -49,3 +46,12 @@
     </ion-item>
   </ion-list>
 </ion-content>
+
+<script>
+let overlayElement = document.querySelector("ion-modal");
+console.log(overlayElement.componentProps);
+
+const closeOverlay = () => {
+  overlayElement.dismiss({ data: Date.now() });
+};
+</script>
