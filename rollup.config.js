@@ -75,6 +75,12 @@ export default {
             targets: [{ src: 'src/service-worker.js', dest: 'public/' }],
             verbose: true
         }),
+
+        production && copy({
+            targets: [{ src: 'src/assets/', dest: 'public/' }],
+            verbose: true
+        }),
+
         typescript({ sourceMap: !production }),
 
         // In dev mode, call `npm run start` once
@@ -83,7 +89,7 @@ export default {
 
         // Watch the `public` directory and refresh the
         // browser on changes when not in production
-        !production && livereload('public'),
+        //  !production && livereload('public'), // disabled because my Chrome is freaking out
 
         // If we're building for production (npm run build
         // instead of npm run dev), minify

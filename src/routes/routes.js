@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.1.2
- * File generated Mon Sep 14 2020 08:43:45 GMT+0200 (Central European Summer Time)
+ * File generated Sun Sep 27 2020 19:28:42 GMT+0200 (Central European Summer Time)
  */
 
 export const __version = "2.1.2"
-export const __timestamp = "2020-09-14T06:43:45.562Z"
+export const __timestamp = "2020-09-27T17:28:42.840Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -145,13 +145,13 @@ export const _tree = {
         {
           "isFile": true,
           "isDir": false,
-          "file": "Badges.svelte",
-          "filepath": "/ionic/Badges.svelte",
-          "name": "Badges",
+          "file": "Badge.svelte",
+          "filepath": "/ionic/Badge.svelte",
+          "name": "Badge",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Badges.svelte",
-          "importPath": "../pages/ionic/Badges.svelte",
+          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Badge.svelte",
+          "importPath": "../pages/ionic/Badge.svelte",
           "isLayout": false,
           "isReset": false,
           "isIndex": false,
@@ -165,20 +165,20 @@ export const _tree = {
             "precache-proximity": true,
             "recursive": true
           },
-          "path": "/ionic/Badges",
-          "id": "_ionic_Badges",
-          "component": () => import('../pages/ionic/Badges.svelte').then(m => m.default)
+          "path": "/ionic/Badge",
+          "id": "_ionic_Badge",
+          "component": () => import('../pages/ionic/Badge.svelte').then(m => m.default)
         },
         {
           "isFile": true,
           "isDir": false,
-          "file": "Buttons.svelte",
-          "filepath": "/ionic/Buttons.svelte",
-          "name": "Buttons",
+          "file": "Button.svelte",
+          "filepath": "/ionic/Button.svelte",
+          "name": "Button",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Buttons.svelte",
-          "importPath": "../pages/ionic/Buttons.svelte",
+          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Button.svelte",
+          "importPath": "../pages/ionic/Button.svelte",
           "isLayout": false,
           "isReset": false,
           "isIndex": false,
@@ -192,20 +192,20 @@ export const _tree = {
             "precache-proximity": true,
             "recursive": true
           },
-          "path": "/ionic/Buttons",
-          "id": "_ionic_Buttons",
-          "component": () => import('../pages/ionic/Buttons.svelte').then(m => m.default)
+          "path": "/ionic/Button",
+          "id": "_ionic_Button",
+          "component": () => import('../pages/ionic/Button.svelte').then(m => m.default)
         },
         {
           "isFile": true,
           "isDir": false,
-          "file": "Cards.svelte",
-          "filepath": "/ionic/Cards.svelte",
-          "name": "Cards",
+          "file": "Card.svelte",
+          "filepath": "/ionic/Card.svelte",
+          "name": "Card",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Cards.svelte",
-          "importPath": "../pages/ionic/Cards.svelte",
+          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Card.svelte",
+          "importPath": "../pages/ionic/Card.svelte",
           "isLayout": false,
           "isReset": false,
           "isIndex": false,
@@ -219,20 +219,20 @@ export const _tree = {
             "precache-proximity": true,
             "recursive": true
           },
-          "path": "/ionic/Cards",
-          "id": "_ionic_Cards",
-          "component": () => import('../pages/ionic/Cards.svelte').then(m => m.default)
+          "path": "/ionic/Card",
+          "id": "_ionic_Card",
+          "component": () => import('../pages/ionic/Card.svelte').then(m => m.default)
         },
         {
           "isFile": true,
           "isDir": false,
-          "file": "Checkboxes.svelte",
-          "filepath": "/ionic/Checkboxes.svelte",
-          "name": "Checkboxes",
+          "file": "Checkbox.svelte",
+          "filepath": "/ionic/Checkbox.svelte",
+          "name": "Checkbox",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Checkboxes.svelte",
-          "importPath": "../pages/ionic/Checkboxes.svelte",
+          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Checkbox.svelte",
+          "importPath": "../pages/ionic/Checkbox.svelte",
           "isLayout": false,
           "isReset": false,
           "isIndex": false,
@@ -246,20 +246,20 @@ export const _tree = {
             "precache-proximity": true,
             "recursive": true
           },
-          "path": "/ionic/Checkboxes",
-          "id": "_ionic_Checkboxes",
-          "component": () => import('../pages/ionic/Checkboxes.svelte').then(m => m.default)
+          "path": "/ionic/Checkbox",
+          "id": "_ionic_Checkbox",
+          "component": () => import('../pages/ionic/Checkbox.svelte').then(m => m.default)
         },
         {
           "isFile": true,
           "isDir": false,
-          "file": "Chips.svelte",
-          "filepath": "/ionic/Chips.svelte",
-          "name": "Chips",
+          "file": "Chip.svelte",
+          "filepath": "/ionic/Chip.svelte",
+          "name": "Chip",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Chips.svelte",
-          "importPath": "../pages/ionic/Chips.svelte",
+          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Chip.svelte",
+          "importPath": "../pages/ionic/Chip.svelte",
           "isLayout": false,
           "isReset": false,
           "isIndex": false,
@@ -273,9 +273,9 @@ export const _tree = {
             "precache-proximity": true,
             "recursive": true
           },
-          "path": "/ionic/Chips",
-          "id": "_ionic_Chips",
-          "component": () => import('../pages/ionic/Chips.svelte').then(m => m.default)
+          "path": "/ionic/Chip",
+          "id": "_ionic_Chip",
+          "component": () => import('../pages/ionic/Chip.svelte').then(m => m.default)
         },
         {
           "isFile": true,
@@ -334,13 +334,13 @@ export const _tree = {
         {
           "isFile": true,
           "isDir": false,
-          "file": "Fabs.svelte",
-          "filepath": "/ionic/Fabs.svelte",
-          "name": "Fabs",
+          "file": "Fab.svelte",
+          "filepath": "/ionic/Fab.svelte",
+          "name": "Fab",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Fabs.svelte",
-          "importPath": "../pages/ionic/Fabs.svelte",
+          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Fab.svelte",
+          "importPath": "../pages/ionic/Fab.svelte",
           "isLayout": false,
           "isReset": false,
           "isIndex": false,
@@ -354,9 +354,9 @@ export const _tree = {
             "precache-proximity": true,
             "recursive": true
           },
-          "path": "/ionic/Fabs",
-          "id": "_ionic_Fabs",
-          "component": () => import('../pages/ionic/Fabs.svelte').then(m => m.default)
+          "path": "/ionic/Fab",
+          "id": "_ionic_Fab",
+          "component": () => import('../pages/ionic/Fab.svelte').then(m => m.default)
         },
         {
           "isFile": true,
@@ -415,13 +415,13 @@ export const _tree = {
         {
           "isFile": true,
           "isDir": false,
-          "file": "Icons.svelte",
-          "filepath": "/ionic/Icons.svelte",
-          "name": "Icons",
+          "file": "Icon.svelte",
+          "filepath": "/ionic/Icon.svelte",
+          "name": "Icon",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Icons.svelte",
-          "importPath": "../pages/ionic/Icons.svelte",
+          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Icon.svelte",
+          "importPath": "../pages/ionic/Icon.svelte",
           "isLayout": false,
           "isReset": false,
           "isIndex": false,
@@ -435,9 +435,9 @@ export const _tree = {
             "precache-proximity": true,
             "recursive": true
           },
-          "path": "/ionic/Icons",
-          "id": "_ionic_Icons",
-          "component": () => import('../pages/ionic/Icons.svelte').then(m => m.default)
+          "path": "/ionic/Icon",
+          "id": "_ionic_Icon",
+          "component": () => import('../pages/ionic/Icon.svelte').then(m => m.default)
         },
         {
           "isFile": true,
@@ -496,13 +496,13 @@ export const _tree = {
         {
           "isFile": true,
           "isDir": false,
-          "file": "Items.svelte",
-          "filepath": "/ionic/Items.svelte",
-          "name": "Items",
+          "file": "Item.svelte",
+          "filepath": "/ionic/Item.svelte",
+          "name": "Item",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Items.svelte",
-          "importPath": "../pages/ionic/Items.svelte",
+          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Item.svelte",
+          "importPath": "../pages/ionic/Item.svelte",
           "isLayout": false,
           "isReset": false,
           "isIndex": false,
@@ -516,20 +516,20 @@ export const _tree = {
             "precache-proximity": true,
             "recursive": true
           },
-          "path": "/ionic/Items",
-          "id": "_ionic_Items",
-          "component": () => import('../pages/ionic/Items.svelte').then(m => m.default)
+          "path": "/ionic/Item",
+          "id": "_ionic_Item",
+          "component": () => import('../pages/ionic/Item.svelte').then(m => m.default)
         },
         {
           "isFile": true,
           "isDir": false,
-          "file": "Lists.svelte",
-          "filepath": "/ionic/Lists.svelte",
-          "name": "Lists",
+          "file": "List.svelte",
+          "filepath": "/ionic/List.svelte",
+          "name": "List",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Lists.svelte",
-          "importPath": "../pages/ionic/Lists.svelte",
+          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/List.svelte",
+          "importPath": "../pages/ionic/List.svelte",
           "isLayout": false,
           "isReset": false,
           "isIndex": false,
@@ -543,9 +543,9 @@ export const _tree = {
             "precache-proximity": true,
             "recursive": true
           },
-          "path": "/ionic/Lists",
-          "id": "_ionic_Lists",
-          "component": () => import('../pages/ionic/Lists.svelte').then(m => m.default)
+          "path": "/ionic/List",
+          "id": "_ionic_List",
+          "component": () => import('../pages/ionic/List.svelte').then(m => m.default)
         },
         {
           "isFile": true,
@@ -685,13 +685,13 @@ export const _tree = {
         {
           "isFile": true,
           "isDir": false,
-          "file": "Notes.svelte",
-          "filepath": "/ionic/Notes.svelte",
-          "name": "Notes",
+          "file": "Note.svelte",
+          "filepath": "/ionic/Note.svelte",
+          "name": "Note",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Notes.svelte",
-          "importPath": "../pages/ionic/Notes.svelte",
+          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Note.svelte",
+          "importPath": "../pages/ionic/Note.svelte",
           "isLayout": false,
           "isReset": false,
           "isIndex": false,
@@ -705,9 +705,9 @@ export const _tree = {
             "precache-proximity": true,
             "recursive": true
           },
-          "path": "/ionic/Notes",
-          "id": "_ionic_Notes",
-          "component": () => import('../pages/ionic/Notes.svelte').then(m => m.default)
+          "path": "/ionic/Note",
+          "id": "_ionic_Note",
+          "component": () => import('../pages/ionic/Note.svelte').then(m => m.default)
         },
         {
           "isFile": true,
@@ -793,13 +793,13 @@ export const _tree = {
         {
           "isFile": true,
           "isDir": false,
-          "file": "Radios.svelte",
-          "filepath": "/ionic/Radios.svelte",
-          "name": "Radios",
+          "file": "Radio.svelte",
+          "filepath": "/ionic/Radio.svelte",
+          "name": "Radio",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Radios.svelte",
-          "importPath": "../pages/ionic/Radios.svelte",
+          "absolutePath": "C:/Gebruikers/Developer/Src/svelte-ionic-app/src/pages/ionic/Radio.svelte",
+          "importPath": "../pages/ionic/Radio.svelte",
           "isLayout": false,
           "isReset": false,
           "isIndex": false,
@@ -813,9 +813,9 @@ export const _tree = {
             "precache-proximity": true,
             "recursive": true
           },
-          "path": "/ionic/Radios",
-          "id": "_ionic_Radios",
-          "component": () => import('../pages/ionic/Radios.svelte').then(m => m.default)
+          "path": "/ionic/Radio",
+          "id": "_ionic_Radio",
+          "component": () => import('../pages/ionic/Radio.svelte').then(m => m.default)
         },
         {
           "isFile": true,

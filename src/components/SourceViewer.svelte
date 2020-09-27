@@ -12,12 +12,29 @@ import { Plugins } from "@capacitor/core";
 import { fromFetch } from "rxjs/fetch";
 import { IonicShowToast, IonicShowLoading } from "../services/IonicControllers";
 
+import localforage from "localforage";
+
 const { Clipboard } = Plugins;
 const { componentProps } = document.querySelector("ion-modal");
 
+let prut = "svelte";
 let apiURL = "";
 let REPLlink;
 let APIlink;
+let codeLanguage = "svelte";
+let sourceCode = "Loading....";
+let sources = {};
+let languages = ["svelte", "js"];
+languages.forEach((lang) => {
+  sources[lang] = "Loading " + lang + "....";
+});
+
+localforage.getItem("source-language").then((value) => {
+  if (value) {
+    codeLanguage = value;
+    sourceCode = sources[codeLanguage];
+  }
+});
 
 // probably can be done in easier way, but I am lazy
 let name = "/";
@@ -36,12 +53,7 @@ if (name.toLowerCase().includes("tabs")) {
   name = "tabs";
 }
 
-console.log("Name", name);
-
-const closeOverlay = () => {
-  const modal = document.querySelector("ion-modal");
-  modal.dismiss({});
-};
+console.log("Svelte name to load", name);
 
 // cannot use function as Safari request window.open to be called in on:click
 // therefor, preload the links
@@ -56,24 +68,15 @@ fromFetch("/assets/json/repls.json").subscribe((response) => {
   });
 });
 
-const showNoREPLToast = () => {
-  IonicShowToast({
-    color: "danger",
-    duration: 2000,
-    message: "No REPL link configured",
-    showCloseButton: true,
-  });
-};
-
 // try to generate the url to the api docs
-let apiName = name.toLowerCase();
-if (apiName.charAt(apiName.length - 1) == "s") {
-  apiName = apiName.slice(0, -1);
-}
+// let apiName = name.toLowerCase();
+// if (apiName.charAt(apiName.length - 1) == "s") {
+//  apiName = apiName.slice(0, -1);
+// }
+
 console.log("Raw APINAME", apiName);
 
 // do a mapping for some exceptions
-// using RXJS just for fun
 apiName = apiName.replace("/", "");
 fromFetch("/assets/json/api-mappings.json").subscribe(
   (response) => {
@@ -81,6 +84,7 @@ fromFetch("/assets/json/api-mappings.json").subscribe(
       let url = "https://ionicframework.com/docs/api/";
       if (json[apiName]) {
         url += json[apiName];
+        // if we found an exception - we replace
         if (json[apiName].toLowerCase().substring(0, 4) == "http") {
           url = json[apiName];
         }
@@ -95,21 +99,66 @@ fromFetch("/assets/json/api-mappings.json").subscribe(
   }
 );
 
-// using RXJS just for fun
-console.log("Path to source ", "/assets/src/" + name + ".svelte");
-let sourceCode = "Loading....";
+// and more automated ways to load the other languages
+languages.forEach((lang) => {
+  if (lang !== "svelte") {
+    // we hace the name because the name mismatch
+    // let componentHack = name;
+    // if (componentHack.slice(-1) === "s") {
+    //   componentHack = componentHack.slice(0, -1);
+    //  }
+
+    console.log("Loading code ", lang, componentHack, name, name.slice(0, -1));
+
+    fromFetch(
+      "/assets/src/" + lang + "/" + componentHack.toLowerCase() + "/index.html"
+    ).subscribe((response) => {
+      response.text().then((txt) => {
+        sources[lang] = txt;
+        console.log("Loaded code", sources);
+        sourceCode = sources[codeLanguage];
+      });
+    });
+  }
+});
+
+// we use a separate way to load the svelte source
+// hack the name for tabs
 if (name == "tabs") {
   name = "tabs/[tab]";
 }
-fromFetch("/assets/src/" + name + ".svelte").subscribe((response) => {
+fromFetch("/assets/src/svelte/" + name + ".svelte").subscribe((response) => {
   response.text().then((txt) => {
     if (txt.search("<!DOCTYPE html>") > -1) {
-      sourceCode = `No svelte file found for ${name}. Please check github repo.`;
+      sources[
+        "svelte"
+      ] = `No svelte file found for ${name}. Please check github repo.`;
     } else {
-      sourceCode = txt;
+      sources["svelte"] = txt;
+      sourceCode = sources[codeLanguage];
     }
   });
 });
+
+const segmentChange = (value) => {
+  codeLanguage = value.detail.value;
+  localforage.setItem("source-language", codeLanguage);
+  sourceCode = sources[codeLanguage];
+};
+
+const closeOverlay = () => {
+  const modal = document.querySelector("ion-modal");
+  modal.dismiss({});
+};
+
+const showNoREPLToast = () => {
+  IonicShowToast({
+    color: "danger",
+    duration: 2000,
+    message: "No REPL link configured",
+    showCloseButton: true,
+  });
+};
 
 // somehow does not fly on iOS?
 const copySource = () => {
@@ -171,6 +220,15 @@ const copySource = () => {
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
+
+  <ion-segment value="{codeLanguage}" on:ionChange="{segmentChange}">
+    <ion-segment-button value="svelte">
+      <ion-label>Svelte</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="js">
+      <ion-label>Javascript</ion-label>
+    </ion-segment-button>
+  </ion-segment>
 </ion-header>
 
 <ion-content padding scroll-x="true">

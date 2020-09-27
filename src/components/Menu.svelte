@@ -11,6 +11,8 @@ import { getIonicMenu } from "./../services/IonicControllers";
 
 import { routes } from "./../routes/routes";
 
+let gtag;
+
 export let side = "start";
 
 function navigate(url) {
@@ -19,6 +21,7 @@ function navigate(url) {
 }
 
 function closeAndNavigate(url) {
+  console.log("Navigate url", url);
   navigate(url);
   getIonicMenu("mainmenu")
     .close(true)
