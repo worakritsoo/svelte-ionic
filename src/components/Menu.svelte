@@ -1,6 +1,60 @@
+<ion-menu
+  side="{side}"
+  content-id="main"
+  menu-id="mainmenu"
+  class:menuhide="{hideMenu}"
+>
+  {#if menuItems.length > 0}
+    <ion-header>
+      <ion-toolbar translucent="true">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        {#each menuItems as menuItem, i}
+          <ion-item
+            on:click="{() => {
+              closeAndNavigate(menuItem.url);
+            }}"
+          >
+            <ion-icon
+              name="{menuItem.icon}"
+              slot="start"
+              color="{getRandomColor()}"
+            ></ion-icon>
+            <ion-label>{menuItem.label}</ion-label>
+          </ion-item>
+        {/each}
+        <ion-item></ion-item>
+        <ion-item
+          on:click="{() => {
+            window.open('https://github.com/Tommertom/svelte-ionic-app', '_blank');
+          }}"
+        >
+          <ion-icon name="logo-github" slot="start"></ion-icon>
+          <ion-label>Go to GitHub for this app</ion-label>
+        </ion-item>
+        <ion-item
+          on:click="{() => {
+            window.open('https://forum.ionicframework.com/t/ionicsvelte-all-of-ionics-ui-in-one-svelte-app', '_blank');
+          }}"
+        >
+          <ion-icon name="logo-ionic" slot="start"></ion-icon>
+          <ion-label>Go to Ionic Forum</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  {/if}
+</ion-menu>
+
 <style>
 ion-item {
   cursor: pointer;
+}
+
+.menuhide {
+  display: none;
 }
 </style>
 
@@ -12,6 +66,12 @@ import { getIonicMenu } from "./../services/IonicControllers";
 import { routes } from "./../routes/routes";
 
 let gtag;
+let hideMenu = true;
+
+// a hack because the menu shows before the splash (in Chrome on Windows)
+setTimeout(() => {
+  hideMenu = false;
+}, 1000);
 
 export let side = "start";
 
@@ -106,48 +166,3 @@ fromFetch("/assets/json/ionicons.json").subscribe(
   }
 );
 </script>
-
-<ion-menu side="{side}" content-id="main" menu-id="mainmenu">
-  {#if menuItems.length > 0}
-    <ion-header>
-      <ion-toolbar translucent="true">
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        {#each menuItems as menuItem, i}
-          <ion-item
-            on:click="{() => {
-              closeAndNavigate(menuItem.url);
-            }}"
-          >
-            <ion-icon
-              name="{menuItem.icon}"
-              slot="start"
-              color="{getRandomColor()}"
-            ></ion-icon>
-            <ion-label>{menuItem.label}</ion-label>
-          </ion-item>
-        {/each}
-        <ion-item></ion-item>
-        <ion-item
-          on:click="{() => {
-            window.open('https://github.com/Tommertom/svelte-ionic-app', '_blank');
-          }}"
-        >
-          <ion-icon name="logo-github" slot="start"></ion-icon>
-          <ion-label>Go to GitHub for this app</ion-label>
-        </ion-item>
-        <ion-item
-          on:click="{() => {
-            window.open('https://forum.ionicframework.com/t/ionicsvelte-all-of-ionics-ui-in-one-svelte-app', '_blank');
-          }}"
-        >
-          <ion-icon name="logo-ionic" slot="start"></ion-icon>
-          <ion-label>Go to Ionic Forum</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  {/if}
-</ion-menu>

@@ -10,78 +10,37 @@
           <h1>Please rate this app!</h1>
           <ion-grid>
             <ion-row>
-              <ion-col>
-                <ion-icon
-                  name="{stars[0]}"
-                  id="1"
-                  on:click="{starClick}"
-                ></ion-icon>
-              </ion-col>
-              <ion-col>
-                <ion-icon
-                  name="{stars[1]}"
-                  id="2"
-                  on:click="{starClick}"
-                ></ion-icon>
-              </ion-col>
-              <ion-col>
-                <ion-icon
-                  name="{stars[2]}"
-                  id="3"
-                  on:click="{starClick}"
-                ></ion-icon>
-              </ion-col>
-              <ion-col>
-                <ion-icon
-                  name="{stars[3]}"
-                  id="4"
-                  on:click="{starClick}"
-                ></ion-icon>
-              </ion-col>
-              <ion-col>
-                <ion-icon
-                  name="{stars[4]}"
-                  id="5"
-                  on:click="{starClick}"
-                ></ion-icon>
-              </ion-col>
+              {#each stars as star, id}
+                <ion-col>
+                  <ion-icon
+                    name="{star}"
+                    id="{id + 1}"
+                    on:click="{starClick}"
+                  ></ion-icon>
+                </ion-col>
+              {/each}
             </ion-row>
           </ion-grid>
+
           {#if rate == 5}
             <h2>Thank you for your review!</h2>
           {:else}
-            <h2>.</h2>
+            <h2>&nbsp;</h2>
           {/if}
 
           {#if rate > 0 && rate != 5}
-            Help us improve and give feedback.
-            <ion-item>
-              <ion-checkbox
-                value="helpfull"
-                on:ionChange="{checkBoxChange}"
-                color="dark"
-                slot="start"
-              ></ion-checkbox>
-              <ion-label>Very helpful app</ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-checkbox
-                value="buggy"
-                on:ionChange="{checkBoxChange}"
-                color="dark"
-                slot="start"
-              ></ion-checkbox>
-              <ion-label>A bit buggy</ion-label>
-            </ion-item>
-            <ion-item>
-              <ion-checkbox
-                value="newfeature"
-                on:ionChange="{checkBoxChange}"
-                color="dark"
-                slot="start"
-              ></ion-checkbox>
-              <ion-label>New feature needed</ion-label>
-            </ion-item>
+            Help us improve and give feedback. <br />
+            {#each checkBoxes as { value, label }}
+              <ion-item>
+                <ion-checkbox
+                  value="{value}"
+                  on:ionChange="{checkBoxChange}"
+                  color="dark"
+                  slot="start"
+                ></ion-checkbox>
+                <ion-label>{label}</ion-label>
+              </ion-item>
+            {/each}
             <ion-item>
               <ion-label position="stacked">Tell us more ...</ion-label>
               <ion-textarea on:ionChange="{changeValue}"></ion-textarea>
@@ -91,7 +50,7 @@
           {#if showDone}
             <br />
             <ion-button on:click="{userDone}" expand="full" color="primary" on>
-              Close this popup
+              Close
             </ion-button>
           {/if}
         </ion-card-content>
@@ -122,7 +81,6 @@ import localforage from "localforage";
 
 import firebase from "firebase/app";
 import "firebase/firestore";
-import "firebase/auth";
 
 let feedback = {};
 let showDone = false;
@@ -136,18 +94,26 @@ let stars = [
   "star-outline",
 ];
 
+let checkBoxes = [
+  { value: "helpfull", label: "Very helpful app" },
+  { value: "buggy", label: "A bit buggy" },
+  { value: "newfeature", label: "New feature needed" },
+];
+
 // we don't want to show, unless we need to
 let showRateMe = false;
 localforage.getItem("rate-me-1").then((value) => {
   console.log("RateMe value", value);
+  //  showRateMe = true; // testing purposes should be on then
   if (!value) {
     setTimeout(() => {
       showRateMe = true;
-    }, 1000 * 60 * 1); // * 60
+    }, 1000 * 60 * 1);
   }
 });
 
 const starClick = (event) => {
+  // console.log("Starclick", event.srcElement.id);
   if (rate === 0) {
     const id = event.srcElement.id;
     stars = stars.map((star, i) => {
