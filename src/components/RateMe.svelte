@@ -97,7 +97,7 @@ let stars = [
 let checkBoxes = [
   { value: "helpfull", label: "Very helpful app" },
   { value: "buggy", label: "A bit buggy" },
-  { value: "newfeature", label: "New feature idea" },
+  { value: "newfeature", label: "New feature:" },
 ];
 
 // we don't want to show, unless we need to
