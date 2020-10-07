@@ -1,3 +1,5 @@
+<Router routes="{routes}" />
+
 <style>
 :global(html) {
   /* this will apply to <html doc> */
@@ -29,8 +31,4 @@ let firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-
-// console.log("ROUTES", routes);
 </script>
-
-<Router routes="{routes}" />

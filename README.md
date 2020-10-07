@@ -32,9 +32,13 @@ All items also available as individual REPLs: https://github.com/Tommertom/svelt
 **NEW FEATURE: TYPESCRIPT ARRIVED!!!!! Configuration done and usable via `<script lang="ts">`**
 (I just need to add some types to the IonicController.ts so you don't get red curls)
 
-**NEW FEATURE: JAVASCRIPT CODE ADDED!!! ** 
+**NEW FEATURE: JAVASCRIPT CODE ADDED!!!**
+
+**RATE ME FEATURE ADDED**
+Yes, I like to get your feedback!
 
 All features (vision/realised) 
+- Rate me - popup to see hear what your user thinks (100%)
 - Configured for Typescript usage (100%)
 - Web Animations API (see Avatars - 100% done)
 - All Ionic Framework UI components showcased (100% done)
