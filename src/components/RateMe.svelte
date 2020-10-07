@@ -42,7 +42,7 @@
               </ion-item>
             {/each}
             <ion-item>
-              <ion-label position="stacked">Tell us more ...</ion-label>
+              <ion-label position="stacked">Tell us more...</ion-label>
               <ion-textarea on:ionChange="{changeValue}"></ion-textarea>
             </ion-item>
           {/if}
@@ -97,14 +97,14 @@ let stars = [
 let checkBoxes = [
   { value: "helpfull", label: "Very helpful app" },
   { value: "buggy", label: "A bit buggy" },
-  { value: "newfeature", label: "New feature needed" },
+  { value: "newfeature", label: "New feature idea" },
 ];
 
 // we don't want to show, unless we need to
 let showRateMe = false;
 localforage.getItem("rate-me-1").then((value) => {
   console.log("RateMe value", value);
-  //  showRateMe = true; // testing purposes should be on then
+  showRateMe = true; // testing purposes should be on then
   if (!value) {
     setTimeout(() => {
       showRateMe = true;
@@ -154,6 +154,22 @@ const userDone = () => {
   const d = new Date();
   feedback["utc"] = d.toUTCString();
 
+  // we want lots of info!
+  [
+    "product",
+    "platform",
+    "userAgent",
+    "appName",
+    "appVersion",
+    "appCodeName",
+  ].forEach((key) => {
+    feedback[key] = navigator[key];
+    if (typeof feedback[key] === "undefined") {
+      feedback[key] = "Unknown";
+    }
+  });
+
+  // stringify and firebase can give runtime errors
   let feedbackText = "";
   try {
     let db = firebase.firestore();
