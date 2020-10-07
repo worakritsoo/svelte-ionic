@@ -183,6 +183,11 @@ const changeValue = (event) => {
 
 const userDone = () => {
   showRateMe = false;
+
+  feedback["time"] = Date.now();
+  const d = new Date();
+  feedback["utc"] = d.toUTCString();
+
   let feedbackText = "";
   try {
     let db = firebase.firestore();
