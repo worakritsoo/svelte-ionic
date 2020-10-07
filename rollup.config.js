@@ -41,6 +41,21 @@ export default {
         dir: 'public/bundle'
     },
     plugins: [
+        production && del({ targets: 'public/bundle/*' }),
+
+        production && copy({
+            targets: [{ src: 'src/service-worker.js', dest: 'public/' }],
+            verbose: true
+        }),
+
+        production && copy({
+            targets: [{ src: 'src/assets/', dest: 'public/' }],
+            verbose: true
+        }),
+
+        // no service worker in dev
+        !production && del({ targets: 'public/service-worker.js' }),
+
         svelte({
             // enable run-time checks when not in production
             dev: !production,
@@ -68,18 +83,8 @@ export default {
             //        }
             //		}
         ),
-        // no service worker in dev
-        !production && del({ targets: 'public/service-worker.js' }),
 
-        production && copy({
-            targets: [{ src: 'src/service-worker.js', dest: 'public/' }],
-            verbose: true
-        }),
 
-        production && copy({
-            targets: [{ src: 'src/assets/', dest: 'public/' }],
-            verbose: true
-        }),
 
         typescript({ sourceMap: !production }),
 

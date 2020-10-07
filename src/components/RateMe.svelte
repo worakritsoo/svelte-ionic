@@ -104,7 +104,7 @@ let checkBoxes = [
 let showRateMe = false;
 localforage.getItem("rate-me-1").then((value) => {
   console.log("RateMe value", value);
-  showRateMe = true; // testing purposes should be on then
+  // showRateMe = true; // testing purposes should be on then
   if (!value) {
     setTimeout(() => {
       showRateMe = true;
