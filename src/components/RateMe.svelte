@@ -136,6 +136,17 @@ let stars = [
   "star-outline",
 ];
 
+// we don't want to show, unless we need to
+let showRateMe = false;
+localforage.getItem("rate-me-1").then((value) => {
+  console.log("RateMe value", value);
+  if (!value) {
+    setTimeout(() => {
+      showRateMe = true;
+    }, 1000 * 60 * 1); // * 60
+  }
+});
+
 const starClick = (event) => {
   if (rate === 0) {
     const id = event.srcElement.id;
@@ -159,17 +170,6 @@ const starClick = (event) => {
     }
   }
 };
-
-// we don't want to show, unless we need to
-let showRateMe = false;
-localforage.getItem("rate-me-1").then((value) => {
-  console.log("RateMe value", value);
-  if (!value) {
-    setTimeout(() => {
-      showRateMe = true;
-    }, 1000 * 60 * 2); // * 60
-  }
-});
 
 const checkBoxChange = (event) => {
   feedback[event.detail.value] = event.detail.checked;
