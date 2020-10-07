@@ -367,3 +367,80 @@
 [debug] [2020-10-07T15:27:10.954Z] [uploadQueue] Retrying task 52bf263e48f0164e80ae61abcb4af91c1b728d5986422e1cd5810b0db60c901b
 [debug] [2020-10-07T15:27:10.962Z] [uploadQueue] Retrying task c5942dd47861045c6d2b6faa43f738ccdc7fad12dccee5074010f6beca836f71
 [debug] [2020-10-07T15:27:11.004Z] [uploadQueue] Retrying task 3ad6210dd78d66dc0bdc3a222662825570cf078f7df282320959235c70ce3413
+[debug] [2020-10-07T15:27:23.101Z] [uploadQueue] Retrying task a3c4e1c1db0e57c3750f2d717191be5534f129fcd93db60270a0f794085376bb
+[debug] [2020-10-07T15:27:23.155Z] [uploadQueue] Retrying task e83634937924e660bc5dfa0cb2367bc57c3c22caa32a9659afdebfe3b3ccdd91
+[debug] [2020-10-07T15:27:23.170Z] [uploadQueue] Retrying task 9724d4b762a8b857b12032a2de857adab8eba2b4d456760c42978a0c2d171511
+[debug] [2020-10-07T15:27:23.184Z] [uploadQueue] Retrying task dd0c406bbc949cf31bdc6d510ca9e26a70bedc34394bdd07c2807c59e4872a5a
+[debug] [2020-10-07T15:27:23.364Z] [uploadQueue] Retrying task 70e1130c3125caa1c3b2b420d6de6facd7b4b9f98c96a0a7b985bfb43544b93f
+[debug] [2020-10-07T15:27:23.619Z] [uploadQueue] Retrying task 312c8d1f4cc883341911a62cf973a7dbdabb8beda6c80feb6c3a8189b676fc50
+[debug] [2020-10-07T15:27:23.621Z] [uploadQueue] Retrying task b3ff84200c977f546de0718ef6f90feadd04516710ab1c707d0cc9e8312241a2
+[debug] [2020-10-07T15:27:23.623Z] [uploadQueue] Retrying task bb687b9b03b130c138d2d93b484d9136f744355dbfacac050799d7b623d3797a
+[debug] [2020-10-07T15:27:23.624Z] [uploadQueue] Retrying task a75525b4d5332b7bff3b4548020d31e0ca17b09f1e154598865eefcb7d9b7193
+[debug] [2020-10-07T15:27:23.628Z] [uploadQueue] Retrying task f97fae889c07599b05b6250cad78c854428e3247f19787df1c8d30675ba659db
+[debug] [2020-10-07T15:27:23.643Z] [uploadQueue] Retrying task a8468ac27db514508f7c7b2418dd6f3fb716edbd94e48c056e790e384b11add3
+[debug] [2020-10-07T15:27:23.968Z] [uploadQueue] Retrying task 0d39cf430bd6c87d8c6ab71abbf061d5daa510073542280e18a7f549c0cc6191
+[debug] [2020-10-07T15:27:24.760Z] [uploadQueue] Retrying task c5d14855e8a79b30826fe62e841dad1ca953cc4fee816fb40ea1606d391a25eb
+[debug] [2020-10-07T15:27:24.781Z] [uploadQueue] Retrying task f48145a3907c6ec20844866a09aa39fffef0527774cdce9f4115124fd3235c95
+[debug] [2020-10-07T15:27:25.581Z] [uploadQueue] Retrying task 75b867dc9d5547ff3cddf41ed276ef59f998600a1435dc9d9a1cae705f9c3434
+[debug] [2020-10-07T15:27:29.942Z] [uploadQueue] Retrying task 114956c24a5af578b4359015170b577481cb133d40514fd8340d4ede54cc571f
+[debug] [2020-10-07T15:27:29.944Z] [uploadQueue] Retrying task 3d5a40cd4b20f46f30eb75b9bdb75f8ad4aaec4683e6e2689ba3a8d46321b412
+[debug] [2020-10-07T15:27:29.945Z] [uploadQueue] Retrying task c1dd76542737816a51b91a1db5c04c1eb6092070f8da089eb91b0acdb844fee8
+[debug] [2020-10-07T15:27:29.951Z] [uploadQueue] Retrying task fa11ba68fb626b1b44f11d047ccac1ef132d3155003fef9c241b330a0bfb933b
+[debug] [2020-10-07T15:27:29.952Z] [uploadQueue] Retrying task 1bf87f20cf186d767119a3e08479a0ed5859bd1595426251002adc5251ad689e
+[debug] [2020-10-07T15:27:29.953Z] [uploadQueue] Retrying task 48dfacdd52b55715c9a94f9d2a4dc9348217e24bba0d6c5eb2c2dca986f01a35
+[debug] [2020-10-07T15:27:29.954Z] [uploadQueue] Retrying task a7a4ea7edd0d4eca9dce8d7d7b36f4522669aa5dd7720ade523261ae6cee3a80
+[debug] [2020-10-07T15:27:29.967Z] [uploadQueue] Retrying task d5982cd23b3265eaaecd00b18544da7e7a57c901bac8d0e19701ebae46149d27
+[debug] [2020-10-07T15:27:29.968Z] [uploadQueue] Retrying task cc1555a5a13b7de68487d6d7aaaff8e3c5567098b3d906f6e9a012a49e960d03
+[debug] [2020-10-07T15:27:29.968Z] [uploadQueue] Retrying task b2eca04234f09493ef8bd08d2569a1b083714735afaeb5029db1963d730a4f3d
+[debug] [2020-10-07T15:27:29.969Z] [uploadQueue] Retrying task 0b63553b4700b29fb1eddeaa4836d60a7cd28e2381380857a857bcba67f81c22
+[debug] [2020-10-07T15:27:29.977Z] [uploadQueue] Retrying task 335ab60b3188b6e8dbf9335d3f20f136c89fbf304d4ca1c8d3192f799e9e1d02
+[debug] [2020-10-07T15:27:30.738Z] [uploadQueue] Retrying task 3ad6210dd78d66dc0bdc3a222662825570cf078f7df282320959235c70ce3413
+[debug] [2020-10-07T15:27:32.484Z] [uploadQueue] Retrying task d1abac0b99a6a7d5726b74ad999a8d9e7d18149e1e5974d182d958203eeac304
+[debug] [2020-10-07T15:27:32.835Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154160}
+[debug] [2020-10-07T15:27:32.925Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154250}
+[debug] [2020-10-07T15:27:32.926Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154251}
+[debug] [2020-10-07T15:27:32.940Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154265}
+[debug] [2020-10-07T15:27:32.941Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154266}
+[debug] [2020-10-07T15:27:32.945Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154270}
+[debug] [2020-10-07T15:27:32.946Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154271}
+[debug] [2020-10-07T15:27:32.946Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154271}
+[debug] [2020-10-07T15:27:32.949Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154274}
+[debug] [2020-10-07T15:27:32.950Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154275}
+[debug] [2020-10-07T15:27:32.950Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154275}
+[debug] [2020-10-07T15:27:32.984Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154309}
+[debug] [2020-10-07T15:27:32.985Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154310}
+[debug] [2020-10-07T15:27:33.025Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154350}
+[debug] [2020-10-07T15:27:33.033Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154358}
+[debug] [2020-10-07T15:27:33.078Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154403}
+[debug] [2020-10-07T15:27:33.079Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154404}
+[debug] [2020-10-07T15:27:33.108Z] [hosting][upload] {"max":31898,"min":1299,"avg":4608.721666666663,"active":200,"complete":4800,"success":4800,"errored":0,"retried":238,"total":10801,"elapsed":154433}
+[debug] [2020-10-07T15:27:33.636Z] [uploadQueue] Retrying task 635c7453f36a74e2be03ea3453ddc51a84503050e78e21b56d3c872b2c04949d
+[debug] [2020-10-07T15:27:33.727Z] [uploadQueue] Retrying task 1d1d0468bcf33a87ba2535fb617c89116653579dd10f965609fc6fcfeeb0a118
+[debug] [2020-10-07T15:27:33.728Z] [uploadQueue] Retrying task f7f82db4c0607150e7c605a35b5ca5b0ad302c7e1f75a4d9d6786124fd5083b0
+[debug] [2020-10-07T15:27:33.742Z] [uploadQueue] Retrying task 5f5dbfba8a77e3112786cdb5061b7d83836ea8a33c98af99725cf1a0ef0d50f3
+[debug] [2020-10-07T15:27:33.742Z] [uploadQueue] Retrying task 53111b33fb315468a6bd16d0d469fafcb9d62942940340ce9b4927bb682271bc
+[debug] [2020-10-07T15:27:33.746Z] [uploadQueue] Retrying task 796bc032ecd521d2b065014a8f92a607f435f709e3994132559e5211388e7c62
+[debug] [2020-10-07T15:27:33.746Z] [uploadQueue] Retrying task 1b62f83debe4c907f444b6871bb1f6e28361ad925b0a0b4554f665ecb9104972
+[debug] [2020-10-07T15:27:33.747Z] [uploadQueue] Retrying task 961ce8e66374a4b840047b3146c67b5e857f54f351e86ead42c7fb3d8efee3fc
+[debug] [2020-10-07T15:27:33.750Z] [uploadQueue] Retrying task e193bb0d8bf7c02887198a3c8e86a698e7230070fe9b78286e64278bba9398f8
+[debug] [2020-10-07T15:27:33.750Z] [uploadQueue] Retrying task a5cdab316c8815109711132cf461854e38a46f41f91d659ad21e0abe7ecea7ee
+[debug] [2020-10-07T15:27:33.751Z] [uploadQueue] Retrying task 562a2b7c21b310f2f09085b326ca967ee5f750f166f0437a88313278fad5c30b
+[debug] [2020-10-07T15:27:33.784Z] [uploadQueue] Retrying task 39d99bbfc35f1467902819bdb539802bb56b78c500b2f4a6b737b968c6200694
+[debug] [2020-10-07T15:27:33.786Z] [uploadQueue] Retrying task 3722ada513d3cbc60efafc0850561a064a35b950b33a8e614b52c86b2049dcf3
+[debug] [2020-10-07T15:27:33.825Z] [uploadQueue] Retrying task 46be8ed8ba851a5a8d38b2095a8ecd81d26d44766ef7ead2ac414cf3ee6a5ab2
+[debug] [2020-10-07T15:27:33.833Z] [uploadQueue] Retrying task 22a6ab9f7e57a74519b103e1204a15ca8fcec0bca28cdccee6095bcaa464091e
+[debug] [2020-10-07T15:27:33.878Z] [uploadQueue] Retrying task 326d61db9d2f1d800e392d104ce17d89c686ce5724895fd9373efc9c2857cc8d
+[debug] [2020-10-07T15:27:33.879Z] [uploadQueue] Retrying task fda39b4d55544e7fdc1eacb1199c6ce17ad96a4323568abe7479e988d0c7f17f
+[debug] [2020-10-07T15:27:33.953Z] [uploadQueue] Retrying task 1a0062b45ecb3d31de808c68981ec569b7697e7cb0d88d36f947556a0efb4294
+[debug] [2020-10-07T15:27:34.444Z] [uploadQueue] Retrying task 49623297b09d68afc7d5a07e318abc91d3ade4a76ea06e0470e7f14a2f4f70ad
+[debug] [2020-10-07T15:27:35.693Z] [uploadQueue] Retrying task 70b69f60b9fdb591c0d8fe5c9a096901a4a7cf84f459870f423410eb27b28821
+[debug] [2020-10-07T15:27:37.726Z] [uploadQueue] Retrying task 70f0ca1ca793038313ae131aca1e7ee9a1997bd1e92d7de984b8f43904926da6
+[debug] [2020-10-07T15:27:38.530Z] [uploadQueue] Retrying task b6ef663ad79cb94553fb48405084522269a0fef1298b5af9b9c1b337773f1f5a
+[debug] [2020-10-07T15:27:38.804Z] [uploadQueue] Retrying task a9d2272bbfc3e06b673bdc2fec3887d76cac3754639ef7ffa18a799d990b0148
+[debug] [2020-10-07T15:27:39.193Z] [uploadQueue] Retrying task ffcfa4a8d6b4cca12b4dec8de96df16598a921db48db010dad9e1ec6355e05ec
+[debug] [2020-10-07T15:27:39.942Z] [uploadQueue] Retrying task 85a51967d46f26e6aa71e29d0e549b90d83a5050989f0310314c46ee6b89ee81
+[debug] [2020-10-07T15:27:42.880Z] [uploadQueue] Retrying task 0f25463105a14e73907e93cd416d1fcc7c2d8d51a49a46d2ea6e170c77967af7
+[debug] [2020-10-07T15:27:42.881Z] [uploadQueue] Retrying task ece896db62fd2745c9a7ae3e079f496c3ec9002caa8a2855c52104a5a14b58c9
+[debug] [2020-10-07T15:27:42.882Z] [uploadQueue] Retrying task 0cd43d47d223926a6f711b8cc94289c61be0c334d9fdd1e8e231cd270372069c
+[debug] [2020-10-07T15:27:42.883Z] [uploadQueue] Retrying task d8ba971a197b7c34ff1620122d8b7113d153e5b70ebde09a966a1732d7b6795d
+[debug] [2020-10-07T15:27:42.884Z] [uploadQueue] Retrying task 557ce29e05d79640de8b0ec88a2f56c01631c986923c541fdf40e4df04bb7d9c
