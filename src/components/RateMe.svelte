@@ -167,9 +167,9 @@ const userDone = () => {
   const d = new Date();
   feedback["utc"] = d.toUTCString();
 
-  // we want lots of info!
+  // we want lots of info! - and some info is too much
   [
-    "product",
+    // "product",
     "platform",
     //  "userAgent",
     //  "appName",
