@@ -19,6 +19,8 @@ npm run dev
 
 The app will be served on `localhost:5000`.
 
+Please note: livereload not enabled (see `rollup.config.js`) because of issue in development environment.
+
 All items also available as individual REPLs: https://github.com/Tommertom/svelte-ionic-app/blob/master/REPLS.md
 
 **NEW FEATURE: click to view source! For all components (except tab) you can click the lower right source button to view the source and copy/paste in your app. If you use fullscreen view, the menu will be a sidepanel instead of a hamburger!**
@@ -34,7 +36,7 @@ All items also available as individual REPLs: https://github.com/Tommertom/svelt
 
 **NEW FEATURE: JAVASCRIPT CODE ADDED!!!**
 
-**RATE ME FEATURE ADDED**
+**NEW FEATURE: RATE ME FEATURE ADDED**
 Yes, I like to get your feedback!
 
 All features (vision/realised) 
