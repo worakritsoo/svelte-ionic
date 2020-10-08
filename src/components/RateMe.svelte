@@ -7,7 +7,7 @@
     <div class="card-inset">
       <ion-card>
         <ion-card-content>
-          <h1>Please rate this app!</h1>
+          <h2>Rate this app!</h2>
           <ion-grid>
             <ion-row>
               {#each stars as star, id}
@@ -51,6 +51,15 @@
             <br />
             <ion-button on:click="{userDone}" expand="full" color="primary" on>
               Close
+            </ion-button>
+          {:else}
+            <ion-button
+              on:click="{userCancel}"
+              expand="full"
+              color="primary"
+              on
+            >
+              No thx - maybe next time
             </ion-button>
           {/if}
         </ion-card-content>
@@ -147,6 +156,10 @@ const changeValue = (event) => {
   // console.log("FEEDBACK", feedback);
 };
 
+const userCancel = () => {
+  showRateMe = false;
+};
+
 const userDone = () => {
   showRateMe = false;
 
@@ -158,10 +171,10 @@ const userDone = () => {
   [
     "product",
     "platform",
-    "userAgent",
-    "appName",
+    //  "userAgent",
+    //  "appName",
     "appVersion",
-    "appCodeName",
+    //  "appCodeName",
   ].forEach((key) => {
     feedback[key] = navigator[key];
     if (typeof feedback[key] === "undefined") {
@@ -172,9 +185,12 @@ const userDone = () => {
   // stringify and firebase can give runtime errors
   let feedbackText = "";
   try {
-    let db = firebase.firestore();
-    feedbackText = JSON.stringify(feedback, null, 2);
-    db.collection("feedback").add({ feedbackText });
+    // we don't want to post to production database while in development
+    if (window.location.hostname !== "localhost") {
+      let db = firebase.firestore();
+      feedbackText = JSON.parse(JSON.stringify(feedback, null, 2)); // convert into a saveable object
+      db.collection("feedback").add({ feedbackText });
+    }
   } catch (e) {
     console.log("Errors", e);
   }
