@@ -32,12 +32,15 @@ All items also available as individual REPLs: https://github.com/Tommertom/svelt
 **NEW FEATURE: Web Animations API included (see Avatars)**
 
 **NEW FEATURE: TYPESCRIPT ARRIVED!!!!! Configuration done and usable via `<script lang="ts">`**
+
 (I just need to add some types to the IonicController.ts so you don't get red curls)
 
 **NEW FEATURE: JAVASCRIPT CODE ADDED!!!**
 
 **NEW FEATURE: RATE ME FEATURE ADDED**
+
 Yes, I like to get your feedback!
+And I do wonder why I cant get the navigated URL as a store, so I had to make a separate one...
 
 All features (vision/realised) 
 - Rate me - popup to see hear what your user thinks (100%)

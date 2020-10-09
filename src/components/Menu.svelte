@@ -27,6 +27,10 @@
           </ion-item>
         {/each}
         <ion-item></ion-item>
+        <ion-item on:click="{goToReview}">
+          <ion-icon name="star" slot="start"></ion-icon>
+          <ion-label>Rate this app</ion-label>
+        </ion-item>
         <ion-item
           on:click="{() => {
             window.open('https://github.com/Tommertom/svelte-ionic-app', '_blank');
@@ -65,28 +69,12 @@ import { getIonicMenu } from "./../services/IonicControllers";
 
 import { routes } from "./../routes/routes";
 
-let gtag;
-let hideMenu = true;
+import { path } from "../services/routestore";
 
-// a hack because the menu shows before the splash (in Chrome on Windows)
-setTimeout(() => {
-  hideMenu = false;
-}, 1000);
+let gtag;
+let hideMenu = true; // a hack because the menu shows before the splash (in Chrome on Windows)
 
 export let side = "start";
-
-function navigate(url) {
-  console.log("Navigate url", url);
-  $goto(url);
-}
-
-function closeAndNavigate(url) {
-  console.log("Navigate url", url);
-  navigate(url);
-  getIonicMenu("mainmenu")
-    .close(true)
-    .then(() => {});
-}
 
 const getRandomColor = () => {
   const items = [
@@ -165,4 +153,27 @@ fromFetch("/assets/json/ionicons.json").subscribe(
     console.error("Error HTTP", error);
   }
 );
+
+const closeAndNavigate = (url) => {
+  console.log("Navigate url", url);
+
+  path.set(url);
+  $goto(url);
+
+  getIonicMenu("mainmenu")
+    .close(true)
+    .then(() => {});
+};
+
+const goToReview = () => {
+  path.set("/RateMe");
+  getIonicMenu("mainmenu")
+    .close(true)
+    .then(() => {});
+};
+
+// hack because of visibility of menu in Chrome/Windows
+setTimeout(() => {
+  hideMenu = false;
+}, 1000);
 </script>

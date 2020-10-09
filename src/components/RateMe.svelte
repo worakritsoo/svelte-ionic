@@ -1,6 +1,6 @@
 {#if showRateMe}
   <div
-    in:fly="{{ y: 200, delay: 7000, duration: 1500, easing: elasticInOut }}"
+    in:fly="{{ y: 200, duration: 1500, easing: elasticInOut }}"
     out:fly="{{ y: 200, delay: 10, duration: 1000, easing: elasticInOut }}"
     class="card"
   >
@@ -88,6 +88,8 @@ import { fly } from "svelte/transition";
 import { elasticInOut } from "svelte/easing";
 import localforage from "localforage";
 
+import { path } from "../services/routestore";
+
 import firebase from "firebase/app";
 import "firebase/firestore";
 
@@ -118,6 +120,15 @@ localforage.getItem("rate-me-1").then((value) => {
     setTimeout(() => {
       showRateMe = true;
     }, 1000 * 60 * 1);
+  }
+});
+
+path.subscribe((p) => {
+  console.log("PATH", p);
+  if (p === "/RateMe") {
+    console.log("RAte me");
+    showRateMe = true;
+    path.set("/"); // reset in case user wants to rate again without having to navigate away
   }
 });
 
