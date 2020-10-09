@@ -74,12 +74,18 @@
   position: absolute;
   width: 100%;
   bottom: 10%;
-  background: white;
+  background: transparent;
 }
 
 .card-inset {
   margin: auto;
   width: 90%;
+}
+
+@media only screen and (min-width: 500px) {
+  .card-inset {
+    width: 50%;
+  }
 }
 </style>
 
