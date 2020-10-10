@@ -33,6 +33,7 @@
         </ion-item>
         <ion-item
           on:click="{() => {
+            gtag('event', 'github');
             window.open('https://github.com/Tommertom/svelte-ionic-app', '_blank');
           }}"
         >
@@ -41,6 +42,7 @@
         </ion-item>
         <ion-item
           on:click="{() => {
+            gtag('event', 'forum');
             window.open('https://forum.ionicframework.com/t/ionicsvelte-all-of-ionics-ui-in-one-svelte-app', '_blank');
           }}"
         >
@@ -71,8 +73,8 @@ import { routes } from "./../routes/routes";
 
 import { path } from "../services/routestore";
 
-let gtag;
 let hideMenu = true; // a hack because the menu shows before the splash (in Chrome on Windows)
+let gtag;
 
 export let side = "start";
 
@@ -91,6 +93,7 @@ const getRandomColor = () => {
 };
 
 const excludedPaths = [
+  "Pane", // buggy component
   "AltDetails",
   "ModalExtra",
   "NavDetail",
@@ -156,6 +159,13 @@ fromFetch("/assets/json/ionicons.json").subscribe(
 
 const closeAndNavigate = (url) => {
   console.log("Navigate url", url);
+
+  if (window.location.hostname !== "localhost") {
+    if (typeof gtag !== "undefined") {
+      gtag("event", url);
+      gtag("event", "nagivate", { url });
+    }
+  }
 
   path.set(url);
   $goto(url);

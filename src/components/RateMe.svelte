@@ -174,6 +174,12 @@ const changeValue = (event) => {
 };
 
 const userCancel = () => {
+  if (window.location.hostname !== "localhost") {
+    let gtag;
+    if (typeof gtag !== "undefined") {
+      gtag("event", "Cancel rateme");
+    }
+  }
   showRateMe = false;
 };
 
