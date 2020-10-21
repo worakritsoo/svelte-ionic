@@ -32,7 +32,39 @@ function serve() {
     };
 }
 
+
+// https://github.com/rollup/rollup/issues/1089
+// because of the Ionic circular reference, as a result of trying to fix the firebase/analytics lib
+const onwarn = (warning, rollupWarn) => {
+    const ignoredWarnings = [{
+        ignoredCode: 'CIRCULAR_DEPENDENCY',
+        ignoredPath: 'node_modules/@ionic/core/',
+    }, ]
+
+    console.log('WARN check', warning, rollupWarn);
+    // only show warning when code and path don't match
+    // anything in above list of ignored warnings
+    if (!ignoredWarnings.some(({ ignoredCode, ignoredPath }) => (
+            warning.code === ignoredCode &&
+            warning.importer.includes(path.normalize(ignoredPath))))) {
+        rollupWarn(warning)
+    }
+}
+
+
 export default {
+    //  onwarn,
+    onwarn(warning, warn) {
+        // skip certain warnings
+        //  if (warning.code === 'UNUSED_EXTERNAL_IMPORT') return;
+
+        // throw on others
+        //  if (warning.code === 'NON_EXISTENT_EXPORT') throw new Error(warning.message);
+
+        console.log('TEST', warning);
+        // Use default for everything else
+        warn(warning);
+    },
     input: 'src/main.ts',
     output: {
         sourcemap: true,
@@ -74,8 +106,17 @@ export default {
         // https://github.com/rollup/plugins/tree/master/packages/commonjs
         resolve({
             browser: true,
+            mainFields: ["main", "module"],
+            dedupe: (importee) =>
+                importee === "svelte" || importee.startsWith("svelte/")
+        }),
+
+        /*
+  resolve({
+            browser: true,
             dedupe: ['svelte']
         }),
+        */
         commonjs(
             //			{
             //          namedExports: {
