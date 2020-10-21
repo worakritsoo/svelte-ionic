@@ -21,14 +21,23 @@
               {/each}
             </ion-row>
           </ion-grid>
+          <br />
+          <h2>Ratings by others:</h2>
 
-          {#if rate == 5}
-            <h2>Thank you for your review!</h2>
-          {:else}
-            <h2>&nbsp;</h2>
-          {/if}
+          <ion-grid>
+            {#each rateLabels as label, id}
+              <ion-row>
+                <ion-col>{label} ({rateCount[5 - id]})</ion-col>
+                <ion-col>
+                  <ion-progress-bar
+                    value="{rateCount[5 - id] / rateTotal}"
+                  ></ion-progress-bar>
+                </ion-col>
+              </ion-row>
+            {/each}
+          </ion-grid>
 
-          {#if rate > 0 && rate != 5}
+          {#if rate > 0 && rate < 5}
             Help us improve and give feedback. <br />
             {#each checkBoxes as { value, label }}
               <ion-item>
@@ -102,6 +111,9 @@ import "firebase/firestore";
 let feedback = {};
 let showDone = false;
 let rate = 0;
+const rateCount = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+const rateLabels = ["5 stars", "4 stars", "3 stars", "2 stars", "1 stars"];
+let rateTotal = 0;
 
 let stars = [
   "star-outline",
@@ -129,6 +141,7 @@ localforage.getItem("rate-me-1").then((value) => {
   }
 });
 
+// allow to show RateMe when menu is selected - unfortunately we cannot grap from routify?
 path.subscribe((p) => {
   console.log("PATH", p);
   if (p === "/RateMe") {
@@ -138,18 +151,36 @@ path.subscribe((p) => {
   }
 });
 
+// lets try to load all the earlier ratings - if we didn't get them earlier
+if (rateTotal === 0) {
+  let db = firebase.firestore();
+  db.collection("feedback")
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        const docData = doc.data();
+        const loadedRate = docData.feedbackText.rate;
+        if (loadedRate > 0 && loadedRate < 6) {
+          rateCount[loadedRate] += 1;
+          rateTotal += 1;
+        }
+        //  console.log(doc.id, " => ", doc.data(), rate, rateCount);
+      });
+    });
+}
+
 const starClick = (event) => {
-  // console.log("Starclick", event.srcElement.id);
+  console.log("Starclick", event.srcElement.id, rate);
   if (rate === 0) {
     const id = event.srcElement.id;
+    rate = event.srcElement.id;
     stars = stars.map((star, i) => {
-      if (i < id) {
+      if (i < rate) {
         return "star-sharp";
       } else {
         return "star-outline";
       }
     });
-    rate = event.srcElement.id;
 
     feedback["rate"] = rate;
 
@@ -186,11 +217,12 @@ const userCancel = () => {
 const userDone = () => {
   showRateMe = false;
 
+  // let's track some stuff
   feedback["time"] = Date.now();
   const d = new Date();
   feedback["utc"] = d.toUTCString();
 
-  // we want lots of info! - and some info is too much
+  // we want lots of info! - and some info is too much, so we skip
   [
     // "product",
     "platform",
@@ -219,5 +251,15 @@ const userDone = () => {
   }
   console.log("User rateme", feedbackText);
   localforage.setItem("rate-me-1", true);
+
+  // reset for another review
+  rate = 0;
+  stars = [
+    "star-outline",
+    "star-outline",
+    "star-outline",
+    "star-outline",
+    "star-outline",
+  ];
 };
 </script>
