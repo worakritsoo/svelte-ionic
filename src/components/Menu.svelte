@@ -168,8 +168,8 @@ const closeAndNavigate = (url) => {
       gtag("event", "nagivate", { url });
     }
 
-    const defaultAnalytics = firebase.analytics();
-    defaultAnalytics.logEvent("page_view", { page_title: url });
+    // const defaultAnalytics = firebase.analytics();
+    // defaultAnalytics.logEvent("page_view", { page_title: url });
   }
 
   path.set(url);
