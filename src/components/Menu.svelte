@@ -73,6 +73,8 @@ import { routes } from "./../routes/routes";
 
 import { path } from "../services/routestore";
 
+import firebase from "firebase/app";
+
 let hideMenu = true; // a hack because the menu shows before the splash (in Chrome on Windows)
 let gtag;
 
@@ -165,6 +167,9 @@ const closeAndNavigate = (url) => {
       gtag("event", url);
       gtag("event", "nagivate", { url });
     }
+
+    const defaultAnalytics = firebase.analytics();
+    defaultAnalytics.logEvent("page_view", { page_title: url });
   }
 
   path.set(url);
