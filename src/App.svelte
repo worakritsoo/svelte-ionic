@@ -12,7 +12,7 @@ import { Router } from "@roxi/routify";
 
 export let routes;
 
-// import { FirebaseApp } f rom "sveltefire";
+// import { FirebaseApp } from "sveltefire";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
@@ -34,6 +34,6 @@ let firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-// const defaultAnalytics = firebase.analytics();
-// defaultAnalytics.logEvent("page_view", { page_title: "app start" });
+const defaultAnalytics = firebase.analytics();
+defaultAnalytics.logEvent("page_view", { page_title: "app start" });
 </script>

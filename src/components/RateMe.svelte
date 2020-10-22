@@ -22,7 +22,7 @@
             </ion-row>
           </ion-grid>
           <br />
-          <h2>Others ({rateTotal}) said:</h2>
+          <h2>{rateTotal} others said...</h2>
 
           <ion-grid>
             {#each rateLabels as label, id}
