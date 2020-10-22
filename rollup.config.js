@@ -11,7 +11,7 @@ import del from 'rollup-plugin-delete';
 
 const production = !process.env.ROLLUP_WATCH;
 
-function serve() {
+const serve = () => {
     let server;
 
     function toExit() {
@@ -32,16 +32,18 @@ function serve() {
     };
 }
 
+// because of fix on firebase/analytics, we get a circular reference on ionic
+const onwarn = (warning, warn) => {
+    if (warning.code === 'CIRCULAR_DEPENDENCY' && warning.importer.includes('@ionic')) {
+        console.log('Supressed circular warning Ionic in rollup')
+        return;
+    } else {
+        warn(warning);
+    }
+}
+
 export default {
-    onwarn(warning, warn) {
-        // because of fix on firebase/analytics, we get a circular reference on ionic
-        if (warning.code === 'CIRCULAR_DEPENDENCY' && warning.importer.includes('@ionic')) {
-            console.log('Supressed circular warning Ionic in rollup')
-            return;
-        } else {
-            warn(warning);
-        }
-    },
+    onwarn,
     input: 'src/main.ts',
     output: {
         sourcemap: true,
@@ -88,12 +90,6 @@ export default {
                 importee === "svelte" || importee.startsWith("svelte/")
         }),
 
-        /*
-  resolve({
-            browser: true,
-            dedupe: ['svelte']
-        }),
-        */
         commonjs(
             //			{
             //          namedExports: {
@@ -101,8 +97,6 @@ export default {
             //        }
             //		}
         ),
-
-
 
         typescript({ sourceMap: !production }),
 

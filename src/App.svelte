@@ -16,9 +16,11 @@ export let routes;
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
-import "firebase/performance"; // gives runtime error
-import "firebase/analytics"; // gives runtime error: Cannot read property 'registerComponent' of undefined at registerInstallations
+
+// Notice regarding imports below
 // https://stackoverflow.com/questions/63835251/firebase-modules-cause-registercomponent-error-in-svelte
+import "firebase/performance";
+import "firebase/analytics";
 
 let firebaseConfig = {
   apiKey: "AIzaSyAOul3jp5hfGOfRWwqxjrvU4i965DE11Qk",
@@ -32,4 +34,6 @@ let firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+const defaultAnalytics = firebase.analytics();
+defaultAnalytics.logEvent("page_view", { page_title: "app start" });
 </script>

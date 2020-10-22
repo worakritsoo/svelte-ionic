@@ -22,7 +22,7 @@
             </ion-row>
           </ion-grid>
           <br />
-          <h2>Ratings by others ({rateTotal} ratings):</h2>
+          <h2>Others ({rateTotal}) said:</h2>
 
           <ion-grid>
             {#each rateLabels as label, id}
@@ -143,9 +143,7 @@ localforage.getItem("rate-me-1").then((value) => {
 
 // allow to show RateMe when menu is selected - unfortunately we cannot grap from routify?
 path.subscribe((p) => {
-  console.log("PATH", p);
   if (p === "/RateMe") {
-    console.log("RAte me");
     showRateMe = true;
     path.set("/"); // reset in case user wants to rate again without having to navigate away
   }
@@ -164,7 +162,6 @@ if (rateTotal === 0) {
           rateCount[loadedRate] += 1;
           rateTotal += 1;
         }
-        //  console.log(doc.id, " => ", doc.data(), rate, rateCount);
       });
     });
 }
@@ -196,12 +193,10 @@ const starClick = (event) => {
 
 const checkBoxChange = (event) => {
   feedback[event.detail.value] = event.detail.checked;
-  //  console.log("FEEDBACK", feedback);
 };
 
 const changeValue = (event) => {
   feedback["notes"] = event.detail.value;
-  // console.log("FEEDBACK", feedback);
 };
 
 const userCancel = () => {
@@ -252,14 +247,16 @@ const userDone = () => {
   console.log("User rateme", feedbackText);
   localforage.setItem("rate-me-1", true);
 
-  // reset for another review
-  rate = 0;
-  stars = [
-    "star-outline",
-    "star-outline",
-    "star-outline",
-    "star-outline",
-    "star-outline",
-  ];
+  // reset for another review - after animation end
+  setTimeout(() => {
+    rate = 0;
+    stars = [
+      "star-outline",
+      "star-outline",
+      "star-outline",
+      "star-outline",
+      "star-outline",
+    ];
+  }, 1000);
 };
 </script>
