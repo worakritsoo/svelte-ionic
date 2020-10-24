@@ -33,7 +33,7 @@
         </ion-item>
         <ion-item
           on:click="{() => {
-            gtag('event', 'github');
+            GITHUBclick();
             window.open('https://github.com/Tommertom/svelte-ionic-app', '_blank');
           }}"
         >
@@ -42,7 +42,7 @@
         </ion-item>
         <ion-item
           on:click="{() => {
-            gtag('event', 'forum');
+            FORUMclick();
             window.open('https://forum.ionicframework.com/t/ionicsvelte-all-of-ionics-ui-in-one-svelte-app', '_blank');
           }}"
         >
@@ -76,7 +76,7 @@ import { path } from "../services/routestore";
 import firebase from "firebase/app";
 
 let hideMenu = true; // a hack because the menu shows before the splash (in Chrome on Windows)
-let gtag;
+const defaultAnalytics = firebase.analytics();
 
 export let side = "start";
 
@@ -162,15 +162,7 @@ fromFetch("/assets/json/ionicons.json").subscribe(
 const closeAndNavigate = (url) => {
   console.log("Navigate url", url);
 
-  if (window.location.hostname !== "localhost") {
-    if (typeof gtag !== "undefined") {
-      gtag("event", url);
-      gtag("event", "nagivate", { url });
-    }
-
-    const defaultAnalytics = firebase.analytics();
-    defaultAnalytics.logEvent("page_view", { page_title: url });
-  }
+  defaultAnalytics.logEvent("page_view", { page_title: url });
 
   path.set(url);
   $goto(url);
@@ -185,6 +177,14 @@ const goToReview = () => {
   getIonicMenu("mainmenu")
     .close(true)
     .then(() => {});
+};
+
+const GITHUBclick = () => {
+  defaultAnalytics.logEvent("page_view", { page_title: "GITHUB_go" });
+};
+
+const FORUMclick = () => {
+  defaultAnalytics.logEvent("page_view", { page_title: "FORUM_go" });
 };
 
 // hack because of visibility of menu in Chrome/Windows

@@ -157,10 +157,15 @@ if (rateTotal === 0) {
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         const docData = doc.data();
+
         const loadedRate = docData.feedbackText.rate;
         if (loadedRate > 0 && loadedRate < 6) {
           rateCount[loadedRate] += 1;
           rateTotal += 1;
+
+          if (docData.feedbackText.notes) {
+            console.log("Notes received", docData.feedbackText.notes);
+          }
         }
       });
     });
@@ -200,12 +205,6 @@ const changeValue = (event) => {
 };
 
 const userCancel = () => {
-  if (window.location.hostname !== "localhost") {
-    let gtag;
-    if (typeof gtag !== "undefined") {
-      gtag("event", "Cancel rateme");
-    }
-  }
   showRateMe = false;
 };
 

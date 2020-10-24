@@ -1,38 +1,3 @@
-<script>
-let controller;
-let firstName, lastName;
-
-function processForm(event) {
-  console.log("Processing form", event);
-  // event.preventDefault();
-  controller
-    .create({
-      header: "Account Created",
-      message: `Created account for: <b>${firstName} ${lastName}</b>`,
-      buttons: [
-        {
-          text: "OK",
-        },
-      ],
-    })
-    .then((alert) => alert.present());
-}
-function handleFirstNameValue(event) {
-  firstName = event.target.value;
-}
-function handleLastNameValue(event) {
-  lastName = event.target.value;
-}
-
-const changeValue = (event) => {
-  console.log("Change of value", event.detail);
-};
-
-if (typeof gtag !== "undefined") {
-  gtag("event", "Whoaaaaah!!");
-}
-</script>
-
 <svelte:head>
   <title>Ionic UI Companion App - Inputs</title>
 </svelte:head>
@@ -110,3 +75,34 @@ if (typeof gtag !== "undefined") {
   </form>
 </ion-content>
 <ion-alert-controller bind:this="{controller}"></ion-alert-controller>
+
+<script>
+let controller;
+let firstName, lastName;
+
+function processForm(event) {
+  console.log("Processing form", event);
+  // event.preventDefault();
+  controller
+    .create({
+      header: "Account Created",
+      message: `Created account for: <b>${firstName} ${lastName}</b>`,
+      buttons: [
+        {
+          text: "OK",
+        },
+      ],
+    })
+    .then((alert) => alert.present());
+}
+function handleFirstNameValue(event) {
+  firstName = event.target.value;
+}
+function handleLastNameValue(event) {
+  lastName = event.target.value;
+}
+
+const changeValue = (event) => {
+  console.log("Change of value", event.detail);
+};
+</script>

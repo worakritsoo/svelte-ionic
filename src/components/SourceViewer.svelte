@@ -7,6 +7,7 @@
       <ion-button
         on:click="{() => {
           if (REPLlink.length > 1) {
+            REPLclick();
             window.open(REPLlink, '_blank');
           } else {
             showNoREPLToast();
@@ -18,6 +19,7 @@
 
       <ion-button
         on:click="{() => {
+          APIclick();
           window.open(APIlink, '_blank');
         }}"
       >
@@ -68,11 +70,12 @@ import { IonicShowToast } from "../services/IonicControllers";
 
 import localforage from "localforage";
 
+import firebase from "firebase/app";
+
 const { Clipboard } = Plugins;
 const { componentProps } = document.querySelector("ion-modal");
 
-let prut = "svelte";
-let apiURL = "";
+const defaultAnalytics = firebase.analytics();
 let REPLlink;
 let APIlink;
 let codeLanguage = "svelte";
@@ -89,6 +92,9 @@ localforage.getItem("source-language").then((value: string) => {
     sourceCode = sources[codeLanguage];
   }
 });
+
+// we want to measure some stuff
+defaultAnalytics.logEvent("page_view", { page_title: "sourceviewer" });
 
 // probably can be done in easier way, but I am lazy
 let name = "/";
@@ -200,6 +206,17 @@ const segmentChange = (value) => {
   codeLanguage = value.detail.value;
   localforage.setItem("source-language", codeLanguage);
   sourceCode = sources[codeLanguage];
+  defaultAnalytics.logEvent("page_view", {
+    page_title: "source" + codeLanguage,
+  });
+};
+
+const REPLclick = () => {
+  defaultAnalytics.logEvent("page_view", { page_title: "REPL_view" });
+};
+
+const APIclick = () => {
+  defaultAnalytics.logEvent("page_view", { page_title: "API_view" });
 };
 
 const closeOverlay = () => {

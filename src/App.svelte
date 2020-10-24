@@ -35,5 +35,5 @@ let firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 const defaultAnalytics = firebase.analytics();
-defaultAnalytics.logEvent("page_view", { page_title: "app start" });
+defaultAnalytics.logEvent("page_view", { page_title: "app_start" });
 </script>
