@@ -112,7 +112,7 @@ let feedback = {};
 let showDone = false;
 let rate = 0;
 const rateCount = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
-const rateLabels = ["5 stars", "4 stars", "3 stars", "2 stars", "1 stars"];
+const rateLabels = ["5 stars", "4 stars", "3 stars", "2 stars", "1 star"];
 let rateTotal = 0;
 
 let stars = [

@@ -36,7 +36,7 @@
         "@capacitor/core": "^2.4.0",
         "@ionic/core": "^5.3.2",
         "@roxi/routify": "^2.1.2",
-        "cupertino-pane": "^1.1.81",
+        "cupertino-pane": "^1.1.92",
         "firebase": "^7.19.1",
         "localforage": "^1.9.0",
         "rxjs": "^6.6.2",
