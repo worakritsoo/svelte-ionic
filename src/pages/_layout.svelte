@@ -1,6 +1,6 @@
 <!-- src/App.svelte -->
 <svelte:head>
-  <title>Ionic UI Companion App - svelte power!</title>
+  <title>Ionic Companion - svelte power!</title>
 </svelte:head>
 
 <ion-app>

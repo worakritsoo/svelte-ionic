@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Ionic UI Companion App - Grid</title>
+  <title>Ionic Companion - Grid</title>
 </svelte:head>
 
 <ion-header translucent="true">

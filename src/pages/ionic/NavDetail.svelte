@@ -1,16 +1,5 @@
-<script>
-  import IonBackButton from "../../components/IonBackButton.svelte";
-
-  const nav = document.querySelector("ion-nav");
-  const tech = document.querySelector("nav-detail").tech;
-
-  const popWindow = () => {
-    nav.pop();
-  };
-</script>
-
 <svelte:head>
-  <title>Ionic UI Companion App - NavDetail</title>
+  <title>Ionic Companion - NavDetail</title>
 </svelte:head>
 <ion-header translucent="true">
   <ion-toolbar>
@@ -22,8 +11,20 @@
 </ion-header>
 <ion-content fullscreen class="ion-padding">
   <ion-icon
-    name={'logo-' + tech.icon}
+    name="{'logo-' + tech.icon}"
     style="color: {tech.color}"
-    size="large" />
+    size="large"
+  ></ion-icon>
   <p>{tech.description}</p>
 </ion-content>
+
+<script>
+import IonBackButton from "../../components/IonBackButton.svelte";
+
+const nav = document.querySelector("ion-nav");
+const tech = document.querySelector("nav-detail").tech;
+
+const popWindow = () => {
+  nav.pop();
+};
+</script>

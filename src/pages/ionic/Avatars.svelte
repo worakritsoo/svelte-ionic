@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Ionic UI Companion App - Avatars</title>
+  <title>Ionic Companion - Avatars</title>
 </svelte:head>
 
 <ion-header translucent="true">

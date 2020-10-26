@@ -1,47 +1,5 @@
-<style>
-:root {
-  --ion-safe-area-top: 20px;
-  --ion-safe-area-bottom: 22px;
-}
-
-ion-slide {
-  display: block;
-}
-ion-slide > h2 {
-  margin-top: 2.8rem;
-}
-ion-slide > img {
-  max-height: 50%;
-  max-width: 60%;
-  margin: 36px 0;
-}
-</style>
-
-<script>
-import { getIonicMenu } from "./../../services/IonicControllers";
-import { goto } from "@roxi/routify";
-
-function navigate(url) {
-  $goto(url);
-}
-
-const continueToTab = () => {
-  navigate("/ionic/tabs/movies");
-};
-
-const flipMenuOnOff = () => {
-  console.log("flipMenuOnOff");
-  setTimeout(() => {
-    getIonicMenu("mainmenu").open(true);
-    setTimeout(() => {
-      getIonicMenu("mainmenu").close(true);
-    }, 2000);
-  }, 2000);
-};
-</script>
-
 <svelte:head>
-  <title>Ionic UI Companion App - Slides</title>
+  <title>Ionic Companion - Slides</title>
 </svelte:head>
 <ion-header translucent="true">
   <ion-toolbar>
@@ -100,3 +58,45 @@ const flipMenuOnOff = () => {
     </ion-slide>
   </ion-slides>
 </ion-content>
+
+<style>
+:root {
+  --ion-safe-area-top: 20px;
+  --ion-safe-area-bottom: 22px;
+}
+
+ion-slide {
+  display: block;
+}
+ion-slide > h2 {
+  margin-top: 2.8rem;
+}
+ion-slide > img {
+  max-height: 50%;
+  max-width: 60%;
+  margin: 36px 0;
+}
+</style>
+
+<script>
+import { getIonicMenu } from "./../../services/IonicControllers";
+import { goto } from "@roxi/routify";
+
+function navigate(url) {
+  $goto(url);
+}
+
+const continueToTab = () => {
+  navigate("/ionic/tabs/movies");
+};
+
+const flipMenuOnOff = () => {
+  console.log("flipMenuOnOff");
+  setTimeout(() => {
+    getIonicMenu("mainmenu").open(true);
+    setTimeout(() => {
+      getIonicMenu("mainmenu").close(true);
+    }, 2000);
+  }, 2000);
+};
+</script>

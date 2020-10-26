@@ -1,18 +1,11 @@
-<style>
-  p {
-    margin-left: 16px;
-    margin-top: 0;
-  }
-</style>
-
 <svelte:head>
-  <title>Ionic UI Companion App - Chips</title>
+  <title>Ionic Companion - Chips</title>
 </svelte:head>
 
 <ion-header translucent="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button />
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Chip</ion-title>
   </ion-toolbar>
@@ -25,14 +18,15 @@
       <ion-label>Default</ion-label>
     </ion-chip>
     <ion-chip>
-      <ion-icon name="checkmark-circle" />
+      <ion-icon name="checkmark-circle"></ion-icon>
       <ion-label>Icon</ion-label>
     </ion-chip>
     <ion-chip>
       <ion-avatar>
         <img
           alt="avatar"
-          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjYzVkYmZmIiBkPSJNMCAwaDUxMnY1MTJIMHoiLz48cGF0aCBkPSJNMjU2IDMwNGM2MS42IDAgMTEyLTUwLjQgMTEyLTExMlMzMTcuNiA4MCAyNTYgODBzLTExMiA1MC40LTExMiAxMTIgNTAuNCAxMTIgMTEyIDExMnptMCA0MGMtNzQuMiAwLTIyNCAzNy44LTIyNCAxMTJ2NTZoNDQ4di01NmMwLTc0LjItMTQ5LjgtMTEyLTIyNC0xMTJ6IiBmaWxsPSIjODJhZWZmIi8+PC9zdmc+" />
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjYzVkYmZmIiBkPSJNMCAwaDUxMnY1MTJIMHoiLz48cGF0aCBkPSJNMjU2IDMwNGM2MS42IDAgMTEyLTUwLjQgMTEyLTExMlMzMTcuNiA4MCAyNTYgODBzLTExMiA1MC40LTExMiAxMTIgNTAuNCAxMTIgMTEyIDExMnptMCA0MGMtNzQuMiAwLTIyNCAzNy44LTIyNCAxMTJ2NTZoNDQ4di01NmMwLTc0LjItMTQ5LjgtMTEyLTIyNC0xMTJ6IiBmaWxsPSIjODJhZWZmIi8+PC9zdmc+"
+        />
       </ion-avatar>
       <ion-label>Avatar</ion-label>
     </ion-chip>
@@ -85,24 +79,31 @@
   <ion-list-header>Icons</ion-list-header>
   <p>
     <ion-chip outline color="primary">
-      <ion-icon name="pin" />
+      <ion-icon name="pin"></ion-icon>
       <ion-label>Madison</ion-label>
-      <ion-icon name="close-circle" />
+      <ion-icon name="close-circle"></ion-icon>
     </ion-chip>
     <ion-chip outline color="secondary">
-      <ion-icon name="wine" />
+      <ion-icon name="wine"></ion-icon>
       <ion-label>Nightlife</ion-label>
-      <ion-icon name="close-circle" />
+      <ion-icon name="close-circle"></ion-icon>
     </ion-chip>
     <ion-chip outline color="tertiary">
-      <ion-icon name="restaurant" />
+      <ion-icon name="restaurant"></ion-icon>
       <ion-label>Dining</ion-label>
-      <ion-icon name="close-circle" />
+      <ion-icon name="close-circle"></ion-icon>
     </ion-chip>
     <ion-chip outline color="dark">
-      <ion-icon name="videocam" />
+      <ion-icon name="videocam"></ion-icon>
       <ion-label>Entertainment</ion-label>
-      <ion-icon name="close-circle" />
+      <ion-icon name="close-circle"></ion-icon>
     </ion-chip>
   </p>
 </ion-content>
+
+<style>
+p {
+  margin-left: 16px;
+  margin-top: 0;
+}
+</style>

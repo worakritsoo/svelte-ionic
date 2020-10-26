@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Ionic UI Companion App - Infinitescroll</title>
+  <title>Ionic Companion - Infinitescroll</title>
 </svelte:head>
 
 <ion-header translucent="true">

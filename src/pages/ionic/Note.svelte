@@ -1,19 +1,10 @@
-<style>
-  ion-grid {
-    padding-left: 9px;
-  }
-  ion-row {
-    margin-bottom: 10px;
-  }
-</style>
-
 <svelte:head>
-  <title>Ionic UI Companion App - Notes</title>
+  <title>Ionic Companion - Notes</title>
 </svelte:head>
 <ion-header translucent="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button />
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Note</ion-title>
   </ion-toolbar>
@@ -51,7 +42,6 @@
           <ion-note color="dark">Dark</ion-note>
         </ion-col>
       </ion-row>
-
     </ion-grid>
 
     <ion-list-header>List Notes</ion-list-header>
@@ -96,3 +86,12 @@
     </ion-item>
   </ion-list>
 </ion-content>
+
+<style>
+ion-grid {
+  padding-left: 9px;
+}
+ion-row {
+  margin-bottom: 10px;
+}
+</style>

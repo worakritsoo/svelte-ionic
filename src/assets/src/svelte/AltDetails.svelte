@@ -15,7 +15,7 @@
 </script>
  
 <svelte:head>
-  <title>Ionic UI Companion App - AltDetail</title>
+  <title>Ionic Companion - AltDetail</title>
 </svelte:head>
 
 <IonPage>

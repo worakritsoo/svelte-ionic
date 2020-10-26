@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Ionic UI Companion App - Inputs</title>
+  <title>Ionic Companion - Inputs</title>
 </svelte:head>
 
 <ion-header translucent="true">

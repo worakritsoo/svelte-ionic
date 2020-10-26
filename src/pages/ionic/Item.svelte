@@ -1,37 +1,10 @@
-<script>
-  let itemSlidingStart;
-  let itemSlidingEnd;
-
-  const animateSliding = () => {
-    if (itemSlidingEnd && itemSlidingStart) {
-      setTimeout(() => {
-        itemSlidingStart.open("start");
-        itemSlidingEnd.open("end");
-        setTimeout(() => {
-          itemSlidingStart.close();
-          itemSlidingEnd.close();
-          animateSliding();
-        }, 2000);
-      }, 2000);
-    }
-  };
-
-  animateSliding();
-</script>
-
-<style>
-  .blue-item {
-    --background: blue;
-  }
-</style>
-
 <svelte:head>
-  <title>Ionic UI Companion App - Items</title>
+  <title>Ionic Companion - Items</title>
 </svelte:head>
 <ion-header translucent="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button />
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Item</ion-title>
   </ion-toolbar>
@@ -45,7 +18,7 @@
     </ion-item>
 
     <ion-item>
-      <ion-icon slot="end" name="logo-ionic" />
+      <ion-icon slot="end" name="logo-ionic"></ion-icon>
       <ion-label>Label with Icon</ion-label>
     </ion-item>
   </ion-list>
@@ -114,7 +87,7 @@
   <ion-list>
     <ion-list-header>Sliding Item</ion-list-header>
 
-    <ion-item-sliding bind:this={itemSlidingStart}>
+    <ion-item-sliding bind:this="{itemSlidingStart}">
       <ion-item class="blue-item">
         <ion-label>New Message</ion-label>
       </ion-item>
@@ -128,7 +101,7 @@
       </ion-item-options>
     </ion-item-sliding>
 
-    <ion-item-sliding bind:this={itemSlidingEnd}>
+    <ion-item-sliding bind:this="{itemSlidingEnd}">
       <ion-item>
         <ion-label>New Message</ion-label>
       </ion-item>
@@ -176,3 +149,30 @@
     </ion-item>
   </ion-list>
 </ion-content>
+
+<style>
+.blue-item {
+  --background: blue;
+}
+</style>
+
+<script>
+let itemSlidingStart;
+let itemSlidingEnd;
+
+const animateSliding = () => {
+  if (itemSlidingEnd && itemSlidingStart) {
+    setTimeout(() => {
+      itemSlidingStart.open("start");
+      itemSlidingEnd.open("end");
+      setTimeout(() => {
+        itemSlidingStart.close();
+        itemSlidingEnd.close();
+        animateSliding();
+      }, 2000);
+    }, 2000);
+  }
+};
+
+animateSliding();
+</script>

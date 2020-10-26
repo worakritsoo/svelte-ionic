@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Ionic UI Companion App - Tabs-Games</title>
+  <title>Ionic Companion - Tabs-Games</title>
 </svelte:head>
 <ion-header translucent="true">
   <ion-toolbar>

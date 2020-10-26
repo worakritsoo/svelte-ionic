@@ -1,11 +1,11 @@
 <svelte:head>
-  <title>Ionic UI Companion App - Lists</title>
+  <title>Ionic Companion - Lists</title>
 </svelte:head>
 
 <ion-header translucent="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button />
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>List</ion-title>
   </ion-toolbar>

@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Ionic UI Companion App - Modal Extra</title>
+  <title>Ionic Companion - Modal Extra</title>
 </svelte:head>
 <ion-header translucent="true">
   <ion-toolbar>

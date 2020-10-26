@@ -1,16 +1,5 @@
-<style>
-ion-segment {
-  padding: 5px;
-}
-</style>
-
-<script>
-const segmentChange = console.log;
-const segmentButtonChange = console.log;
-</script>
-
 <svelte:head>
-  <title>Ionic UI Companion App - Segment</title>
+  <title>Ionic Companion - Segment</title>
 </svelte:head>
 <ion-header translucent="true">
   <ion-toolbar>
@@ -130,3 +119,14 @@ const segmentButtonChange = console.log;
     </ion-segment-button>
   </ion-segment>
 </ion-content>
+
+<style>
+ion-segment {
+  padding: 5px;
+}
+</style>
+
+<script>
+const segmentChange = console.log;
+const segmentButtonChange = console.log;
+</script>

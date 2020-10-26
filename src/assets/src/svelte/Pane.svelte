@@ -1,48 +1,16 @@
-<script>
-  //
-  // https://github.com/roman-rr/cupertino-pane
-  //
-  import { CupertinoPane } from "cupertino-pane";
-
-  import { onMount } from "svelte";
-
-  onMount(() => {
-    var myPane = new CupertinoPane(
-      ".cupertino-pane", // Pane container selector
-      {
-        onDrag: () => console.log("Drag event"),
-        breaks: {
-          top: { enabled: true, offset: -10 },
-          middle: { enabled: true, offset: 180 },
-          bottom: { enabled: true, offset: 140 }
-        }
-      }
-    );
-    myPane.present();
-  });
-</script>
-
-<style>
-  .cupertino-header,
-  .cupertino-content {
-    margin: 20px;
-  }
-</style>
-
 <svelte:head>
-  <title>Ionic UI Companion App - Pane - experimental</title>
+  <title>Ionic Companion - Pane - experimental</title>
 </svelte:head>
 
 <ion-header translucent="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button />
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Pane</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content padding scroll-y="false">
-
   <h1>Cupertino Pane</h1>
   <ion-text>
     <p>
@@ -52,18 +20,17 @@
       Right like in Apple Maps, Apple Stocks, Apple Music and other modern apps.
       Lightweight, Multiplatform, Open Source. For progressive applications.
     </p>
-    <br />
-    Repo:
-    <a href="https://github.com/roman-rr/cupertino-pane" target="_blank">
+    <br /> Repo: <a
+      href="https://github.com/roman-rr/cupertino-pane"
+      target="_blank"
+    >
       roman-rr/cupertino-pane
     </a>
-
   </ion-text>
 
   <div class="cupertino-pane">
     <div class="cupertino-header">
       <h1>Drag me up!</h1>
-
     </div>
     <div class="cupertino-content">
       <ion-text color="primary">
@@ -105,3 +72,34 @@
     </div>
   </div>
 </ion-content>
+
+<style>
+.cupertino-header,
+.cupertino-content {
+  margin: 20px;
+}
+</style>
+
+<script>
+//
+// https://github.com/roman-rr/cupertino-pane
+//
+import { CupertinoPane } from "cupertino-pane";
+
+import { onMount } from "svelte";
+
+onMount(() => {
+  var myPane = new CupertinoPane(
+    ".cupertino-pane", // Pane container selector
+    {
+      onDrag: () => console.log("Drag event"),
+      breaks: {
+        top: { enabled: true, offset: -10 },
+        middle: { enabled: true, offset: 180 },
+        bottom: { enabled: true, offset: 140 },
+      },
+    }
+  );
+  myPane.present();
+});
+</script>

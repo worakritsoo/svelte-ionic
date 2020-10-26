@@ -1,16 +1,10 @@
-<script>
-  const selectChange = event => {
-    console.log("Select change ", event.detail);
-  };
-</script>
-
 <svelte:head>
-  <title>Ionic UI Companion App - Select</title>
+  <title>Ionic Companion - Select</title>
 </svelte:head>
 <ion-header translucent="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button />
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Select</ion-title>
   </ion-toolbar>
@@ -20,7 +14,7 @@
   <ion-list>
     <ion-item>
       <ion-label>Pet</ion-label>
-      <ion-select on:ionChange={selectChange}>
+      <ion-select on:ionChange="{selectChange}">
         <ion-select-option value="cat">Cat</ion-select-option>
         <ion-select-option value="dog">Dog</ion-select-option>
       </ion-select>
@@ -28,7 +22,7 @@
 
     <ion-item>
       <ion-label>Gaming</ion-label>
-      <ion-select on:ionChange={selectChange} interface="popover">
+      <ion-select on:ionChange="{selectChange}" interface="popover">
         <ion-select-option value="nes">NES</ion-select-option>
         <ion-select-option value="n64">Nintendo64</ion-select-option>
         <ion-select-option value="ps">PlayStation</ion-select-option>
@@ -41,9 +35,10 @@
     <ion-item>
       <ion-label>Notifications</ion-label>
       <ion-select
-        on:ionChange={selectChange}
+        on:ionChange="{selectChange}"
         value="notifications"
-        interface="action-sheet">
+        interface="action-sheet"
+      >
         <ion-select-option value="enable">Enable</ion-select-option>
         <ion-select-option value="mute">Mute</ion-select-option>
         <ion-select-option value="mute_week">Mute for a week</ion-select-option>
@@ -53,7 +48,11 @@
 
     <ion-item>
       <ion-label>Operating System</ion-label>
-      <ion-select on:ionChange={selectChange} ok-text="Okay" cancel-text="Nah">
+      <ion-select
+        on:ionChange="{selectChange}"
+        ok-text="Okay"
+        cancel-text="Nah"
+      >
         <ion-select-option value="dos">DOS</ion-select-option>
         <ion-select-option value="lunix">Linux</ion-select-option>
         <ion-select-option value="mac7">Mac OS 7</ion-select-option>
@@ -66,7 +65,7 @@
 
     <ion-item>
       <ion-label>Music</ion-label>
-      <ion-select value="nirvana" on:ionChange={selectChange}>
+      <ion-select value="nirvana" on:ionChange="{selectChange}">
         <ion-select-option>Alice in Chains</ion-select-option>
         <ion-select-option>Green Day</ion-select-option>
         <ion-select-option value="nirvana">Nirvana</ion-select-option>
@@ -79,7 +78,7 @@
 
     <ion-item>
       <ion-label>Month</ion-label>
-      <ion-select value="12" on:ionChange={selectChange}>
+      <ion-select value="12" on:ionChange="{selectChange}">
         <ion-select-option value="01">January</ion-select-option>
         <ion-select-option value="02">February</ion-select-option>
         <ion-select-option value="03">March</ion-select-option>
@@ -97,7 +96,7 @@
 
     <ion-item>
       <ion-label>Year</ion-label>
-      <ion-select value="1994" on:ionChange={selectChange}>
+      <ion-select value="1994" on:ionChange="{selectChange}">
         <ion-select-option>1989</ion-select-option>
         <ion-select-option>1990</ion-select-option>
         <ion-select-option>1991</ion-select-option>
@@ -113,3 +112,9 @@
     </ion-item>
   </ion-list>
 </ion-content>
+
+<script>
+const selectChange = (event) => {
+  console.log("Select change ", event.detail);
+};
+</script>

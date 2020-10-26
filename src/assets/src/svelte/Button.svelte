@@ -1,38 +1,15 @@
-<style>
-  :root {
-    --ion-safe-area-top: 20px;
-    --ion-safe-area-bottom: 22px;
-  }
-  header {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    margin-bottom: 1.25em;
-    text-transform: uppercase;
-  }
-  section {
-    margin-top: 1em;
-    margin-bottom: 2.5em;
-  }
-  section:not(.full-width),
-  .full-width > header {
-    padding: 0 10px;
-  }
-</style>
-
 <svelte:head>
-  <title>Ionic UI Companion App - Buttons</title>
+  <title>Ionic Companion - Buttons</title>
 </svelte:head>
 <ion-header translucent="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button />
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Button</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content fullscreen>
-
   <section>
     <header>Small Size</header>
     <ion-button size="small">Default</ion-button>
@@ -63,5 +40,26 @@
     <header>Full Width</header>
     <ion-button expand="full" color="secondary">A full-width button</ion-button>
   </section>
-
 </ion-content>
+
+<style>
+:root {
+  --ion-safe-area-top: 20px;
+  --ion-safe-area-bottom: 22px;
+}
+header {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25em;
+  text-transform: uppercase;
+}
+section {
+  margin-top: 1em;
+  margin-bottom: 2.5em;
+}
+section:not(.full-width),
+.full-width > header {
+  padding: 0 10px;
+}
+</style>

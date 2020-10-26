@@ -1,18 +1,17 @@
 <svelte:head>
-  <title>Ionic UI Companion App - Cards</title>
+  <title>Ionic Companion - Cards</title>
 </svelte:head>
 
 <ion-header translucent="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button />
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Card</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen>
-
   <ion-card>
     <ion-card-header>
       <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
@@ -27,7 +26,7 @@
 
   <ion-card>
     <ion-item>
-      <ion-icon name="pin" slot="start" />
+      <ion-icon name="pin" slot="start"></ion-icon>
       <ion-label>ion-item in a card, icon left, button right</ion-label>
       <ion-button fill="outline" slot="end">View</ion-button>
     </ion-item>
@@ -40,22 +39,22 @@
 
   <ion-card>
     <ion-item href="/ionic/tabs/:tab" class="activated">
-      <ion-icon name="wifi" slot="start" />
+      <ion-icon name="wifi" slot="start"></ion-icon>
       <ion-label>Card Link Item 1 .activated</ion-label>
     </ion-item>
 
     <ion-item href="/ionic/Buttons">
-      <ion-icon name="wine" slot="start" />
+      <ion-icon name="wine" slot="start"></ion-icon>
       <ion-label>Card Link Item 2</ion-label>
     </ion-item>
 
     <ion-item class="activated">
-      <ion-icon name="warning" slot="start" />
+      <ion-icon name="warning" slot="start"></ion-icon>
       <ion-label>Card Button Item 1 .activated</ion-label>
     </ion-item>
 
     <ion-item>
-      <ion-icon name="walk" slot="start" />
+      <ion-icon name="walk" slot="start"></ion-icon>
       <ion-label>Card Button Item 2</ion-label>
     </ion-item>
   </ion-card>
@@ -71,5 +70,4 @@
       Madison was named the capital of the Wisconsin Territory in 1836.
     </ion-card-content>
   </ion-card>
-
 </ion-content>

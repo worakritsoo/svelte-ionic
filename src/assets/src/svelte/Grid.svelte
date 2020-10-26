@@ -1,23 +1,11 @@
-<style>
-  :root {
-    --ion-safe-area-top: 20px;
-    --ion-safe-area-bottom: 22px;
-  }
-  ion-col > div {
-    background-color: #f7f7f7;
-    border: solid 1px #ddd;
-    padding: 10px;
-  }
-</style>
-
 <svelte:head>
-  <title>Ionic UI Companion App - Grid</title>
+  <title>Ionic Companion - Grid</title>
 </svelte:head>
 
 <ion-header translucent="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button />
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Grid</ion-title>
   </ion-toolbar>
@@ -97,3 +85,15 @@
     </ion-row>
   </ion-grid>
 </ion-content>
+
+<style>
+:root {
+  --ion-safe-area-top: 20px;
+  --ion-safe-area-bottom: 22px;
+}
+ion-col > div {
+  background-color: #f7f7f7;
+  border: solid 1px #ddd;
+  padding: 10px;
+}
+</style>
