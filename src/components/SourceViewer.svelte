@@ -45,7 +45,7 @@
   </ion-segment>
 </ion-header>
 
-<ion-content padding scroll-x="true">
+<ion-content scroll-x="true" class="source-viewer">
   <pre
     style="-webkit-user-select: text; /* Chrome 49+ */
   -moz-user-select: text; /* Firefox 43+ */
@@ -60,6 +60,11 @@ pre {
   -moz-user-select: all; /* Firefox 43+ */
   -ms-user-select: all; /* No support yet */
   user-select: all; /* Likely future */
+}
+
+.source-viewer {
+  --padding-start: 15px;
+  --padding-end: 15px;
 }
 </style>
 

@@ -14,5 +14,5 @@ module.exports = {
   ],
   "distDir": "dist",
   "hashScroll": true,
-  "started": "2020-10-26T09:45:12.290Z"
+  "started": "2020-11-08T18:27:43.728Z"
 }

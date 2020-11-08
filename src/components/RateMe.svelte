@@ -114,6 +114,7 @@ let rate = 0;
 const rateCount = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
 const rateLabels = ["5 stars", "4 stars", "3 stars", "2 stars", "1 star"];
 let rateTotal = 0;
+let showRateMe = false;
 
 let stars = [
   "star-outline",
@@ -130,7 +131,6 @@ let checkBoxes = [
 ];
 
 // we don't want to show, unless we need to
-let showRateMe = false;
 localforage.getItem("rate-me-1").then((value) => {
   console.log("RateMe value", value);
   // showRateMe = true; // testing purposes should be on then
