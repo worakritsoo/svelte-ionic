@@ -136,7 +136,7 @@ localforage.getItem("rate-me-1").then((value) => {
   // showRateMe = true; // testing purposes should be on then
   if (!value) {
     setTimeout(() => {
-      showRateMe = true;
+      //   showRateMe = true;  // got complaints from user about rating-begging. Maybe asking too many times and localstorage does not work?
     }, 1000 * 60 * 1);
   }
 });
