@@ -125,6 +125,7 @@ let stars = [
 ];
 
 let checkBoxes = [
+  { value: "begging", label: "To often asking for rating" },
   { value: "helpfull", label: "Very helpful app" },
   { value: "buggy", label: "A bit buggy" },
   { value: "newfeature", label: "New feature:" },
