@@ -23,6 +23,15 @@ Please note: livereload not enabled (see `rollup.config.js`) because of issue in
 
 All items also available as individual REPLs: https://github.com/Tommertom/svelte-ionic-app/blob/master/REPLS.md
 
+# User requests
+If you have user requests, please raise an issue @ github, or drop a note using the "RateMe" feature in the menu. Some of these comments received and resolved:
+- Margin in the SourceViewer
+- Stop the begging for Rating
+
+Please check the issue list for other issues resolved. 
+
+I am very happy to get feedback and to make it more usefull to all!
+
 **NEW FEATURE: click to view source! For all components (except tab) you can click the lower right source button to view the source and copy/paste in your app. If you use fullscreen view, the menu will be a sidepanel instead of a hamburger!**
 
 **NEW FEATURE: click on share button in source view to link directly to the Ionic API docs**
