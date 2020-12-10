@@ -161,7 +161,7 @@ A number of todo's:
 - add non Ionic elements to complete UI: 
     - chat ui and other social elements (https://github.com/thenaim/ionic-tk-social-network)
     - ~~Stimeline~~S
-    - accordeon
+    - accordion
     - ~~pane~~ 
 - ~~SSR~~
 - ~~to docs link https://ionicframework.com/docs/api/input~~
