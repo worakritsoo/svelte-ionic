@@ -14,11 +14,10 @@ npm install -g degit
 degit Tommertom/svelte-ionic-app svelte-ionic-app
 cd svelte-ionic-app
 npm i
-npm run build
 npm run dev
 ```
 
-Why npm run build? -> there is a copy script copying many assets to build folder. Having this script run in dev-mode slows down development flow. So strictly spoken, you only need to run this once for this project.
+Why npm run build sometimes while developing? -> there is a copy script copying many assets to build folder. Having this script run in dev-mode slows down development flow. So strictly spoken, you only need to run this once for this project. So, if you run npm run dev, your assets will be copied. If you want this standard behavior, change rollup.config.js.
 
 The app will be served on `localhost:5000`.
 
