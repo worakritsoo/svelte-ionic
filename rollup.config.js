@@ -59,7 +59,7 @@ export default {
             verbose: true
         }),
 
-        production && copy({
+        production && copy({          // remove production keyword if you want to copy also in dev
             targets: [{ src: 'src/assets/', dest: 'public/' }],
             verbose: true
         }),
