@@ -14,8 +14,11 @@ npm install -g degit
 degit Tommertom/svelte-ionic-app svelte-ionic-app
 cd svelte-ionic-app
 npm i
+npm run build
 npm run dev
 ```
+
+Why npm run build? -> there is a copy script copying many assets to build folder. Having this script run in dev-mode slows down development flow. So strictly spoken, you only need to run this once for this project.
 
 The app will be served on `localhost:5000`.
 
