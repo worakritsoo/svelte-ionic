@@ -17,7 +17,7 @@
     <img alt="avatar" src="../assets/img/ionic/avatar.svg" />
   </ion-avatar>
 
-  <ion-list-header>Chip Avatar</ion-list-header>
+  <ion-list-header>Chip!</ion-list-header>
   <ion-chip class="ion-margin-start">
     <ion-avatar>
       <img alt="avatar" src="../assets/img/ionic/avatar.svg" />

@@ -1,7 +1,7 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import livereload from 'rollup-plugin-livereload';
+// import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
@@ -46,7 +46,7 @@ export default {
     onwarn,
     input: 'src/main.ts',
     output: {
-        sourcemap: true,
+        sourcemap: !production,
         format: 'esm',
         name: 'app',
         dir: 'public/bundle'
@@ -54,12 +54,13 @@ export default {
     plugins: [
         production && del({ targets: 'public/bundle/*' }),
 
-        production && copy({
-            targets: [{ src: 'src/service-worker.js', dest: 'public/' }],
+        copy({
+            targets: [{ src: ['src/service-worker.js', 'src/manifest.json', 'src/index.html', 'src/global.css', 'src/favicon.png'], dest: 'public/' }],
             verbose: true
         }),
 
-        production && copy({          // remove production keyword if you want to copy also in dev
+        // disabled for dev because asset folder being too large
+        production && copy({
             targets: [{ src: 'src/assets/', dest: 'public/' }],
             verbose: true
         }),
@@ -106,7 +107,8 @@ export default {
 
         // Watch the `public` directory and refresh the
         // browser on changes when not in production
-        // !production && livereload('public'), // disabled because my Chrome is freaking out
+        // Livereload is not working nicely - manual refresh needed.
+        // !production && livereload('public'),
 
         // If we're building for production (npm run build
         // instead of npm run dev), minify

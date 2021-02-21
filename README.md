@@ -135,8 +135,11 @@ Obviously you need to put the NPM lib of @ionic in the assets folder.
 
 # Todo's
 A number of todo's:
-- Copy snippets of source code
-- Implement workbox and spassr as shown in the startertemplate of routify (or at least check)
+- Ionic 6 - expected in March?
+- Snowpack instead of rollup
+- Add some other Ionic things like Platform
+- ~~Copy snippets of source code~~
+- ~~Implement workbox and spassr as shown in the startertemplate of routify (or at least check) - using https://github.com/OliwerDrywa/svelte-pwa/blob/master/public/service-worker.js~~
 - ~~fix IonTab~~
 - ~~fix Ionic Menu close, go through all components and fix some messages~~
 - ~~research some of the warnings after Ionic 5 migration~~
