@@ -4,11 +4,11 @@
 </svelte:head>
 
 <ion-app>
-  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+  <!-- <ion-fab horizontal="end" vertical="bottom" slot="fixed">
     <ion-fab-button class:pulseSourceViewer on:click="{viewSource}">
       <ion-icon name="code-working"></ion-icon>
     </ion-fab-button>
-  </ion-fab>
+  </ion-fab> -->
 
   <ion-split-pane content-id="main">
     <Menu />
@@ -18,7 +18,7 @@
   </ion-split-pane>
 </ion-app>
 <CookieJar />
-<RateMe />
+
 
 <style>
 @keyframes shadow-pulse {
@@ -30,10 +30,6 @@
   }
 }
 
-.pulseSourceViewer {
-  border-radius: 50%;
-  animation: shadow-pulse 1s infinite;
-}
 </style>
 
 <script>
@@ -41,11 +37,9 @@ import { IonicShowModal } from "../services/IonicControllers";
 
 import localforage from "localforage";
 
-import SourceViewer from "../components/SourceViewer.svelte";
 import Menu from "../components/Menu.svelte";
 
 import CookieJar from "../components/CookieJar.svelte";
-import RateMe from "../components/RateMe.svelte";
 
 // source viewer and pulsating class for the FAB
 let pulseSourceViewer = false;

@@ -26,29 +26,7 @@
             <ion-label>{menuItem.label}</ion-label>
           </ion-item>
         {/each}
-        <ion-item></ion-item>
-        <ion-item on:click="{goToReview}">
-          <ion-icon name="star" slot="start"></ion-icon>
-          <ion-label>Rate this app</ion-label>
-        </ion-item>
-        <ion-item
-          on:click="{() => {
-            GITHUBclick();
-            window.open('https://github.com/Tommertom/svelte-ionic-app', '_blank');
-          }}"
-        >
-          <ion-icon name="logo-github" slot="start"></ion-icon>
-          <ion-label>Go to GitHub for this app</ion-label>
-        </ion-item>
-        <ion-item
-          on:click="{() => {
-            FORUMclick();
-            window.open('https://forum.ionicframework.com/t/ionicsvelte-all-of-ionics-ui-in-one-svelte-app', '_blank');
-          }}"
-        >
-          <ion-icon name="logo-ionic" slot="start"></ion-icon>
-          <ion-label>Go to Ionic Forum</ion-label>
-        </ion-item>
+      
       </ion-list>
     </ion-content>
   {/if}
@@ -108,7 +86,7 @@ const excludedPaths = [
 // let's use the generated routes for making the menu items
 // and skip a few ones for the menu
 let menuItems: Array<{ url: string; label: string; icon: string }> = routes
-  .filter((route) => route.path.includes("ionic"))
+  .filter((route) => route.path.includes("page"))
   .filter((route) => {
     let found = false;
     excludedPaths.forEach((exclude) => {

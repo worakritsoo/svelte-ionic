@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Ionic Companion - Cards</title>
+  <title>Ionic Companion - {title}</title>
 </svelte:head>
 
 <ion-header translucent="true">
@@ -7,7 +7,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Card</ion-title>
+    <ion-title>{title}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -71,3 +71,7 @@
     </ion-card-content>
   </ion-card>
 </ion-content>
+
+<script>
+export let title;
+</script>

@@ -4,7 +4,7 @@
   "/ionic/Avatars",
   "/ionic/Badge",
   "/ionic/Button",
-  "/ionic/Card",
+  "/ionic/CardPage",
   "/ionic/Checkbox",
   "/ionic/Chip",
   "/ionic/Controllers",
@@ -41,5 +41,12 @@
   "/ionic/Thumbnails",
   "/ionic/Timeline",
   "/ionic/Toggle",
-  "/ionic/Toolbar"
+  "/ionic/Toolbar",
+  "/page/Collection",
+  "/page/Discover",
+  "/page/Login",
+  "/page/Search",
+  "/page/Setting",
+  "/page/Snap",
+  "/page/Timeline"
 ]

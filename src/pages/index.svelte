@@ -6,5 +6,5 @@ function navigate(url) {
   $goto(url);
 }
 
-navigate("/ionic/Splash");
+navigate("/page");
 </script>
