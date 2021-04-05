@@ -42,11 +42,12 @@
   "/ionic/Timeline",
   "/ionic/Toggle",
   "/ionic/Toolbar",
+  "/page/AddLink",
   "/page/Collection",
   "/page/Discover",
   "/page/Login",
+  "/page/Ranking",
   "/page/Search",
   "/page/Setting",
-  "/page/Snap",
   "/page/Timeline"
 ]

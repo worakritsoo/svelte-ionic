@@ -6,5 +6,5 @@ function navigate(url) {
   $goto(url);
 }
 
-navigate("/page");
+navigate("/page/Login");
 </script>

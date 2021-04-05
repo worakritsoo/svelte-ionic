@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.1.2
- * File generated Fri Apr 02 2021 13:43:17 GMT+0700 (Indochina Time)
+ * File generated Mon Apr 05 2021 13:31:39 GMT+0700 (Indochina Time)
  */
 
 export const __version = "2.1.2"
-export const __timestamp = "2021-04-02T06:43:17.575Z"
+export const __timestamp = "2021-04-05T06:31:39.047Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -1307,6 +1307,33 @@ export const _tree = {
         {
           "isFile": true,
           "isDir": false,
+          "file": "AddLink.svelte",
+          "filepath": "/page/AddLink.svelte",
+          "name": "AddLink",
+          "ext": "svelte",
+          "badExt": false,
+          "absolutePath": "E:/Project/svelte-ionic-pbox/src/pages/page/AddLink.svelte",
+          "importPath": "../pages/page/AddLink.svelte",
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": true,
+          "ownMeta": {},
+          "meta": {
+            "preload": false,
+            "prerender": true,
+            "precache-order": false,
+            "precache-proximity": true,
+            "recursive": true
+          },
+          "path": "/page/AddLink",
+          "id": "_page_AddLink",
+          "component": () => import('../pages/page/AddLink.svelte').then(m => m.default)
+        },
+        {
+          "isFile": true,
+          "isDir": false,
           "file": "Collection.svelte",
           "filepath": "/page/Collection.svelte",
           "name": "Collection",
@@ -1388,6 +1415,33 @@ export const _tree = {
         {
           "isFile": true,
           "isDir": false,
+          "file": "Ranking.svelte",
+          "filepath": "/page/Ranking.svelte",
+          "name": "Ranking",
+          "ext": "svelte",
+          "badExt": false,
+          "absolutePath": "E:/Project/svelte-ionic-pbox/src/pages/page/Ranking.svelte",
+          "importPath": "../pages/page/Ranking.svelte",
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": true,
+          "ownMeta": {},
+          "meta": {
+            "preload": false,
+            "prerender": true,
+            "precache-order": false,
+            "precache-proximity": true,
+            "recursive": true
+          },
+          "path": "/page/Ranking",
+          "id": "_page_Ranking",
+          "component": () => import('../pages/page/Ranking.svelte').then(m => m.default)
+        },
+        {
+          "isFile": true,
+          "isDir": false,
           "file": "Search.svelte",
           "filepath": "/page/Search.svelte",
           "name": "Search",
@@ -1438,33 +1492,6 @@ export const _tree = {
           "path": "/page/Setting",
           "id": "_page_Setting",
           "component": () => import('../pages/page/Setting.svelte').then(m => m.default)
-        },
-        {
-          "isFile": true,
-          "isDir": false,
-          "file": "Snap.svelte",
-          "filepath": "/page/Snap.svelte",
-          "name": "Snap",
-          "ext": "svelte",
-          "badExt": false,
-          "absolutePath": "E:/Project/svelte-ionic-pbox/src/pages/page/Snap.svelte",
-          "importPath": "../pages/page/Snap.svelte",
-          "isLayout": false,
-          "isReset": false,
-          "isIndex": false,
-          "isFallback": false,
-          "isPage": true,
-          "ownMeta": {},
-          "meta": {
-            "preload": false,
-            "prerender": true,
-            "precache-order": false,
-            "precache-proximity": true,
-            "recursive": true
-          },
-          "path": "/page/Snap",
-          "id": "_page_Snap",
-          "component": () => import('../pages/page/Snap.svelte').then(m => m.default)
         },
         {
           "isFile": true,

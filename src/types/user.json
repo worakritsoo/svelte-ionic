@@ -1,0 +1,56 @@
+{"gender":"male",
+    "name": {
+        "title": "Mr",
+        "first": "Sean",
+        "last": "Parker"
+    },
+    "location": {
+        "street": {
+            "number": 7327,
+            "name": "Dogwood Ave"
+        },
+        "city": "Kalgoorlie",
+        "state": "New South Wales",
+        "country": "Australia",
+        "postcode": 9660,
+        "coordinates": {
+            "latitude": "-84.5466",
+            "longitude": "-4.3651"
+        },
+        "timezone": {
+            "offset": "-6:00",
+            "description": "Central Time (US & Canada), Mexico City"
+        }
+    },
+    "email": "sean.parker@example.com",
+    "login": {
+        "uuid": "da3b272b-7f4d-434c-bef9-1b03bb04282b",
+        "username": "yellowmouse175",
+        "password": "thompson",
+        "salt": "C7s1mqVD",
+        "md5": "8f9db2f96b01c69eee4d9d4447b79ed9",
+        "sha1": "0aa5111f8cb127045a24ebc79370d554b1f67f7b",
+        "sha256": "62b5ccafe4232278402e034e27c18100b40bfaa0b5480502375205a366913ef8"
+    },
+    "dob": {
+        "date": "1981-11-09T16:39:50.319Z",
+        "age": 40
+    },
+    "registered": {
+        "date": "2003-01-06T14:47:56.137Z",
+        "age": 18
+    },
+    "phone": "07-7021-5173",
+    "cell": "0407-352-695",
+    "id": {
+        "name": "TFN",
+        "value": "448670907"
+    },
+    "picture": {
+        "large": "https://randomuser.me/api/portraits/men/19.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/19.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/19.jpg"
+    },
+    "link":{
+    }
+}
